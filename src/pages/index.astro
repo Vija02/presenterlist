@@ -72,7 +72,7 @@ const jsonLd = {
           ))}
           <label class="mt-2 flex items-center gap-2 py-0.5">
             <input type="checkbox" name="hide-inactive" value="1" class="accent-brand-600" checked />
-            <span>Hide discontinued</span>
+            <span class="flex-1">Hide unmaintained &amp; discontinued</span><span class="text-xs text-zinc-400">{products.filter((p) => p.status !== "active").length}</span>
           </label>
         </fieldset>
         <fieldset>
@@ -196,7 +196,7 @@ const jsonLd = {
         types.every((t) => tags.includes(t)) &&
         (platforms.length === 0 || platforms.some((p) => plats.includes(p))) &&
         features.every((f) => feats.includes(f)) &&
-        (!hideInactive || c.dataset.status !== "discontinued");
+        (!hideInactive || c.dataset.status === "active");
       c.hidden = !ok;
       if (ok) n++;
     }
