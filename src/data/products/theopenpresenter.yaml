@@ -81,6 +81,8 @@ feature_notes:
   tv_output.android_tv: TheOpenPresenter TV app for Android TV and Apple TV; a Fire TV (Vega OS) version is also built.
   songs.auto_import: Songs can be pulled from MyWorshipList.
 docs_url: https://docs.theopenpresenter.com
+news_feeds:
+  - https://theopenpresenter.com/rss.xml
 sources:
   - https://github.com/Vija02/TheOpenPresenter
   - https://theopenpresenter.com

@@ -71,6 +71,7 @@ feature_notes:
   connectivity.cloud_sync: Lyrics, videos and images are stored online and can be shared between locations within one organisation.
   connectivity.offline: Continues working with no internet connection; a Cache Client can serve local media.
   connectivity.collaboration: Several control surfaces can be open for a location, but only one controls the remote displays at a time.
+release_notes_url: https://bigscreen.show/change-log
 sources:
   - https://bigscreen.show
   - https://bigscreen.show/change-log

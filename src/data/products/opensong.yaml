@@ -68,6 +68,8 @@ feature_notes:
   automation.api: REST and WebSocket API for remote control and integrations.
 docs_url: https://opensong.org
 community_url: https://sourceforge.net/p/opensong/
+news_feeds:
+  - https://sourceforge.net/p/opensong/news/feed.rss
 sources:
   - https://opensong.org/
   - https://sourceforge.net/projects/opensong/

@@ -11,6 +11,7 @@
     "check": "node scripts/validate.ts && astro check",
     "validate": "node scripts/validate.ts",
     "add-product": "node scripts/add-product.ts",
+    "fetch-news": "node scripts/fetch-news.ts",
     "astro": "astro"
   },
   "dependencies": {
@@ -23,6 +24,7 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^1.4.0",
     "@astrojs/check": "^0.9.12",
     "typescript": "^5.9.3"
   }

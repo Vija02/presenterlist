@@ -1,0 +1,290 @@
+worship
+presentation
+software
+Home
+Download
+Account
+Store
+Support
+News
+Forums
+Sync
+Drive
+Mobile Control
+Sign in
+New Features
+Version 9.3
+Accommodated breaking change to the CCLI® SongSelect® service.
+Added support for the CCLI auto-reporting service.
+Image color indexing is now included with the standard installation. Chromex installation is no longer needed.
+Added metadata indexing for Song Show Plus slide show.
+Added metadata indexing for PowerPoint files.
+Added metadata indexing for audio and video chains.
+Added optional indexing using Azure Computer Vision.
+Added support for High Efficiency Image Files (.HEIF and .HEIC file formats) ****
+Enhanced the Planning Center Online import process.
+Version 9.2
+Windows 11 compatibility.
+Enhanced scripture program item selection and editing.
+Internet Image search and importer.
+Capability to name Presenter Window layouts.
+Increased the Presenter Window layout count to five.
+Arrange-mode for Presenter Window layout.
+Added capability to select which Output Windows are included in the
+Monitor Panel.
+Mobile Control has been converted to a Progress Web App
+technology replacing the app store versions.
+Reworked and Improved the Shift Worship media import process.
+Reworked and improved the SongSelect song import process.
+Added an account management window.
+Web features now use the new Chromium Edge browser components
+rather than the older Internet Explorer components for better
+compatibility with current websites.
+Version 9.1
+Added support for Network Device Interface (NDI) streaming (Ultra Edition).
+Added two more display output windows.
+Added capability to have multiple stage monitors or other configurations such as lower-third.
+Display windows can now be named for convenience.
+New Emphasis animation that can be used to emphasis text as you step through a slide.
+New Divider effect that can be used to add a divider line to any object.
+Animations can now be set in slide themes.
+Songs can now be rendered to use the new Emphasis animation. Useful when used with a synchronized lower-third output window.
+Scripture presentation can now be rendered to use the new Emphasis animation. Useful when used with a synchronized lower-third output window.
+Slide objects can now be positioned relative to their layout field.
+Slide objects can now be positioned relative to the slide, not just the slide margins.
+DeckLink output can now be specified for any Display Window (previously, only Display Window 1 was supported).
+Version 9.0
+Improved support for video formats:
+Support for higher bitrate videos
+Support for higher resolution (4K) videos
+Native support for H.264 (no additional plug-in required)
+Note: These new features are presently only available for
+Windows 10.
+Improved slide show merging: Now avoids making duplicate slide
+properties.
+Support for scanner devices re-implemented.
+Can now rotate and crop while importing an image from a scanner.
+Rotation support for images in programs.
+Crop and rotate functions now together in slide builder for
+images.
+Alternate UI theme options for the presentation control window.
+Version 8.5
+Slide Show Artisan
+Image rotation support.
+Auto-rotation support for image for files containing rotation metadata.
+UI improvements for Slide Show Builder image editing.
+Added capability to import PowerPoint presentations step-by-step.
+Added capability to import PowerPoint presentations as video files.
+Added capability to specify a preview display output that can be sent to a separate monitor, partial monitor, or embedded in the Presenter Window.
+The Stage Display now uses the blank slide properties assigned to it when a blank slide is presented. This is also true for the new Preview Display.
+Added capability to specify the file naming templates for new programs, slide shows, and imported media.
+Added capability to set left and right indents for slide text.
+Added subthemes for slide shows.
+Text underline has been improved so that the line is now thicker.
+Version 8.4
+SongShow Drive for easily sharing media content with others on your media team.
+Cross platform apps for SongShow Drive
+50MB SongShow Drive space provided with active SongShow Upgrade subscription. (Upgradable)
+New mobile control app.
+Direct package-to-go for Video Chains.
+New Audio Chain feature including direct package-to-go support.
+Fixed compatibility issue of PowerPoint introduced with Windows 10 1607 Release.
+Improved the handling of graphics when the system gets elevated.
+Version 8.3
+Media synchronization for collaborating with others on your media team.
+50MB SongShow Sync provided with active SongShow Upgrade subscription. (Upgradable)
+Capability to schedule slides.
+Capability to schedule signage machine channels (SongShow Signage).
+Windows 10 compatibily and official support.
+Version 8.2
+Timers now work like other video formats and can be used in all places that videos are used (primary feature, background, Overlay Improv, etc.)
+Timers now have an option to countdown to the next quarter, half, or whole hour
+Three layout presets for the SongShow Plus Control Window letting you set up different configurations for various scenarios (one layout for media preparation, another layout for media presentation, etc.)
+The preview slides for the Program Panel can now be set to multiple sizes
+New box effects for placing backdrops behind and borders around text and other objects
+New controls layout for Slide Builder
+The Slide Builder can now be set up to use 9:16 and 3:4 aspect ratios for edit mode
+Capability to adjust object position and size directly from the Slide Builder toolbar
+Improved access to machines on a local area network as source and destination for importing and Package-to-Go (lets you store optional user name and password)
+Version 8.1
+Stage display now customizable using slide properties
+Stage display will now show video, PowerPoint, and web page media items when presented from the source display
+Auto triple-wide mode to image and video backgrounds
+Environmental projection support (additional display that uses the background of the source display)
+Display masks to block out projected content, used primarily for environmental projection
+Global background brightness adjustment lets you quickly and easily adjust the brightness of the background to quickly slides where there is insufficient contrast between background and text
+Replicate effect
+Version 8.0
+Integrated media file import from Dropbox accounts
+Integrated media file import from Google Drive accounts
+Integrated media file import from Microsoft One Drive accounts
+Integrated importing of songs from SongSelect
+Integrated import of service plans and media from Planning Center Online
+Integrated import of media from Shift Worship
+Package-to-Go integration with storage cloud services
+Layered backgrounds
+Fill-in-the-blank animation
+Supports up to four independent displays
+Multiple slide properties themes for slide shows
+Complete control of media for each display
+Additional text types for slides
+Slide theme properties for images and videos in slide shows
+Media specific slide properties for songs, scripture, video, and images
+Greater control of the Control Window panel layout
+Improved support for right-to-left text
+Enhanced editing capabilities for slide shows
+Color picker tool
+HSL color selection
+Authentication support for mobile apps
+Version 7, May 2012
+New transport controls for slide-based media items.
+Fade In/Out for videos.
+Enhanced audio control for slide shows.
+Slide based audio tracks for slide shows.
+Enhanced support for videos within slide shows.
+Control panel monitors for Secondary and Stage Displays.
+Increased song database size.
+DeckLink support for most transitions.
+DeckLink support for PowerPoint presentation.
+DeckLink support for web page presentation.
+Addition of new Bible plug-ins: New International Version 2011 and English Standard Version. (Plug-ins sold separately).
+Version 7, November 2011
+Slide previews in the media control and program panels.
+Audio level control for video files.
+Enhanced display properties for images and videos.
+AutoPlay for Vimeo and YouTube.
+Enhanced Quick List features.
+Version 7, August 2011
+Secondary display output for a second independent presentation.*
+New scripture plug-ins: Reina-Valera and Holman Christian Standard Bible.***
+iPad/Tablet stage monitor interface.*
+New keyboard navigation mode for use with remote control devices.
+Option to keep display windows open even when the control window is minimized.
+Version 7, March 2011
+Tablet control interface for use with iPads and similar devices.
+Improved remote control interface for iPods and similar devices.
+Undo/redo capability for editing programs and slide shows.
+Support for the Unicode character set.
+Multi-language spell check
+Auto-save for programs.
+Increased song database size.
+Version 7, October 2010
+Search-by-Color feature for image and video files.
+Searcy-by-metadata feature for image and video files.
+Video Chains as motion backgrounds and slide video objects
+Improved integration of media importers
+Program panel improved providing more granularity for presenting mid-slide items
+Preview release of mobile control (iPad, iPod, iPhone, Android, etc.)
+Version 7, June 2010
+Improved support for YouTube and Vimeo videos.
+New tolerance setting for transparency colors for images.
+New image import tool for importing a single video frame for use as an image object.
+New Color Key effect.*
+New short-cut keys for opening, creating, and saving slide shows and programs.
+Version 7, March 2010
+Web page presentation support.
+Color Improv for on-the-fly color changes.*
+Overlay Improv for the overlay of videos and images.*
+Audio File Improv for on-the-fly audio file playback.*
+Instant Message for showing nursery alerts and other messages.*
+Stage Message similar to Instant Message but for the stage monitor.*
+Video Effects scroll and blink.*
+Version 7, December 2009
+Windows 7 Support.
+Support for multi-processor (multi-core, hyper-threaded) machines.
+Reflection effect.**
+Improved user interface for Background Improv.
+Version 7, September 2009
+Capability to re-run slide show builders on slide shows that were created by them.
+New Background Sequence Builder.
+Access to Display Property presets from the Control Window toolbar providing an easier way to use presets.
+Capability to paste files directly from a copied .zip file.
+Improved import utilities for PowerPoint.
+New PowerPoint import into SongShow Plus slide shows (import as image slides).
+Capability to restore a slide show package from within the SongShow Plus control window.
+Enhancements to the stage monitor feature.
+Additional options for sizing images and videos in slide shows.
+Option for looping a video within a slide show.
+New Basic Display Properties window for easier setting of global display properties. (Advanced properties are still accessible.)
+Version 7, May 2009
+Stage monitor output
+Export feature for slide shows
+New title options for song presentation
+Additional public domain Bibles
+New Copyrighted Bible plug-ins***
+Support for H.264 .mov and .mp4 files***
+Version 7, February 2009
+Improved support for custom formatting of songs
+Enhanced Windows shell and AutoRun integration
+Improved ease-of use for importing media files
+Improved support for non-English languages
+Version 7, November 2008
+Support for DeckLink video card for lag-free text-over-video***
+Gaussian blur for improved softening of photos*
+Transition timings now in seconds
+Random transitions
+Improved support for lower-third slides
+Version 7, July 2008
+Video objects for slide shows
+Video sequence builder
+Video slide inserter
+Image slide inserter
+Hue-based effects*
+New cinematic effects**
+New and improved Pan / Zoom Effect**
+Version 7, April 2008
+Capability to convert songs to slide shows
+New text slides builder
+New photo slides builder
+New top-ten list builder
+New scripture slides builder
+Exit animations
+Version 7, January 2008
+Custom song parts
+Improved SongSelect importer
+In-edit spell-checking
+Improved support for 16:9 displays
+PowerPoint 2007 Support
+Version 7, October 2007
+Enhanced controls for text fill/outline
+Capability to use motion fills for objects and text
+Gradient and pattern fills support transparency
+Thumbnail view of media items in file panels
+Service elements for programs
+File search mechanism
+Completed Vista compatibility
+Version 7, June 2007
+Audio tracks for slide shows
+Audio tracks for songs
+New cinematic effect**
+Version 7, April 2007
+Transparency support for PNG and TIFF images
+Support for GIF images
+New Video Effects Collection for images and videos
+All effects can now be used with video files using RipFX technology
+Complete support for object rotation
+Version 7, October 2006
+Improved DVD support
+Version 7, August 2006
+Custom settings for transitions and animations
+Release of the Cinematic Effects Collection**
+Version 7, June 2006
+User can now have multiple song edit windows open
+Multiple download support from SongSelect
+Easier adding of songs after import
+Version 7, February 2006
+Audio file support
+Background Improv*
+Video Chain*
+3D animations*
+Easier background selection
+Toolbar customizations
+Professional Level license required. May also be available through a separate plug-in license for Basic Level license users.
+Cinematic Effects license required
+***
+Plug-ins sold separately
+****
+Requires a Silver Level subscription.
+An error has occurred. This application may no longer respond until reloaded.
+An unhandled exception has occurred. See browser dev tools for details.
+Reload

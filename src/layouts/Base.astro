@@ -18,6 +18,7 @@ const nav = [
   { href: "/compare/", label: "Compare" },
   { href: "/features/", label: "Features" },
   { href: "/platforms/", label: "Platforms" },
+  { href: "/releases/", label: "Releases" },
   { href: "/about/", label: "About" },
 ];
 const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
@@ -59,6 +60,7 @@ const ld = [
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${SITE_NAME} releases`} href="/releases/rss.xml" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE_NAME} />
     <meta property="og:title" content={fullTitle} />

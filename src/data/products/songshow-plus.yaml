@@ -87,6 +87,7 @@ feature_notes:
   connectivity.cloud_sync: SongShow Sync requires the Silver subscription.
   connectivity.remote_control: Mobile Control (a progressive web app) requires the Silver subscription.
   connectivity.collaboration: SongShow Drive media sharing and the web-based SongShow Builder require the Silver subscription.
+release_notes_url: https://www.songshowplus.com/whatsnew
 sources:
   - https://www.songshowplus.com/
   - https://www.songshowplus.com/store

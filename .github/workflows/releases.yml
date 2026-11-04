@@ -1,0 +1,67 @@
+name: Releases
+
+# Monthly: drafts last month's releases for every product, summarizes them with Claude
+# (Claude Code CLI on the maintainer's Claude subscription, via `claude setup-token`),
+# publishes the ones that pass the checks and commits them. Pushing to main triggers the
+# normal site deploy.
+on:
+  schedule:
+    - cron: "0 6 1 * *" # 06:00 UTC on the 1st of each month
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: releases
+  cancel-in-progress: false
+
+jobs:
+  releases:
+    # Only ever on main, and only from the "releases" environment, which holds the token.
+    if: github.ref == 'refs/heads/main' && github.repository == 'Vija02/presenterlist'
+    environment: releases
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: npm install -g @anthropic-ai/claude-code@2.1.318
+
+      - name: Fetch and summarize releases
+        id: fetch
+        run: pnpm fetch-news --auto
+        continue-on-error: true # still commit what succeeded; the job is marked failed below
+        env:
+          # Subscription token from `claude setup-token`. Don't also set ANTHROPIC_API_KEY here:
+          # Claude Code would prefer the API key. To use the API instead, swap this line for
+          # ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SUMMARY_MAX_CALLS: "40"
+
+      - run: pnpm validate
+      - run: pnpm build
+
+      - name: Commit
+        run: |
+          git add src/data/news scripts/changelog-snapshots scripts/news-ignored.txt
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Releases for $(date -u -d 'last month' +%Y-%m)"
+          git push
+
+      - name: Fail if some summaries failed
+        if: steps.fetch.outcome == 'failure'
+        run: |
+          echo "Some sources or summaries failed; they'll be retried next run. See the fetch step log."
+          exit 1

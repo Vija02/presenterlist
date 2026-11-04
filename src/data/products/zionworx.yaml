@@ -67,6 +67,7 @@ feature_notes:
   connectivity.remote_control: ZionWorx Remote app for Android and iOS; v5 adds a web remote reached via QR code.
   broadcast_video.ndi: Multiple independent live NDI outputs.
   songs.auto_import: One-click SongSelect lyrics import is new in v5, which is in beta until its release from December 2026.
+release_notes_url: https://download.zionworx.com/zionworx/zw-release-notes-v4.txt
 sources:
   - https://zionworx.com/
   - https://zionworx.com/pricing/

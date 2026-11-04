@@ -54,6 +54,10 @@ feature_notes:
   multilingual.bilingual_display: A translation can be added to each song and is shown on the slide in a separate font.
   outputs.lower_thirds: A chroma-key mode replaces backgrounds with green or blue for keying in a video mixer.
 languages: [German, English]
+news_feeds:
+  - https://praisebase.org/en/feed/
+release_feeds:
+  - https://praisebase.org/en/category/releases-en/feed/
 sources:
   - https://github.com/PraiseBase-Presenter/PraiseBase-Presenter
   - http://praisebase.org

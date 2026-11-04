@@ -1,0 +1,8 @@
+title: "LyricDisplay: October 2026 releases (6.8.9 to 7.0.0)"
+date: 2026-10-28
+product: lyricdisplay
+kind: release
+url: https://github.com/PeterAlaks/lyric-display-app/releases
+summary: Version 7.0 adds a structured song editor with per-line translations and stage-only notes, paste-and-format for lyrics, and song play orders. Earlier October updates added a Windows Firewall option to the installer and fixes.
+source: GitHub
+draft: false

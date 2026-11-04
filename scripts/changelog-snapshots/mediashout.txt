@@ -1,0 +1,851 @@
+MediaShout 7 (Windows) Change Log
+Home
+Knowledge Base
+MediaShout 7 (Windows)
+Support Documentation
+MediaShout 7 (Windows) Change Log
+MediaShout 7 Release Notes
+Download the latest build to get the newest features and improvements.
+Latest Release
+Version 7.7.1 (Build 15012) — May 30, 2026
+This release delivers improvements and fixes across the platform. Installs as a standard update on Windows 10 or Windows 11.
+View detailed changes .
+New Features
+New integration with Unsplash media service
+New integration with Pixabay media service
+You can now Copy / Paste media content into cues from the Clipboard
+New options to remap USB Remote buttons in a more flexible way
+Improvements
+Update Display numbers to match Windows Display settings better
+Improved the visibility of text menu options in the Light theme
+Changed default thumbnail point on video objects to 0:02 seconds
+Improved and Simplified the Export feature
+Changed the default file type to be SC7 for new installations
+Changed the default tab in the Background window
+Changed the color of Browse button in Background > Image/Video tab
+Added a shortcut to access Background settings from cue right-click menus
+Adjusted the behavior and message when using Fire mode in Bibles
+Added options for failover between local and remote Lyrics databases
+Updated the default Bible database to include additional translations
+Remapped Vertical Tab characters during import into Lyrics
+Updated the installer to use the latest WebView package
+Updated to underlying files to .NET Framework 4.8.1
+Fixes
+Thumbnails on the Welcome screen were cut off when not in Full Screen mode
+Library folders had large gaps between them in some cases
+Selected Comment cues were not shown as selected in Presenter view
+Changed the error behavior when the Remote app has a port conflict
+Previous Releases
+Version 7.7.1 (Build 14711) — May 28, 2026
+Replaced by b15012 due to issues with the installer failing to update a critical file in certain rare cases.
+Version 7.7.0 (Build 24511) — September 2, 2025
+This release delivers improvements and fixes across the platform. Installs as a standard update on Windows 10 or Windows 11.
+View detailed changes .
+New Features
+Settings to Minimize the Main/Stage with the Control screen
+Settings to keep the Main/Stage on top at all times
+Shortcut keys for media object scaling options
+Tool to show hidden formatting marks in text
+Setting to run the Lyrics library database at all times
+Settings for advanced Lyrics library configurations
+Localization for Swedish language
+Localization for Ukrainian language
+'Refresh' functions for Presenter View thumbnails
+Improvements
+Overhaul Presenter View to switch views much faster
+Modify Search boxes to behave more consistently
+Simplify the Bible reference search process
+Improved ease of selecting options in the FX window
+Enhanced Search function in multiple locations
+Improved ease of selecting Key options
+Updated information in the 'About' window
+Improved logging functionality for troubleshooting
+Fixes
+Shift Worship opening in a second window after website changes
+AutoScroll occasionally causing the wrong cue/page to fire
+Changing the default template not applying until after relaunch
+Selecting multiple cues not working correctly in some cases
+Images set to 'Original' size varying depending on image DPI setting
+Certain actions preventing Lyrics from being selectable
+Arrow key selection in Search results not working
+Text boxes losing the editing toolbar in certain conditions
+Unable to fire a page by double-clicking in blank area
+Custom tags on Stage becoming unreadable after UI language change
+Main display background flashing briefly on Stage
+Navigation issues with arrows through multi-page Blank cues
+ESC key not exiting Overlay mode in some cases
+Wrong cue firing when leaving a fired Quick Cue
+Presenter View thumbnails having inconsistent widths
+Color Picker Tool not working correctly in some instances
+Version 7.7.0 (Build 23210) — August 20, 2025
+Replaced by b24511 due to issues with Shift Worship opening in a second window and media insertion problems.
+Version 7.6.6 (Build 8071) — March 20, 2025
+View detailed changes .
+Improvements
+Improved Search bar function in Cues Library
+Simplified display names in the settings
+Downloaded SongSelect lyrics now selected in list after download
+Enlarged icons in Lyrics > Edit mode
+Added Lyrics database connection status indicator
+Added control to reset Lyrics database connection if disconnected
+Simplified Crop function with controls moved to toolbar
+Added new Help menu item for MediaShout website
+Quick Cues UI improvements
+Updated NDI to support NDI 6 runtime
+Improved speed and progress feedback during installation
+Added error dialog for installation failures
+Added uninstallation options dialog
+Fixes
+Using 'Edit' on multiple lyric cues no longer causes replacement of original lyrics
+Svenska Bibeln and Tree of Life now work correctly in Dual bible cues
+FX (Effects) settings now open when pressing hot key (Ctrl+E)
+Version 7.6.6 (Build 7270) — March 18, 2025
+Replaced by b8071 due to difficulty creating new lyrics.
+Version 7.6.5 (Build 34176) — December 18, 2024
+This release offers improvements and fixes. Installs as a standard update on Windows 10 or Windows 11.
+Windows 7 & 8 Users: These Windows versions are no longer supported by Microsoft. Press Skip this version and upgrade to Windows 10 for free. Learn more .
+View detailed changes .
+New Features
+New Christmas Sample script included
+Title page formatting now stored with templates (both Main and Stage)
+Stage default template applied when using Lyrics or Bible Fire mode
+Improvements
+Improved Cue timer functions
+Fixes
+Embedded page breaks in Lyrics library no longer causing extra blank lines
+Dual Bible cue page preview text now sourced from correct translation
+Keyboard shortcuts no longer causing skipped pages to fire
+Crash when using old script with misformatted timer info fixed
+Version 7.6.4 (Build 25556) — September 17, 2024
+View detailed changes .
+New Features
+Add Previous/Next verse to existing Bible cue in script
+AutoSync Main text to Stage when Lyric or Bible cue is created
+Apply default Stage template when Lyric or Bible cue is created
+Text alignment options for Stage data objects
+'Recently Used' file list added to the '+' (new script) button
+Toolbar button for 'Apply Format to All Pages'
+CCLI Auto-Report confirmation window
+Improvements
+CCLI 'Preferred Auto-Reporting time' improved for more reliable reporting
+User prompted to log into CCLI if Auto-Reporting fails due to expired login
+Save As now starts in current script path
+TAB characters stripped when performing 'Paste' action
+Media file names exceeding Windows' pathname limits now modified
+UI changes to make 'toggle' switch control colors more consistent
+Fixes
+Extra blank line no longer added when inserting page break at beginning of line
+Page Breaks no longer lost after later edits
+Using Rewind then Play no longer produces 'blip' of paused audio
+Quick Cues now display unique content on Stage display
+Ability to change assigned text font restored in rare cases
+Version 7.6.3 (Build 14375) — May 23, 2024
+View detailed changes .
+New Features
+New cue type for Comments
+Compact view of the Script pane
+Settings to hide mouse on Main & Stage displays
+New "Recently used" list at top of Fonts menu
+Media used in current script now shown in Media library
+More cue functionality added to Quick Cues
+'Collapse All' and 'Expand All' options for script pane
+Click 'Main Next' viewer to play cues (switchable)
+Toolbar button to enable/disable alignment guides
+Improvements
+Alignment guides can now align to the page itself
+Collapsed cues now auto-expand during Auto-Scroll (in Edit mode)
+Reduced visual clutter in script pane
+Fixes
+Crash when creating Media library thumbnails if corrupt file present
+Crash when changing font size on Lyric title page in certain conditions
+Known Issues
+New Quick Cues features still require Mirror to display on Stage display
+Adjusting playback speed of audio files remains disabled
+Version 7.6.2 (Build 8164) — March 21, 2024
+View detailed changes .
+New Features
+New options for script Auto-scroll feature
+Show subfolders in Library Media tabs
+Improvements
+Font size control no longer loses focus when mouse is moved off
+Positioning tool collapses after selection
+Cached CCLI account info cleared after logout
+Default media library paths updated
+Fixes
+Script no longer fails to open if corrupt media file is included
+Audio playback status now shows in Playback Controls
+Audio files now follow loop and 'play times' settings
+Timer key object no longer stops and resets during Library 'Fire mode' use
+Known Issues
+Audio playback speed adjustment disabled: This function was causing audio playback flaws with no immediate resolution. We're working on this for the next release. If adjusting audio speed is critical, continue using the previous release.
+Corrupt video files can cause crashes: If a corrupt video file is in the Shift Worship or Media Library folders, thumbnail creation may crash the program. The new Media Library subfolders feature in this release now processes all subfolders, increasing the chance of encountering a corrupt file. See this article for steps to resolve .
+Version 7.6.2 (Build 7460) — March 14, 2024
+Replaced by b8164 due to conflict between new feature and existing default media library paths.
+Version 7.6.1 (Build 5180) — February 20, 2024
+Hotfix release. Installs as a standard update on Windows 10 or Windows 11.
+Fixes
+Removing a stanza from an old lyric cue no longer causes a crash
+Version 7.6.1 (Build 3979) — February 13, 2024
+View detailed changes .
+New Features
+Six new Sermon Builder themes
+Converted Sermon Builder themes to editable templates
+New license options providing access to NIV-UK translation
+Script tooltip now displays file pathname
+Display of CCLI account info in Lyrics window
+Improvements
+Presenter view List view page names now match script page names for Lyrics
+Presenter view thumbnails now show full script page names
+Presenter view zoom setting now saved between launches
+Scroll bar width increased 30%
+Script and Viewer panes can now be resized to wider widths
+Sermon Builder now easier and quicker to use
+Main/Stage mode stays same when switching between Edit and Presenter
+Main/Stage mode control added to Presenter view
+Fixes
+MP3 files no longer experience dropouts during playback
+Fire mode background now fills screen correctly
+Crash when applying All Caps fixed
+All Caps now applied for all text on first cue in script
+Lyrics with only uppercase text no longer changed to lowercase
+Indent settings no longer revert after clicking "Increase Indent"
+Incorrect initial Zoom value in Presenter view fixed if Windows or date/time format not in English
+Version 7.6.0 (Build 31266) — November 17, 2023
+Hotfix release addressing issues found in previous release. Installs as a standard update on Windows 10 or Windows 11.
+Fixes
+Insert Stanza: Several issues fixed, including formatting of added stanzas not matching existing stanzas; added stanzas not grouped as stanzas; page naming and removal issues
+Bibles: Insert button now available immediately without swapping templates when using 'One verse per paragraph' or 'Wrap Text'
+Media Library: Scroll bar on Audio tab restored
+Presenter view: Page names are once again the same as Script page names
+Version 7.6.0 (Build 29865) — November 2, 2023
+Replaced by b31266 due to minor issues.
+Version 7.6.0 (Build 27058) — September 27, 2023
+View detailed changes .
+New Features
+Media store integration for Shift Worship
+Ability to insert existing stanza into lyric cue while in script
+Improvements
+Lyric library backup restoration improved to recover from corrupt database
+Prevented crash when attempting to use clipboard if locked by another app
+Added alert message when clipboard is locked and cannot be used
+Added warning in Bible 'Fire' mode when using incompatible template options
+Fixes
+Custom settings for video object or background 'End Position' no longer lost or ignored
+FX settings for Outline and Shadow can now be applied in all situations
+Viewers no longer stop functioning when certain cues are fired
+Lyrics now add to subfolders correctly
+Version 7.5.3 (Build 16458) — June 27, 2023
+View detailed changes .
+New Features
+New Lyric stanza type: Vamp
+Repair function for Cues Library records missing CCLI number
+Portuguese language option for user interface
+Improvements
+Right side pane now stays as set across script and mode changes
+Splitting mode setting now saved in templates
+Lyrics' Title page and Copyright settings now saved in templates
+Computer license ID now displayed under Help > About
+Fixes
+Lock up when selecting Insert Lyrics if Lyrics window was already open
+Scale to Fill mode not correctly centering scaled background
+Pages not auto-paginating after certain page break changes
+Preset not storing Indent setting
+Problem reverting some Bible cue splitting modes
+Known Issues
+Templates using 'One Verse per Paragraph' or 'Wrap Text' splitting modes will not create previews in the Insert Bible window. Cues will insert correctly formatted, but Fire mode users will need to use different templates. We're working to remove this limitation.
+Version 7.5.2 (Build 8870) — March 29, 2023
+View detailed changes .
+Improvements
+Script backup system added
+'Missing Media' menu option enabled for SC7X scripts
+Fixes
+SongSelect search results now ordered by relevance
+Error when user trying to log in to SongSelect fixed
+Old Lyrics records with incorrectly stored CCLI ID numbers fixed
+Lyrics arrangement no longer missing in some cases
+Some imported v6 lyrics with outline and shadow offset issues fixed
+Lyric arrangements now being stored in database
+'All Caps' format no longer changing justification to left aligned text
+Cue page label edits no longer lost after page content edits
+Text for 'Time' settings in Light theme no longer too light
+Presence in Cues Library now indicated by star icon
+Missing registry settings in Windows User account now recreated
+Inability to zoom cue in Edit window in some cases fixed
+NDI Source List menu crash fixed with refresh button added
+Various adjustments to Spanish localized UI
+Missing 'Help' in top menu in Spanish localization fixed
+Version 7.5.1 (Build 1388) — January 18, 2023
+Note: This build replaces b485 due to an installer issue. If you already updated to that build, no need to install this one.
+View detailed changes .
+New Features
+Implementation of CCLI's new Auto-Reporting feature
+Updated SongSelect to use new interface from CCLI
+Major improvements to Lyrics functions to increase speed and ease of use
+New system to backup Lyrics database
+Improvements
+Newly created stanzas now added to Arrangement list automatically
+Playback Controls in Light theme now more visible
+Preset naming in Light theme now has black text
+Lyric edit mode stanza drop-down list now retains last selected stanza type
+Lyric edit mode now auto-scrolls to newly added stanza
+Fixes
+Lyric title in library list view now updated after editing
+Crash when opening .SC7 script on different PC without referenced drives
+Crash when using List view in Presenter mode
+Lyrics with more than 9 stanzas now insert correctly
+Time Trigger description text no longer black in Dark theme
+Default copyright text removed when creating new Lyric
+Known Issues
+New lyric stanzas do not immediately show preview text in Arrangement view (improvement in progress)
+Version 7.5.1 (Build 485) — January 10, 2023
+Replaced by b1388 due to installer issue.
+Version 7.5.0 (Build 24332) — August 31, 2022
+Note: This build replaces b24130 due to an issue now fixed.
+View detailed changes .
+New Features
+Light color scheme for user interface
+Spanish language user interface
+Controls to flip media objects horizontally and vertically
+Ability to Insert page breaks in Lyrics Edit mode
+Improvements
+Lyrics imported from v6 library now include existing playorder
+Error log simplified to aid troubleshooting
+Fixes
+Some edits to text objects now fire immediately
+1st verse no longer lost when entering lyrics stanzas manually
+Search history in Insert Lyrics window now works as expected
+Recently used Bible translations list now appears in translation menu
+Default script format setting now applied to new scripts when set to .SC7
+Version 7.5.0 (Build 24130) — August 30, 2022
+Replaced by b24332 due to issue with inserting page breaks in Lyrics library.
+Version 7.4.1 (Build 16211) — June 14, 2022
+View detailed changes .
+New Features
+New field for Tags added to Lyrics database
+Setting to select default script type (SC7 or SC7X)
+Improvements
+Speed up launching of MediaShout 7
+PowerPoints imported as images keep resulting pages in correct cue
+Fixes
+Replace Media option now correctly updates all file information
+Cues with MPEG-PS files no longer begin to fire when selected
+Main display templates no longer saved as Stage templates
+Crash when right-clicking in empty script under certain conditions fixed
+Version 7.4.0 (Build 6901) — March 22, 2022
+HOTFIX: Fixes issues affecting the new lyrics database. Stability improvements only—no new features.
+Fixes
+Songs downloaded from SongSelect now saved to library after current session
+Newly entered song lyrics now saved to library after current session
+Lyrics library no longer stops working after searches returning no results
+CCLI ID field now populated correctly
+Version 7.4.0 (Build 4995) — February 21, 2022
+ALERT: This update uses a new database engine for Lyrics library supporting Windows 10+ only. Do NOT install if using Windows 7 or 8. Both versions can upgrade to Windows 10 for free.
+View detailed changes .
+New Features
+New NDI Video Source object type
+Reference-based script format (.SC7)
+Indication of script type (SC7 or SC7X) when in use or on Welcome Screen
+Indication of missing media in Control display
+Missing Media dialog in File menu
+Path and setting for converted script media when SC7X is converted to SC7
+Method to indicate and replace missing Audio object media
+Converted Lyrics library to new database system
+Ability to select which fields to search when searching for Lyric
+'Recently Used' list added to Lyrics search feature
+Improvements
+Dual Bible orientation now more consistent with templates
+Insert Bible button disabled when nothing is selected
+Fixes
+Script corruption no longer occurs if software closed while saving
+Custom video object thumbnail now saved
+Displays no longer flash black between cues
+Flickering on page re-fire in certain circumstances eliminated
+Version 7.3.5 (Build 34279) — December 8, 2021
+New Features
+Playback controls and media playback status added to right pane
+Bible verses can now display verse numbers at beginning of each verse
+Individual cues can now be set to Mirror Main display on Stage
+Background for all cues in script can now be changed at once
+New control to disable Stage display output for those not using it
+Improvements
+Easier to exit Overlay mode by only pressing ESC
+Cue's Skipped status now saved when added to Cues Library
+Template logic improved to prevent saving as wrong type
+Sermon Builder plugin now creates cues that work better with new features
+Installer now updates software properly when only revision number changed
+Fixes
+Crash while pasting text under certain conditions fixed
+Stanza/Page text alignment no longer changes when last line of other stanzas edited
+Text cues/boxes no longer add extra carriage returns and create unnecessary pages
+Main Display Next viewer now scaling correctly when width changed
+Bible reference for cues with certain splitting options now displays all verse numbers
+Page names for Bible cues with certain splitting options now display all verse numbers
+Unable to delete all pages of cue (creating invalid cue) now prevented
+Page names in Bible/Lyric cues now update correctly after text box resizing
+No selection displayed when using Edit feature for first time in session fixed
+Deleted page breaks no longer restored after splitting option changes
+Logging out of SongSelect now successful
+Cue no longer fires when video object layer moved forward/backward
+Bible passages omitting certain verse numbers now insert correctly
+Activation system issue interfering with activation management fixed
+Crash during installation on certain system configurations fixed
+Version 7.3.5 (Build 33678) — December 7, 2021
+Replaced by b34279 due to installer crash on some systems.
+Version 7.3.4 (Build 28116) — October 9, 2021
+Note: This update adds important improvement to earlier build of v7.3.4. If you previously installed an earlier build, see Known Issues below to learn how to take advantage of the user settings import feature.
+New Features
+Bible cues can now be edited or replaced via right-click menu 'Edit' option
+Bible translations can be searched for keywords in Insert Bible window
+Default setting for Dual (second) bible translation
+Overlay display mode for single screen previews
+Time Trigger cues can now be edited and refined in Time Trigger window
+Stage mirrors Main in Fire mode of Lyrics and Bible Insert windows
+Replace Media or Background via right-click menu on object or background
+Admin users can preset all settings for Windows User accounts
+Improvements
+Added control to disable F2/F3 tip window
+VLC version updated for improvements and bugfixes
+Text formatting stripped when pasting into Text cue to prevent incompatible formatting
+Sermon Builder now follows user-defined settings (resolution, default bible, etc)
+Blank stanza type can again be added to Lyrics cues from Insert window
+Second Viewer (Stage/Main Next) selection retained when closing
+Lyrics 'Insert' mode label changed to 'Arrange'
+Bible 'Insert' mode label changed to 'Select'
+Settings moved to Windows Registry for enhanced reliability
+Real text replaces 'dummy' text in new Text cues; templates and presets behave as expected
+Fonts can be selected using arrow keys after selection from font list
+Hue control now has slider for easier setting of Hue values
+Fixes
+Applying template no longer leaves previous properties set incorrectly
+Stage tokens now show all information on all Bible book names
+Text format settings and FX now available immediately after resizing text object
+Text format settings and FX can now be applied in Wrap Text and One verse per Paragraph modes
+Object Opacity settings restored to Graphics and Video objects
+Preset properties now greyed out when they cannot be deselected or applied separately
+Blank stanza type can again be added to Lyrics cues
+Crash after changing Splitting options on Sermon Builder cue fixed
+Changing Splitting Mode no longer alters text formatting
+Splitting mode value now properly updates after Undo
+Additional objects on pages no longer removed when changing Splitting options
+User settings from v7.3.3 now imported during installation
+Known Issues
+If you installed an earlier build of 7.3.4: Installing this update will not import your 7.3.3 settings. Follow this process to take advantage of the settings import feature.
+Edit Bible cue feature: Not compatible with old cues. If unusual behavior occurs, recreate the cue. This doesn't affect the cue's ability to fire correctly.
+Version 7.3.4 (Build 27813) — October 6, 2021
+(Same features as b28116 above, prior to additional improvements.)
+Version 7.3.3 (Build 63619) — August 13, 2021
+Note: This build replaces b63617. If you installed that build, please uninstall it first. This fixes issues with the new Duplicate Stanza feature and Main/Stage text box linking.
+New Features
+Time Trigger — Right-click on cue to program timed advance
+Duplicate Stanza option to create unique copy of existing stanza
+Previously opened files can be removed from Welcome screen via right-click
+Control screen now remembers changes to left and right pane width
+Tip to remind user of F2/F3 display controls appears during first script opening (5 second timeout or ESC to exit)
+Improvements
+Lyric stanzas now all linked and identical; editing one reflects on all instances
+Media filenames containing unusual characters no longer prevent script reopening
+Menu and keyboard shortcut added to switch between Main and Stage view [ALT+D]
+Faster response when entering Insert Bible window's Fire mode
+If 'Enable displays on launch' selected, displays not enabled until script opens
+Text FX dialog features arranged more logically
+Newly created Templates now in focus and selected
+Improved suggestions when searching for Template
+M2TS added as supported file format
+Fixes
+Next Page Break no longer removed if entered before/above existing break
+Page and Object names now contain actual text of that page (even after page breaks)
+Text formatting buttons now accurately reflect format of selected text
+Pages that are Skipped no longer show in Stage data tokens
+Changing splitting modes no longer removes additional objects from page
+All Caps setting now properly reset when applying template without that setting
+Selected template no longer lost when opening Insert Bible window
+Version 7.3.3 (Build 63617) — August 11, 2021
+Replaced by b63619 on August 13th due to issues with Duplicate Stanza feature and Main/Stage text box linking.
+Version 7.3.2 (Build 53102) — June 3, 2021
+New Features
+Keyboard shortcuts for script editing: Delete, Ctrl+C (Copy), Ctrl+V (Paste), Insert (adds new page when page selected)
+Title page now available for Lyrics (Enabled with switch on Insert window)
+CCLI organization license now added to Settings > General and Lyric references
+Lyric copyright now adds organization CCLI license number
+New 'Edit' option added to right-click menu of Lyric cues
+New option to 'Pin' blank or custom page as first in cue (to allow blank before Title)
+New option to add lyric directly to Cues Library via 'Star' button on Insert window
+Improvements
+Pages/stanzas of cue can now be skipped
+Multiple selected cues can be set to 'Skipped' at once
+Insert Bible now scrolls to selected verse(s)
+Selected template in Insert Lyrics now remembered on next use
+Template info now saved to cues and script
+Missing template can be recreated from script containing cue based on missing template
+Sync to Stage now applies default Stage Template automatically
+Repagination for Lyrics/Bible Cues improved when custom pages present
+Fixes
+Text remains selected after changing attribute (Bold, Italic, etc)
+Script Control: 'After the current cue play…' now saves destination with script
+Save As improved to prevent loss of thumbnails or media files
+Stage data tokens now display bible references correctly
+Stage template no longer inherits BG color of Main when created
+'Insert' button now greyed-out when lyric not selected
+Correct page now shown on Main Display Next viewer when skipped cue is set
+Previews in Insert > Bible window now display selected verses more reliably
+Previews in Insert > Lyrics window now display verse order more reliably after edits
+Bundled templates updated to scale backgrounds for both 16:9 and 4:3 screens
+Version 7.3.1 (Build 32508) — April 5, 2021
+Extensive bugfix release addressing 37 issues including crashes, data loss, and usability improvements.
+Key Fixes
+Various conditions preventing script from being saved
+Scripts with media files same name in different cases not reopening
+Scripts over 4GB not reopening
+Certain changes to Stage display not saving
+Script Control plugin changes not prompting save before closing
+Crash when deleting template in certain conditions
+Imported v6 lyrics with page breaks showing codes where breaks were
+Background not included when printing if selected
+Video stopping when layer moved while fired
+Pages not firing correctly after rearrangement while cue firing
+Preset unable to apply immediately after Undo
+Edit area not displaying after using Undo to remove inserted cue
+Recent Scripts list showing unavailable files
+Right-hand pane width changes causing Viewers to stretch instead of scale
+Undo after syncing to Stage not removing all synced content
+Editing toolbar disappearing after deleting object from cue
+Scrollbar in Export window unable to be moved manually
+Object unable to be moved to lowest position in Layers list
+Play/Pause button improvements for videos added as object
+Font settings/values not displaying after adding new Text object
+Alt+Left Arrow rotation causing attribute values to disappear
+Improvements
+Search for cue now scrolls script to found and selected cue
+Desktop icon now placed in 'Public\Desktop' for all user accounts
+Default title suggested when inserting Blank or Text cues
+Lyrics 'Fire' mode Preview area partially shown pages now fire
+Chapter changing in Insert Bible window faster
+Stage text boxes no longer overlap after assigning dual-bible Stage templates
+Progress 'spinning wheel' during lengthy Insert Bible dialog operations
+Text cues added to Insert menu with more keyboard shortcuts
+Templates storage improved for speed and reliability
+Save As command returns to working location instead of top
+Zoom in Edit area remains after making edits
+MediaShout 7 launches as frontmost application
+New lyric added to library scrolls to added item
+Default bible no longer occupies position in 'Most Recently Used' list
+Cue comment hint text auto-selects for easy replacement
+Bible reference entry no longer errors on incorrect capitalization
+Script saving improvements
+Object coordinate and size values no longer contain commas
+Resolution settings values limited to four digits to avoid crashes
+Selected text remains selected after changing settings while editing
+Cue names limited to 100 characters to avoid various problems
+Version 7.3.0 (Build 1778) — November 27, 2020
+Improvements
+Sped up process of selecting and inserting Bible passages by deferring thumbnail creation until Fire mode
+Known Issues
+When entering Fire mode in Insert Bible window, there is still delay while thumbnails are generated. This varies by verse count. We're working to reduce or eliminate this delay.
+Version 7.3.0 (Build 1770) — October 27, 2020
+Major release introducing significant new features and improvements.
+New Features
+Cue Templates allow you to save and apply same settings to cues
+Text Cues provide new cue type dedicated to paginated text
+Text pagination modes: one verse per page, split verse across pages, wrap text per verse or complete block
+Stage Data Tokens show cue/page names and can display first line of next page
+Remote App support enables control of v7 using iOS remote control app
+Play Times/Loop: Media objects can now loop selected number of times
+Timed advance per page: Individual advance time for each page of cue
+Fire Lyrics 'on-the-fly': Select template and directly fire selected Lyric from dialog
+Fire Bible cues 'on-the-fly': Display Bible passages to screen from Insert Bible dialog
+Scheduled playback: Set day of week and time to fire cue automatically
+Update notifications: Notify when update available with option to skip, defer, or install
+Auto-Scroll automatically moves script and Presenter View to show active cue
+Cue 'type' icons show what type each cue in script is
+Improvements
+Increased 'zoom' range in Presenter View for bigger thumbnails
+Default script path now points to Scripts folder
+Slim red frame indicates active page in script and Presenter View
+Red 'dot' indicating active cue enhanced for greater visibility
+Known Issues
+Excessive delay when selecting Bible reference while thumbnails generate. Varies by verse count. Improvement in progress.
+Version 7.2.8 (Build 1622) — June 16, 2020
+Fixes
+Fixed issue causing script not to open if it contained audio files created with Apple's VoiceMemos app
+Minor improvements and fixes to Audio Player plugin
+Version 7.2.8 (Build 1617) — May 29, 2020
+Fixes
+Installer fix for missing file/folder when upgrading
+Minor fixes for bible MRU list
+Version 7.2.8 (Build 1613) — May 20, 2020
+New Features
+Cues can now be set to automatically advance at end of selected media object
+Cues can now be set to be Skipped (via Script Control plugin or right-click menu)
+Default bible translation (set in Settings > Library Settings)
+Five 'Most Recently Used' bibles listed when selecting translation
+Improvements
+Improved Spacebar to fire cues in Edit mode reliability
+Removed leading colons and zeros in Timer and Key Objects
+Added new icon and tooltip when object is not locked
+Quick cues now save globally
+Using keyboard shortcuts after Quick Cues now works better
+First video after launching now fires more quickly
+Import 'as Presentation' improvements to Shadow, Outline, Background, Resolution and Smart Art
+Quick Cues now displayed on Stage when fired
+Fixes
+Locked objects can no longer be edited or have page breaks attempted
+Library windows no longer blink/flash under certain conditions
+Crash when exporting script 'as images' fixed
+'Undo' after Importing from v6 and syncing to Stage no longer crashes
+Imported v6 lyrics now show correct title
+Drag and non-drop from Explorer no longer leaves lonely thumbnail chasing cursor
+Unsupported file formats removed from file browsing list
+Several other rare crash issues eliminated
+Version 7.2.7 (Build 1565) — April 14, 2020
+New Features
+Drag and Drop media files from Library or Windows Explorer to create multi-page or individual cues
+Audio Player plugin for creation of independent audio playlists
+Fire cues in Edit mode by double-clicking cue thumbnail or page name
+Improvements
+Control display text and icons brighter with higher contrast
+'Scale to Fit' option added to Background layer as default
+WMA and M4A files added to supported audio file list
+New unified sort option as default when browsing media files
+Stage display objects imported when converting v6 scripts
+Video objects can now be played on Stage display
+'Mirror Main' feature now mirrors video objects
+Pop-out Scroll bars replaced with improved design
+Fixes
+Cut transitions no longer delay per 'Duration' setting
+'Directory name is invalid' error removed when importing from v6
+Imported PowerPoint files now inserted below selected cue
+Newly added cues now placed after selected cue
+Unsupported media types no longer cause v6 script imports to fail
+Pasted lyrics stanzas no longer inserted in wrong place
+Rare crash issues eliminated
+Known Issues
+Potential Crash: Instability with scripts over 20 cues when using Export as Images. Advise saving script and testing. Investigation in progress.
+Performance Warning: Low-end hardware may experience poor performance with 'Mirror Main' feature, especially with video content. Test your system before presenting.
+Lock Bug: Layers do not fully lock edits, allowing page break attempts. Right-clicking shows greyed-out options but page breaks can still be created (blank and unlocked). 'Undo' can reverse inadvertent changes. Fix in progress.
+Version 7.2.6 (Build 1513) — March 5, 2020
+Fixes
+Correctly converts Cues Library even if empty (prevents repeated prompts)
+Deletes related content from Cues Library folder when cue is deleted
+Version 7.2.6 (Build 1507) — February 26, 2020
+New Features
+Import scripts from MediaShout 6
+Improvements
+Cues Library storage method reworked to speed up saving and accessing cues (will convert first launch; time varies with library size)
+Importing PowerPoint files as 'Images' now produces cues more accurately at wider resolution range
+Importing PowerPoint files as 'Presentation' creates native v7 cues more accurately
+Control Screen layout adjusted for 1366x768 screens (common on 14-15" laptops)
+Improved activation experience for those upgrading from v6
+Known Issues
+MediaShout 6 Import: Some v6 cue types not yet supported or imported in modified form. Support will be added as features are released.
+Cues Library conversion: Can take considerable time with large libraries (do NOT close MediaShout). Restart after conversion recommended. Computer may report MediaShout as 'Not responding' (normal—only happens once).
+Importing PowerPoint as 'Presentation': Some content may look different due to conversion tool limitations. Presentations using 'Themes' affected most.
+Version 7.2.5 (Build 1431) — December 5, 2019
+Improvements & Fixes
+Fixed bug preventing firing cues by double-clicking in Presenter View
+Fixed bug causing some 'Insert Lyrics' controls to be greyed-out with SongSelect
+Fixed issue with muted video objects sometimes playing audio
+Improved loading scripts to fix issues with old scripts
+Improved adding Page Breaks in text
+'Mirror Main' switch position now retained between launches
+Removed 'Edit on the fly' switch—feature always on now
+Changed default for 'Autosave' to off to avoid playback interruptions
+Numerous small under-the-hood bug fixes
+Version 7.2.5 (Build 1410) — November 29, 2019
+Primary focus: improving and optimizing core foundation. Enhanced stability by fixing 3rd-party tool issues and preparing for upcoming features.
+New Features
+Most edits to currently fired cue now display instantly on-screen
+Fixes & Improvements
+Fixed crash when playing multiple consecutive video cues
+Fixed issue with Locked objects preventing script reopening
+Fixed Sermon Builder issue disabling 'Create' button
+Improvements to adding pages to cues
+Improvements to Drag and Drop
+Improvements to Copy and Paste cues and pages
+Improvements to Transitions
+Known Issues
+Object attributes (lock, layer order, etc) of previous scripts may be modified due to extensive code changes. Check existing scripts before presenting.
+Use of Lists (bullets, numbered lists) may produce output differing from editor (improvement in progress)
+Use of Tabs currently disabled due to improper display (improvement in progress)
+Large Cues Libraries can cause delays (improvement planned)
+AutoSave can cause delays while saving periodically (can be disabled but enabled by default)
+Version 7.2.2 (Build 1364) — October 11, 2019
+Fixes
+Fixed rare issue where Stage display would not update
+Version 7.2.1 (Build 1362) — October 9, 2019
+New Features
+Audio Objects and Audio Backgrounds
+Drag and Drop directions for media objects
+Key Object firing added to Script Scenario Plug-In for Main and Stage
+Fire Control Plug-In to see and adjust media elements playing at current time
+Speed Controls added to Video Backgrounds
+Fixes & Improvements
+Fixed major crash involving Telerik 3rd-party tools
+Fixed rare crash from copy error with Page Breaks
+Added count of objects in Layers Tab
+Improved Text Boxes and FX
+Improved import of v6 Lyrics
+Improved scaling when changing script resolutions
+Fixed rare bug where Bible Reference would not fire correctly
+Implemented Cues Library saving after installing new version
+Fixed issue on start-up when double-clicking script with MediaShout 7 closed
+Fixed issue where video background would refire when moving backwards
+Fixed issue when firing Key Objects manually
+Fixed issue defining Main and Stage Key Objects independently
+Added file name and path of original background media object
+Improved Video Background playback and transitions
+Improved Object Visibility UI in Layers
+Improved Background Properties
+Fixed issue where video objects using VLC may loop on some computers
+Significant improvement to saving and applying Presets
+Added ability to copy and paste entire license code in Activation Window
+Improved file path settings
+Fixed issue where object layers may not work correctly
+Fixed issue where Remote Control config did not save
+Improved setting In/Out points for Video and Audio
+Updated "Sunday Sample.sc7x" script for installation
+Improved Background FX options for images and videos
+Improved video playback code
+Fixed issue where Key Objects may not show correctly in Edit Area on fire
+Added labels to library media files
+Fixed issue with Key Object creation
+Improved transitions for objects and pages
+Added audio FX for audio files
+Fixed issue when firing Blank Cue
+Adjusted Layers and Background Tabs for Audio
+Improved Script saving logic
+Fixed issue with Opacity settings on images
+Fixed issue where Key Object Plug-In may not show fired Key Object correctly
+Fixed naming of script folder
+Fixed new script temp folder
+Fixed issue with background media in temp folder
+Improved Windows Media Player Classic Video option
+Fixed issue where Undo/Redo would not update ribbon correctly
+Fixed issue where Cues Library temp folder would not work
+Fixed issue with Preview of cues/pages in Edit Area
+Improved Insert Bible Window
+Fixed issue with Key Objects not refreshing on Main and Stage displays
+Improved Sermon Builder
+Fixed installer file issue
+Fixed issue where right-click menu would blink unexpectedly
+Improvement of opening old v7 scripts
+UI/UX Improvements
+Code refactoring for stability and smaller installer file size
+Version 7.1.8 (Build 1258) — September 3, 2019
+Fixed issue with Video Thumbnail Paths causing error
+Fixed issue with adding Cues to Cue Library
+Fixed crash when using Stop All while playing Video Background
+Improved folder paths for New Scripts
+Fixed issue where Display Settings may not save correctly
+Improved Key Objects functionality and stability
+Fixed issue where saving could cause corrupt script file
+Added ability to change video playback to Windows Media Player Classic
+Other stability improvements
+Version 7.1.7 (Build 1251) — August 14, 2019
+Added ability to download Bibles from within program
+Added ability to select thumbnail for video objects
+Added ability to set In/Out Points for Background Video
+Improvement of Import PPT/PPTX parsing
+New Settings Window with tabs for easier navigation
+Fixed issue where Presenter Toggle may not work when first launching
+Other stability improvements
+Version 7.1.6 (Build 1243) — August 5, 2019
+Limited Release.
+Improved Font Selection window controls
+Improved focus control
+Set Open Folder to match Default Save Folder
+Added In/Out Points for Video Backgrounds
+Fixed issue where last line alignment after page break was always center
+Fixed issue where Stage sync would not keep visibility settings
+Added PageUp/PageDown for USB Remote controls
+Fixed issue where extra line break added when doing Page Breaks in Lyrics
+Updated v6 upgrade window to better explain activation count
+Version 7.1.5 (Build 1233) — July 30, 2019
+Limited Release.
+Updated Registration Trial Information
+Backend work on new language files
+Fixed random crash when using List View in Presenter Mode
+Version 7.1.4 (Build 1230) — July 28, 2019
+Fixed issue with SongSelect search and download
+Fixed issue where uninstalling may fail
+Fixed issue with Main and Stage Display status and icons
+Version 7.1.3 (Build 1227) — July 24, 2019
+Improvement of Stanza List
+Update of Right-Click Menu for Text objects
+Improved Lock Aspect Ratio Controls
+Improved X, Y, H, and W object controls
+Improved speed of switching between scripts
+Improved FX functions for various objects
+Updated Trial Licensing System
+Improved Dissolve Transition for objects and pages
+Fixed issue where saved script would not reopen if object was originally read-only
+Fixed rare issue where program would lose user-control when failing to save
+Fixed rare issue with trial appearing when activated computer offline
+Added ability to multi-select lyrics in Lyric Library (delete, move to folder, insert)
+Updated Cue Library's order of cues
+Improved transition when moving page to page non-linearly
+Added toggle for Presenter View/Edit View in Main Ribbon
+Fixed issue where copied/cut cues paste after selected cue
+Added icons to toggle Main/Stage displays on/off independently
+Version 7.1.2 (Build 1204) — July 15, 2019
+Fixed random issue with trial users receiving error code
+Fixed issue for v7.0.9 users with trial expired appearing unexpectedly
+Fixed issue where Bibles may not appear fully in licensed build
+Version 7.1.1 (Build 1203) — July 11, 2019
+For Licensed Users Only.
+Major feature release with 30 significant additions and improvements.
+Version 7.0.9 (Build 1166) — June 27, 2019
+Limited Release. 18 improvements and fixes.
+Version 7.0.8 (Build 1149) — June 21, 2019
+Separated user config file when updating from previous build
+Fixed issue with videos on background causing unexpected behavior
+Version 7.0.7 (Build 1147) — Internal only
+(Internal build for testing.)
+Version 7.0.6 (Build 1139) — June 17, 2019
+Improvements to saving User Configuration when updating
+Added ability to Apply Formatting when synching linked Objects
+Improved notification with busy icon for longer-running processes
+Version 7.0.5 (Build 1136) — June 13, 2019
+Improvement of Video System
+Fixed rare issue where program could close without saving if video file present
+Fixed issue with Key Objects appearing incorrectly on Stage Display
+Fixed issue with Key Objects disappearing when switching scripts
+Fixed rare issue with Offline Activation that may fail
+Version 7.0.4 (Build 1133) — June 12, 2019
+Minor search improvements in Insert Lyrics
+Improvement of Activation Wizard text
+Improved UI clarity for already downloaded SongSelect lyric
+Improved UI clarity for right-click menu when Synching
+Added Required Fields to Registration and Trial windows
+Added ToolTip to Cues Library cue name hover
+Fixed crash when deleting Cue being fired to Displays
+Updated licensing behavior for improved Trials/Activations
+Updated Installer UI text for clarity
+Fixed issue where uninstalling/updating showed deactivation window (should not appear going forward)
+Version 7.0.3 (Build 1126) — June 7, 2019
+Fixed issue where selecting video thumbnail of background could cause crash
+Fixed issue where recently created script with video element may not save or reopen correctly
+Version 7.0.2 (Build 1124) — June 6, 2019
+Fixed issue for some users getting Expired Trial
+Improvement to Video Playback
+Improved Comment Box in Cue to dynamically expand
+Fixed issue where background might cut transition instead of set transition
+Added Loading notification for lengthy functions
+Fixed issue when copying/pasting currently fired cue
+Fixed issue where cue numbers were incorrect when copying/pasting
+Added ability to "Apply Formatting" for Stage Display text boxes
+Fixed issue for Windows 7 users when trying to activate Online
+Version 7.0.1 (Build 1115) — June 4, 2019
+Original Launch Build.
+Updated: Jun 01 (5 months ago)
+Other Articles
+How to Set up Remote Control in MediaShout 7
+How to use the Unsplash and Pixabay Integrations in MediaShout 7
+How to Backup your MediaShout files
+How to export your Lyric Library in MediaShout 7 (and import it)
+Suggested Video Cards for MediaShout 7
+How to Upgrade to MediaShout 7 from ANY older version
+Creating Custom Title Pages for Lyric Cues
+How to Add your own Templates to the Sermon Builder
+How to Update CCLID For a Lyric in your Cues Library
+How to connect SongSelect and Auto Reporting
+and 17 more ...

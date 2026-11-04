@@ -323,6 +323,12 @@ export const productSchema = z
     languages: z.array(z.string()).optional(),
     docs_url: z.url().optional(),
     community_url: z.url().optional(),
+    /** RSS/Atom feeds of the vendor's blog/announcements. scripts/fetch-news.ts drafts `announcement` items from these. */
+    news_feeds: z.array(z.url()).optional(),
+    /** RSS/Atom feeds of release notes, for products without GitHub/GitLab releases. Drafted as monthly `release` items. */
+    release_feeds: z.array(z.url()).optional(),
+    /** Human-readable release notes / changelog page. Shown on the product page; checked by hand when there's no feed. */
+    release_notes_url: z.url().optional(),
 
     /** URLs used to verify this entry. */
     sources: z.array(z.url()).min(1),
@@ -341,3 +347,40 @@ export const productSchema = z
   });
 
 export type Product = z.infer<typeof productSchema>;
+
+export const NEWS_KINDS = {
+  release: "Release",
+  pricing: "Pricing change",
+  status: "Status change",
+  acquisition: "Acquisition",
+  announcement: "Announcement",
+} as const;
+
+/**
+ * A news item links out to the original source; the summary is written in our own words.
+ * Inclusion rule (same for every product, enforced by scripts/validate.ts):
+ * releases are rolled up to at most one `release` item per product per calendar month.
+ */
+export const newsSchema = z
+  .object({
+    title: z.string().min(1).max(120),
+    date: isoDate,
+    /** Product slug (filename in src/data/products without .yaml). */
+    product: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/),
+    kind: enumOf(NEWS_KINDS),
+    /** The original article, release or changelog. */
+    url: z.url(),
+    /** One or two neutral sentences in our own words. Never copy the source text. */
+    summary: z.string().max(300).default(""),
+    /** Publisher, e.g. "GitHub", "Vendor blog". */
+    source: z.string().optional(),
+    /** Drafts are not published. scripts/fetch-news.ts creates drafts for review. */
+    draft: z.boolean().default(false),
+  })
+  .strict()
+  .superRefine((n, ctx) => {
+    if (!n.draft && n.summary.trim().length < 20)
+      ctx.addIssue({ code: "custom", path: ["summary"], message: "a summary (20+ characters, in your own words) is required unless draft: true" });
+  });
+
+export type NewsItem = z.infer<typeof newsSchema>;

@@ -97,6 +97,7 @@ feature_notes:
   connectivity.collaboration: Multiple users can work on presentations from one account; simultaneous Presenter sessions require Pro Plus.
   connectivity.offline: Offline mode runs existing and new services; YouTube and SongSelect import need a connection.
 docs_url: https://www.worshiptools.com/
+release_notes_url: https://www.worshiptools.com/en-us/presenter/download/change-log
 sources:
   - https://worshiptools.com/presenter
   - https://www.worshiptools.com/pricing

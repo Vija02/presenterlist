@@ -1,0 +1,8 @@
+title: 'Proclaim: August 2026 releases (4.20.0.0127 to 4.20.0.0134)'
+date: 2026-08-31
+product: proclaim
+kind: release
+url: https://faithlife.github.io/ProclaimReleaseNotes/4.20/ReleaseNotes.html
+summary: Maintenance updates to 4.20 that fix customizing media, include all media in presentation backups, fix a MIDI crash on Windows and support new payment options at checkout.
+source: Proclaim release notes
+draft: false

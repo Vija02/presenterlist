@@ -81,6 +81,7 @@ feature_notes:
   broadcast_video.ndi: NDI output is available only in the Windows desktop app, not the browser version.
   connectivity.remote_control: Running the service from a phone is a Teams (paid) feature.
   connectivity.collaboration: Real-time multiplayer and inviting teammates to the workspace are Teams (paid) features.
+release_notes_url: https://www.cloudofworship.com/changelog
 sources:
   - https://github.com/CoW-Labs/cloudofworship
   - https://github.com/CoW-Labs/cloudofworship/blob/main/app/composables/useSubscription.ts

@@ -44,6 +44,9 @@ feature_notes:
   multilingual.bilingual_display: Songs can be presented and exported in two languages at the same time.
   outputs.multiple: Multi-screen presentation is supported out of the box.
 docs_url: https://www.cantara.app
+news_feeds:
+  - https://www.cantara.app/blog/index.xml
+release_notes_url: https://www.cantara.app/releasenotes/
 sources:
   - https://www.cantara.app
   - https://github.com/reckel-jm/cantara

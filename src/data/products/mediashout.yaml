@@ -76,6 +76,7 @@ feature_notes:
   outputs.lower_thirds: Lower-third templates are included.
   connectivity.remote_control: MediaShout Remote app for iOS (added in 7.3); standard USB presentation remotes also work.
 docs_url: https://mediashout.com/docs/mediashout-7-user-guide/
+release_notes_url: https://support.mediashout.com/688627-MediaShout-7-Windows-Change-Log
 sources:
   - https://mediashout.com/
   - https://mediashout.com/pricing

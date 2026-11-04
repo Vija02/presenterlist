@@ -1,0 +1,8 @@
+title: "LyricDisplay: September 2026 releases (6.8.7 to 6.8.8)"
+date: 2026-09-19
+product: lyricdisplay
+kind: release
+url: https://github.com/PeterAlaks/lyric-display-app/releases
+summary: Adds a configurable backend port and new notification sounds, with fixes to the timer display, file navigator and updater.
+source: GitHub
+draft: false

@@ -1,0 +1,8 @@
+title: SongBeamer 6.16f released
+date: 2026-09-21
+product: songbeamer
+kind: release
+url: https://forum.songbeamer.de/viewtopic.php?p=24771#p24771
+summary: Improves book names in Zefania XML Bible imports, sends mixed-object text to the stage monitor and text output, and only sends pasted images over NDI when image transfer is enabled.
+source: forum.songbeamer.de
+draft: false

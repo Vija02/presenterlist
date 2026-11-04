@@ -110,6 +110,7 @@ feature_notes:
   connectivity.cloud_sync: All data and media can be synchronised between computers through Google Drive (settings are not synced).
   connectivity.remote_control: Holyrics mobile app for Android and iOS (iOS app is a one-time US$0.99 purchase).
 docs_url: https://github.com/holyrics/API-Server
+release_notes_url: https://holyrics.com.br/changelog/
 sources:
   - https://holyrics.com.br/
   - https://holyrics.com.br/software.html

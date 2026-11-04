@@ -1,0 +1,5 @@
+# Items fetch-news should not draft again. One per line:
+#   a URL (blog post or release link), or
+#   "<product-slug> <YYYY-MM>" to skip a product's release item for that month.
+# Comments start with #.
+songbeamer 2026-10  # 6.17 announced as a beta

@@ -1,0 +1,209 @@
+Planning Beta is now available to try for FREE! Start planning your Sunday service today.
+Software
+Media
+Blog
+Support
+My Information
+Log In
+software
+Features
+Pricing
+Bible Plugins
+What's New
+Requirements
+Download
+What's New in EasyWorship
+Build 8.0.49
+Jun 30, 2026
+General Bug Fixes
+View more info
+Build 8.0.48
+Jun 9, 2026
+General Bug Fixes
+View more info
+Build 8.0.47
+May 29, 2026
+General Bug Fixes
+View more info
+Build 8.0.46
+May 14, 2026
+General Bug Fixes
+View more info
+Build 8.0.44
+Apr 27, 2026
+Mac Support
+Run EasyWorship natively on Apple Silicon Mac computers without emulation or workarounds.
+Watch the announcement
+Cross-Platform Workflows
+Prepare and present on Mac or Windows interchangeably. Volunteers can use whichever computer is available in the booth or office.
+Cross-Platform File Compatibility
+Open schedules, songs, and media across Mac and Windows without conversion or additional setup.
+Demo Data
+Sample media come pre-loaded so you can explore a complete service setup before building your own.
+Build 7.4.2.12
+Jul 8, 2026
+General Bug Fixes
+View more info
+Build 7.4.2.11
+Jun 30, 2026
+General Bug Fixes
+View more info
+Build 7.4.1.9
+Mar 3, 2023
+General Enhancements
+View more info
+General Bug Fixes
+View more info
+Build 7.4.1.6
+Feb 7, 2023
+General Bug Fixes
+View more info
+Build 7.4.1.5
+Jan 31, 2023
+CCLI Auto-Reporting
+Enable auto-reporting for SongSelect by CCLI and have all of your song activity automatically reported.
+General Enhancements
+View more info
+General Bug Fixes
+View more info
+Build 7.4.0.15
+Jan 3, 2023
+General Bug Fixes
+General Bug Fixes
+Build 7.4.0.14
+Dec 9, 2022
+General Bug Fixes
+View more info
+Build 7.4.0.13
+Nov 16, 2022
+General Bug Fixes
+View more info
+General Enhancements
+View more info
+Build 7.4.0.8
+Aug 15, 2022
+General Enhancements
+View more info
+General Bug Fixes
+View more info
+Build 7.4.0.7
+Jul 29, 2022
+SongSelect Integration
+Browse, search, and import lyrics from SongSelect by CCLI directly into the Song Library.
+Premium Media Integration
+Browse, filter, and import Premium Media directly into the Media Library.
+MIDI Sync
+Connect and control EasyWorship schedules on different computers using MIDI In & Out.
+New Web Browser
+Go live with any web page or video from YouTube or Vimeo.
+General Enhancements
+View more info
+General Bug Fixes
+View more info
+Build 7.3.0.13
+Oct 26, 2021
+General Bug Fixes
+View more info
+Build 7.3.0.11
+Sep 14, 2021
+Alternate Output
+Use of multiple outputs allows for different displays for in-house or livestream events while combined with themes.
+Shapes
+Create new designs with the addition of the Shape Engine in the Editor. Also, use shapes as masks for videos and images.
+Element Rotation
+Rotate text, shapes, and media elements using the Editor.
+Contiguous View
+View your whole schedule in the live window selector of Preview and Live Combined view.
+General Enhancements
+View more info
+General Bug Fixes
+View more info
+Build 7.2.3.0
+Nov 23, 2020
+General Bug Fixes
+View more info
+Build 7.2.2.0
+Jul 23, 2020
+General Bug Fixes
+View more info
+Build 7.2.1.0
+Jun 25, 2020
+Memory Extended for 64-bit systems
+Extended addressable memory from 2GB to 4GB on 64-bit systems (2GB to 3GB on 32-bit)
+Support for NDI Version 4
+Added NDI version 4 support
+General Enhancements
+View more info
+General Bug Fixes
+View more info
+Build 7.1.4.2
+May 8, 2020
+General Bug Fixes
+View more info
+Build 7.1.4.0
+Feb 5, 2019
+General Bug Fixes
+View more info
+Build 7.1.3.0
+Jan 8, 2019
+NDI Update
+Updated to NewTek NDI 3.8.
+Added native NDI HX support.
+General Bug Fixes
+View more info
+Build 7.1.2.0
+Nov 12, 2018
+General Bug Fixes
+View more info
+Build 7.1.1.0
+Nov 7, 2018
+Midi Support - Subscription Only
+Added support for Abelton Live and other MIDI input devices.
+Android App
+Added Android Remote App
+Google Play Store
+Apple Watch App
+Added support for Apple Watch App (Available in the App Store)
+Support for Transparent WebM Files
+Added support for transparent webm files. Removed side-by-side and top-to-bottom support.
+General Bug Fixes
+View more info
+Build 7.0.4.1
+Feb 22, 2018
+PowerPoint Import Fix
+Fixed an issue with PowerPoint 32Bit not rendering custom text styles correctly.
+Build 7.0.4.0
+Feb 22, 2018
+General Bug Fixes
+View more info
+Build 7.0.2.0
+Dec 28, 2017
+Remote Control App Fix
+Added some changes to remote control for acknowledgement of valid connection. This is needed for new iOS remote beta.
+Build 7.0.1.0
+Dec 6, 2017
+Dark Theme
+Now you can switch between a dark and light interface.
+Slide Look and Color
+Easily know where you are at in song slides with the added ability to color slides based on verse, chorus and bridge.
+Alpha Channel Video
+Layer text over video over your live feed and get the professional look you've been wanting.
+Multiple Lines on Foldback Video
+Keep the Foldback Screen informative as possible with the ability to use multiple lines.
+Copyright Visible on First Slide Only
+Keep your song slides clean with the option of copyright only available on the first slide.
+Support NDI as a Live Output
+Use your live output as an NDI stream to a video mixer or other computer with EasyWorship.
+Support NDI as a Capture Source
+With NDI as a capture source, anything with NDI capabilities is now your camera. From your smart phone to the actual camera you bought for filming.
+Added Undo and Redo to Editor
+Want to try something new with your design? Go for it! Undo is here and on your side.
+Remote App (iOS)
+The Remote App for EasyWorship is now available for iOS devices. Control is now in the palm of your hand.
+Watch the video tutorial.
+Subscription
+EasyWorship software now has the ability to operate through subscription pricing, so that the software becomes more affordable for your budget.
+General Bug Fixes
+View more info
+Join thousands of EasyWorship users worldwide and keep up to date with our latest software updates and media content.
+Join Now

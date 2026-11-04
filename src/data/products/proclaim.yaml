@@ -107,6 +107,11 @@ feature_notes:
   connectivity.web_native: Presentations can be created and edited in a browser with Proclaim Pro, but presenting requires the desktop app.
   connectivity.remote_control: Remote control apps for iOS and Android are included in every plan.
 docs_url: https://support.proclaim.logos.com/
+news_feeds:
+  - https://www.logos.com/grow/tag/proclaim/feed/
+release_feeds:
+  - https://github.com/Faithlife/ProclaimReleaseNotes/commits/gh-pages.atom
+release_notes_url: https://faithlife.github.io/ProclaimReleaseNotes/
 sources:
   - https://proclaim.logos.com/
   - https://proclaim.logos.com/pricing

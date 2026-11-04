@@ -1,0 +1,8 @@
+title: "ChurchPresenter: October 2026 releases (26.16.6 to 26.17.29)"
+date: 2026-10-26
+product: churchpresenter
+kind: release
+url: https://www.churchpresenter.org/changelog/
+summary: Adds merged outputs for video walls, remote Bible translations, a second voice and per-song looks for songs, and an Output tab in the song editor, plus crossfade and remote-control fixes.
+source: GitHub
+draft: false

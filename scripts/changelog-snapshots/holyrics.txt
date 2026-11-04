@@ -1,0 +1,1109 @@
+Software Holyrics to Windows -->
+Slide show and Bible verses.
+Organize playlists and schedule, announcements, history, reports...
+15/09/2026 - v2.30.0
+News and Changes
+• [User Data API] New API available to list online program data, allowing integration with other services;
+• [Cloud Sync - Google Drive] Conflict resolution dialog to prevent service order desynchronization.
+• [JSLib | Module] Updates and improvements to JSLib and Modules.
+Bug Fixes
+• [Cloud Sync] Failure to continue synchronization when a symbolic link (shortcut) is unavailable;
+• Other fixes and performance improvements...
+15/07/2026 - v2.29.0
+News and Changes
+• Integration with volunteer management applications, allowing the service order created in the application to be downloaded directly into the program (file menu, open).
+- asaph
+- LouveApp
+- Voluts
+• [Display Settings] Screen mapping with Vertex Mapper . Free license included for use with Holyrics;
+• [Display Settings] NDI® output (text layer only, not compatible with videos); ( NDI® is a registered trademark of Vizrt NDI AB )
+• [Cloud Sync | Google Drive] Permission management, allowing you to define what each device connected through synchronization is allowed to edit;
+• [Presentation] Option to zoom the displayed image (right-click the image in the presentation footer);
+• [Tags] Option to assign tags to song lyrics, text, audio, video, and images, enabling advanced organization for use with triggers, modules, rules, and other solutions;
+• [JavaScript - Development Mode] Synchronize .js files from a program subfolder with the corresponding JavaScript code used by the program, allowing the code to be edited externally in an IDE (for example) and automatically updated in the program. Available for: Includes, Modules and Community;
+• [Settings] In the "Manage access without password" (mobile) option, the "Last Connection" information will display the date and time of the device's most recent access;
+• [Verse | Projection] Option to display the Bible book name in uppercase, not just the verse text;
+• [Planning Center] Support for importing items with multiple attachments;
+• [Login | Plan] Option to generate a token for Holyrics Plan login, avoiding the need to share username and password when signing in on another computer;
+• [Log | JavaScript] Option to automatically save logs to a file;
+• [JSLib | Module] Updates and improvements to JSLib and Modules.
+Bug Fixes
+• Fixed an issue where the slide preview in the main window (HTML output) displayed content without line breaks, resulting in a preview that differed from the actual output;
+• Fixed an issue when displaying images whose filenames contain semicolons;
+• Other fixes and performance improvements...
+23/07/2026 - v2.29.1
+Bug Fixes
+• [VLC Player] Context menu is blocked, preventing video scaling adjustments while playing;
+• Dragging a media file directly from a computer folder onto a Text slide does not work;
+• Custom Bible theme does not work on the NDI output.
+14/04/2026 - v2.28.0
+News and Changes
+• [Stage View] Option to add the beginning of the next verse on the current slide;
+• [Triggers] Option to add an individual trigger for a playlist item or favorites bar. In other words, it allows adding actions (triggers) that will be executed automatically when running the main item;
+• [Countdown] Syntax that allows adding multiple texts that will be displayed according to the remaining countdown time;
+• [Display Settings] "Multiview" window that allows previewing multiple system screens (public, return, HTML, etc.) (Also available via plugin link);
+• When reordering by dragging a Title item in the media playlist, if it is collapsed, all "child" items will be moved together with the title as a block;
+• [Logo - Settings] Option to save and load Logo configuration (preset);
+• [Triggers] Option for triggers when starting and ending the program;
+• [Triggers] New "source" rule, which makes it easier to create a trigger that works for any item except a specific one;
+• Setting to add a delay (execution delay) to a Trigger and to a favorites bar item (right mouse button);
+• [Automatic Presentation] Option to select "next presentation" that will be executed automatically when an auto presentation ends;
+• [Automatic Presentation] When selecting and running multiple Automatic Presentation items in the service/event list using the right mouse button, the items will be executed sequentially one after another, using the recent "next presentation" implementation;
+• [MIDI] Option to sync VLC Player with MIDI Time Code;
+• [Bible Window] Setting to fix the number of columns in the chapters and verses grid (Bible window settings button, layout tab);
+• [Bible Window] Setting to increase the width of the verse list (right mouse button on the verse list, settings submenu, "width" option);
+• [Settings - Clock - Wallpaper] Setting to fine-tune the exact position of the clock on the wallpaper;
+• [Display Settings] Option to rename the respective HTML tabs in the display settings;
+• [Display Settings] Option to hide specific presentation types for physical outputs, similar to HTML outputs;
+• Option to define the alignment of the verse reference (when at the top or bottom) independently from the alignment defined in the Theme;
+• New item type (for playlist or favorites bar) that allows selecting a background from the "my videos" tab for display;
+• [Interface] Multiple languages available for the program interface, automatically translated using AI;
+Bug Fixes
+• Issue restoring component widths when restarting the program;
+• Automatic Presentation does not update the global BPM value;
+• The verse from the third Bible version when displaying 3 versions simultaneously does not apply the "split long verses" option when enabled;
+• Other fixes and performance improvements...
+14/04/2026 - v2.28.1
+Bug Fixes
+• The smooth transition effect is not being applied when starting a presentation with a video background.
+28/10/2025 - v2.27.0
+News
+• Integration with Worshipwide content (subscription required). Download directly from the theme background window;
+• [Receiver] New receiver type "Holyrics Action" (for use in triggers) that allows executing a native program action, such as playing audio, displaying an image, etc.;
+• [Actions] New type of native item (for use in the favorites bar, playlist, etc.) that performs general context actions, such as controlling VLC Player, opening windows, changing some settings like Bible version, etc.;
+• [Favorites] Option to temporarily pause trigger execution (within the new "Actions" item);
+• [JSLib] State button (boolean) for use in rules and buttons in favorites.
+Changes
+• [Alert] Display alert text while playing videos in VLC Player;
+• [Presentation Footer] Setting to define maximum width and height for Text mode and set a fixed ratio for Image mode;
+• [Bible Window] Shortcut to open the verse passage search window in the currently selected book using Ctrl+Shift+F .
+Fixed issues
+• Changes made in the receiver editing window are not saved;
+• Setting a color in custom formatting does not save the color;
+• Duplicate parentheses when displaying the Bible version (in layer mode);
+• Possible temporary UI freeze when a module’s function actions() takes too long to execute;
+• Possible crash when listing webcams;
+• Fixes and performance improvements...
+29/10/2025 - v2.27.1
+Fixed issues
+• Error displaying images on Linux and macOS;
+• Internal adjustment in the integration with Worshipwide;
+• VLC Player configuration context menu with excessive items.
+18/07/2025 - v2.26.1
+Fixed issues
+• [macOS | VLC Player] Problem playing videos on macOS;
+• [Automatic Presentation] Audio progress bar error limited to 1 minute and 40 seconds.
+15/07/2025 - v2.26.0
+News
+• Holy Bible, New Living Translation®
+• THE MESSAGE®
+Thanks to Tyndale House Publishers
+• BKJ Biblia King James Fiel 1611®
+Thanks to BV Books Editora
+• [Bible] Support for selecting non-sequential verses in the Bible window using the Mouse and CTRL or SHIFT keys;
+• [Bible | Verse Display] Option to add a solid separator line between different Bible versions;
+• [Rules | Conditional Execution] New mechanics to create complex rules and control execution of items like triggers and scheduled tasks. Allows specifying exact times when a trigger can run;
+• [Spell Checker] JavaScript handler to ease the implementation and maintenance of spell checkers for new languages;
+• [Communication Panel] Right-click shortcut on an image to display it in the Communication Panel (i.e., return screen only);
+• [Interface] Location and size of the main window and Bible window are saved to reopen in the same position after restarting the program;
+• [Display Settings] Option to save and load configuration presets in the display settings window (right-click on the respective tab title);
+• [Playlist] When saving a list under "saved lists" with an existing name, an option to replace the current item is shown instead of just returning a "name already exists" error;
+• [Receivers] Receiver editing window now shows both Trigger and API receivers in the same window;
+• [Announcements] "Random" option for displaying multiple announcements;
+• [Triggers] New trigger options: Theme Tag, Background Tag, song group, changed Bible version, drawn item, and alert message;
+• [Cache] Option to disable video file cache to save space if needed (advanced settings);
+• [Settings] Ability to define fade in and/or fade out effects independently for each type of presentation on the public screen window;
+• [Multiple Choice] Option added to save and import questions in JSON format. Conflict window added to handle duplicate items on import;
+• [Transition Effects] You can set specific transition effects for different item types or for each slide in a presentation (right-click on slide in the editing window);
+• [Song Lyrics] Option to hide slide text on the "public" screen when using a specific background (right-click on the respective slide in the song lyrics editing window). Useful for video lyrics ;
+• [Planning Center Online] Organization of "ServiceType" based on each item's "Folder" value;
+• [JSLib | API Server | Module] Various updates to JSLib, API Server, and Modules;
+Fixed issues
+• [Lyrics] When creating a new song lyric and saving it, the lyric text disappears right after;
+• [Linux] Error when opening file location that contains spaces;
+• [VLC Player] Prevent display of "black screen" on the first frame when playing a video in VLC Player;
+• [Trigger] An "when close" video or audio trigger was being activated when the "stop" action was executed, even if the media hadn't actually played;
+• [Interface] The "Replace" (ctrl+h) shortcut does not activate the save button in the edit window;
+• [Synchronization] Music arrangements with sync errors when using Holyrics Plan;
+• Fixes and performance improvements...
+22/03/2025 - v2.25.1
+Fixed issues
+• [Automatic Presentation] Problem creating new Automatic Presentations;
+• [Communication Panel] Custom color setting for time was not working;
+• [Edit Slide Order] 'Reset' button was not working;
+• Some important fixes in the JSLib ecosystem.
+18/03/2025 - v2.25.0
+News
+• [Custom Messages] Option to send a Custom Message over the internet (requires a Holyrics Plan subscription), without needing to be on the same local network (accessible via Telegram);
+• [Custom Messages] Option to automatically close the displayed content after X seconds;
+• [Styled Model] Structure that allows the creation of formatting templates (similar to CSS) for use in texts compatible with <styled> ;
+• [Sort Slides] Ability to create different slide sequences for the same song lyrics, making it easier to organize and modify sequences without losing a previously created one;
+• [Insert Text - JavaScript] New available types: Plain Text and Communication Panel ;
+• [Countdown Timer] Setting to display only seconds when the time is below 1 minute (option to "remove zero minute");
+• [Background - Videos] Option to reduce the resolution and/or bitrate of all videos to a set limit, and also an option to define a limit when adding new videos;
+• [Preview] Clicking the mouse scroll button displays a preview of the media (image and video). Available for media in the library and backgrounds;
+• Display the respective item's content in the program's central area (preview) when selecting an item of type Plain Text or Verse in the media playlist;
+• Ability to implement a JavaScript code to mediate the import of a list from Planning Center Online.
+Changes
+• [Media Playlist] Setting to enable line breaks in the item name displayed in the media playlist;
+• Text box to search for items in the settings window;
+• [Background] Option to add new videos and images by dragging the file to the theme footer;
+• [CMG Sans] Updated the appearance of the number 1 in the default CMG Sans font package;
+• [JSLib | Module] Various updates for JSLib and Modules (creating, editing, and deleting program data, for example);
+• [Verse List Display] Option for the first slide in a verse list display to show the verse reference (settings, several tab).
+Fixed issues
+• Changes to the advanced settings of the wallpaper clock were not being saved;
+• Issue with cropped images in some features when the screen scale is set to something other than 100% in the operating system settings;
+• Issue when using translation in an Automatic Presentation , and the translation not displaying when generating a video of the Automatic Presentation ;
+• Issue with the first edit of items in a Multiple Actions window;
+• Fixes and performance improvements...
+10/12/2024 - v2.24.0
+News
+• Option to remove the start slide and the end (blank) slide from a lyrics presentation (display settings, start slide button);
+• Conditional display of favorites bar items. Allows you to define the display of an item only in a specific window, or in a specific type of service, for example;
+• [Automatic Presentation] Option to display the remaining time of the current slide while the presentation is running;
+• [Bible] Option to set the language of the Bible window's book grid independently of the currently selected version;
+• Option to create fields to save information in a Text item (Text editing window, Extras panel);
+• Change the real-time tone of the chord displayed on the return screen (in the presentation footer, 3 dots);
+• Quick presentation of a Bible verse (in the presentation footer, 3 dots) during any presentation. Allows you to display a Bible verse without ending the current presentation. Also available in the context menu of a verse item;
+Changes
+• [VLC Player] Support for playing videos with rotation;
+• [Simulate Projection] Possibility of simulating up to 3 screens (previously there were 2) and possibility of defining the location of the screens independently;
+• [Modules] Support for translating module names and descriptions;
+• [Bible] "Search" item in the versions menu to select a version by searching by name, for convenience;
+• Ctrl+Z and Ctrl+Y support in service playlist;
+• Optimized management of space occupied by deleted files in Google Drive™ cloud sync;
+• [JSLib | Module] Various updates to JSLib and Modules.
+Fixed issues
+• Show first line of next slide in Automatic Presentation not working;
+• Prevent clicking on an empty area of ​​the main window's theme list from selecting the last item;
+• Changes were not saved in the Multiple Actions receiver's editing window;
+• Prevent black screen when starting a presentation with a video background (loading time);
+• Fixes and performance improvements...
+23/08/2024 - v2.23.1
+Fixed issues
+• Fixed possible high CPU usage and crash when there are many files in the program's media tabs;
+20/08/2024 - v2.23.0
+News
+• Modules (tools menu): new functionality that allows you to create solutions (or add solutions already created) via JavaScript for integration with the program ( Know more );
+• Option to Find (Ctrl+F) and Replace (Ctrl+H) in text editing windows (lyrics, text, script, ...);
+• [TXT] Option to run a .txt file from the "files" tab as a presentation;
+• Available list of icons (Google Material Symbols) for use on items with custom icons;
+• [Triggers] New triggers for playing media in a specific folder and for messages received via chat;
+• [Triggers / API] New "Multiple Actions" receiver for an item to perform multiple actions, making it easier to organize and maintain;
+• [JS Monitor] Window to monitor and manage some actions of the JavaScript ecosystem [setInterval, setTimeout, triggers, global, timer/countdown] ;
+(file menu, settings, advanced, JavaScript, monitor)
+• [Script] Script editing window displays code suggestions when pressing Ctrl+Space shortcut key;
+• [Script] New option to add a "shutdown" code that will be executed every time the program is terminated;
+• [Script] Importing lyrics via JavaScript;
+• [JSLib] New JSLib methods.
+Changes
+• Possibility to open the Bible window without closing the main window (settings, advanced, advanced settings);
+• Option to display the preview panel and playlist for the current service/event in the Bible window;
+• [Clock - Wallpaper] New settings for displaying the clock on the wallpaper;
+• [Alert] New "Horizontal Alignment" and "Horizontal Margin" settings in alert display;
+• [Favorites] Setting to set custom icons for some types of items in the favorites bar;
+• View list of devices connected to Google Drive™ cloud sync and option to disconnect a connected device;
+• "Next" and "Back" keys available in the "view image" window;
+• Support for synchronizing Holyrics chat with a Telegram topic group;
+• [Script] Compatibility for using Arrow Function ;
+• Option to fix line break location for slides of different sizes (settings, advanced, advanced settings).
+Fixed issues
+• List of teams, roles and members did not update in real time when editing or adding items;
+• Problem displaying wallpaper for different services and events when opening the edit window;
+• Fixes and performance improvements...
+Details of some features
+Modules
+Allows the creation of solutions using JavaScript that interact with various program resources, allowing you to change and/or adapt the program's operation, create buttons that execute customized actions, real-time triggers, among other possibilities, all in one place
+Solutions can be easily shared through a single JavaScript code (or saved as a file) and also made available in the program for other users to add ready-made solutions, through the online repository
+JSLib
+- Compatibility with websocket connections via simple string (instead of json) and the possibility of creating tcp connections that keep the connection active.
+This allows the implementation of other specific protocols and communication with other programs, such as QLC, MTQQ, Soundcraft, etc.
+- Arrow Function
+Although the system uses ECMA 5.1 as a base, a real-time parser was implemented to allow the use of Arrow Functions in the JavaScript codes used in the program.
+19/04/2024 - v2.22.1
+Fixed issues
+• Error when exporting reports to spreadsheet;
+• File locked error when restoring a backup;
+• Countdown displaying color code next to the text;
+• Fixed some internal JSLib methods.
+16/04/2024 - v2.22.0
+News
+• La Santa Biblia, Nueva Traducción Viviente ® NTV ®.
+Thanks to Tyndale House Publishers
+• New item "Team", to organize roster functions into different Teams (previously called groups). The option is now also editable;
+• "Telegram Files" functionality. When sending files to a custom bot, the files will be listed in a program window for easy access (tools menu, several);
+• [Chat] Chat sync functionality with a Telegram group also syncs media files;
+• [Bible Settings] Option to display 3 Bible translations simultaneously;
+• [Bible Settings] Option to display verse number at the beginning of the text of each verse;
+• New "Context Action" functionality (tools menu, several). Allows you to create scripts that will be displayed when right-clicking on a program item;
+• [Settings > Display tab] PPT/PPTX Presentation - Option to display the progress of the public screen (step by step) on the return screen, instead of the complete slide;
+• [Settings > Display tab] Option to apply blur effect when displaying images in the "adjust" option with a different proportion of the display screen;
+• Import a video or image file directly into a music slide in the editing window, without having to add it to "my images" or "my videos";
+• [JSLib] New JSLib methods.
+Changes
+• The "share" option of the program (Holyrics Plan) is now synchronized in real time;
+• Advanced filter settings in the schedule window, being able to hide specific services and events, display only scheduled items, etc.;
+• Option to rename files (right mouse button) from the media library (audio, video, image, file), updating references in the program's features (playlist, favorites, etc.);
+• Option to archive announcements;
+• It is possible to add images to the videos tab, so that the image behaves like a video, being displayed by VLC Player;
+• [Script] Option to redirect the action of a Custom Message to JavaScript code.
+Fixed issues
+• Possible crash in song lyrics and script editing window when pressing TAB;
+• Display of invalid characters in the countdown using the Theme's "uppercase" setting;
+• [Chat] Text copied from the chat window did not consider line breaks;
+• Fixes and performance improvements...
+Details of some features
+Holyrics Plan Synchronization
+The program's native "share" option (Holyrics Plan, not Google Drive) is now synchronized in real time.
+Unlike before, it was necessary to access the window and upload/download items manually.
+It continues to share only basic data: song lyrics, playlist, services, events, etc.
+This change to automatic synchronization will allow the implementation of the "Holyrics Plan" app that will be available in the future.
+Allowing access to Holyrics Plan account data in real time via cell phone.
+And it will also allow editing via the app (create or edit song lyrics, scale, etc.) and, consequently, the app edits will also be automatically synchronized in the computer program
+"Telegram Files" functionality
+With a Holyrics Plan subscription, the user has an option to create a custom Telegram bot for use in the Holyrics ecosystem.
+The Telegram Files functionality allows users to send files to your personalized bot, and you can access these files directly through the program window, making it convenient to organize and receive files from other people that will be displayed in the Holyrics program.
+Limit of 20MB for sending the file directly in the chat.
+But you can send a Google Drive link in chat for larger files.
+Rename file
+Option to rename or move files (by right-clicking) in the program library by updating the references to the file used in the program.
+For example, if the file is added to the favorites bar, when you rename or move it, the reference in the favorites bar will also be updated.
+This avoids problems and errors when adding a file to some program functionality (favorites bar, for example) and, when renaming the file by the operating system, the previously added item continues to point to the previous name, giving a file not found error.
+Updated references: playlist (services and events), favorites bar, triggers, Input Param (script/api), event wallpaper
+Images in the videos tab
+It is possible to add images to the program's videos tab, so that the image behaves like a video, being displayed by VLC Player, for example.
+The default duration of an image played as a video is 10 seconds, which can be changed in the VLC Player settings (3 dots).
+And you can change the duration of each image individually by clicking the right mouse button on the image.
+Import a video or image file directly into a slide
+You can drag a video or image file from your computer directly onto a slide in the font (or text) editing window to use it as the slide's background.
+This is useful in cases where the user has videos or images ready for each paragraph of the song.
+For example, if someone makes a "lyric video" with animations, and cuts the video into paragraphs, they can add the video as a specific background for each corresponding paragraph.
+However, there is no need to add videos or images to the "my videos" or "my images" tab in the theme background window, preventing specific backgrounds from a song slide from being added and mixed with the themes' reusable backgrounds.
+"Context Action" functionality
+Enables the creation of scripts that receive information about a specific item that was executed.
+When you right-click on a video, for example, a submenu will appear with the available scripts.
+When selecting a script for action, the respective video will be sent as "obj" to the script to be executed.
+This script can, for example, run the video itself received as a parameter, and start a countdown based on the video's duration.
+Without necessarily creating a trigger for it.
+In practice, it allows the user to create custom actions for items in the program, which can be quickly executed on any item with the right mouse button.
+Redirect Custom Message to JavaScript
+The Custom Message option in the program has its own interface for "capturing" specific variables, to display pre-formatted texts.
+And it is compatible with the cell phone app.
+An option has been implemented that causes the action of "displaying" a "Custom Message" to be redirected to a script, instead of being displayed on the screen (or in the alert).
+This allows, for example, the user to create their own internal solutions that can receive information from the Holyrics mobile app itself, save this information and use it as necessary.
+For example, you can create a Custom Message called "Visitors", with the field "Name".
+Other people during the service can access the Holyrics app, in the Personalized Message tab, type their name and send it to Holyrics.
+By redirecting the message received from the app to a script, the script can save these names in an internal list via jslib, and then the program operator on the computer can display all the names in the list via jslib with some Script item created and added to favorites .
+JSLib
+- New "Input" types for JavaScript interfaces.
+button : allows you to create a button on the interface, which performs an action when clicked.
+It allows, for example, to create an interface that receives user input to perform a specific action and a "button" input that opens another interface with settings.
+So that it is not necessary to place several inputs in the same window
+label : displays text content (updatable).
+Allows you to generate some text for temporary result viewing, and also a "copy" icon to copy displayed content.
+- Added request option via TCP
+- Option to save content in TXT or XLSX
+23/01/2024 - v2.21.1
+Fixed issues
+• Song and text editing window with hidden panel;
+• [Played songs report] Quantity does not update when changing filters.
+16/01/2024 - v2.21.0
+News
+• [Background - Video] Option to display video background on an additional screen in addition to the public screen (file menu, settings, advanced);
+• [Hotkeys] Option to edit/create shortcut keys for standard program actions (help menu, hotkeys);
+• [Event - Wallpaper] Option to set a specific wallpaper for an event;
+• [Stage View] Option to display the next image on the return screen when presenting an image list. Also compatible with ppt/pptx presentation;
+• [Draw Lots] Possibility to draw multiple items simultaneously;
+• [Playlist] Calculate and display the schedule time for each playlist item based on the event start time and the duration of each item;
+• [Communication Panel] Setting "yellow color from" replaced by "Attention color from" ;
+• [Communication Panel] Option to change the attention color and the color of other states in the settings tab;
+• [Audio / Video] Option to configure settings for playing media in favorites or playlist (right-click on the item). For example, volume, starting second, etc.;
+• [Lyrics] Option via API to open the pre-populated lyrics creation window ( Documentation );
+• [Countdown - Public] Option to customize the countdown font;
+• [Communication Panel] Edit the theme used for countdown;
+• [Telegram - Question, Poll, Draw Lots] Option to send notifications to Telegram groups and/or channels informing the availability of a new event;
+• [Chat] Option to synchronize the program's Chat with a Telegram group (Chat window settings button);
+• [JSLib] New JSLib methods ( Documentation ).
+Changes
+• [Image] Compatibility with WEBP files;
+• [Lyrics - Filter] Try to display results even with typing errors in the search field;
+• [Draw Lots] Draw area is now based on the margin of the Theme (previously it was always centered);
+• [Bible] Setting to select the default order of the Bible books (different order in some languages);
+• [Favorites] Option to set a custom icon for a folder item;
+• [File Selection] Shortcut to the Downloads folder in the file selection window;
+• [Presentation Footer - Go To] Option to execute the slide change without pressing Enter (right mouse button in the text box);
+• [Multiple Choice] Play different audios depending on the question index;
+• [Report - Played Songs] Option to merge history of duplicate items, for example, two "same" song lyrics from different singers;
+• [Automatic Presentation] Option to edit song title, author, artist and extra information.
+Fixed issues
+• File import .mufl ;
+• Search for verses using the characters « »;
+• Fixes and performance improvements...
+14/08/2023 - v2.20.0
+News
+• Create folders and subfolders in the favorites bar;
+• [Favorites - Playlist] New Streaming item that allows adding a shortcut to a streaming platform;
+• [Song lyrics] Option to link a file from audio folder or streaming URL to song lyrics (lyrics edit window, extra items);
+• [Text] Option to organize Text tab items into subfolders;
+• [Bible] Mapping verses to different languages when displaying two versions simultaneously;
+• [Styled] Option to apply formatting to text using tags;
+• [JSCommunity] Online repository for creating and sharing JavaScript code for use in the program;
+• [API/Script] Apply custom status to item displayed in favorites bar;
+• [API/Script] Possibility to dynamically create input parameters to run a script based on input values;
+• [Triggers] New triggers for Webcam and PowerPoint slide switching;
+• Display hymnals with a default order automatically (toggle between verse/chorus);
+• Move mouse to main window by pressing CTRL in sequence (settings > display);
+• [Settings] Option to manually set a timezone (settings > advanced).
+Changes
+• [Wallpaper] Independent settings for different screens (show, fill color, clock);
+• Option to set a margin for displaying videos by VLC Player;
+• [Report - Played Songs] Option to filter by service. Added a "timeline" tab in the exported worksheet;
+• [Communication Panel] New settings for countdown, timer, color, etc.;
+• [JavaScript - Include] Option to organize codes in tabs;
+• [Automatic Presentation (capture window)] F9 shortcut for blank slide and option to change size of preview slides;
+• [Stage View] Option to limit the number of slides displayed in the "display all slides" option;
+• [Bible] Independent "display two versions" setting for different screens;
+• Keep last setting in verse search window.
+Fixed issues
+• Support for RTL alphabet renderingRTL;
+• Automatic presentation of images or text by advancing the wrong amount of slide;
+• Feature to display different images on different screens not working for different screens but with the same resolutions;
+• Fixes and performance improvements...
+18/04/2023 - v2.19.2
+Changes
+• Change in searching for song lyrics on the internet (holyrics.com);
+• JavaScript interface that allows its own implementation to search for lyrics on the internet;
+• Added 'copyright' field in lyrics edit window;
+• Custom options for configuring the content of the initial slide and the display of "copyright" in the corner of the screen (display settings).
+28/03/2023 - v2.19.1
+Fixed issues
+• Problem running an automatic presentation (images, announcements, etc);
+• Error loading Bible translations on Linux/Mac;
+• Layout misconfigured on "display all slides" option in stage view of HTML outputs;
+• Changes to the default theme in the announcement window were not being saved.
+21/03/2023 - v2.19.0
+News
+• Holy Bible, versions:
+- La Biblia de las Américas ® (LBLA)
+- Nueva Biblia de las Américas (NBLA)
+Thanks to The Lockman Foundation
+• Some online features will require a Holyrics Plan subscription to use ( Know more );
+• The Title item of the media playlist has special behavior, it can hide/expand the list of items below it as a group of items ( Know more );
+• Set texture for font, background color and outline. Solid color, transparent, gradient and image ( Know more );
+• Character spacing and horizontal alignment in advanced editor formatting options;
+• Option to save a template playlist to reuse between services (3 dots in the media tab, saved lists option);
+• [Background] Hue functionality that allows you to dynamically change the hue of the video background displayed in the projection (windows menu, menu bar, hue);
+• Local and online WebService to send requests to the program over the local network and over the internet ( Know more );
+• [URL Receivers] Added support for POST requests and possibility to add custom headers in the request;
+• [JSLib] New JSLib methods. ( Documentation );
+• [API - Script] Option to add custom icons in API and Script items;
+• Option to use javascript methods as System Variable , that is, within the text that will be displayed in the projection ( Know more );
+• [Triggers] New items available and new mechanic when change ;
+• [Runtime Environment] New configuration available to facilitate the management of automated items such as Triggers (settings, advanced) ( Know more );
+• [Triggers] Option to define Tags for trigger items, for easy management and filtering;
+• [Draw Lots - Multiple Choice] Option to set audios to autoplay during actions;
+• Open an URL item (playlist and favorites) in full-screen browser in projection ( Know more );
+• New shortcut keys for the Bible window.
+Changes
+• Wallpaper no longer appears when switching between showing a verse and other presentations;
+• Option to add custom bot in the Draw Lots, Questions and Poll features via Telegram;
+• Mouse pointer is invisible (by default) on the projection screen (file menu, settings, display);
+• In the song and text editing window, the slide you are currently editing will be highlighted;
+• Extra fields for a song are now in the edit window itself, in a panel that expands when clicked;
+• Option to set seconds in task scheduling features;
+• Option to display an extra screen (return screen, for example) in the preview area of the main window;
+• Alert edit window changed to use FPS setting instead of frame skip ;
+• [Playlist] Option to hide the Lyrics tab of the playlist;
+• [Media playlist] Option to remove extension in file name display;
+• Starting day of the week (Sunday or Monday) displayed in calendars will be according to the user's regional configuration (settings, layout tab).
+Fixed issues
+• [Verses] Avoid line break after dash;
+• Text alignment in some non-Latin alphabets (Tamil for example);
+• Fixes and performance improvements...
+12/12/2022 - v2.18.1
+News
+• Holy Bible, versions:
+- Nova Bíblia Viva™ (Portuguese)
+- Holy Bible, New Russian Translation™
+Thanks to Biblica, Inc.
+16/08/2022 - v2.18.0
+News
+• API Action: New functionality to create items that execute URL or MIDI requests, allowing to control other programs on the network ( Know more );
+• [JavaScript] Possibility to automate tasks, actions, triggers, etc. using javascript code that interacts directly with the program ( Know more );
+• [Theme] Organize Themes and Backgrounds using tags (theme menu, tags);
+• [Theme] Create rules to dynamically set background for music slides (theme menu, automation);
+• [Lyrics] New fields (key, bpm and time sig) for lyrics and option for user to create new fields to save song lyric information as needed (lyrics edit window, more options icon, extra);
+• [MIDI] Set unique midi shortcuts for each song lyrics, backgrounds, etc.;
+• [Image] Possibility to display different images for different screens ( Know more );
+• [Verses] Open quick show window when displaying a list of verses from the media playlist;
+• [Text] Quick presentation of a verse without ending the current presentation on display ( Know more );
+• Show live slide in center slide of main window (right mouse button);
+• View Cloud Sync and Backup status in main window;
+• [Slide Description] Set paragraphs in sequence with the same description without the need to repeat;
+• [Theme] Custom layout for verse description in Theme edit;
+• [Theme] Set auto line wrap and uppercase text in Theme setting;
+• [Theme] Option to filter the themes displayed in each program window/feature (theme menu, filter) ( Know more );
+• [Background - Video] Option to set a BPM for the background video that makes it possible to synchronize the video speed according to the BPM set for the lyrics of the song being displayed ( Know more );
+• New item to display text in communication panel (favorites and playlist).
+Changes
+• List archived lyrics when searching;
+• [Sort Slides] Option to sort slides by slide description;
+• Option to change slide in projection with single click in the vertical list of the main window (right mouse button, settings);
+• [Communication Panel] Option to stop countdown when reaching zero;
+• Option to add song lyrics to media list by default (playlist, settings);
+• [Medias] Option to change item thumbnail image size (more options icon, settings).
+Fixed issues
+• [Linux] Problem opening links in system without libgnome ;
+• Problem to refresh selected song in main window after search;
+• Quick show alignment with "Show slide count" option enabled;
+• [Verse] Alternate reading with split verses does not correctly display last verse as "all";
+• Avoid possible crash on startup due to song list sorting error;
+• Fixes and performance improvements...
+Details of some features
+Organize Themes and Backgrounds using tags
+To facilitate the organization and filtering of items, the option of tags was added.
+It is possible to create, for example, tags with the names: particle , water , blue , fire , etc... and this way, when selecting a theme or background, you can easily list only the items in the respective tag to find the desired item.
+It is also useful in the new features of the program, such as scripts and automation.
+Dynamically set background
+You can create rules to dynamically set background for music slides.
+For example, creating a rule where every slide that has the word 'rain' is defined with a random theme/video that has the tag rain .
+Every slide that has the word 'ocean' , 'oceans' or 'sea' is defined with a random theme/video that has the tag sea .
+Set unique MIDI shortcuts
+Controlling music slides via MIDI is a feature that has been used more and more.
+However, to start the presentation of the lyrics, it was necessary that it was in the playlist to know the position of the item in the list and start the presentation via MIDI.
+With the MIDI shortcuts option, you can set a specific MIDI code and velocity for a song lyric.
+And that way you don't have to worry about adding it to the program's playlist, or what position in the list it is in.
+Just send the MIDI command (code/velocity) defined for the lyrics of the song and the program will start the presentation.
+This makes it easier, as you only need to set the song shortcut once in your track program, instead of constantly changing it according to the item's position in the playlist.
+[Slide Description] Paragraphs in sequence with no need to repeat
+In the lyric edit window, when defining a slide with a description, the following slides will also have the same description.
+For example:
+##(Verse 1)
+Slide A
+Slide A
+Slide B
+Slide B
+##(Chorus)
+Slide C
+Slide C
+Slide D
+Slide D
+In the example above, Slide B will be considered as Verse 1 , and Slide D as Chorus
+Sort slides by slide description
+In the sorting slides window it will be possible to sort using only the descriptions.
+For example: Verse 1, Chorus, Verse 2, Chorus, Chorus
+25/04/2022 - v2.17.1
+Fixed issues
+• Double line break does not work when presenting two versions of the Bible simultaneously;
+• Communication Panel clock not updating minutes;
+• File listing by mobile app does not show folders added as shortcut.
+13/04/2022 - v2.17.0
+News
+• Google Drive™
+- Cloud synchronization of program data via Google Drive (share menu);
+- Automatic backup of program data via Google Drive (tools menu, backup);
+• [Stage View] Apply different formatting for current slide and other slides (Display Settings);
+• [Stage View] Option to display all slides of the song (Display Settings);
+• [PowerPoint] Quick presentation of Bible verses without ending the currently displayed PowerPoint presentation;
+• [Image] Option to apply basic changes to an image for display, such as brightness, color, ...;
+(right mouse button, settings);
+• [Telegram] Poll, Questions and Draw Lots with short link option and qrcode display for quick access;
+• [Lyrics Edit] Option to separate all paragraphs into single lines;
+• [Lyrics List] Option to archive an item instead of deleting it (right mouse button);
+• [Triggers] New action 'when closing';
+• [Image] Support for displaying animated GIF.
+Changes
+• [Bible] Option to hide certain translations in program listings (version menu);
+• Option to set the Bible version for a verse from the media playlist (main window);
+• [Edit Screen Position] More accurate percentage for 'fine tuning';
+• [Logo] Option to display image in front of VLC Player videos;
+• Option to disable transition effect for same slides (file menu, settings, several).
+Fixed issues
+• [Online Search] Google lyrics search with error when using scrollbar;
+• [Linux] Fix error erro 'com.sun.media.jfxmedia.MediaException: Could not create player' ;
+• [My Images - My Videos] Error adding files with capital extension;
+• Alphabetical sorting of cyrillic characters;
+• Fixes and performance improvements...
+Details of some features
+Cloud Sync via Google Drive
+You can log in to a Google account and use Google Drive storage space to sync all program data and files between different computers.
+Share Menu > Cloud Sync
+Data and files will be added, updated and deleted between all computers connected to the same account.
+Note: There is no user and/or password control for cloud synchronization.
+All computers synced to the same account will be able to add, change, or remove program files synced to the cloud.
+Automatic backup via Google Drive
+You can log into a Google account and use Google Drive storage space to automatically backup all program data and files.
+Tools Menu > Backup > Google Drive > Enable Auto Backup
+By enabling backup, the program will keep an online backup always up to date with every change to the program.
+You can restore a backup when needed:
+Tools Menu > Backup > Google Drive > Restore
+(Stage View) View all music slides
+Option to display the entire text of the song being performed on the return screen.
+You can also set different formatting for the current slide in view (or other slides).
+That way, even with the full text being displayed on the return screen, the portion of the slide currently being displayed will be highlighted.
+[PowerPoint] Quick verse display
+Option to be able to display a Bible verse in the projection without having to end the PowerPoint presentation being displayed by Holyrics.
+This can be done from the main window's presentation footer, by clicking on the 'show verse' button.
+To make it easier, the program automatically tries to identify some reference within each slide.
+In this way, in the presentation footer, by right-clicking on a slide that has some biblical reference, a shortcut will appear to display the particular verse.
+For example: If on the slide somewhere it says John 3:16 or Romans 12:2 , then you can right-clicking on this slide in the footer of the presentation will show the option "Automatic Presentation" and the verse in the list of items to display.
+05/10/2021 - v2.16.4
+Fixed issues
+• Google lyrics search.
+02/10/2021 - v2.16.3
+Fixed issues
+• Failure of program communication with server holyrics.com.br;
+Lyrics search, online sharing, etc.
+04/06/2021 - v2.16.2
+Fixed issues
+• Alert text is not displayed after changing alert settings.
+02/06/2021 - v2.16.1
+Fixed issues
+• Bible window "blinking" during use.
+01/06/2021 - v2.16.0
+News
+• Download playlist and files from Planning Center (file menu, open);
+• Individual screen configurations for Verse Description and Verse Theme ;
+• Option to display multiple verses without line break between verses;
+• Triggers functionality for automatic execution of actions for predetermined events (tools menu, several);
+Changes
+• The multiple verse display will display up to the last verse of the current chapter, then move on to the first verse of the next chapter;
+Fixed issues
+• [Custom Message] Text box accepting only numbers, even with the option "numbers only" deactivated;
+• [HTML Output] HTML rendering did not maintain formatting of multiple spaces in a row, useful in chords, for example;
+• Fixes and performance improvements...
+Details of some features
+Triggers
+Actions that will be performed automatically by the program when a specific event occurs.
+For example: You can configure it so that whenever a certain theme is displayed in the projection or a certain song is presented, a MIDI command is sent to a receiving device.
+13/04/2021 - v2.15.1
+Fixed issues
+• Plugin Initialization.
+05/04/2021 - v2.15.0
+News
+• Bíblia Almeida Século 21 (A21).
+Thanks to Sociedade Religiosa Edições Vida Nova
+• Option to translate (manually) slides of a song independently (Advanced Editor );
+• [Display Settings] Define a translation for a specific screen and HTML outputs;
+• [Display Settings] Define a version of the Bible for a specific screen and HTML outputs;
+• [Display Settings] Option to display the Slide Description in the projection;
+• [Bible] Option display reference only with independent configuration for each screen;
+• [Alert] Independent alert configuration for each screen;
+• [Text] Automatic Presentation (right mouse button).
+Fixed issues
+• Fixes and performance improvements...
+Details of some features
+Translate (manually) slides of a song or text
+It is possible to create translations for each slide of a song in a simple way.
+Once translated, display the original text on the main projection and the translated text on another screen or multiple translations on the same screen.
+To use this feature it is necessary to access the advanced editor in the music/text editing window.
+19/02/2021 - v2.14.2
+News
+• Russian translation.
+Fixed issues
+• Music list doesn't load completely.
+• Other fixes and performance improvements...
+02/02/2021 - v2.14.1
+Fixed issues
+• Failed to control the player from the cell phone.
+01/02/2021 - v2.14.0
+News
+• Holy Bible, versions:
+- Holy Bible, New International Version™, NIV™
+- Biblia Sagrada, Nova Versão Internacional™, NVI™
+- La Santa Biblia, Nueva Versión Internacional™, NVI™
+Thanks to Biblica, Inc.
+• New draw lots option for Telegram;
+• Create polls for participation by Telegram (tools menu);
+• Receive questions by Telegram (tools menu);
+• [Display Settings] New output HTML 3;
+• [Display Settings] Select the type of presentation allowed (songs, announcements, etc) in image and HTML outputs;
+• Option to hide the schedule and notes tabs in the playlist;
+• [Bible - Favorites] Option to select the position (start/end) when adding a new item in the list;
+• [Bible - Favorites] Option to reorder the verses in the list;
+• [Notificação] Option to change Option to change the notifications color (file menu, settings, layout tab).
+Changes
+• [Bible] Do not display version name when using display reference only ;
+• [MIDI] Option to display the presentation footer of the main window when starting a presentation;
+• [MIDI] Option to display all items in the playlist (songs);
+• [Presentation Footer] "Change Theme" feature with option to change only the current song when presenting multiple songs;
+• [Backup] Do not add or delete folders added as a shortcut on media tabs when exporting or importing a backup.
+Fixed issues
+• The add at start/end option in the favorites bar was not working;
+• Searching for words within parentheses, quotes, etc;
+• Wrong default font in the advanced editing window;
+• Other fixes and performance improvements...
+Details of some features
+[Telegram] 'Draw Lots', 'Poll' and 'Questions' features via Telegram
+It is possible to create these events in the program so that people can participate using Telegram itself.
+Participation is done using the chat @HolyricsBot .
+For example, create a poll through the program and tell participants the name of the poll.
+People will be able to vote by accessing the chat and you will be able to display the result in real time on the projection.
+[Presentation Footer] Change Theme functionality with option to change only current song when playing playlist
+In the presentation footer, when playing a playlist and changing the theme or background of slides during the presentation, all slides are changed by default.
+This option allows you to change the default operation to change only the slides of the currently playing music.
+[MIDI] Option to display the main window presentation footer when starting a presentation
+When starting a presentation remotely (as commands via MIDI) the presentation footer in the main program window is not displayed.
+Added an option in the MIDI window settings for the footer to be displayed when playing a song and to be controlled by the user if necessary.
+20/06/2020 - v2.13.0
+News
+• [Multiple Choice] Advanced controls (scoreboard, countdown, etc);
+• [Wallpaper] Set a wallpaper for each service (File menu, settings);
+• [Media] Basic media editor (audio, video and image) (cutting tool, for example);
+• Option to reorder slides using the slide description;
+• [Bible - Theme] Select different Theme for "show two versions" option;
+• Scoreboard (tools menu);
+• News channel to receive messages from the Holyrics team (main window);
+• Serbian translation.
+Changes
+• Design of components and windows;
+• Privacy Policy ( view );
+• [Video] Workaround to play rotated videos;
+• [Song] View song history in the feature "remove duplicates" and option to merge histories;
+• [Song] Author parameter added;
+• [Announcement] When clicking on edit an announcement, the window will open with the respective announcement selected;
+• Set a minimum size in the slide preview to avoid small slides;
+• Option to capitalize title and artist (File menu, settings);
+• Presentation Footer with option to display list in landscape orientation;
+• Option to edit the slide description in the main window (right click on paragraph);
+• [Custom Message] "Items received" history;
+• Optimization in theme rendering with font size over 25%;
+• [Transition] Option to merge fade effect;
+• [ChordPro Tags] Option to convert chords in ChordPro format to comment, and also option to remove from text;
+• Option to change FPS for transition and fade in/out (File menu, settings).
+Fixed issues
+• [VLC Player] Even at random, the playlist always started with the first file in the list;
+• [VLC Player - Linux] VLC Player files were always being extracted each time the program was opened;
+• "View as HTML" option in the edit window was incorrectly aligned;
+• [Bible] Verse search incompatible with non-Latin characters;
+• Other fixes and performance improvements...
+Details of some features
+[Wallpaper] Set a wallpaper for each searvice (file menu, settings)
+When setting a wallpaper for a service, the program will automatically use the service wallpaper selected in the main window's playlist.
+If there is no wallpaper set for the selected service, or if the temporary playlist is selected, the default wallpaper will be used.
+Note: The wallpaper displayed is not according to the time of service , but according to the service selected in the playlist of the main window.
+Note: It is also possible to set a wallpaper for each service in the wallpaper option of the bookmarks bar.
+[Schedule] Filter members for each role
+When editing the scale in role mode, the list of users that appear for each role is based on the group defined for the member and role, for example:
+If the guitar role is defined as the instrument group, all members of the instrument group appear in the list to be assigned to the guitar role.
+It is now possible to define which users of the instrument group will appear in the list to be cast in the guitar role.
+[Media] Basic audio, video and image editing
+Some editing tools will be available by right-clicking a media item in the main window tabs.
+It will also be available in the tools menu, several.
+[Video] Workaround to play videos with rotation not identified by the program
+Some videos (generally recorded by mobile) do not play correctly in the program as VLC Player does not identify the video rotation setting.
+A workaround has been implemented to avoid this unforeseen event, as in many cases this is only repaired at the time of use.
+If the program identifies that the video has a rotation setting defined in the "metadata" of the file, the video will be played externally by VLC Player directly in the operating system.
+Option to add a video as a slide background without using the "my videos" tab
+In the music editing window, to set a video as the background for a slide, you must first add it to the My Videos tab in the Themes background list.
+It is now possible to set a specific video as the background of a slide without adding it in the My Videos tab.
+Just drag the video file from the operating system folder (Windows Explorer, for example) to the top of the slide.
+Note: Recommended only if you want to use a specific video for a particular slide.
+If the video will be reused in other slides of other songs, it is still recommended to add it in the My Videos tab.
+02/01/2020 - v2.12.0
+News
+• Control PowerPoint presentations from the program (beta). (Windows only. Requires PowerPoint installed);
+• New Text tab in the main window, to create presentations independent of the Lyrics tab;
+• Manage remote access (mobile app) without using passwords (file menu, settings);
+• Search for online song on your own server (Holyrics.com);
+• Support for reading very large images (px) and JPEG/CMYK images;
+• [Favorites - Wallpaper] Alpha mask;
+• List potentially duplicated songs (song menu).
+Changes
+• [Responsive Reading] Option to use multiple values ​​as title for responsive reading;
+• [Display Settings] Option to disable Communication Panel information on a return screen;
+• [Display Settings] Improved layout of settings;
+• [Favorites - Wallpaper] Added shortcut: Ctrl+F8 ;
+• [Favorites] Shortcut to edit (right mouse button);
+• [Split long verses] Improved text separation point;
+• Automatic update of the program for Linux/Mac (upcoming updates).
+Fixed issues
+• Incorrect extension (.muf; .mufl) when saving song file;
+• F8, F9 and F10 buttons on the MIDI panel;
+• Minimum interval between the markings of the option mark song as played automatically ;
+• Fixes and performance improvements...
+25/09/2019 - v2.11.0
+News
+• Share the lyrics playlist from your computer (or mobile app) online to access on another computer;
+• Search for media in subfolders;
+• [small caps] Adjust the proportion of lowercase characters transformed into uppercase;
+• Option to display Logo (tools menu) in the center of the screen when using F9 (without lyrics);
+• [VLC Player] List Webcams.
+• Translation into Italian;
+Changes
+• Option to automatically reload program data (settings). Useful for synchronized folders on two PCs simultaneously with online backup program;
+• [Custom Message] History of displayed messages for possible reuse;
+• [Logo] Option to show/hide image with fade effect;
+Fixed issues
+• Add Announcement ALL option to favorites with HTML tags;
+• [Media] Drag files to media tab copying files to last subfolder if current folder is empty;
+• [MIDI] List with many devices could cause window not to be displayed correctly on screen;
+• [Streaming - HTML] Real-time editing did not update text in HTML streaming;
+• Fixes and performance improvements...
+09/07/2019 - v2.10.0
+News
+• Multiple Choice feature for questions and answers (tools menu);
+• Draw Lots feature (tools menu);
+• [Bible] Highlight excerpts from a verse (right-click on the verse);
+• Save text formatting in advanced editing for reuse (right-click);
+• Display image with transparency (right-click, settings);
+• Skip forward or back 10/30 seconds in VLC Player;
+• Set an exact minute/second to start the media in VLC Player (right-click on the timer).
+Changes
+• [Favorites Bar] Option to display in the Bible window;
+• [Wallpaper] Set a base color to fill the screen;
+• [Settings] Set a color for the "Black Screen (F10)" feature;
+• Option to display theme name in the list of themes in the main window;
+• [Transition Effect] Fade effect in Themes with line mode background color (fill) does not apply effect to the background color, only to the text;
+• [Announcement - Advanced Editor] Automatic line break when using advanced editing;
+• [VLC Player] Shortcut key to go back/forward (Ctrl + Shift + <) (Ctrl + Shift + >);
+• Option to hide the timer in the presentation footer.
+Fixed issues
+• [Video] Possible black screen when playing some videos or video background;
+• [Favorites Bar] wallpaper feature to display return screen information when needed;
+• Program icon on some OS;
+• Fixes and performance improvements...
+04/05/2019 - v2.9.1
+Fixed issues
+• Presentation of lyrics by the mobile app using text with advanced editing;
+• Error when searching for lyrics created by the mobile phone on the PC after sending an update to the PC;
+• Other fixes...
+01/05/2019 - v2.9.0
+News
+• Advanced slide editor;
+• Create video from a sequence of images (right-click on a subfolder in the images tab);
+• Spanish language option;
+• [Theme Menu] Shortcut to the window with Theme backgrounds;
+• [Theme Menu] Export Theme in batch;
+• [Theme] Option to reduce the resolution and bit rate of a video from the My Videos tab;
+• [Favorites Bar] Wallpaper option to make it easier to create video wallpapers;
+• [Favorites Bar] Add shortcut to some program features;
+• [Help Menu] Clear program data (restore initial settings);
+• [Logo] Option to automatically show and hide when starting or ending a presentation, respectively;
+• [VLC Player] Fade in/out option when playing or ending a video, respectively;
+• [Responsive Reading] Option to change the description of the last verse;
+• [Presentation Footer] Timer with the duration of the current presentation.
+Changes
+• [Media Playlist] Right-click on lyrics displays mark as played option;
+• [Media Playlist] Right-click displays done option;
+• [Theme] Increased maximum values ​​for brightness, outline and shadow;
+• [Theme] Option to drag and drop files into My Videos and My Images tabs;
+• [Announcement Menu] Split the list of announcements into submenus when there are too many items;
+• [MIDI] Log panel to make it easier to identify received commands.
+Fixed issues
+• [Save playlist] Ads were saved without background;
+• [Custom message] Starting message with two variables in a row did not save the space between variables;
+• Possible crash when clicking on the tools, backup, import menu;
+• Update backup made again every time the program is restarted;
+• Fixes and performance improvements...
+14/03/2019 - v2.8.1
+Fixed issues
+• 'Video needed to be paused' error message and possible crash due to this error.
+01/03/2019 - v2.8.0
+News
+• Update for program compatibility with the new Holyrics app for IOS.
+Fixed issues
+• Question about sharing statistical data appearing every time you open the program.
+15/01/2019 - v2.7.0
+News
+• Bíblia King James Atualizada (KJA).
+Thanks to Sociedade Bíblica Ibero-Americana & Abba Press Editora
+• Custom message;
+• [Chat] Send and receive files via Chat;
+• [Help] Try to automatically resolve the communication failure of the mobile app;
+• [Bible] Create 'labels' (shortcuts) for translations;
+• [Bible] Shortcut key ' B ' to change the translation in the Bible window;
+• [Media] Drag and drop files into the media tabs (audio, video...);
+• Index of paragraphs of the lyrics in the vertical list of the main window during the presentation;
+• Import Theme in batch.
+Changes
+• [Presentation] Presentation footer with option to change: thumbnail size (image mode); font and text size (text mode);
+• [Share] Update data via the Internet or via mobile phone with option to choose which items to update, option to merge or replace the current list of letters and also it is no longer necessary to restart the program after the update;
+• [HTML Streaming] Option to disable image streaming;
+• File selection window with shortcuts to desktop, my documents, etc...;
+• Changes for compatibility with the Android APP update.
+Fixed issues
+• [Media] File name cut off in vertical alignment;
+• [Lyrics Edit] Ctrl+Z (undo) not working correctly;
+• [HTML Streaming] Text displayed with multiple spaces.
+26/10/2018 - v2.6.0
+News
+• Bíblia Sagrada, translations:
+- Nova Tradução na Linguagem de Hoje®
+- Nova Almeida Atualizada®
+- Almeida Revista e Atualizada®
+- Almeida Revista e Corrigida®
+Thanks to Sociedade Bíblica do Brasil
+• A Bíblia Sagrada, Almeida Corrigida Fiel | acf.
+Thanks to Sociedade Bíblica Trinitariana do Brasil
+• Insert Comment in the lyrics to be displayed on feedback monitors ( Know more );
+• [Bible] Split text of long verses (Tools menu in the Bible window);
+• [VLC Player] Play video on feedback monitors;
+• [Media] Add shortcut to folders from other locations on the computer in the audio, video and image tabs;
+• [Bible] Button to "compare translations";
+• View as option in the lyrics editing window;
+• Shortcut list (Help menu) and new shortcuts for Clock and Logo ;
+• [Settings - Layout] Configure the font size of the title and artist on the slide
+Changes
+• [Presentation] Holding down the ctrl key while moving between slides with the left and right arrows changes the projection only when you release the ctrl key;
+• [Main Window] Right-click on a paragraph with the option to edit and divide ;
+• [Media] Right-click on an image or video with the option to set the stretch and fill mode;
+• [Announcement] Increased limit of announcement created. New announcement with images will not be compatible with previous versions of the program;
+• [VLC Player] Switch between elapsed time and time remaining when clicking the timer ;
+• Last slide of the lyrics presentation (blank) to have the same background as the last paragraph.
+• Communication Panel countdown with option to set yellow color from X seconds.
+• [Bible] Display the translation name in capital letters or abbreviated.
+Fixed issues
+• Custom theme for each slide of the lyrics not saving when closing the program;
+• Convert text to uppercase in the lyrics editing window;
+• [Theme] Add videos in the My Videos tab duplicating files;
+08/08/2018 - v2.5.2
+News
+• Bíblia Sagrada Nova Versão Transformadora. Thanks to Editora Mundo Cristão .
+Changes
+• Possibility to define which lines will receive Custom Paragraph Formatting ;
+• Option to search in the database or on the internet with a field pre-filled with the text entered in the search field of the main window.
+Fixed issues
+• [App] Error in some situations when updating mobile application via computer (caused by exceeded time limit);
+• Error when importing some .hbac backup files (Requires WinRAR or 7zip installed).
+30/05/2018 - v2.5.1
+Fixed issues
+• Logo layer conflicting with Live (Return) window;
+• [Theme] Margin settings for new outline and fill options reverted to default when editing the Theme;
+• New option for setting the Bible version name in HTML mode streaming not working 100%.
+23/05/2018 - v2.5.0
+News
+• New way to create schedule (based on roles );
+• Option to configure a Logo layer, which can be an animated gif (Tools Menu);
+• [Theme] Spacing between characters; outline and filling of the written area;
+• MIDI communication (Tools Menu);
+• Schedule tasks with time and day of the week (Tools Menu).
+Changes
+• New layout option for the main window (Windows Menu);
+• [Theme] Creation/editing window as a new layout;
+• [Theme - My Videos and My Images] Option to choose extended mode, fill, adjust, etc...;
+• [VLC Player] Option to extend, adjust or center the video while playing;
+• Profile functionality changed to Group for better understanding of what it is about;
+• Exclusive password to send file from the APP to the computer (Settings Menu);
+• Automatically move file received from the cell phone to the program folders;
+• History of the last verses displayed on the screen;
+• Complete list of fonts in the HTML display settings;
+• [Import] Option to import lyrics from PowerPoint into batch;
+• Playlist with scroll bar (when needed).
+Fixed issues
+• Opening the Media tab in the mobile APP with a "subfolder" listed on the PC listed the same subfolder on the mobile phone;
+• Some items deleted in My Videos and My Images returned when restarting the program;
+• Fixes and performance improvements...
+12/03/2018 - v2.4.1
+Changes
+• [Theme] Numeric field to change the font size;
+• [Plugin] Option to configure the server manually;
+• [Plugin] White color (rgb(255,255,255) or #FFFFFF) considered as null in HTML streaming. Using white color makes it unnecessary to configure Chroma Key in OBS.
+Fixed issues
+• Some users' backgrounds were not full screen;
+• System variables were not working with the uppercase option enabled.
+01/03/2018 - v2.4.0
+News
+• [Interface] Dark Mode (Help Menu);
+• Save Playlist in file format.
+• System variables in slide text (time, date...);
+• Configuration options to "set song as played automatically" (Playlist - Settings);
+• [Chat] List of connected users;
+• Extended background (Settings);
+• Mac and Linux versions officially available on the website.
+Changes
+• [Bible] Beep sound removed;
+• [Plugin] Maximum font size (HTML Mode);
+• Automatically close Plugin with the program;
+• Exclusive Stage View for HTML mode streaming;
+• [Communication Panel] Display Countdown along with time in alert;
+• Option to block alert text in APP streaming;
+• Double click on the slide list starts a presentation;
+• Changes for compatibility with Android APP update.
+Fixed issues
+• Temporary playlist becoming empty when restarting the program;
+• Countdown not appearing in the APP;
+• Bible book panel not working in list mode;
+• Black screen on the user's monitor when starting a presentation;
+• Fixes and performance improvements...
+26/12/2017 - v2.3.0
+News
+• Customize each paragraph individually with a Theme or Background ;
+• Change Theme Background during presentation;
+• Spell Checker;
+• Slideshow shortcut keys ( Go to... functionality);
+• Receive Transmission in text mode (HTML). Shorter delay;
+• Simulate projection (Tools). ( Learn more );
+• Format the font of the Bible version description;
+• [Bible] Responsive Reading;
+• Design two versions of the Bible simultaneously;
+• Activity Report (Tools). Stores the activities performed in the program (disabled by default);
+• Define a default Theme for creating Announcements;
+• Define a default Theme for creating Themes;
+• Name Themes, My Videos and My Images;
+• [Theme] Define default Theme for Title and Artist;
+• Import lyrics. New formats: .txt and .scct (Super Songs);
+• [Plugin] Start Plugin automatically;
+• [File selection] Possibility to filter files by name;
+• [Chat] Incorporate Chat in the main window (Windows Menu);
+• Option to invert the default action of the F5 and Shift+F5 keys;
+• [Playlist] Option to display the name of the Profile Group in which the song is located instead of the Artist's name in the Playlist ;
+• [Playlist] Option to display only the song title music in Playlist ;
+• [Communication Panel] "Call Attention" button;
+• [Countdown] Option to add to favorites.
+Changes
+• Real-time editing of lyrics, allowing you to split a slide;
+• Option to display the list of Themes vertically;
+• [Custom Formatting] Option to change text color;
+• [Theme] Add videos and images in batches to the My Videos and My Images tabs (Background);
+• [Theme] Removed the limit on items added to My Videos and My Images (Background);
+• Option to enable/disable the F8, F9 and F10 shortcuts in Stage View ;
+• Option for the F8, F9 and F10 shortcuts not to automatically disable when changing the slide;
+• Transition effect when changing the background in real time;
+• Possibility of leaving the Title and Artist fields blank;
+• Closing the Bible window returns to the main window;
+• Maximum resolution allowed for enlarged images. Calculated dynamically;
+• Image limit for presentation removed;
+• New groups for the Members functionality;
+• Optimization of the program's startup time;
+• Optimization of thumbnail generation.
+Fixed issues
+• Option to all capital letters when creating an MP4 video from an Automatic Presentation;
+• Replacing files in the images and videos tabs with the same names did not update the thumbnail;
+• Custom Formatting of the Automatic Presentation;
+• Fixes and performance improvements...
+15/09/2017 - v2.2.0
+News
+• Chat for communication between computer and Holyrics mobile app (Windows Menu);
+• Display clock only on the return monitor (Communication Panel);
+• Add verse to media playlist;
+• Freeze screen (Tools Menu);
+• Change the playback speed of a theme video;
+• Minimize the presentation footer;
+• Display verse description at the end of the text;
+• Update data (download) via the internet;
+• Choose a presentation to start automatically at the end of the countdown;
+• Set a time for the countdown to start;
+• Schedule tasks (set a time for a presentation/media to start automatically);
+• New transition options between slides;
+• Holyrics Plugin (Tools Menu);
+• Shortcut to display background during a presentation (F8);
+• Import lyrics from .doc and .docx files;
+• Option to display only verse description (Settings - Bible);
+• Countdown only in the feedback monitor (Communication Panel);
+• Option to change Theme during a presentation.
+Changes
+• Length limit for a theme video increased to 600 seconds;
+• Option to save multiple songs in a single file;
+• Countdown text on multiple lines;
+• Bottom-aligned presentation footer side buttons.
+Fixed issues
+• Countdown did not update the theme list after a theme was edited;
+• Black screen between playing a looped video in VLC Player;
+• Searching in the audio tab did not highlight searched text;
+• Fixes and performance improvements...
+22/06/2017 - v2.1.0
+News
+• Automatic Presentation with audio (Tools Menu); ( Know more )
+• Create a video of an Automatic Presentation using the program's Themes;
+• Edit a slide (lyrics, announcement, etc.) in "real time";
+• Adjust the projection position on the screen (Display Settings);
+• Delete music in batch (Music Menu).
+Changes
+• [APP] Necessary implementations for new features in the Holyrics mobile app;
+• Possibility to display in two lines and change the text color of the "title and artist on all slides" option;
+• Improved thumbnail generation;
+• File selection windows now with video thumbnails;
+• Slide identification in the slide footer (Custom Formatting);
+• [Theme] Increased limit for "My Images" and "My Videos" (dynamically calculated).
+Fixed issues
+• Example window of transition between slides with "delay" between examples unadjusted;
+• Fixes and performance improvements...
+01/05/2017 - v2.0.0
+News
+• Play audio and video;
+• Transition effect between slides;
+• "Stage View" feature ( Know more );
+• Favorites bar;
+• [Theme] Vertical alignment, justified alignment and custom margins;
+• Automatic line break;
+• Save a specific theme for each song;
+• Media-specific playlist;
+• Custom paragraph formatting ( Know more );
+• Possibility to display title and artist on all slides;
+• Shortcut to change the Bible version in the tab title;
+• Shortcut keys F9 (slide without text) and F10 (black screen) working for the Bible;
+• Save reports and schedule in Excel file (*.xlsx);
+• Countdown (Tools Menu);
+• Communication Panel (Windows Menu) ( Know more );
+• "LIVE" window (Windows Menu).
+Changes
+• The duration limit for a theme video has been increased to 60 seconds;
+• The maximum number of registered ads has been increased (limit calculated dynamically by the program);
+• A confirmation popup no longer appears when double-clicking on playlists;
+• The slide order editing feature is easier to use.
+• The ability to disable remote control via the application.
+• Side-scrolling alert message.
+Fixed issues
+• Displaying slides on all auxiliary monitors was not working;
+• Error when closing the program with a registered user and without an internet connection;
+• Each new window opening to select a file slowed down the system;
+• The "*.dll" file used by the database generated many temporary files without deleting them later;
+• Fixes and performance improvements...
+22/01/2017 - v1.4.0
+News
+• Enable/disable underlining in artist names (Main window);
+• Create an image from a theme and typed text (Tools);
+• Change only selected text to uppercase (Lyrics editing window);
+• Fade in/out when starting or ending a presentation;
+• Holyrics mobile app updated with new features. Example: alerts; announcements; display text typed on the mobile phone; change Bible version, etc...;
+• Link to the list of program tutorial videos on YouTube in the Help menu.
+Changes
+• [Searches] No longer need to type commas, periods, exclamation marks and question marks in searches;
+• Alerts and clocks can have a transparent background;
+• Adaptation of the program code to allow new functions in the Holyrics app on cell phones.
+Fixed issues
+• Flashed a white screen before starting a presentation;
+• Other fixes...
+03/01/2017 - v1.3.0
+News
+• Image presentation (tools menu);
+• Clock display on wallpaper (settings);
+• Some layout improvements.
+Fixed issues
+• Note field was blank when editing a song;
+• Other fixes...
+17/12/2016 - v1.2.1
+Fixed issues
+• Slide control footer in "original" mode did not display the background image in video themes;
+• Decreased error rate when converting video to loop (Theme creation);
+• Other fixes...
+17/12/2016 - v1.2.0
+News
+• Scheduling and displaying alerts;
+• Possibility of displaying more than one verse at the same time;
+• Options for how to display the verse description on the slide.
+10/12/2016 - v1.1.0
+Changes
+• Optimization of video themes.
+Fixed issues
+• Offline search did not find music if the lyrics were at the beginning of the line;
+• Program did not restart automatically after importing a backup;
+• Automatic presentation control footer did not update the seconds value on time;
+• Other fixes...
+01/12/2016 - v1.0.2
+Fixed issues
+• Error when importing via PowerPoint (one lyrics in each file);
+• Importing from PowerPoint did not update the lyrics list automatically;
+• Other fixes...
+30/11/2016 - v1.0.1
+Changes
+• Footer for adding new lyrics to a group profile only appears if you have at least one group profile created.
+Fixed issues
+• Error when adding video (from PC) to a theme;
+• Saving video theme (from PC) did not save the video file;
+• Error when updating Bible verses (via internet);
+• Example text when creating/editing theme was not changed;
+• Other fixes...
+13/11/2016 - Release version 1.0.0

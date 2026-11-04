@@ -1,0 +1,8 @@
+title: 'Proclaim: October 2026 releases (4.21.0.0175 to 4.22.0.0097)'
+date: 2026-10-26
+product: proclaim
+kind: release
+url: https://faithlife.github.io/ProclaimReleaseNotes/4.22/ReleaseNotes.html
+summary: Version 4.22 adds importing from MultiTracks.com Chart Pro subscriptions, MIDI control by song index and documentation for the local Wi-Fi remote API. Earlier October updates fixed Planning Center imports.
+source: Proclaim release notes
+draft: false

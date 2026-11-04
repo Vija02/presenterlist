@@ -1,0 +1,470 @@
+Skip to content
+Free Worship Presentation Software For Churches
+DOWNLOAD
+DOWNLOAD
+Free Worship Presentation Software For Churches
+Main Menu
+List of Changes
+VideoPsalm 1.29 - February 19, 2025
+“Copy/Paste” between VideoPsalm lyrics editor and Microsoft Office works again.
+When the logged-in Windows user is not allowed to write files in the VideoPsalm document folder, VideoPsalm informs the operator that he will not be able to save his changes.
+Bug/Crash: VideoPsalm can control PowerPoint while the PowerPoint application is not activated.
+VideoPsalm 1.28 - February 12, 2025
+No more crash on PCs without the “Century Gothic” font.
+More labels/translations included at the very start so that error messages get translated even at early stages.
+VideoPsalm 1.27 - February 11, 2025
+New web site: videopsalm.org
+Bug correction: PowerPoints now display correctly under all conditions.
+New font color gallery, with colors with better contrast.
+Bible favorites with context menu to add/remove a Bible from the favorites.
+Song IDs up to 8 digits.
+Windows AeroPeek is now automatically disabled on the presentation screen.
+VideoPsalm 1.27 Beta - February 18, 2024
+Stage view can now show the whole song.
+It is now possible to increase the Bible verse selection with the following keyboard shortcuts:
+Ctrl+*, Ctrl+/
+and to decrease the Bible verse selection with the following shortcuts: Shift+*, Shift+/
+It is now possible to select the video audio channel. Not quite finished.
+French typography rules apply to “fr” by default, not only to “fr-FR”.
+Fixed a bug where entire songbook song verses were deselected after an agenda song had verses deselected.
+VideoPsalm 1.27 Beta - December 21, 2023
+Bug correction of folder on command-line /f=
+Default Layout for first time run (panel sizes).
+Adjustments in the default styles for installations that didn’t adjust theirs:
+Bible header font is a little bigger.
+Songbook and Bible footer is a little bigger.
+Margins are bigger (5%).
+Prevent a crash in the song verses splitting.
+Shortcut “Alt+S” switches again to “Songbooks”, instead of “Save”.
+Bug correction so that a versification change doesn’t produce a stack-overflow anymore under certain conditions.
+Video feed: Prevent a crash under some condition.
+VideoPsalm 1.27 Beta - November 24, 2023
+After displaying a PowerPoint, the preview panel is now restored. Previously, it remained hidden and could not be redisplayed. You had to close and restart VideoPsalm.
+VideoPsalm 1.27 Beta - November 17, 2023
+The slide panel shortcuts work again (1 2 3 4 5 6 7 8 9 0 V C B E O etc.)
+Chord display corrections.
+Verse order: it is now possible to add verses to a verse order without having to create a new verse order.
+Color dropdowns use full width in high DPI monitors.
+Bug correction of Bible verse splitting after a specific number of character. Now there is less chance to produce an orphan word.
+CCLI import correction.
+Forms don’t open-up on the presentation screen anymore.
+Bug correction: The “Wait” form closes when the task is finished.
+Agenda name corrections.
+Layout improvements, with clickable splitters and panels full collapse.
+New shortcuts: Ctrl+S (Save), F6 (Focus slide panel).
+Correction for Bible reference selection for languages where Bible book names have similar starts with diacritics differences.
+Buggy skin removed (McSkin)
+Correction of around 20 bugs.
+VideoPsalm 1.27 Beta - August 6, 2023
+Bible versification switch between English, Russian and French. -> Enables natural bilingual display of different Bible versifications.
+Max character/Word per slide: Evenly dispatch of words and characters on the two last slides, so that there is no orphan word.
+Bible header/footer display: now it is possible to display the whole Bible reference, not only the currently displayed verse(s).
+PowerPoint display corrections.
+CCLI import correction.
+Text import correction.
+Correction of around 20 bugs.
+VideoPsalm 1.27 Beta - January 28, 2023
+Correction of around 10 bugs
+VideoPsalm 1.27 Beta - January 1st, 2023
+Correction of around 30 bugs, many back to before version 1.26.
+VideoPsalm 1.27 Beta - October 13, 2022
+It is now possible to set a preferred style level for songs, and for Bible verses.
+Options -> Songbooks -> Preferred style level -> Recommended value: “Song” style level
+Options -> Bibles -> Preferred style level -> Recommended value: “Bibles” style level
+Improved clock display:
+20 predefined clocks
+Clock can be resized and positioned anywhere on screen
+Ability to add your own clock designs.
+Analogic and digital clocks
+AM/MP and military digital display
+Improved song search
+It is now possible to search for numbers/digits in the song lyrics.
+Ability to not display an empty line between two bilingual Bible verses.
+Favorite Bibles
+It is now again possible to select a Bible with a single click (additionally to the ability to select any Bible in a dropdown).
+Bug fix: It is now again possible to select a “Base” style level background color.
+Numerous bug fixes.
+VideoPsalm 1.27 Beta - July 9, 2022
+New menuReopen recent agenda
+New settings
+Show/disable the wait form displayed during the rendering of a slide.
+Show/hide the songbook abbreviation for songs in the agenda.
+Show/hide the song number in the agenda.
+Show/hide the Bible abbreviation for Bible verses in the agenda.
+New songbook template field in slide header/footer
+Verse sequence with highlighted current verse.
+“Read only” songbooks and Bibles
+Better handling of “Read Only” files (Bibles, songbooks, etc.) and the message displayed when the operator tries to overwrite such files.
+Numerous bug fixes.
+VideoPsalm 1.27 Beta - June 1st, 2022
+Numerous bug fixes.
+VideoPsalm 1.27 Beta - April 24, 2022
+Numerous bug fixes.
+VideoPsalm 1.27 Beta - March 20, 2022
+New agenda item type: YouTube (could be achieved before with “web site”, now more obvious).
+Header and footer templates at any style level. Can be edited in the new “Size and location” floating form.
+Legacy “Pushpin”-button is back (this is obsolete, some people still want it).
+New setting: Show/hide the flyout panel informing of an automatic style level change.
+Numerous bug fixes.
+VideoPsalm 1.27 Beta - January 30, 2022
+New floating window to set the body, header and footer panel size and location.
+Ability to limit the number of lines displayed in song verses
+Ability to limit the characters displayed in song verses
+Improved translation dialog with Google translate, for language contributors
+Improved setup of monitors, with single click monitor switcher
+RTL support for Arabic and Hebrew
+Song verse order
+Song color, songbook color, song icon, selectable among 120 icons.
+Bible selection, especially when many Bibles, with search, very useful when there is more than a few Bibles.
+Bible books with old and new Testaments together in one list. Much easier.
+Bible book name colors
+Bible book names for selection / Bible book names for display
+Several Bible verses on the same slide
+Faster startup
+Faster agenda open and saving, with progress information when necessary.
+Style level badges/hints over style level attributes, for improved understanding of what happens under the hood. (Replacement for the Style Explorer).
+It is now possible to give a meaningful name to agenda items like images, videos, audios, PowerPoints, Excels, Words, Pdfs.
+It is now possible to replace the agenda file by another one for images, videos, audios, PowerPoints, Excels, Words, Pdfs.
+This can be useful when the agenda does not contain the file, and the file was moved to another place on the hard drive.
+Synchronization of the lyrics editor and the displayed song verse.
+Video: disable hardware acceleration (for new laptops where the display driver is not updated)
+New languages: Tamil, Kurdish, Spanish Colombia
+As always, 100 % compatible with earlier versions (to rollback: uninstall 1.27, then install an older version).
+PDF displayed with fit to width
+Ministry Manager Stage View (Brad Wickett).
+Comprehensive save dialog
+Improved Web cam support, setting dialog and refresh web cam list
+Improved stage view
+Feature: Play or pause video or audio with the F5 key (works with Logitech remotes and other standard remotes).
+Video/audio player: New shortcut: I et O, to set the video (or audio) range start and end.
+“X” keyboard key shortcut to switch a PowerPoint slide visibility.
+Temp folder is now by default the Windows Temp folder. It is possible to configure the location of the Temp folder.
+Corrected bugs:
+Video loops without black flash
+Improved PowerPoint, very fast PowerPoint load, even hundreds of slides
+Import songs from popular sources: bug corrections
+Audios in the agenda can have different start and stops
+Fallback language is English (not French anymore)
+FormMain TabOrder almost perfect. TAB was not working since version 0.9 (the start…)
+Video luminosity works again.
+PowerPoint unexpected white top bar is now gone.
+Bug correction so that the Base image background gets displayed correctly right after loading the app.
+etc.
+VideoPsalm 1.26 - June 01, 2020
+PowerPoint improvements
+Automatic resize of PowerPoint thumbnails in the preview panel.
+Fast loading of PowerPoint documents, even documents with thousands of slides.
+Integrated display into the presentation screen (no more focus loss problem and desktop flashing at the end), etc.
+Better Microsoft PowerPoint application detection.
+Video rendering improvements:
+Integrated video codecs (no need to install specific codecs anymore).
+Fluid video rendering.
+Support of all video format.
+Gallery thumbnails.
+Image rendering improvements:
+Image rotation (right/left/mirror)
+Loading time improvements:
+Faster startup time due to delayed and fast loading of image thumbnails, video thumbnails, and Bibles.
+Import improvements:
+WorshipCenter Pro import
+Worship Him import
+Text import handles chorus sequences better.
+Stage view:
+Display current verse + next verse or only current verse.
+Add to agenda:
+The entered search is no more emptied. You can empty it either by pressing “Esc” or press the “Clear” button.
+Miscelaneous improvements/corrections:
+Show/hide mouse cursor over presentation screen (through the Options -> Presentation screen).
+The Chinese Bible search (word search) works now, and possibly in other languages that have no word separator.
+Text template corrections.
+Default text size (“Base” style) is now 70 (100 was too big).
+Following song imports now also work on 64 bit systems: MediaShout, EasySlide, Lyrix, SongPro, WorshipCenter Pro, Worship Him.
+Stage view bug corrections.
+New/modified labels (for translators)
+VideoPsalm 1.24/1.25 - August 02, 2019, 2020
+These versions are test versions that have several bugs and were removed from the site.
+VideoPsalm 1.23 - November 09, 2018
+Stage view improvements.
+Improved Wycliffe Bible import.
+Improved performances (startup time in 7 seconds instead of 20).
+Display of both Bible names in bilingual display.
+Screen ratio band color is now configurable (white by default).
+PowerPoint thumbnail width is now configurable.
+Bug corrections
+Several bug corrections.
+New/modified labels (for translators)
+VideoPsalm 1.22 - August 25, 2018
+Bug corrections:
+Freeze/unfreeze button works as expected.
+It is now possible to open VideoPsalm by double-clicking an agenda file.
+Font styles are back (they were missing since 1.20).
+Improvements:
+8 more text animations/transitions.
+Better Right-to-left language support (Hebrew, Arabic).
+Automatic Right-to-Left window layout for RTL languages.
+Culture-specific search in lyrics and Bible verses (document language).
+ZionWorx 2.6 import.
+Setup with folder selection.
+VideoPsalm 1.21 - February 24, 2018
+Bug corrections:
+Backgrounds are now displayed even when their transition duration is 0.
+Style explorer: it is again possible to reset the header and footer templates.
+Import from SQLite works again (for OpenLP import, etc.).
+Mac folder VMvare mapping should work now.
+A malformed image doesn’t issue an exception anymore.
+It is again possible to add a new song while the search field contains some text.
+It is possible again to open an agenda by double-clicking it.
+It is possible again to search Bible verses by keywords.
+It is possible to set the “Base” style attribute under any condition
+Improvements:
+Sunflower icon.
+Splash screen progress bar more precise.
+Microsoft Windows MSI setup (no exe anymore).
+Faster start (up to 30 % faster).
+High dpi screen support.
+Improved Lyrix import.
+SongPro native import.
+VideoPsalm 1.20 - December 2, 2017
+Mainly corrections of old bugs:
+The agenda “Move up/down” buttons visibility state is properly taken from the VideoPsalm options.
+Some missing labels are now translatable.
+Restoring a backup does not fail anymore due to a used image or document.
+Correction of a bug that could arise depending on the analog clock settings.
+To prevent the BitDefender antivirus to struggle for nothing, VideoPsalm now does give an extension to temporary files.
+VideoPsalm now works better on high dpi monitor (for example 192 dpi).
+Style explorer: VideoPsalm doesn’t insert [] anymore when we click twice on the header or footer field dropdown.
+Style explorer: The header and footer field dropdown contains now all fields.
+Style explorer: Missing translation added.
+VideoPsalm now automatically reduces the text resolution when it detects that the video memory could get filled up on high resolution monitors (this doesn’t happen on “normal” monitors, only on some macs having ridiculous high resolution).
+Possibility to add an offset to the tamil font, via CommonSettings.TopOffsetFontSizeFactor.
+Correction of a bug while drag & drop a web address into the agenda.
+Correction of not translated labels in the options.
+Correction of multiple bugs in the video control.
+Correction in the EasyWorship import.
+Correction in the agenda export to the Windows Clipboard, which now contains the CCLI number.
+Correction of what could be understood as “Out of Memory” exceptions while displaying images.
+Correction of a memory leak while displaying images and text.
+Memory optimization.
+Correction in the recognition of YouTube video links.
+Better audio and video control size.
+Audio control gets now hidden properly when switching to another document.
+Correction of a bug when setting style attributes while on the “Base” level.
+Correction of a layout bug under certain circumstances.
+The main form gets now displayed on top of already opened windows.
+In the “About” dialog, the version number is now visible, even if there is no internet connection.
+Better performance when switching to a new language.
+New functions:
+EasyWorship 2006 import.
+OpenLP 2.1 import (attention : it is necessary to convert your OpenLP SQLite DB from version 2. to 3 before proceeding to the import. If you don’t know how to do that, feel free to send us your old OpenLP database, and we will do the import for you.
+4 new skins, for a total of 50 skins.
+VideoPsalm 1.19 – August 24, 2017
+Bible wrap setting updates properly from an earlier VideoPsalm version.
+Video last image is now hidden when showing a new video.
+Up/Down agenda buttons can be made visible in the Options -> Customization.
+Eliminated startup error message on some PCs (SQLite Interop blabla).
+Missing texts are now translated (English, Spanish, Portuguese, French, German, Czech, Dutch, Afrikaans, Lithuanian).
+List of new labels (for the language translation contributors).
+VideoPsalm 1.18 – August 7, 2017
+The song editor layout is no more broken on screens with high pixel density.
+Audio files compatibility between 1.16 and 1.18, including agenda files.
+List of new labels (for the language translation contributors).
+VideoPsalm 1.17 – August 1st, 2017
+New features
+List of new labels (for the language translation contributors).
+VideoPsalm 1.16 – Mai 25, 2015
+Fixes the “background image bug” found in 1.15.
+The “Pushpin” button is again visible by default, like it was before version 1.15.
+Note: you can show or hide your “Pushpin” button anytime via the VideoPsalm options -> “Customization” Tab.
+List of new labels (for the language translation contributors).
+VideoPsalm 1.15 Beta – Mai 16, 2015
+An MP3 can get associated to a song, and played automatically during the display of the lyrics, for churches that have no musicians.
+Display of a live video stream in the background (live camera).
+Display image thumbnails in the video gallery, like what is already available in the image gallery.
+Search / filtering of images and videos by keywords in their file name and metadata.
+This function makes it easy to find a picture or a video.
+Optionally optimized for touch-screen devices (bigger buttons, etc.), for example on Microsoft Surface tablet types.
+Display of an animated alert message, below the text, or a clock, a stopwatch and a count-down (mechanical clock only at the moment, more models will come later if people request it).
+New import filters from popular formats (including CCLI .usr, OSI, Wycliffe), many corrections in existing imports (EasyWorship, OpenSong, text, PowerPoint, Psalmo, OpenLyrics, etc.).
+Improved song search by CCLI No., songs with chords, etc.
+Ability to add CCLI songs (.usr) directly into the agenda, such songs will also be added automatically to a CCLI songbook for later reuse.
+Display of the searched properties in the songbook tree when possible: Song number, CCLI, author, composer, reference, theme, chords, etc.
+Transposition / Capo more visible and user-friendly.
+Ability to hide the bass chords.
+For example “C/A#” will be displayed as “C”, without the “A#” (the bass).
+Many smaller improvements and fixed bugs:
+– It is now possible to hide less frequently used buttons.
+– It is now possible to hide the tooltips (in the settings).
+– Improvement: The main window panel layout will make sure that no panel will accidentally get hidden (for example during re-sizing of the main window or a screen resolution change).
+– Improvement: Now after the restore of a backup, the existing files are not overridden, they are renamed into .ignore files.
+– Improvement: While presenting, the PC won’t go into sleep, nor the screen.
+– Improvement: Default skin: Office 2010 Blue.
+– Improvement: If a document happens to be missing from the VideoPsalm Online Library, VideoPsalm continues with the download of subsequent documents. Before, the download used to fail silently.
+– Improvement: A Bible verse songbook is created without the “Searchable” flag set by default.
+– Improvement: The VideoPlayerControl is moved over the horizontal splitter.
+– Improvement: “Snowflake” button shortcut: Ctrl+R
+– Corrected bug: Exception when copying an agenda description while the agenda contains PowerPoint files.
+– Corrected bug: Bible book names get rendered with a number instead of with names under certain conditions.
+– Corrected bug: Shortcuts failed to work under some condition.
+– Corrected bug: Exception raised with malformed chord (/).
+– Corrected bug: Exception raised with a chord alone on a line.
+– Corrected bug: Exception while editing lyrics with text attributes under some conditions.
+– Corrected bug: Video files could get deleted under some condition during the application shutdown, when assigned to the base style.
+– Corrected bug: Adding an agenda into an agenda didn’t shift the flow-type values.
+– Corrected bug: Exception when displaying an agenda Bible verse of a Bible that got deleted.
+– Corrected bug: Exception when clicking on another Testament when there is no Bible.
+Bug: Assigning an image or a video to the “Base” style level displays an error message (corrected in 1.16).
+VideoPsalm 1.14 – April 19, 2014
+It is now possible to change the color and style of individual words in a slide: italic, bold, underline, strikethrough, font, size, text color, stroke color.
+Ability to edit song lyrics via a simplified text editor compatible with entering RTL text, for Arabic and Hebrew.
+Ability to adjust the brightness of background images and videos, to better highlight the text.
+Display of the agenda name in the title bar and in the agenda panel.
+The “Open agenda” menu has been improved with additional menus for slideshow, standalone videos, PowerPoint, etc.
+The “Open agenda” menu visually describes what happens with your texts and styles when you open an agenda.
+The “Save agenda” button now has a menu.
+Linked (bilingual) agenda items are displayed in italic and gray.
+It is now possible to move multiple agenda items at the same time by selecting them.
+Drag & drop agenda items also works towards the upper and lower limits of the Agenda: The agenda list begins to scroll automatically.
+Automatic display of bilingual Bibles verses when other Bible verses are displayed.
+The “Copy agenda” function includes the songs lyrics and Bible verses.
+Added a function to copy the summary of a songbook into the clipboard.
+It is now possible to leave the image and video galleries opened while selecting an image or a video.
+The size of the image and video galleries is remembered between sessions.
+Several quick access buttons in the ribbon Quick toolbar.
+New keyboard shortcuts (Enter, /*-+, right and left click, double click on the presentation screen, quick access to verses with 1-9, C).
+Ability to search by keywords in the VideoPsalm Online Library, to more easily find songbooks and Bibles that you need. There is also a new “Code” field, where you can search for an abbreviation.
+Possibility to loop PowerPoints.
+PowerPoint: Ability to use the “Next slide” button, even within a PowerPoint slide with animations.
+Various bug fixes in controlling PowerPoints.
+Ability to save an agenda file without background images, image slideshow, video background, standalone videos, PowerPoints.
+When moving in lists (agenda, slides), the next item is made visible as much as possible.
+In the options, you can configure the text editor font and some color attributes.
+In the options, it is possible to selectively enable notifications of new releases, new songbooks, new Bibles and new languages.
+Your preferences are now stored exclusively in Settings.json and CommonSettings.json files. In previous versions, some parameters were stored in the Windows folder registered for, but this caused problems under certain conditions or even caused crashes.
+Correction in the Psalmo import.
+Correction in the EasyWorship import.
+Correction in the OpenLyrics import.
+Fixed various bugs.
+VideoPsalm 1.13 – August 24, 2013
+The main new feature consists in a search functionality for Bible verses, similar to the song search feature:
+Picture
+How to search for verses, examples:
+To swap between the two Bible verse selection modes, click on the search button.
+To find all Bible verses containing the words “Bread” and “Cup”, type these words in the search field.
+Don’t be bothered about punctuation and character casing. If your language uses diacritics (accents, etc.), don’t bother about them either.
+VideoPsalm starts searching after you type more than three characters.
+The search is performed as you type.
+To search for a sentence, for example “Jesus took bread”, type these words together: “jesustookbread”.
+Here again, don’t bother about the punctuation, character casing and diacritics. However, you need to type the proper orthography.
+Other changes:
+VerseView import.
+In single screen mode, you can advance through the presentation by clicking on the mouse.
+During a search, the current slides are only replaced after you click on one of the found songs. In previous versions, the current slides were automatically replaced by the focused found song. This could be disturbing.
+If you copy (clone) a songbook via the Windows file explorer, it will be loaded when VideoPsalm starts. VideoPsalm assigns automatically a new id to this songbook.
+In previous versions, cloned songbooks were ignored.
+Smooth scrolling in the agenda, found Bible verses and slides grids.
+Bug fixes: Better handling of VideoPsalms font, better handling of horizontal splitters, to try to reduce the disappearance of the slide buttons (press simultaneously on the Ctrl + Alt + Shift keys), restore button more visible, buttons in the alert popups so that you can choose if the popup must appear the next time or not, better layout handling when you choose a bigger font in Windows, VideoPsalms settings are now stored into specific files in the respective library folders, Thai language bug correction, changing the content of the image folder doesn’t crash VideoPsalm anymore, image file extensions in uppercase are now taken into account, the “Snowflake” button works again properly.
+VideoPsalm 1.12 – July 7, 2013
+Bug fix: Microsoft PowerPoint 2003, 2007, 2010 et 2013 compatibility (only 2010 et 2013 in version 1.11).
+Bug fix: Toolbar buttons disappearance on some PCs.
+Bug fix: Agenda instability (opening of an agenda containing PowerPoints, cloning agenda items via Ctrl+Drag+Drop, etc..).
+Bug fix: OpenSong songs import.
+Bug fix: EasySlides and OpenLP Bible import.
+Bug fix: MediaShout songs.
+Bug fix: Combined chords display after transposition via the capo.
+Bug fix: Search a song when a songbook has no song.
+Bug fix: Agenda opening set songbooks to a dirty state (no more).
+VideoPsalm 1.11 – April 13, 2013
+Video playback controls.
+Two ways to edit chords: a) Chords over lyrics, b) ChordPro format.
+Auto-advance function: The presentation can automatically advance at a specific time interval.
+Agenda (song list) summary can be copied and paste in text format, for example to email a list of songs titles and numbers.
+Song search will find songs by number in a specific songbook, via its abbreviation. Example: “soc204” will select “Song of Fellowship” number 204.
+Ameliorated PowerPoint control.
+99 Bibles in around 50 languages available in the VideoPsalm Online Library (from within VideoPsalm).
+Performance improvement at the loading of VideoPsalm and many bug corrections.
+New import filters: WebAsaph songs, EasySlides Bibles, ChordPro songs, ameliorated OpenSong import (the verse sequence is now taken into account).
+Slide shortcuts: 1 to 9 (and 10 with key 0) to display verse 1 to 10, C to move to the next chord, Ctrl + 1 to 9 to display corresponding chord, E to move to end of song, X to swap verse visibility (checkbox selection/deselection).
+Identified bugs in the version 1.11 so far (corrected in 1.12):
+When you try to duplicate a slideshow image, a video or a PowerPoint from the agenda (with Ctrl + Drag & Drop), the program raises an exception.
+Duplicating a song or Bible verses works like expected.
+VideoPsalm can only pilot PowerPoint presentations if you have PowerPoint 2010 or 2013 installed. If you have PowerPoint 2007 or 2003, you may experience unexpected results.
+VideoPsalm 1.10 – November 4, 2012
+Converting a Bible verse into a songbook song, to enable its easy edition.
+See article How to place several Bible verses on the same slide
+Keyboard shortcut: When VideoPsalm finds several songs that match the search criteria, you can add one of those songs by pressing Ctrl+song position.
+For example, if you want to add the third song, press Ctrl+3.
+EasyWorship song import.
+Import bug correction (Bibles OpenSong, MediaShout, OpenLP, EasySlides).
+PowerPoint presentation control bug corrections.
+Several minor bug corrections.
+VideoPsalm 1.9 – September 26, 2012 – Australia/Sydney/Hillsong version
+Portable VideoPsalm
+Backup and restore of songbooks, Bibles, images and videos
+VideoPsalm Online Library
+Song and Bible import from several well known sources
+Import images and videos into their gallery
+Updates notification
+Improvements in the song instant search via keywords
+Faster startup time
+Copy/move song into another songbook
+Display font
+Bug corrections
+Multilingual
+VideoPsalm 1.8 – March 26, 2012
+Better handling of the OpenSong import of songs and Bibles: verse sequence and chords are now properly imported.
+Header and footer fields: song title, author, composer, songbook name or abbreviation, copyright, church licence or CCLI, free text, Bible, Bible book, chapter, Bible verse, position (verse 3/5), etc. (there are many other fields).
+SongBook and Bible panel layout problem solved.
+Style explorer gets a navigation bar.
+Bilingual display of Bible verse gets corrected.
+Transition can be set with a single click (sometimes two click were needed before).
+Screensaver and screen power saving are now disabled during the video-projection.
+Removal from the backgroung image or video loop via the gallery black thumbnail.
+Better handling of PowerPoints.
+Correct handling of file names containing some special characters.
+The removal of a style doesn’t break the program anymore.
+The video sound is not broadcasted twice anymore.
+Song verse tags are displayed with a grey color.
+VideoPsalm 1.7 – January 6, 2012
+Keyboard shortcut enabling the use of a wireless presentation device.
+Mouse cursor gets hidden over the presentation screen.
+VideoPsalm 1.6 – January 3, 2012
+Background video loops.
+Add videos to the agenda.
+Add PowerPoints to the agenda.
+Add slideshow pictures to the agenda (available since a long time, but mentioned here).
+Bilingual display of song verses and Bible verses.
+Ability to select whether displaying a black screen between songs.
+Skins : around 40 skins for different situations (low light or bright environments).
+Style explorer.
+Splash screen.
+Screen ratio previews.
+Takes dynamically into account screen resolution changes, screen ratio, screen count and screen swap: it is not necessary to restart VideoPsalm for these changes to be taken into account.
+Contextual help (“F1” key)
+Ability to hide unused songbooks.
+Attaching font and color attributes of header and footer to the body.
+Songbook corrections.
+VideoPsalm 1.5 – November 26, 2011
+Chord input mode. [] characters automatically inserted. In this mode, it is enough to type “D” to insert [D].
+Ability to switch between Chord mode: “ABC” or “Do Ré Mi” format, with automatic transposition (via the song « Capo » property). Chord font, color, size, etc. are configurable.
+Ribbon shortcut. Press Alt to discover them (like in MS Office).
+Two new search options: a) Only search in the title, b) Search song having chords.
+Careful : The chord format has changed: Chords use now the ChordPro format ([] instead of <>).
+VideoPsalm 1.4 – November 16, 2011
+Correction in the opening of a slideshow created on another PC.
+Font size stored proportionaly to the screen size.
+VideoPsalm 1.3 – November 13, 2011
+No more error in case the Bible has undefined book abbreviation.
+No more gap in the chords display in case where the lyrics contain dashes.
+VideoPsalm 1.2 – November 12, 2011
+Transition duration now stored in ms.
+Ability to define a Bible book abbreviation. Abbreviations can be useful when typing a Bible reference. Of course, it is still possible to type a reference via the book name.
+Red pushpin to pin the style level.
+Icon changes (screen instead of torch light).
+The displayed slide is now highlighted in blue.
+VideoPsalm stays on the selected slide while editing a song lyrics.
+10 search methods, on the several song fields.
+Single click display. The double-click still works.
+Snowflake to freeze the presentation screen.
+VideoPsalm 1.1 – October 24, 2011
+First version.
+Scroll to Top

@@ -1,0 +1,8 @@
+title: "LyricDisplay: August 2026 releases (6.8.0 to 6.8.6)"
+date: 2026-08-28
+product: lyricdisplay
+kind: release
+url: https://github.com/PeterAlaks/lyric-display-app/releases
+summary: Adds an in-app file navigator, a multiview page that previews every output, a redesigned song editor, audio-reactive visualizer backgrounds and a connected-outputs strip in the control panel.
+source: GitHub
+draft: false

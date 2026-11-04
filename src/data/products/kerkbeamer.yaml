@@ -73,6 +73,10 @@ feature_notes:
   connectivity.collaboration: Team members can work on presentations and templates at the same time.
   connectivity.web_native: Presentations are prepared in the browser, but playback in church uses the KerkBeamer software for Windows or macOS.
 languages: [Dutch]
+news_feeds:
+  - https://kerkbeamer.nl/categorie/nieuws/feed/
+release_feeds:
+  - https://kerkbeamer.nl/categorie/app/feed/
 sources:
   - https://kerkbeamer.nl
   - https://kerkbeamer.nl/tarieven/

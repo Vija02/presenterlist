@@ -1,0 +1,324 @@
+C hangelog
+Updates, changes, and improvements at Pewbeam
+2.6.20 October 28, 2026 Fixes
+Steadier transcription through long services.
+F ixed
+No more drop at 50 minutes: Transcription no longer reconnects partway through a long service, so the "Transcription connection dropped" notice and its gap in the transcript are gone.
+Auto-detect language: With the language set to auto-detect, transcription could fail to start at all. It now starts reliably, keeping every book of the Bible in its vocabulary.
+2.6.19 October 25, 2026 New Feature!
+Excerpts: the sermon's best lines, on screen while they're preached.
+A dded
+Excerpts: Turn the strongest lines of a sermon into slides as they're preached. Click + beside any line in the transcript, or use Add your own to type one, and Pewbeam designs it in your church's brand, or that service's, using the preacher's own words. Each excerpt sits on your brand's background, or on one Pewbeam makes from your flyer. Send it live in one click.
+Find excerpts: One click looks over the sermon since your last Find and suggests up to five lines worth putting on screen. It favours what the preacher repeated, contrasted, or paused on, and each card says why it was picked. Tighten shortens a long card without changing what was said.
+Lists that build themselves: When the preacher says "five ways to…" and then "number one…", a list card appears and fills in as each point is preached.
+Choose where excerpts go: Send excerpts to every output, or only to the screens you pick in Settings → Excerpts. For example, a lobby screen can show the excerpt while the main screen keeps the scripture.
+Scripture comes first: When the preacher names a verse, it takes over the screen from the excerpt.
+Making excerpts with + or Add your own is free, and so are self-building lists. Find excerpts and Tighten use slide credits. Nothing from the sermon leaves your computer unless you click one of them.
+2.6.14 October 4, 2026 New Feature!
+Spoken verse ranges, more reliable voice navigation, and a smoother theme designer.
+A dded
+Verse ranges by voice: Say “John 3, verses 1 to 2” and Pewbeam displays both verses together. Longer ranges show the first three verses, keeping the passage readable on screen.
+F ixed
+Moving through a chapter: Saying “verse 2”, “verse 3”, or “next verse” now follows the passage you’re reading more reliably. After a displayed range, “next verse” continues from the end of that range.
+Repeated and rapid commands: Improved handling of closely spaced verse calls so the latest reference takes priority and repeated detection of one command doesn’t advance twice.
+Opening the theme designer: Removed the full-screen fade and zoom that could cause a visual glitch on Windows, with the dashboard showing through as the editor opened.
+C hanged
+Consistent confirmation dialogs: Theme deletion and unsaved-change prompts now match the rest of Pewbeam.
+2.6.12 September 26, 2026 New Feature!
+Premium themes, one-click renewal, and smoother theme switching.
+A dded
+Premium themes: Four new designer-made themes ship with Pewbeam: Motion I, Motion II, Lower Third II and Lower Third III. Free users can preview them; putting one on your screens needs Plus or Core. Themes use your installed fonts where you have them and fall back to Inter where you don't.
+Renewal reminders: In the last 9 days of your plan, a banner at the top of Pewbeam shows how many days are left and what your church would lose if it lapsed, with a one-time reminder at 9 days, 4 days and on expiry. It never appears mid-service, and it stays away entirely if your plan renews automatically.
+Renew in one click: Renewing charges the card you already paid with, right from the reminder, with no forms. Renewing early costs nothing: your new period starts when the current one ends. If your bank needs to confirm the payment, a secure checkout opens in your browser.
+C hanged
+Lighter theme switching: Changing themes does less work behind the scenes, so the app stays responsive, even with several NDI outputs running and a scrolling alert on screen.
+F ixed
+Alert banner on wide themes: On themes with a wide custom canvas, the alert banner now sits right on the top edge of your picture. Motion backgrounds line up with the picture on the live preview and HDMI screens instead of filling past its edges.
+2.6.11 September 25, 2026 Fixes
+A fix for outputs that wouldn't turn on.
+F ixed
+Main output switch: If your saved display was unplugged, for example a projector disconnected since last Sunday, the output switch could flip on and straight back off without explaining why. Pewbeam now switches that screen to NDI and tells you, or moves it to another connected display.
+2.4.610 September 25, 2026 Update
+Cleaner sliders and colour controls everywhere.
+C hanged
+New sliders: Every slider in Pewbeam has a fresh look, with a tick ruler, a shaded fill and the value shown right inside it. This includes the theme designer, slide editor, alert window, input volume and canvas zoom. Input volume now shows your microphone level in decibels and still snaps to 0 dB.
+New colour inputs: Colour controls now show a clear swatch, the full hex code and the opacity side by side, lined up neatly from row to row.
+Tidier alert window: Sliders and colour inputs in the alert window now match the height of the fields around them.
+2.4.6 September 25, 2026 New Feature!
+A redesigned editor, QR codes on your slides, and moving backgrounds.
+A dded
+QR codes: Add a QR code to any slide or theme, for your giving page, website or sign-up form. Choose from several styles and colours, and every style still scans reliably. On the free plan the centre carries the Pewbeam mark. On paid plans you can put your own logo there or leave it clear.
+Motion backgrounds: Gradient, flow, wave and aurora backgrounds that move gently behind your scripture. They are drawn by your graphics card, so they stay light on church PCs. (Plus and Core)
+Video backgrounds on slides: A slide page can now have a video background, set straight from the editor toolbar. (Plus and Core)
+Bring to front and send to back: Reorder any element in the theme designer and the slide editor from the right-click menu or keyboard shortcuts. This works for the scripture text too, so a shape can sit behind or in front of your verse.
+A new highlight tool: Highlighting words on the live verse has a cleaner panel and solid, easy-to-read colours.
+"Go to verse" by voice: When a chapter is on screen, saying "verse 17" or "and then in verse two" moves to that verse. Reading a sentence that merely contains a verse number won't move the display.
+Keyboard shortcuts for the live screen: Esc clears the screen, number keys send a verse straight to live, and Enter sends what you've staged.
+C hanged
+A redesigned editor toolbar: The theme designer and slide editor share a new floating toolbar with undo, redo, video and QR tools. Drag it anywhere, and it keeps its spot when you resize the window.
+Move freely around the canvas: Hold Space and drag, or use two fingers on a trackpad, to pan around your design, with more room to work at the edges.
+Tidier editing: Clearer selection handles, an alignment grid, and a simpler slide page list where you can insert a page before or after any other. Word Study settings now appear only when you're editing the scripture, not a shape.
+Set a theme for a specific output: Use "Set as Output 2" (and so on) to send a theme to one screen. This fixes themes that didn't apply to the output you picked.
+Imported slides fit their boxes: Text from PowerPoint and Word imports now shrinks to fit its box instead of spilling over.
+Smoother alert banners: Scrolling alerts glide smoothly on the live preview and HDMI screens.
+Faster to the screen: Less work happens each time a verse goes live, so it appears sooner, especially with photo backgrounds.
+Sign in: Signing in to your account now happens in a simple in-app window.
+Transparent backgrounds are now part of Core: Creating new transparent themes needs Core. The built-in Lower Third stays transparent on every plan, and themes you've already made keep working exactly as they do today.
+F ixed
+Changing theme while a verse is live: NDI and HDMI now update straight away, instead of waiting for the next verse.
+Tiny text at the top of the screen: Some themes with a custom verse position sent small text to the top of the output. Fixed.
+Selecting a range of verses: Shift-selecting a range now highlights every verse in it, and typing a reference brings that verse into view.
+Live display list: The live display now lists only what's actually live.
+Sermon publishing: The detected-scriptures list in the publish review now scrolls, so long sermons show every reference.
+2.4.5 September 12, 2026 New Feature!
+Motion inside your shapes, smoother hand-offs, and a fix for older Macs.
+A dded
+Video and GIF fills on shapes: Lower thirds and other shapes can now play a video or GIF as their background, set up in the theme designer. A shape's motion can run alongside your theme's own video background. (Plus and Core)
+Apply formatting to every slide: Set one slide's background, heading and body styling the way you want it, then apply it to the whole deck from the page's right-click menu instead of repeating it page by page.
+C hanged
+No more blank flash between slides and scripture: Switching between a slide and a verse used to flash a blank or standby frame. The outgoing picture now stays on screen until the incoming one is ready.
+Steadier secondary screens: Screens 2–4 keep their slide while the verse takes over, so a hand-off no longer blinks them.
+Suggested slide, where you're looking: The "follow the service" suggestion now appears right under the Main output preview, with accept and dismiss beside it.
+Smoother verse text: Text outlines are more even, and shadow softness now matches what you see in the theme designer.
+Thumbnails hold their picture: Slide cards and deck thumbnails keep the last frame until the new one is ready, instead of flashing a light placeholder.
+Feedback form: Pre-fills the email address on your account.
+F ixed
+Older Macs opening to a blank window: On macOS 12 (Monterey), Pewbeam could open to an empty window. Fixed — the app no longer depends on browser features that version doesn't have.
+Verses missed mid-sentence: A reference spoken inside a sentence (for example, "we read in Isaiah 45:19") could be skipped. It's picked up now.
+"Chapter and verse" callouts: Saying something like "Isaiah 45 and 19" now opens the verse your pastor named, instead of only the chapter.
+BLACK is fully black: BLACK now blacks out every output completely, including while an alert banner is on screen.
+2.4.4 September 4, 2026 New Feature!
+Motion backgrounds, and Pewbeam follows along with your slides.
+A dded
+Video backgrounds: Your theme background can now be a video or GIF (MP4, MOV, GIF), not just a still image. Motion backgrounds play behind your scripture on NDI, HDMI and every output. Videos are optimised once when you import them, so playback stays smooth even on modest church PCs. (Plus and Core)
+Follow the service: Pewbeam now listens for where you are in your slide deck and suggests the matching slide as your pastor preaches. Suggestions appear for you to accept — nothing changes on the screen unless you say so. Auto-advance is available if you want it.
+Slide backgrounds you can shape: Slide page image backgrounds now have the same controls as the theme designer: image fit, scale, blur and a colour overlay. What you set is what goes to the screen.
+Voice control for slides: Move to the next or previous slide with a voice command, hands-free.
+A clearer way to upgrade: Plans and pricing now open as a full page instead of a cramped dialog, so you can compare what you get at a glance.
+F ixed
+Nigerian pricing at checkout: Some Nigerian churches were being sent to dollar pricing at checkout instead of Naira. Checkout now uses the same location as the price you were shown.
+CLEAR now clears everything but your background: On lower-third themes, pressing CLEAR left the bars and reference labels on screen with no verse in them. Only your background stays now, on every output including secondary screens.
+Secondary screens no longer freeze: If a theme's video background failed to play, a second or third screen could freeze on the last thing shown and refuse anything new. It now falls back to showing the verse and warns you.
+Verse list stays put: Double-tapping a verse you'd searched for could select a different one, because the list scrolled between your two taps. Sending a typed reference also left you somewhere random in the chapter instead of on the verse you sent.
+2.4.3 September 1, 2026 New Feature!
+Take your slides with you — export any deck to PowerPoint or PDF.
+A dded
+Slide deck export: Export any deck from the slide library — right-click a deck and choose Export as PPTX or Export as PDF.
+Editable PowerPoint: PPTX exports keep your headings, body text, and text boxes fully editable in PowerPoint, with backgrounds, fonts, sizes, and colors carried over exactly as designed.
+PDF quality options: Pick Best, Balanced, or Compact when exporting a PDF to control the file size.
+Shape fills: Shapes in the slide editor now support color, gradient, image, and transparent fills.
+C hanged
+Navbar: Settings now sits at the end of the navbar, after Get help.
+F ixed
+Shape and image properties: Shapes and images added in the slide editor now show their full properties — recolor a shape, or adjust an image's fit, scale, blur, and overlay.
+Slide editor inspector: Removed the theme-only Word study section from the slide editor.
+2.4.2 September 1, 2026 New Feature!
+A more reliable Sunday, with faster slides and better audio controls.
+H ighlights
+Reliable transcription: Fixed transcription repeatedly dropping and reconnecting during worship, prayer, and quiet moments.
+Faster slides: Slide thumbnails now load noticeably faster.
+Better audio testing: New live input monitoring and a longer microphone test.
+A dded
+Referrals: Find your church's referral code, copy your share link, and track the churches you've referred.
+Naira pricing: Upgrade plans now display in ₦ for churches in Nigeria.
+Deck canvas sizes: Set a custom canvas size for each deck.
+Slide controls: Control live slides with the arrow keys and reorder slides within a deck.
+Continuous alerts: Run alerts on an infinite loop and see the loop count in the navbar.
+Verse stepping: Step through verses with the < and > keys.
+Get help: Access support directly from the navbar.
+Targeted announcements: Send announcements to specific accounts.
+C hanged
+Simpler input volume: Replaced dB tick labels with a simpler volume slider, volume glyphs, and a snap at 0 dB.
+Longer mic test: Microphone tests now run for 20 seconds to catch mics that cut out shortly after starting.
+Keyboard shortcuts: The Help page now lists every supported shortcut: LIVE L , Clear C , Blackout B , Tab, and Enter ×2.
+Faster thumbnails: Slide thumbnails now render at display resolution and are cached for noticeably faster loading.
+F ixed
+Sunday transcription disconnects: Fixed transcription repeatedly dropping and reconnecting during worship, prayer, or quiet moments.
+Incorrect plans: Accounts upgraded outside checkout, such as Plus → Core, now show the correct plan everywhere.
+Verse search: Clearing a search now returns you to the chapter you were reading instead of leaving an empty panel.
+Microphone testing: Fixed input level bars not responding while talking.
+Microphone reloads: Changing input volume no longer reloads the microphone.
+2.4.1 August 29, 2026 New Feature!
+Better updates, better live controls, and fewer things to worry about during service.
+A dded
+In-app announcements: Product news and updates now reach you directly inside Pewbeam.
+Automatic updates: macOS downloads updates automatically. Windows installs pending updates when you close the app, with a prompt.
+Live controls: Added LIVE master output override, CLEAR Scripture toggle, and L/C/B keyboard shortcuts.
+Live status: The LIVE pill now blinks while you're on air.
+Windows mic protection: Pewbeam now detects microphones silenced by Windows audio enhancements and provides a one-click fix.
+C hanged
+Custom theme sizes: Custom canvas sizes are now respected across every output, including secondary channels.
+Clearer errors: Operator-facing error messages are now clearer, without technical internals in toasts.
+F ixed
+Live output: Saved themes now repaint correctly when on air.
+Free-plan transcription: Sessions that reach the transcription limit mid-service now show a clear prompt instead of silently stopping.
+NDI cleanup: NDI outputs are now cleaned up when Pewbeam exits.
+Resource downloads: Improved reliability for resource-pack downloads on networks with DNS resolution issues.
+Publish status: Publish failures are now reported accurately, and publish state persists correctly.
+2.6.20 October 28, 2026
+Fixes
+Steadier transcription through long services.
+F ixed
+No more drop at 50 minutes: Transcription no longer reconnects partway through a long service, so the "Transcription connection dropped" notice and its gap in the transcript are gone.
+Auto-detect language: With the language set to auto-detect, transcription could fail to start at all. It now starts reliably, keeping every book of the Bible in its vocabulary.
+2.6.19 October 25, 2026
+New Feature!
+Excerpts: the sermon's best lines, on screen while they're preached.
+A dded
+Excerpts: Turn the strongest lines of a sermon into slides as they're preached. Click + beside any line in the transcript, or use Add your own to type one, and Pewbeam designs it in your church's brand, or that service's, using the preacher's own words. Each excerpt sits on your brand's background, or on one Pewbeam makes from your flyer. Send it live in one click.
+Find excerpts: One click looks over the sermon since your last Find and suggests up to five lines worth putting on screen. It favours what the preacher repeated, contrasted, or paused on, and each card says why it was picked. Tighten shortens a long card without changing what was said.
+Lists that build themselves: When the preacher says "five ways to…" and then "number one…", a list card appears and fills in as each point is preached.
+Choose where excerpts go: Send excerpts to every output, or only to the screens you pick in Settings → Excerpts. For example, a lobby screen can show the excerpt while the main screen keeps the scripture.
+Scripture comes first: When the preacher names a verse, it takes over the screen from the excerpt.
+Making excerpts with + or Add your own is free, and so are self-building lists. Find excerpts and Tighten use slide credits. Nothing from the sermon leaves your computer unless you click one of them.
+2.6.14 October 4, 2026
+New Feature!
+Spoken verse ranges, more reliable voice navigation, and a smoother theme designer.
+A dded
+Verse ranges by voice: Say “John 3, verses 1 to 2” and Pewbeam displays both verses together. Longer ranges show the first three verses, keeping the passage readable on screen.
+F ixed
+Moving through a chapter: Saying “verse 2”, “verse 3”, or “next verse” now follows the passage you’re reading more reliably. After a displayed range, “next verse” continues from the end of that range.
+Repeated and rapid commands: Improved handling of closely spaced verse calls so the latest reference takes priority and repeated detection of one command doesn’t advance twice.
+Opening the theme designer: Removed the full-screen fade and zoom that could cause a visual glitch on Windows, with the dashboard showing through as the editor opened.
+C hanged
+Consistent confirmation dialogs: Theme deletion and unsaved-change prompts now match the rest of Pewbeam.
+2.6.12 September 26, 2026
+New Feature!
+Premium themes, one-click renewal, and smoother theme switching.
+A dded
+Premium themes: Four new designer-made themes ship with Pewbeam: Motion I, Motion II, Lower Third II and Lower Third III. Free users can preview them; putting one on your screens needs Plus or Core. Themes use your installed fonts where you have them and fall back to Inter where you don't.
+Renewal reminders: In the last 9 days of your plan, a banner at the top of Pewbeam shows how many days are left and what your church would lose if it lapsed, with a one-time reminder at 9 days, 4 days and on expiry. It never appears mid-service, and it stays away entirely if your plan renews automatically.
+Renew in one click: Renewing charges the card you already paid with, right from the reminder, with no forms. Renewing early costs nothing: your new period starts when the current one ends. If your bank needs to confirm the payment, a secure checkout opens in your browser.
+C hanged
+Lighter theme switching: Changing themes does less work behind the scenes, so the app stays responsive, even with several NDI outputs running and a scrolling alert on screen.
+F ixed
+Alert banner on wide themes: On themes with a wide custom canvas, the alert banner now sits right on the top edge of your picture. Motion backgrounds line up with the picture on the live preview and HDMI screens instead of filling past its edges.
+2.6.11 September 25, 2026
+Fixes
+A fix for outputs that wouldn't turn on.
+F ixed
+Main output switch: If your saved display was unplugged, for example a projector disconnected since last Sunday, the output switch could flip on and straight back off without explaining why. Pewbeam now switches that screen to NDI and tells you, or moves it to another connected display.
+2.4.610 September 25, 2026
+Update
+Cleaner sliders and colour controls everywhere.
+C hanged
+New sliders: Every slider in Pewbeam has a fresh look, with a tick ruler, a shaded fill and the value shown right inside it. This includes the theme designer, slide editor, alert window, input volume and canvas zoom. Input volume now shows your microphone level in decibels and still snaps to 0 dB.
+New colour inputs: Colour controls now show a clear swatch, the full hex code and the opacity side by side, lined up neatly from row to row.
+Tidier alert window: Sliders and colour inputs in the alert window now match the height of the fields around them.
+2.4.6 September 25, 2026
+New Feature!
+A redesigned editor, QR codes on your slides, and moving backgrounds.
+A dded
+QR codes: Add a QR code to any slide or theme, for your giving page, website or sign-up form. Choose from several styles and colours, and every style still scans reliably. On the free plan the centre carries the Pewbeam mark. On paid plans you can put your own logo there or leave it clear.
+Motion backgrounds: Gradient, flow, wave and aurora backgrounds that move gently behind your scripture. They are drawn by your graphics card, so they stay light on church PCs. (Plus and Core)
+Video backgrounds on slides: A slide page can now have a video background, set straight from the editor toolbar. (Plus and Core)
+Bring to front and send to back: Reorder any element in the theme designer and the slide editor from the right-click menu or keyboard shortcuts. This works for the scripture text too, so a shape can sit behind or in front of your verse.
+A new highlight tool: Highlighting words on the live verse has a cleaner panel and solid, easy-to-read colours.
+"Go to verse" by voice: When a chapter is on screen, saying "verse 17" or "and then in verse two" moves to that verse. Reading a sentence that merely contains a verse number won't move the display.
+Keyboard shortcuts for the live screen: Esc clears the screen, number keys send a verse straight to live, and Enter sends what you've staged.
+C hanged
+A redesigned editor toolbar: The theme designer and slide editor share a new floating toolbar with undo, redo, video and QR tools. Drag it anywhere, and it keeps its spot when you resize the window.
+Move freely around the canvas: Hold Space and drag, or use two fingers on a trackpad, to pan around your design, with more room to work at the edges.
+Tidier editing: Clearer selection handles, an alignment grid, and a simpler slide page list where you can insert a page before or after any other. Word Study settings now appear only when you're editing the scripture, not a shape.
+Set a theme for a specific output: Use "Set as Output 2" (and so on) to send a theme to one screen. This fixes themes that didn't apply to the output you picked.
+Imported slides fit their boxes: Text from PowerPoint and Word imports now shrinks to fit its box instead of spilling over.
+Smoother alert banners: Scrolling alerts glide smoothly on the live preview and HDMI screens.
+Faster to the screen: Less work happens each time a verse goes live, so it appears sooner, especially with photo backgrounds.
+Sign in: Signing in to your account now happens in a simple in-app window.
+Transparent backgrounds are now part of Core: Creating new transparent themes needs Core. The built-in Lower Third stays transparent on every plan, and themes you've already made keep working exactly as they do today.
+F ixed
+Changing theme while a verse is live: NDI and HDMI now update straight away, instead of waiting for the next verse.
+Tiny text at the top of the screen: Some themes with a custom verse position sent small text to the top of the output. Fixed.
+Selecting a range of verses: Shift-selecting a range now highlights every verse in it, and typing a reference brings that verse into view.
+Live display list: The live display now lists only what's actually live.
+Sermon publishing: The detected-scriptures list in the publish review now scrolls, so long sermons show every reference.
+2.4.5 September 12, 2026
+New Feature!
+Motion inside your shapes, smoother hand-offs, and a fix for older Macs.
+A dded
+Video and GIF fills on shapes: Lower thirds and other shapes can now play a video or GIF as their background, set up in the theme designer. A shape's motion can run alongside your theme's own video background. (Plus and Core)
+Apply formatting to every slide: Set one slide's background, heading and body styling the way you want it, then apply it to the whole deck from the page's right-click menu instead of repeating it page by page.
+C hanged
+No more blank flash between slides and scripture: Switching between a slide and a verse used to flash a blank or standby frame. The outgoing picture now stays on screen until the incoming one is ready.
+Steadier secondary screens: Screens 2–4 keep their slide while the verse takes over, so a hand-off no longer blinks them.
+Suggested slide, where you're looking: The "follow the service" suggestion now appears right under the Main output preview, with accept and dismiss beside it.
+Smoother verse text: Text outlines are more even, and shadow softness now matches what you see in the theme designer.
+Thumbnails hold their picture: Slide cards and deck thumbnails keep the last frame until the new one is ready, instead of flashing a light placeholder.
+Feedback form: Pre-fills the email address on your account.
+F ixed
+Older Macs opening to a blank window: On macOS 12 (Monterey), Pewbeam could open to an empty window. Fixed — the app no longer depends on browser features that version doesn't have.
+Verses missed mid-sentence: A reference spoken inside a sentence (for example, "we read in Isaiah 45:19") could be skipped. It's picked up now.
+"Chapter and verse" callouts: Saying something like "Isaiah 45 and 19" now opens the verse your pastor named, instead of only the chapter.
+BLACK is fully black: BLACK now blacks out every output completely, including while an alert banner is on screen.
+2.4.4 September 4, 2026
+New Feature!
+Motion backgrounds, and Pewbeam follows along with your slides.
+A dded
+Video backgrounds: Your theme background can now be a video or GIF (MP4, MOV, GIF), not just a still image. Motion backgrounds play behind your scripture on NDI, HDMI and every output. Videos are optimised once when you import them, so playback stays smooth even on modest church PCs. (Plus and Core)
+Follow the service: Pewbeam now listens for where you are in your slide deck and suggests the matching slide as your pastor preaches. Suggestions appear for you to accept — nothing changes on the screen unless you say so. Auto-advance is available if you want it.
+Slide backgrounds you can shape: Slide page image backgrounds now have the same controls as the theme designer: image fit, scale, blur and a colour overlay. What you set is what goes to the screen.
+Voice control for slides: Move to the next or previous slide with a voice command, hands-free.
+A clearer way to upgrade: Plans and pricing now open as a full page instead of a cramped dialog, so you can compare what you get at a glance.
+F ixed
+Nigerian pricing at checkout: Some Nigerian churches were being sent to dollar pricing at checkout instead of Naira. Checkout now uses the same location as the price you were shown.
+CLEAR now clears everything but your background: On lower-third themes, pressing CLEAR left the bars and reference labels on screen with no verse in them. Only your background stays now, on every output including secondary screens.
+Secondary screens no longer freeze: If a theme's video background failed to play, a second or third screen could freeze on the last thing shown and refuse anything new. It now falls back to showing the verse and warns you.
+Verse list stays put: Double-tapping a verse you'd searched for could select a different one, because the list scrolled between your two taps. Sending a typed reference also left you somewhere random in the chapter instead of on the verse you sent.
+2.4.3 September 1, 2026
+New Feature!
+Take your slides with you — export any deck to PowerPoint or PDF.
+A dded
+Slide deck export: Export any deck from the slide library — right-click a deck and choose Export as PPTX or Export as PDF.
+Editable PowerPoint: PPTX exports keep your headings, body text, and text boxes fully editable in PowerPoint, with backgrounds, fonts, sizes, and colors carried over exactly as designed.
+PDF quality options: Pick Best, Balanced, or Compact when exporting a PDF to control the file size.
+Shape fills: Shapes in the slide editor now support color, gradient, image, and transparent fills.
+C hanged
+Navbar: Settings now sits at the end of the navbar, after Get help.
+F ixed
+Shape and image properties: Shapes and images added in the slide editor now show their full properties — recolor a shape, or adjust an image's fit, scale, blur, and overlay.
+Slide editor inspector: Removed the theme-only Word study section from the slide editor.
+2.4.2 September 1, 2026
+New Feature!
+A more reliable Sunday, with faster slides and better audio controls.
+H ighlights
+Reliable transcription: Fixed transcription repeatedly dropping and reconnecting during worship, prayer, and quiet moments.
+Faster slides: Slide thumbnails now load noticeably faster.
+Better audio testing: New live input monitoring and a longer microphone test.
+A dded
+Referrals: Find your church's referral code, copy your share link, and track the churches you've referred.
+Naira pricing: Upgrade plans now display in ₦ for churches in Nigeria.
+Deck canvas sizes: Set a custom canvas size for each deck.
+Slide controls: Control live slides with the arrow keys and reorder slides within a deck.
+Continuous alerts: Run alerts on an infinite loop and see the loop count in the navbar.
+Verse stepping: Step through verses with the < and > keys.
+Get help: Access support directly from the navbar.
+Targeted announcements: Send announcements to specific accounts.
+C hanged
+Simpler input volume: Replaced dB tick labels with a simpler volume slider, volume glyphs, and a snap at 0 dB.
+Longer mic test: Microphone tests now run for 20 seconds to catch mics that cut out shortly after starting.
+Keyboard shortcuts: The Help page now lists every supported shortcut: LIVE L , Clear C , Blackout B , Tab, and Enter ×2.
+Faster thumbnails: Slide thumbnails now render at display resolution and are cached for noticeably faster loading.
+F ixed
+Sunday transcription disconnects: Fixed transcription repeatedly dropping and reconnecting during worship, prayer, or quiet moments.
+Incorrect plans: Accounts upgraded outside checkout, such as Plus → Core, now show the correct plan everywhere.
+Verse search: Clearing a search now returns you to the chapter you were reading instead of leaving an empty panel.
+Microphone testing: Fixed input level bars not responding while talking.
+Microphone reloads: Changing input volume no longer reloads the microphone.
+2.4.1 August 29, 2026
+New Feature!
+Better updates, better live controls, and fewer things to worry about during service.
+A dded
+In-app announcements: Product news and updates now reach you directly inside Pewbeam.
+Automatic updates: macOS downloads updates automatically. Windows installs pending updates when you close the app, with a prompt.
+Live controls: Added LIVE master output override, CLEAR Scripture toggle, and L/C/B keyboard shortcuts.
+Live status: The LIVE pill now blinks while you're on air.
+Windows mic protection: Pewbeam now detects microphones silenced by Windows audio enhancements and provides a one-click fix.
+C hanged
+Custom theme sizes: Custom canvas sizes are now respected across every output, including secondary channels.
+Clearer errors: Operator-facing error messages are now clearer, without technical internals in toasts.
+F ixed
+Live output: Saved themes now repaint correctly when on air.
+Free-plan transcription: Sessions that reach the transcription limit mid-service now show a clear prompt instead of silently stopping.
+NDI cleanup: NDI outputs are now cleaned up when Pewbeam exits.
+Resource downloads: Improved reliability for resource-pack downloads on networks with DNS resolution issues.
+Publish status: Publish failures are now reported accurately, and publish state persists correctly.

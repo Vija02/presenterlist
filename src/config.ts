@@ -9,3 +9,4 @@ export const newProductIssueUrl = `${REPO_URL}/issues/new?template=new-product.y
 export const editProductIssueUrl = (name: string, slug: string) =>
   `${REPO_URL}/issues/new?template=edit-product.yml&title=${encodeURIComponent(`Edit: ${name}`)}&product=${encodeURIComponent(slug)}`;
 export const editFileUrl = (slug: string) => `${REPO_URL}/edit/main/src/data/products/${slug}.yaml`;
+export const newsIssueUrl = `${REPO_URL}/issues/new?template=release.yml`;

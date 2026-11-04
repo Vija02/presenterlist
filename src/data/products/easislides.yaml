@@ -66,6 +66,7 @@ feature_notes:
   outputs.stage_display: The "detailed" output shows chords, schedule, next item and operator messages for musicians and speakers.
 community_url: https://www.easyslides.com/forums/
 docs_url: https://www.easyslides.com/help/
+release_notes_url: https://www.easyslides.com/main/v5/changelog/
 sources:
   - https://easyslides.com/
   - https://www.easyslides.com/main/v5/features/

@@ -1,0 +1,90 @@
+Skip to content
+Apps
+Presenter
+Planning
+Charts
+Community
+Rehearse
+Pricing
+Support
+Sign in
+Get started free
+Manage Account
+Presenter by WorshipTools
+Presenter Change Log
+2026.1.11
+November 2, 2026
+New/Improved
+NDI: Added support for transparent backgrounds, eliminating the need for chroma keying.
+Auto-Advance: Added the ability to cancel and resume.
+Loop Connect: Added options to disable start and ending slides.
+Loop Community imports now display track types.
+Slides imported from folders now maintain their original order.
+Media filters and tags are now preserved when using Media pickers.
+Dragging Service Items now automatically scrolls the Service list.
+Consolidated lyric sections in printed Services for a cleaner layout.
+Made various UI/UX improvements.
+Resolved
+Countdown: Fixed an issue where clearing a countdown could cause it to continue into the next day.
+Fixed an issue where default media scale settings were not consistently applied to new Service Items.
+Fixed an issue where duplicating or deleting Slides while using a blank Slide could affect the wrong Slide.
+2026.1.10
+October 26, 2026
+New/Improved
+Loop Connect: Added the ability to override and resume a session.
+Loop Connect: Improved support for empty lyrics
+Stage Display: add option to show ChordPro as numbers
+SongSelect Lyric Videos are now supported when bulk-applying transition times.
+Countdowns: Added an option to continue counting past zero.
+Added separate transition times for foreground and background content.
+Improved performance when displaying Slides.
+Made various UI/UX improvements.
+Resolved
+Resolve issue causing the Main Audience Output to show as a small window if Display is not connected
+Fixed an issue that prevented the Media page from loading when media tags were not present.
+Improved consistency of section hotkey availability across songs.
+Improved synchronization of original PowerPoint documents.
+Fixed an issue where importing multiple files requiring conversion would not convert the entire batch.
+Fixed an issue where sorting songs by key could cause entries to disappear from the list.
+2026.1.9
+October 20, 2026
+New/Improved
+Stage Display: new option to show ChordPro as numbers
+Stage Display: Standardized sharp and flat notation to use # and b consistently.
+Quick Scripture now uses the configured Stage Display template.
+SongSelect lyric videos are now supported in bulk auto-advance edits.
+Resolved
+Fixed screen positioning after ending a PowerPoint session.
+NDI screens now relaunch automatically after settings change.
+Fixed home screen scrolling when content exceeds the available space.
+Fixed an issue where the Service Item Editor's media selector could prevent saving.
+Improved stability when displaying content to prevent issues with slide references.
+2026.1.8
+October 11, 2026
+Resolved:
+Loop Connect: Fixed delayed lyrics at the beginning of a song section
+Loop Connect: Fixed an issue where custom lyrics sometimes failed to render
+Improved stability when displaying Slides
+Improved stability while scrubbing media
+Fixed media transitions to ensure crossfades play smoothly instead of cutting before fading
+Fixed an issue where songs added from Charts did not have the correct Service Item name
+2026.1.7
+October 5, 2026
+New/Improved
+SongSelect Lyric videos now support tempo/key changes
+Slide Editor: Add border radius support
+Loop Connect track changes now able to select next track
+Resolved
+Fix Stage Display template background color not showing
+Fix Audio playlist delete interaction
+Resolved issues with context menus
+Presenter by WorshipTools
+Download Now!
+Start making better presentations today. Easily and for free.
+Download Presenter
+Download for %{os}
+Version
+&middot
+Change Log
+Change Log
+Download Legacy Presenter

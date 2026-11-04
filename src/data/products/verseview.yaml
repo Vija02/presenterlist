@@ -55,6 +55,9 @@ feature_notes:
   outputs.lower_thirds: An additional lower-third output can be layered in OBS or fed to video mixers; lower-third themes can also be served over the network.
   outputs.multiple: Main presentation plus stage view, AUX screen and lower-third outputs.
   connectivity.remote_control: Any device with a web browser can control Bible and scheduled song presentation.
+news_feeds:
+  - http://verseview.info/vv/feed/
+release_notes_url: http://verseview.info/vv/2024/01/15/verseview-10-release-notes/
 sources:
   - http://verseview.info/vv/
   - http://verseview.info/vv/downloads/

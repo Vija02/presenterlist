@@ -1,0 +1,74 @@
+Change Log
+21st Oct 2026
+New Features
+Content Margins
+Margins can now be set separately for Songs, Scriptures, Images, YouTube and Slides. You can also set margin insets for the output.
+Changes / Improvements
+Asset Cache
+Requests to cache assets is now more reliable.
+Bug Fixes
+Background Videos and Images that have transparency now show the transparent parts in the Control Surface
+14th Oct 2026
+Bug Fixes
+Fix Become Location checkbox not staying selected after a refresh
+Fix images and videos grid not reloading after upload
+13th Oct 2026
+New Features
+Count Up Timer
+You can now create timers that count up indefinitely.
+11th Oct 2026
+New Features
+Variations
+The location name that created the variation is now shown.
+10th Oct 2026
+New Features
+Background Variations
+You can now create variations of your background videos and images, with adjustments such as blur, brightness, contrast, saturation, hue, greyscale, sepia, invert, opacity and drop shadow. Variations can also zoom, flip, set the background to fit or cover the screen, and change a video’s speed. Variations are shared between locations, but can only be edited or deleted by the location that created them. To change another location’s variation, duplicate it.
+Location Control Surface setting
+A new setting stops a Control Surface from automatically becoming the Master Control Surface. This is useful when several control surfaces are used for the same location. When the Location Control Surface closes, another control surface now takes over within a few seconds.
+Bug Fixes
+Fix Control Surface theme background not loading correctly in preview areas
+8th Oct 2026
+Changes / Improvements
+Admin Font Picker
+Font picker loads preview images faster
+Bug Fixes
+Fix fonts not being cached correctly in Firefox
+7th Oct 2026
+New Features
+Sequences
+Images, Scriptures and Slides have a new context menu item: "Show on Monitor Only". When selected the content will only show on the monitor. This is the same functionality as right clicking on lyrics for a song.
+Changes / Improvements
+Remote Video Playback
+Remote video playback sync has been improved.
+Bug Fixes
+Fix Control Surface login loading wrong location when a remote was previously loaded
+6th Oct 2026
+Changes / Improvements
+YouTube
+Stability improvements. Only buffer YouTube on outputs that show it.
+4th Oct 2026
+Bug Fixes
+Fix sequence playback not showing when switching between sequences
+3rd Oct 2026
+New Features
+Sequences
+Sequence videos now show a preview when playing.
+Changes / Improvements
+Video Playback
+Lower CPU use when playing videos in Safari.
+Monitor Output
+When video preview is off the monitor now shows the video poster.
+Monitor Timers
+CPU usage has been reduced for timers in monitor outputs.
+Bug Fixes
+Fixed outputs staying blank, with only the audio playing, when the browser initially blocked a video from playing automatically.
+Fixed outputs sometimes showing the previous background when backgrounds were changed in quick succession.
+Fixed remote displays sometimes stopping syncing their clock with the control surface during a long session, which could let video playback drift out of sync.
+Fixed the control surface failing to load if its saved settings in the browser became corrupted, and fixed full browser storage interrupting updates to the outputs.
+Page 1 of 24
+Older
+&times; https:// .bigscreen.show username password login
+&times;
+fb.com/BigScreenChurchSoftware
+@bigscreenchurchsoftware

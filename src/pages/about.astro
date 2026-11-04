@@ -1,7 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import { FEATURE_GROUPS, LEAF_PATHS } from "../lib/schema.ts";
-import { REPO_URL, newProductIssueUrl } from "../config.ts";
+import { REPO_URL, newProductIssueUrl, newsIssueUrl } from "../config.ts";
 ---
 <Base title="About" description="How PresenterList works, where the data comes from and how to contribute." breadcrumbs={[{ label: "About" }]}>
   <article class="container-page mt-6 max-w-3xl space-y-10 leading-relaxed text-zinc-700 dark:text-zinc-300">
@@ -46,6 +46,17 @@ import { REPO_URL, newProductIssueUrl } from "../config.ts";
         <li>Open a pull request editing the product's YAML file directly. See <a href={`${REPO_URL}/blob/main/CONTRIBUTING.md`} class="link">CONTRIBUTING.md</a>.</li>
       </ol>
       <p class="mt-3">Vendors are welcome to correct their own listings; please include a link to a public source.</p>
+    </section>
+
+    <section id="releases">
+      <h2 class="h-section text-zinc-900 dark:text-white">Releases</h2>
+      <p>The <a href="/releases/" class="link">releases page</a> follows the same rules for every product:</p>
+      <ul class="mt-3 list-disc space-y-2 pl-5">
+        <li>Releases are rolled up to <strong>at most one item per product per month</strong>, so products that release often don't crowd out the rest. Pre-releases and betas aren't included.</li>
+        <li>Each item links to the original release notes, with a short summary. We don't republish release notes or images.</li>
+        <li>Releases are collected automatically once a month from public GitHub and GitLab releases, release-note feeds and vendors' changelog pages. Summaries are written by AI (Claude) using the same instructions for every product, and checked for promotional wording before publishing.</li>
+        <li>Vendors and users can <a href={newsIssueUrl} class="link">submit a release</a>. If something here is wrong, or you'd like an item removed, open an issue and we'll act on it promptly.</li>
+      </ul>
     </section>
 
     <section>

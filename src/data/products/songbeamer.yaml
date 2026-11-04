@@ -99,6 +99,8 @@ feature_notes:
   connectivity.remote_control: SongBeamer Remote app for iPhone and iPad.
 languages: [German, English]
 community_url: https://forum.songbeamer.de/
+release_feeds:
+  - https://forum.songbeamer.de/app.php/feed/forum/7
 sources:
   - https://www.songbeamer.de/
   - https://www.songbeamer.de/software.htm

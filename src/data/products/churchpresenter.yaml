@@ -102,6 +102,7 @@ feature_notes:
   broadcast_video.sdi: SDI fill and key output through Blackmagic DeckLink cards.
 docs_url: https://www.churchpresenter.org/wiki/
 community_url: https://www.churchpresenter.org/forum/
+release_notes_url: https://www.churchpresenter.org/changelog/
 sources:
   - https://github.com/ChurchPresenter/ChurchPresenter
   - https://github.com/ChurchPresenter/ChurchPresenter/blob/main/FEATURES.md

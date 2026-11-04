@@ -1,0 +1,33 @@
+name: Submit a release
+description: A new version of a listed product
+title: "Release: "
+labels: ["release"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Release items link to the release notes with a one or two sentence summary. Releases are rolled up to one item per product per month, the same for every product. Betas and pre-releases aren't included.
+  - type: input
+    id: product
+    attributes: { label: Product slug, description: "The part of the URL after /software/" }
+    validations: { required: true }
+  - type: input
+    id: url
+    attributes: { label: Link to the release notes }
+    validations: { required: true }
+  - type: input
+    id: date
+    attributes: { label: Release date, description: YYYY-MM-DD }
+    validations: { required: true }
+  - type: textarea
+    id: summary
+    attributes:
+      label: What changed?
+      description: One or two neutral sentences. We may edit for length and tone.
+    validations: { required: true }
+  - type: checkboxes
+    id: affiliation
+    attributes:
+      label: Affiliation
+      options:
+        - label: I work on or for this product

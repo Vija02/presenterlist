@@ -105,6 +105,7 @@ feature_notes:
   connectivity.collaboration: ProPresenter Cloud (beta in 22) lets others prepare playlists and make mid-service changes while an operator presents.
   connectivity.remote_control: ProPresenter Remote app is included with an active subscription.
 docs_url: https://support.renewedvision.com/
+release_notes_url: https://renewedvision.com/propresenter/download
 sources:
   - https://renewedvision.com/propresenter/
   - https://renewedvision.com/propresenter/download

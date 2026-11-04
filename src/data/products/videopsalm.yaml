@@ -69,6 +69,7 @@ feature_notes:
   multilingual.side_by_side: Bilingual display of songs and Bible verses on one slide.
   connectivity.remote_control: A Wi-Fi remote and mobile app are listed as "coming soon" on the features page.
   connectivity.cloud_sync: Data can be kept in a third-party cloud folder (pCloud, Dropbox, OneDrive); there is no built-in sync service.
+release_notes_url: https://videopsalm.org/list-of-changes/
 sources:
   - https://videopsalm.org/
   - https://videopsalm.org/features/

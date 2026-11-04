@@ -1,0 +1,8 @@
+title: 'Pewbeam: October 2026 releases (2.6.14 to 2.6.20)'
+date: '2026-10-28'
+product: pewbeam
+kind: release
+url: https://pewbeam.com/changelog
+summary: Adds excerpts, which turn lines from the live sermon transcript into slides, and verse ranges by voice, plus a fix for transcription dropping during long services.
+source: pewbeam.com
+draft: false

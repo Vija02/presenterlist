@@ -1,0 +1,20 @@
+---
+import Base from "../../layouts/Base.astro";
+import NewsList from "../../components/NewsList.astro";
+import { getReleases } from "../../lib/news.ts";
+const items = await getReleases();
+---
+<Base
+  title="Church presentation software releases"
+  description="Monthly release roundups from church presentation software, with links to the release notes."
+  breadcrumbs={[{ label: "Releases" }]}
+>
+  <div class="container-page mt-6 max-w-3xl">
+    <h1 class="text-3xl font-bold tracking-tight">Releases</h1>
+    <p class="mt-3 text-zinc-600 dark:text-zinc-400">
+      New versions of the software in the directory, rolled up to one item per product per month, the same for every
+      product. Each item links to the release notes. <a href="/about/#releases" class="link">How releases are chosen</a>.
+    </p>
+    <NewsList items={items} rss="/releases/rss.xml" />
+  </div>
+</Base>

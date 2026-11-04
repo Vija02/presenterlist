@@ -23,6 +23,7 @@ import {
   type P,
 } from "../../lib/products.ts";
 import { editFileUrl, editProductIssueUrl } from "../../config.ts";
+import { releasesFor } from "../../lib/news.ts";
 
 export async function getStaticPaths() {
   const products = await getProducts();
@@ -34,6 +35,7 @@ const all = await getProducts();
 const alternatives = alternativesFor(p, all);
 const platforms = p.platforms.map(platformLabel);
 const confirmed = featureCount(p);
+const news = await releasesFor(p.slug);
 
 const faq: { q: string; a: string }[] = [
   { q: `What is ${p.name}?`, a: `${p.name} is church presentation software by ${p.developer}. ${p.tagline}` },
@@ -99,6 +101,7 @@ const links: [string, string | undefined][] = [
   ["Documentation", p.docs_url],
   ["Community", p.community_url],
   ["Pricing page", p.pricing.pricing_url],
+  ["Release notes", p.release_notes_url],
 ];
 const host = (u: string) => new URL(u).hostname.replace(/^www\./, "");
 ---
@@ -188,6 +191,22 @@ const host = (u: string) => new URL(u).hostname.replace(/^www\./, "");
             </div>
           )}
         </section>
+
+        {news.length > 0 && (
+          <section>
+            <h2 class="h-section">Recent releases</h2>
+            <ul class="space-y-4">
+              {news.map((n) => (
+                <li>
+                  <p class="text-xs text-zinc-500"><time datetime={n.date}>{n.date}</time></p>
+                  <a href={n.url} class="font-medium hover:underline" rel="noopener">{n.title} ↗</a>
+                  <p class="mt-0.5 text-sm text-zinc-600 dark:text-zinc-400">{n.summary}</p>
+                </li>
+              ))}
+            </ul>
+            <p class="mt-4"><a href="/releases/" class="link">All releases →</a></p>
+          </section>
+        )}
 
         <section>
           <h2 class="h-section">Frequently asked questions</h2>

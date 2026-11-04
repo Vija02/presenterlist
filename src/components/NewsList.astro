@@ -1,0 +1,48 @@
+---
+import Logo from "./Logo.astro";
+import { getProducts } from "../lib/products.ts";
+import { monthLabel, newsKindLabel, sourceHost, type N } from "../lib/news.ts";
+import { newsIssueUrl } from "../config.ts";
+
+interface Props { items: N[]; rss: string; showKind?: boolean }
+const { items, rss, showKind = false } = Astro.props;
+const bySlug = new Map((await getProducts()).map((p) => [p.slug, p]));
+const months = new Map<string, N[]>();
+for (const n of items) months.set(n.date.slice(0, 7), [...(months.get(n.date.slice(0, 7)) ?? []), n]);
+---
+<div class="mt-4 flex flex-wrap gap-2 text-sm">
+  <a href={rss} class="btn-secondary px-3! py-1.5!">RSS feed</a>
+  <a href={newsIssueUrl} class="btn-secondary px-3! py-1.5!" rel="noopener">Submit a release</a>
+</div>
+
+{items.length === 0 && <p class="mt-10 text-zinc-500">Nothing here yet.</p>}
+
+{[...months].map(([month, list]) => (
+  <section class="mt-10">
+    <h2 class="h-section">{monthLabel(`${month}-01`)}</h2>
+    <ul class="divide-y divide-zinc-200 dark:divide-zinc-800">
+      {list.map((n) => {
+        const p = bySlug.get(n.product)!;
+        return (
+          <li class="flex gap-4 py-4">
+            <a href={`/software/${p.slug}/`} class="no-underline"><Logo product={p} size="sm" /></a>
+            <div class="min-w-0 flex-1">
+              <p class="flex flex-wrap items-center gap-x-2 text-xs text-zinc-500">
+                <time datetime={n.date}>{n.date}</time>
+                <span aria-hidden="true">·</span>
+                <a href={`/software/${p.slug}/`} class="hover:underline">{p.name}</a>
+                {showKind && <span class="chip">{newsKindLabel(n.kind)}</span>}
+                {n.draft && <span class="chip border-amber-400! text-amber-700! dark:text-amber-300!">Draft · {n.id}.yaml</span>}
+              </p>
+              <h3 class="mt-1 font-semibold">
+                <a href={n.url} class="hover:underline" rel="noopener">{n.title} ↗</a>
+              </h3>
+              <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{n.summary || (n.draft && <em class="text-amber-700 dark:text-amber-300">No summary yet</em>)}</p>
+              <p class="mt-1 text-xs text-zinc-500">Source: {n.source ?? sourceHost(n.url)}</p>
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+  </section>
+))}

@@ -1,0 +1,42 @@
+*******************************************************************
+ZionWorx Desktop - version 4.1.1.0 : Updated January 06, 2024
+*******************************************************************
+New - Video effects feature allows editing brightness, saturation and hue
+New - Updated to FFmpeg v6.0.1 audio/video libraries for latest codecs
+Fixed - Rare bug in 4.1.0.0 which limited text display to only one slide
+Fixed - Files tab view settings now saved and restored between app runs
+Fixed - Decimal spin edit boxes in Theme Editor not functioning properly
+*******************************************************************
+ZionWorx Desktop - version 4.1.0.0 : Updated September 30, 2023
+*******************************************************************
+New - 'Files' tab now supports direct folder navigation (double-click a folder icon to go there)
+New - 'Files' tab now provides a fast 'as-you-type' search facility through files and folders (also supports '*' and '?' wildcards)
+New - Media thumbnail generation has been re-written for higher performance and lower memory usage
+New - Updated to FFmpeg v6.0 audio/video libraries for latest codec support
+New - Added user feedback about loading of offline Bibles ('Loading...' message in Bible tab title area)
+New - Improved splash screen and About form to show more accurate information on licence and expiry
+New - Added a 1 month grace period to all subscription expiry dates with better user explanations
+Fixed - BibleGateway integration failed to list available versions on connection due to website change
+Fixed - Import of CCLI SongSelect lyrics failed due to file format change
+Fixed - OnlineBible desktop app failed to initialise on startup (now supports v6.0.0.1+)
+Fixed - Slide thumnbails for large PowerPoint presentations sometimes failed to complete if interrupted
+Fixed - Vertical splitter positions in operator window could become corrupt and cause an unusable UI on next startup
+Fixed - 'Check For Updates' routine on startup could cause a lockup if the server was down (added connection/read timeout to solve this)
+Fixed - 'List index out of bounds' error message appeared on hovering over list of installed offline Bibles in Options dialog box
+Fixed - Thumbnail zoom sliders did not make slides large enough on monitors with DPI scaling more than 100%
+*******************************************************************
+ZionWorx Desktop - version 4.0.3.0 : Updated December 21, 2021
+*******************************************************************
+New - Improvements to support launch of companion mobile app 'ZionWorx Remote'
+New - Updated to FFmpeg v4.4 libraries
+*******************************************************************
+ZionWorx Desktop - version 4.0.1.0 : Updated July 25, 2021
+*******************************************************************
+Fixed - BibleGateway integration stopped working due to external server change.
+Fixed - Theme Editor button 'Save Theme As' caused blocking error message.
+Fixed - Folder permissions corrected for ProgramData install location.
+Fixed - Installer DLL registrations corrected.
+*******************************************************************
+ZionWorx Desktop - version 4.0.0.9 : Released July 19, 2021
+*******************************************************************
+New - Release of ZionWorx v4

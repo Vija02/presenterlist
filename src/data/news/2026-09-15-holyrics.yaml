@@ -1,0 +1,8 @@
+title: Holyrics 2.30.0 released
+date: '2026-09-15'
+product: holyrics
+kind: release
+url: https://holyrics.com.br/changelog/
+summary: Adds an API for listing online program data and a conflict dialog for Google Drive sync, with updates to scripting modules and sync fixes.
+source: holyrics.com.br
+draft: false

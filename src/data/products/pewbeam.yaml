@@ -58,6 +58,7 @@ feature_notes:
   outputs.lower_thirds: Lower-third themes and NDI output with alpha transparency; creating new transparent themes needs the Core plan.
   broadcast_video.ndi: NDI output at 720p, 1080p or 4K with alpha transparency.
   connectivity.offline: Bible search and display work offline; offline transcription is available on Apple Silicon Macs on paid plans, otherwise transcription needs a connection.
+release_notes_url: https://pewbeam.com/changelog
 sources:
   - https://pewbeam.com
   - https://pewbeam.com/pricing

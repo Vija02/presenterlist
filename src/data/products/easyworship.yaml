@@ -77,6 +77,9 @@ feature_notes:
   outputs.lower_thirds: Output supports an alpha channel, with key/fill via Blackmagic ATEM, and there is a lower-thirds media category.
   connectivity.remote_control: Free EasyWorship Remote app for iOS and Android.
 docs_url: https://support.easyworship.com/
+news_feeds:
+  - https://easyworship.com/blog/feed.xml
+release_notes_url: https://www.easyworship.com/software/release-notes
 sources:
   - https://www.easyworship.com/
   - https://easyworship.com/software

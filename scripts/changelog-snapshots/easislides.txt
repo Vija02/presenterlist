@@ -1,0 +1,206 @@
+Skip to content
+Search
+Search for:
+Easyslides Version 5.2 Changelog – Final
+1st October 2026 – All changes since v5.1
+Below are issues fixed in v5.2RC5.
+Issues and Resolutions:
+With certain fonts, text did not align correctly horizontally in 5.2RC4 – fixed in v520RC5
+Underline headings did not work in 5.2RC4 – fixed in v520RC5
+Bibles at Other Bibles tab no longer works in easyslides v5 – fixed in v520RC5
+Some downloaded MyBible won’t install in easyslides v5 – fixed – fixed in v520RC5
+New and Amended Features:
+In v5.2 RC5 – 1st September 2026
+Option to group Region 2 extra lines – in situations where there are more lines in region 2 than region 1, lines will grouped and displayed in the final screen for the verse, or untick the option to insert a linespace with each extra line.
+Option to separately display clock at Live screen, Subtitle screen, or Grid screen
+19th October 2023 – Changelog since v5.1
+Issues and Resolutions:
+Selected database item did not update on preview after edited changes are saved – Fixed in v5.2Beta1
+Extra blank slides at the end when using dual regions and there are mulit-lines in region 2 – Fixed in v5.2Beta1
+Left-Right layout font and subtitle font sizes are sometimes very small when there is space for larger font size – Fixed in v5.2Beta1
+Bible items with applied template can not have individual settings – Fixed in v5.2Beta1
+Some myBible Bibles could not be imported properly – Fixed in v5.2Beta1
+Quick Message Font Settings did not function correctly – Fixed in v5.2Beta2
+Font on stage monitor not set to same as Live Screen – Fixed in v5.2Beta2
+When generating a large number of webpages, easyslides crashed with out of memory error – Fixed in v5.2Beta2
+F5 – Restart Current Item option unticks the rotate option – Fixed in v5.2Beta2
+Migrating data from adhoc easislidesv4 folder on a new machine did not run – Fixed in v5.2RC1
+Interlace display with Notations did not display properly – Fixed in v5.2RC1
+Left and Right aligned Prefix and General Alerts did not display properly when text spanned multiple lines – Fixed in v5.2RC3
+In Single Monitor Mode, the arrow keys did not function after moving to a new item – Fixed in v5.2RC3
+Region 2 as Region 1 format did not function for the last line in certain circumstances – Fixed in v5.2RC3
+On a rare occasion, infoscreens won’t display on the output pane – fixed in v5.2RC4
+Formatting for an image item on a schedule is not carried through to output or Live – fixed in v5.2RC4
+New and Amended Features:
+In v5.2 RC4 – 19th October 2023
+Auto Start function enhanced.
+SongSelect Lyrics conversion updated to reflect recent changes to the format of downloaded SongSelect Lyrics sheets.
+Export Schedule option now lets you save to a location of your choice.
+In v5.2 RC3 – 21st September 2023
+Improved Export/Import Schedule functionality
+Quick Message (Full Screen) is now called Full Screen Message.
+Prefix Alert is now called Prefix Message and has been enhanced with more vertical options and continuous duration (using value of 0).
+General Alert is now called General Message and has been enhanced with more vertical options and continuous duration (using value of 0).
+Option to display Schedule Numbering of items on the schedule.
+Option to disable display of Data Panel based on title/filename prefix.
+Option to Auto Start items on the schedule at their own individually set time:-
+Any items on the schedule can be given an Auto Start time – use the blue clock icon at the schedule or via Menu->Manage->Set Auto Start
+One hour before an Auto Start item goes live, a countdown clock will appear on the Easyslides Main Window.
+If easyslides is not live when the countdown reaches zero, easyslides will start a live show with the item.
+If easyslides is live when the countdown reaches zero, the current live item will stop and the Auto Start item will go live.
+Each item can only have one Auto Start time.
+The maximum number of Auto Start items on a schedule is 200.
+Export Schedules Packages will store Auto Start data (if any) and will therefore be available on another system after the Package is imported.
+Easyslides regularly polls for Auto Start item times and therefore system performance may be impacted if you have set a large number of Auto Start items.
+In v5.2 RC2 – 7th August 2023
+For import/export of schedules there is now an option to convert infoscreens which have Bible passages back to Bible items during import.
+How to export and import a schedule:
+On your first computer create your schedule with all the items you require, eg. database items, Bible passages, slideshow, etc.
+Use the export schedule option to generate an export zip file which contains all the necessary items to run a live show on a second computer with easyslides 5.2.
+Copy the generated zip file to the second computer which has easyslides 5.2.
+In easyslides 5.2 on your second computer use the import schedule option (or use drag and drop) to import in the zip file.
+You will be prompted to confirm the import with an option to convert any Infoscreens with Bible passages back to Bible items.
+On confirmation of import, a new schedule will be created which is a replica of the schedule and all items from your first computer.
+You can now run your live show on your second computer.
+Please note the following when using the export/import schedule function:
+Database items and Bible passages on the schedule on the first computer are copied to the export zip files as infoscreens.
+During import, if you had selected the option to convert Infoscreens with Bible passages back to Bible items, the names of the Bibles referenced in the infoscreens must exist on the import computer.
+For example, if you had a passage from a Bible named “RSV”, the import computer must also have a Bible named “RSV”. If the named Bible is not present, the Infoscreen is not converted, and will remain as an Infoscreen on the schedule after import.
+Exported schedules and imported items are stored in the folder EasyslidesData\Documents\Packages.
+There might be slight layout differences on the second computer due to items being converted to infoscreens.
+All items including media files, images, slide shows, etc referenced in the schedule on the first computer are copied to the export zip file. If you have a lot of large files, the export zip file can get very large and may take time to get generated.
+Settings such as gap items, display panel, installed fonts, etc. are specific to each computer and therefore you will need to ensure the first and second computer have the same easyslides settings if you want to replicate the live show exactly.
+In v5.2 RC1
+Headings for Source, Preview and Output panes which can be switched off if not required.
+Other general user interface changes
+Option to show Data Panel for Subtitle Screens
+In v5.2 Beta2
+New option to display Data Panel on stage screens
+Selected Clock recalled on startup
+New Item restart button and a new Media repeat checkbox in output pane
+Import and Export of Schedules functionalities enhanced since v5.2beta1
+The import and export schedule packages have changed since v5.2beta1 and therefore schedule packages generated in v5.2beta1 is NOT compatible with v5.2beta2.
+Exported schedules and imported items are stored in the folder EasyslidesData\Documents\Packages.
+New clock options:-
+12 and 24 hours option for the three clocks in the output pane
+Use the following in your text contents in the database or infoscreens, examples:-
+[time] <– display the current time in 24 hour format
+[time12] <– display the current time in 12 hour format
+[time 19:00] <– display a countdown to the time 7:00 pm in the evening
+[time 19:00 00:10] <– display a countdown to the time 7:00 pm in the evening and the countdown time will disappear after 10 seconds
+[time 19:00 00:30 20:00] <– display a countdown to the time 7:00 pm in the evening and the countdown time will disappear after 30 seconds, and restart the countdown to the next 7pm after 20 minutes
+[time 19:00] <– display a countdown to the time 7:pm in the evening. Default for display off is 10 seconds and display restart is 15 minutes.
+Infoscreen examples demonstrating the new time options and formatting are available via Menu->Tools->Install Infoscreen Examples
+If you are using multicast, the second computer receiving mulitcast must also run v5.2beta2 to be compatible with the new features.
+In v5.2 Beta1
+Max images for Slide Show increased to 500. Max can be changed in Settings. There may be resource limitations on your particular version of Windows and therefore test thoroughly before putting many slides on.
+Bible passages in Region 1 and 2 on the Schedule can be swapped with each other
+Dual region Bible passages now display title from both regions
+Stage Monitor in subtitle mode now has option to use a particular font
+Option to delete language from languages list
+Additional Generate document features:
+Repeating chorus can be listed in full instead of just the first line
+Index page can be set at the beginning or end of the document, or have no index page at all
+Option to export and import a schedule:
+On your first computer create your schedule with all the items you require, eg. database items, Bible passages, slideshow, etc.
+Use the export schedule option to generate an export zip file which contains all the necessary items to run a live show on a second computer with easyslides 5.2.
+Copy the generated export zip file to the second computer which has easyslides 5.2.
+In easyslides 5.2 on your second computer use the import schedule option (or drag and drop) to import in the export zip file.
+A new schedule will be created automatically which is a replica of the schedule and all items from your first computer.
+You can now run your live show on your second computer.
+Please note the following when using the imported schedule:
+Database items and Bible verses on the schedule on the first computer are copied to the export zip files as infoscreens.
+As Bible verses are converted to infoscreen, you will not be able to use the arrow keys to progress beyond the verses stored in the infoscreen.
+There might be slight layout differences on the second computer due to items being converted to infoscreens.
+All media files, images, slide shows and other items such as powerpoint on the first computer schedule are copied to the export zip file. If you have a lot of large files, the export zip file can get very large and may take time to get generated.
+Settings such as gap items, display panel, installed fonts, etc. are specific to each computer and therefore you will need to ensure the first and second computer have the same easyslides settings if you want to replicate the live show exactly.
+v5.1.0 (01-Sep-2022)
+Issues Fixed
+When moving a database item to another database, the item was copied but the original item was still in the source database – issue fixed, item is removed from the source database after the move
+When editing a database item, changing the folder/database and saving the item did not save the item in the new folder/database – issue fixed
+Repeat checkbox in media settings had no effect during live screen – issue fixed
+Saving individual template settings did not save all the settings – issue fixed
+Search Phrase repeated in list of database items during search – issue fixed
+In Source tab, could not enter subfolders in Documents and Media – issue fixed
+In Settings, Media folder changes not saved – issue fixed
+F2, F3, F4 keys did not function properly – issue fixed
+Usages could not be deleted – issue fixed
+Rotate Group and Listing not grouped correctly – issue fixed
+Move/delete remove author with leading/trialling spaces problem – issue fixed
+Move easyslides data folder location can bring up a error when moving to a route directory – issue fixed
+Confidence Monitor sidebar font sizes not saved – issue fixed
+Text in dual regions sometimes overflows beyond screen – issue fixed
+Enhancements
+** the individual settings templates default folder has been relocated from
+\Admin\Templates\Schedules
+to \Admin\Templates\Individuals
+You will need to manually copy or move the files to the relocated folder to use them.
+Publisher uploading facilities no longer available
+New font shadow depth and font outline width options
+New default template settings for new schedules and booklets
+Image subfolders can be removed permanently if desired
+Usages functionality enhanced
+Region 2 Bible dropdown can be disabled in the main window
+Subtitle functionality enhanced
+Database searches will display the associated databases
+General alert functionality enhanced
+New Slide Show thumbnails – for performance reasons, maximum images in a slide show is set to 100
+Repositioning of some tabs and new New Adhoc Bibles tab added on Main Screen
+Option to select the default user profile or a shared user profile
+Optional template for each Bible
+Rotation and Media playback functions enhanced
+Additional formatting for CCLI compliance
+New option to convert pasted in SongSelect layout style lyrics in Edit Item and Infoscreen
+Additional option to display slideshow by created date
+Import Opensong, OpenLP, and SongSelect Text files
+New Controller Option from a network multicast PC
+New headings available: PreChorus 3, PreChorus 4, Chorus 3, Chorus 4, Bridge 3, Bridge 4, Tag, Intro
+New Powerpoint integration
+Built in safety margin reduced so that text can reach closer to the edge of screen. With some fonts, the text may go beyond the screen – this is a feature and to adjust, increase left/right margins.
+v5.0.1 (23-Jan-2021)
+Issues Fixed
+Items with media background migrated from easislides v4 can sometimes cause easyslides to crash – issue fixed
+Manage Schedules Load Template not functioning properly – issue fixed
+System crashes when total number of images in the image folder reaches a certain point – issue fixed
+Under certain circumstances Infoscreen containing the es4 “Writer” heading can cause easyslides to suspend – issue fixed
+Searching for Cyrillic characters or non-ASCII language was case-sensitive only – issue fixed with case-insensitive search for all UNICODE characters
+Enhancements
+New background image stretch option and new image subfolders to hold default center and stretch images
+New option to change font shadow colour and font outline colour
+New optional numbering and password for schedules published at easyslides.com
+Display Panel Settings available in Manage Schedules
+Navigation of slides in single monitor mode now replicates to confidence monitor
+Display formatting improvements
+We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept All”, you consent to the use of ALL the cookies. However, you may visit "Cookie Settings" to provide a controlled consent.
+Cookie Settings Accept All
+Manage consent
+Close
+Privacy Overview
+This website uses cookies to improve your experience while you navigate through the website. Out of these, the cookies that are categorized as necessary are stored on your browser as they are essential for the working of basic functionalities of the website. We also use third-party cookies that help us analyze and understand how you use this website. These cookies will be stored in your browser only with your consent. You also have the option to opt-out of these cookies. But opting out of some of these cookies may affect your browsing experience.
+Necessary
+Necessary
+Always Enabled
+Necessary cookies are absolutely essential for the website to function properly. These cookies ensure basic functionalities and security features of the website, anonymously.
+Cookie Duration Description
+cookielawinfo-checkbox-analytics 11 months This cookie is set by GDPR Cookie Consent plugin. The cookie is used to store the user consent for the cookies in the category "Analytics".
+cookielawinfo-checkbox-functional 11 months The cookie is set by GDPR cookie consent to record the user consent for the cookies in the category "Functional".
+cookielawinfo-checkbox-necessary 11 months This cookie is set by GDPR Cookie Consent plugin. The cookies is used to store the user consent for the cookies in the category "Necessary".
+cookielawinfo-checkbox-others 11 months This cookie is set by GDPR Cookie Consent plugin. The cookie is used to store the user consent for the cookies in the category "Other.
+cookielawinfo-checkbox-performance 11 months This cookie is set by GDPR Cookie Consent plugin. The cookie is used to store the user consent for the cookies in the category "Performance".
+viewed_cookie_policy 11 months The cookie is set by the GDPR Cookie Consent plugin and is used to store whether or not user has consented to the use of cookies. It does not store any personal data.
+Functional
+Functional
+Functional cookies help to perform certain functionalities like sharing the content of the website on social media platforms, collect feedbacks, and other third-party features.
+Performance
+Performance
+Performance cookies are used to understand and analyze the key performance indexes of the website which helps in delivering a better user experience for the visitors.
+Analytics
+Analytics
+Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics the number of visitors, bounce rate, traffic source, etc.
+Advertisement
+Advertisement
+Advertisement cookies are used to provide visitors with relevant ads and marketing campaigns. These cookies track visitors across websites and collect information to provide customized ads.
+Others
+Others
+Other uncategorized cookies are those that are being analyzed and have not been classified into a category as yet.
+SAVE & ACCEPT

@@ -24,3 +24,18 @@ Thanks for helping churches find the right tool.
 - Update **`last_verified`** whenever you check an entry.
 - **Logos:** use the official logo or app icon from the vendor's site or repo, saved as `public/logos/<slug>.svg` (or a square PNG of at least 128px).
 - Vendors are welcome to update their own listings. Please say you're affiliated in the PR.
+
+## Releases
+
+Release items live in `src/data/news/<date>-<product>.yaml` and link to the original release notes (schema: `newsSchema` in `src/lib/schema.ts`). They appear on `/releases/` and on product pages.
+
+They're collected automatically. On the 1st of each month `.github/workflows/releases.yml` runs `pnpm fetch-news --auto`, which:
+
+- gathers last month's stable releases from GitHub/GitLab (`source_code_url`), release-note feeds (`release_feeds`) and, for products with neither, changelog pages (`release_notes_url`, with text snapshots in `scripts/changelog-snapshots/`);
+- rolls them up to **one item per product per month**, with no release counts in titles;
+- has Claude write a one or two sentence neutral summary (`scripts/summarize.ts`), with the same prompt for every product, and rejects summaries with promotional wording;
+- publishes items that pass, records months with nothing user-facing in `scripts/news-ignored.txt`, and commits.
+
+To help: add a `release_feeds` or `release_notes_url` to a product so its releases are picked up, or use the "Submit a release" issue form. To remove or fix an item, edit or delete its file and, if needed, add a line to `scripts/news-ignored.txt` so it isn't recreated. Run `pnpm fetch-news` without `--auto` to create drafts for manual review instead.
+
+The workflow runs Claude Code on the maintainer's Claude subscription: it needs a `CLAUDE_CODE_OAUTH_TOKEN` secret (from `claude setup-token`) in a GitHub environment named `releases`, restricted to the `main` branch. Locally, `SUMMARY_BACKEND=claude-code pnpm fetch-news --auto` uses your own Claude Code login; with `ANTHROPIC_API_KEY` instead it uses the API. Each run is capped at 40 summary requests (`SUMMARY_MAX_CALLS`).

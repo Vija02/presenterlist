@@ -1,0 +1,8 @@
+title: 'WorshipTools Presenter: October 2026 releases (2026.1.7 to 2026.1.10)'
+date: '2026-10-26'
+product: worshiptools-presenter
+kind: release
+url: https://www.worshiptools.com/en-us/presenter/download/change-log
+summary: Adds ChordPro numbers on the stage display, countdowns that continue past zero, separate foreground and background transition times, slide border radius, and tempo and key changes for SongSelect lyric videos.
+source: worshiptools.com
+draft: false

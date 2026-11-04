@@ -1,0 +1,70 @@
+Skip to content
+VerseVIEW
+Bible and Song Presentation Software
+VerseVIEW 10 Release Notes
+10.3.0 # 3
+June 22, 2026
+- Fixed bugs and improvements
+- Added chords add edit feature
+- Improved theme builder to easily highlight content area
+- Cross Reference feature
+- Copy verses to clip board
+10.2.0 #4
+June 13, 2026
+- Fixed bugs and new database
+- Imporved Chords feature with Number system
+- Theme Builder to customize themes
+- Themes for Bible Verses and Lyrics seperately
+- AUX screen feature
+10.1.0 #1
+Updated Database and bug fixes
+Added Chords feature
+10.0.0 #32
+Updated Database and minor bug fixes
+10.0.0 # 31
+Added suggested words for song title search
+10.0.0 #28
+Fixed spelling mistakes in Telugu Bible text
+Stageview with next slides feature on stage screen and remote
+New Song database
+Improved XML import of Bible database
+10.0.0 #2 7
+Fixed bug on missing vvexport folder on desktop
+Fixed the green screen and flash when presentation launches
+10.0.0 #2 6
+Video and still media playback feature
+Importing of Zefania XML Bible to VV10
+Improved presentation themes and bug fixes
+10.0.0 #2 4
+Minor bug fixes to search numbers in song title
+Portrait theme suitable for vertical form videos
+Fixed bug in stageview themes
+10.0.0 #23
+Added Advanced Bible search features
+Added space in reference between chapter and verse in main presentation
+Fixed bug where the verse does not scroll to the correct one
+New stageview theme for new installations
+Fixed bug when switching verse presentations from main verses and scheduled verses
+Add feature for Malayalam transliteration of songs.
+10.0.0 #2 2
+Fixed issue with missing song lyrics after importing
+Fixed issue with the bible reference when coming from schedule
+Fixed issue of revision number not updating
+10.0.0 #21
+VV10 available for Windows, Mac and Linux
+Stageview and remote lower thirds can be enabled without the main presentation
+Fixed issue with adding fonts for Bible and songs.
+Fixed the book names in presentation to show in primary and secondary languages
+Additional features to customize the main presentation
+Added themes to the stageview presentation to include lower thirds
+Added one video background as part of installation
+Better Malayalam font available
+Fixed adding Bible database on Mac
+VerseVIEW 10 Release Notes
+&larr; Arabic Song Database for VerseVIEW
+Leave a Reply Cancel reply
+Your email address will not be published. Required fields are marked *
+Comment *
+Name *
+Email *
+Website

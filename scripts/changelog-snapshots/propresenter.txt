@@ -1,0 +1,691 @@
+Learn More
+Cloud is here! Learn how you can start building your show from home.
+Renewed Vision Home
+Learn
+Support
+Account
+Learn more about ProPresenter
+Why ProPresenter
+ProPresenter vs EasyWorship Comparison Guide
+ProPresenter vs. Keynote Comparison Guide
+ProPresenter vs. MediaShout Comparison Guide
+ProPresenter vs. PowerPoint Comparison Guide
+ProPresenter vs Presenter by Worship Tools Comparison Guide
+ProPresenter vs. Prezi Comparison Guide
+ProPresenter vs. Proclaim Comparison Guide
+Get started
+Download the latest version or test drive ProPresenter today for free!
+Explore
+Comparisons
+Products
+Cloud NEW Download
+Start $0 trial
+Download
+Start free trial
+Download ProPresenter
+Version
+21.4/21.4.2
+BETA
+352583705
+Stability Improvements
+July 1, 2026
+macOS
+Windows
+Looking for a previous version?
+Feature updates
+What’s Improved (now available for both platforms)
+Planning Center songs with a custom sequence will now have that custom sequence applied when importing into ProPresenter.
+Release notes
+macOS
+Windows
+macOS
+Fixes an issue where objects within a prop in the props editor could not be copied nor pasted.
+Fixes an issue where line heights could display incorrectly on the output.
+Fixes an issue where some text with a drop shadow applied could sometimes render as black on the output.
+Fixes an issue where some fonts were not rendering properly on the output.
+Fixes an issue where when reformatting slides that had text like "LORD" in it, the other characters sometimes showed with capitalized text with certain fonts applied.
+Fixes an issue where tabs at the beginning of a new line in a continued flow of text would not output the way that it appeared in the Editor.
+Fixes an issue where the Multitracks stage layout could show chords in the wrong key when the presentation was triggered using the timeline or using a go-to-next timer.
+Fixes an issue where groups were not able to edited while in a non-Master arrangement.
+Fixes an issue where there could be a lag when triggering slides containing lots of slide objects.
+Fixes an issue where macros would remain selected in the macro show controls after being triggered.
+Fixes an issue where using control+click to select a macro collection would not allow the macro collection to be deleted.
+Fixes an issue where when applying a theme with a media action to a presentation or slide, the media may not be present and a warning could be given.
+Fixes an issue where media playlists were able to be dragged out of the media playlist grouping in the outline view of the Media Bin.
+Fixes an issue where media within a .pptx file would not be imported using Import PowerPoint as Presentation… if Manage Media Automatically was disabled.
+Fixes an issue where "Show Keynote Screens" in Screens Settings would not toggle properly.
+Fixes an issue where an ASCII placeholder in a media file name could causes media to not link properly.
+Fixes an issue where some HEIC images would import in grayscale or as an incorrect size.
+Fixes an issue where text with a media fill could appear pixelated on the output.
+Fixes an issue where there could be a color discrepancy for media between what was seen in the media bin versus what was seen on the output.
+Fixes an issue where multi-track audio .mov files could not be dropped onto the audio track of a timeline.
+Fixes an issue where some audio routing changes made in Settings would not persist.
+Fixes an issue where the details duration and the default out-point values does not equal the length of the file for audio in the Audio Inspector.
+Fixes an issue where an audio input would not show up as a stand alone audio input when bringing in an audio input into ProPresenter over SDI, but would appear when using embedded audio from a video input.
+Fixes an issue where with grouped displays with a custom target output, the first screen in the group would determine the total width (for columns) or height (for rows).
+Fixes an issue where a timeline may not play when playlist is configured for timecode.
+Fixes an issue where triggering the GET/v1/playlist/active/presentation/focus endpoint would only work one time.
+Fixes an issue where the PUT /v1/playlist/{id} endpoint would fail to apply the arrangement_uuid provided in the request body causing the presentation to be placed into the playlist without the chosen arrangement.
+Improves output performance when rendering 4K media using multiple screens.
+Fixes various crashes and includes additional stability updates.
+Windows
+Fixes an issue where some fonts were not rendering properly on the output.
+Fixes an issue where line heights could display incorrectly on the output.
+Fixes an issue where macros would sometimes not trigger properly after switching workspaces.
+Fixes an issue where the next slide linked text object on a stage screen could disappear when recording a timeline.
+Fixes an issue where some HEIC images would import in grayscale or as an incorrect size.
+Fixes an issue where text with a media fill could appear pixelated on the output.
+Fixes an issue where some media with Korean text in the name would not generate thumbnails and could disappear from the Media Bin.
+Fixes an issue where on stage layouts, changes on media with effects applied would not persist between launches of ProPresenter.
+Fixes an issue where there could be a color discrepancy for media between what was seen in the media bin versus what was seen on the output.
+Fixes an issue where triggering the GET/v1/playlist/active/presentation/focus endpoint would only work one time.
+Fixes various crashes and includes additional stability updates.
+Cloud, Text Animations, Stickers by ProContent, Amazing Integration, and More
+Check out the latest Beta release
+BETA
+Version
+369098921
+Cloud, Text Animations, Stickers by ProContent, Amazing Integration, and More
+November 3, 2026
+macOS
+Windows
+Feature updates
+What’s New
+Cloud - Prepare Sunday's playlist from home, make a change mid-service without interrupting the person running it, and get back to work on a new machine if a computer ever fails. Everything in a Cloud workspace stays in sync in near real-time, so every machine collaborating in it is always current, and your content is always backed up. Learn More
+Text Animations - Create polished, animated lyric slides without ever leaving ProPresenter. Select a text object in the Editor and apply a Text Animation as a Build. From there, reveal the text by character, word, or line, set the pace and direction, and add continued motion for extra impact.
+Stickers by ProContent - Add clear emphasis to sermon notes or vibrant energy to youth experiences with Stickers by ProContent. In the Editor, quickly search through a library of animated graphics you can drag and drop directly onto any slide.
+Amazing Integration - The Amazing curriculum your church already pays for now imports straight into ProPresenter. Connect your APlay account, pick a playlist, and import it ready to run, with video and audio streaming and graphics saved to your machine.
+Video & Audio Stream Actions - Play video or audio straight from an HLS stream URL, with no download and no file to manage. Paste the link and ProPresenter checks it right away, then plays it like any other media, live or on demand.
+Export to ProDisplay - Quickly and easily export ProPresenter presentations to your connected ProDisplay account, and content is pushed automatically to your paired devices.
+(macOS only) Support for macOS 27 Golden Gate.
+What's Improved
+Ability to Disable Screens - Need to keep a screen available, but don't want to waste resources rendering it? In Screen Configuration, you can now disable a screen so it can still be referenced, but doesn't take up any rendering resources.
+Import PowerPoint Slides Without Background - Want to import a PowerPoint presentation, but don’t want to include the background? Now at time of import, you can choose whether the PowerPoint background is imported with the PowerPoint itself.
+What's Changed:
+(Windows) Fixes an issue where a newly signed in user could not complete onboarding.
+Additional bug fixes and stability improvements.
+Release notes
+macOS
+Windows
+macOS
+Fixes an issue where manually downloading Planning Center .pro and .proBundle files into a playlist would fail.
+Fixes an issue where text in some older presentations scaled improperly, causing wrapping or cut-off text.
+Fixes an issue where list icons (bullets, numbers) did not scale with text on alternate themes.
+Fixes an issue where edits to text formatting made using the Reflow Editor were not persisted between launches.
+Fixes an issue where Korean text scaled inconsistently between the editor and output.
+Fixes an issue where the font Kaiti TC would not output all Chinese characters.
+Fixes an issue where text on alternate themes scaled down unexpectedly when Chinese punctuation was used.
+Fixes an issue where key mapping assigned to macros were not persisted after relaunching ProPresenter.
+Fixes an issue where Roman numerals within a PowerPoint presentation were not always imported correctly.
+Fixes an issue where actions on a playback marker set to 0 seconds would not always trigger.
+Fixes an issue where the stage screen datalinks for Current and Next Slide Text would sometimes not update correctly when slides were triggered from a timeline using timecode.
+Fixes an issue where custom thumbnails for video inputs did not update in the media bin or cues.
+Fixes an issue where certain media were appearing as the wrong size on the output.
+Fixes an issue where newly created workspaces defaulted the main audio device to None instead of the system setting.
+Fixes an issue where an audio device assigned to a video input showed as disconnected after relaunching.
+Fixes an issue where a Planning Center clock could freeze after multiple services.
+Fixes an issue where custom output target were not persisted after relaunching ProPresenter.
+Fixes an issue where Auto Off audio input was not working correctly when triggering background videos.
+Fixes an issue where Auto Off audio input could clear when switching audience looks.
+Fixes an issue where the API returned a 404 when requesting a Planning Center playlist stored in a playlist folder.
+Fixes an issue where the playlist "active" API could return placeholder or stale data instead of the linked presentation's current data.
+Fixes an issue where a bootstrap failure on launch could prevent the main window from appearing.
+Fixes a crash that could occur when importing certain PowerPoint presentations.
+Fixes various crashes and includes additional stability updates.
+Windows
+Fixes an issue where after triggering a slide with a mouse click, then using the up/down arrow keys to move through the playlist, the presentations and headers would not highlight as expected.
+Fixes an issue where applying an alternate theme with a bulleted list did not apply the bullets.
+Fixes an issue where Korean text wrapped differently on output than in the editor.
+Fixes an issue where Roman numerals within a PowerPoint presentation were not always imported correctly.
+Fixes an issue where presentations were unable to be dragged and dropped on a placeholder form the Search window.
+Fixes an issue where actions on a playback marker set to 0 seconds would not always trigger.
+Fixes an issue where the stage screen datalinks for Current and Next Slide Text would sometimes not update correctly when slides were triggered from a timeline using timecode.
+Fixes an issue where Control + Z was not undoing edits in the Prop Editor.
+Fixes an issue where switching workspaces could add a blank stage layout and make stage actions unresponsive until relaunch.
+Fixes an issue where changes to an alternate theme in an audience look would not always apply to the slide on the output.
+Fixes an issue where calendar events would sometime show the wrong information.
+Fixes an issue where Planning Center Live content did not repopulate after relaunching ProPresenter.
+Fixes an issue where messages with tokens sent from ProPresenter Remote showed garbled characters on output.
+Fixes an issue where messages sent over the API did not display on output.
+Fixes an issue where slides would not trigger until the ProPresenter Helper processes were ended and the app relaunched.
+Fixes an issue where an internal media manager failure on relaunch could block Bibles and media thumbnails from functioning as expected.
+Fixes an issue where rectangle artifacts could randomly appear alongside text on output.
+Fixes an issue where the Network would appear as 0.0.0.0 after a clean install of the application.
+Fixes an issue where the playlist "active" API could return placeholder or stale data instead of the linked presentation's current data.
+Fixes an issue where ProPresenter could crash when importing audio files.
+Fixes various crashes and includes additional stability updates.
+macOS Sequoia recommended
+macOS Sequoia recommended
+The latest version of macOS has been thoroughly tested and is now recommended for all users.
+Windowed Output
+Windowed Output
+Present your ProPresenter outputs in a new window. Use a windowed output to have an adjustable floating preview or simply share your screen more easily in a video meeting.
+AirCast Receiver
+AirCast Receiver
+Share screens and audio from AirPlay devices directly into ProPresenter as video and audio inputs. Present notes from your iPad, show pictures from your iPhone, or simply display a video from another computer.
+Updated Editor Toolbar
+Updated Editor Toolbar
+Adding objects to your slides has never been more simple. The new toolbar keeps creativity at your fingertips by making it even easier to add text boxes, shapes, and more to create beautiful slides all from within ProPresenter.
+TCP/IP Communication
+TCP/IP Communication
+There is a new way to harness ProPresenter’s powerful API by enabling TCP/IP from Network Settings. Now third-party systems have the ability to send and receive TCP data in order to control ProPresenter.
+Single Prop Mode
+Single Prop Mode
+Try this new mode for triggering props! When Single-Prop Mode is enabled for a prop collection, triggering a Prop in that collection will automatically clear any other activated props.
+Auto-clear Props
+Auto-clear Props
+Need a Prop to automatically clear after a set time? Well now you can by setting an Auto-Clear for a Prop. This works both with Props in Show Controls and as Actions on slides & Macros. Additionally, Prop Actions can be set to trigger or clear a prop so you have ultimate control.
+Prop Collections
+Prop Collections
+Organizing your Props just got a whole lot easier. Sort your props into collections and toggle between Table and Grid Views so your most important information is displayed in the best way for your setup.
+User Accounts
+User Accounts
+We've simplified activation! You can now sign in with your Renewed Vision account to access your ProContent subscription or activate your ProPresenter license. No unlock code needed!
+Browse past versions
+Jump to version...
+Thank you! Your submission has been received!
+Oops! Something went wrong while submitting the form.
+21.3 / 21.3.1
+BETA
+352518178
+Stability Improvements
+March 18, 2026
+macOS
+Windows
+Feature updates
+There are now options for switching between slide views from the top View menu. You can also now add your own custom key mappings for the different slide views.
+Release notes
+macOS
+Windows
+macOS
+Fixes an issue where the hardware decoding of imported videos would be set to Disabled by default instead of Automatic.
+Fixes an issue where some media thumbnails would not appear after the media asset was overwritten.
+Fixes an issue where the bottom line of some text would appear slightly cut off when viewed on the output.
+Fixes an issue where slide labels edited in Settings would not always persist between launches of ProPresenter.
+Fixes an issue where deleted calendar events could be restored on a relaunch of ProPresenter.
+Fixes an issue where some text in an imported PowerPoint presentation could be cut off.
+Fixes an issue where media added to a playlist would default to Stop as the end behavior instead of maintaining the setting from the Media Bin.
+Fixes an issue where line spacing of text with different characteristics all within the same text box could render differently on the output than as seen in the Editor.
+Fixes an issue where media within a prop would reset the playback behavior on each launch of ProPresenter.
+Fixes an issue where selecting Continuous Playlist would lose the presentation selection.
+Fixes an issue where the new theme indicator would always show in the Themes pop-over.
+Fixes an issue where, when stopping timecode, any background media triggered from a slide in a timeline would also stop.
+Fixes an issue where multiple lines of text could be pasted into the scripture lookup field in the Bible view.
+Fixes an issue where imported MultiTracks songs were unable to be searched in the library by MTID.
+Fixes an issue where some users were unable to download Resi plugin updates.
+Fixes an issue where audio inputs could appear disconnected after relaunching ProPresenter.
+Fixes an issue where SDI/NDI audio routing in Settings would not show all channels when increased beyond 8.
+Fixes various crashes and includes additional stability updates.
+Windows
+Fixes an issue where renaming a library could result in duplicate presentations appearing.
+Fixes an issue where global transitions could be reset to the defaults on each launch of ProPresenter.
+Fixes an issue where stage actions could stop working when switching workspaces.
+Fixes an issue where the bottom line of some text would appear slightly cut off when viewed on the output.
+Fixes an issue where some text in an imported PowerPoint presentation could be cut off.
+Fixes an issue where images copied from programs outside of ProPresenter could sometimes not be pasted into the Editor in ProPresenter.
+Fixes an issue where Planning Center Live content was sometimes not repopulating after relaunching ProPresenter.
+Fixes an issue where groups in a SongSelect by CCLI import would not be detected if the text was in German.
+Fixes an issue where, when stopping timecode, any background media playing in a timeline would also stop.
+Fixes an issue where some users were unable to trigger slides until the ProPresenter Helper processes were restarted.
+Fixes an issue where some users were unable to update ProPresenter due to helper processes failing to stop.
+Fixes a hang that could occur when triggering web fills.
+Fixes a crash that could occur when renaming props in Table View with a filter applied.
+Fixes a crash that could occur when importing audio files into the Audio Bin.
+Fixes various crashes and includes additional stability updates.
+21.2
+BETA
+352452646
+Stability Improvements
+February 3, 2026
+macOS
+Windows
+Feature updates
+New PowerPoint Importer - Import .pptx files into ProPresenter as native, editable presentations with all text, slide objects, media, slide notes, and simple animations preserved - all without having to have PowerPoint installed on your machine.
+Release notes
+macOS
+Windows
+macOS
+Fixes an issue where when importing PowerPoints as images, the presentation would not appear in the selected playlist.
+Fixes an issue where some slide notes were not importing properly when importing PowerPoints as presentations.
+Fixes an issue where some images included in PowerPoints were showing the incorrect orientation when importing PowerPoints as presentations.
+Fixes an issue where extra lines on a PowerPoint were causing the text to appear smaller when imported into ProPresenter.
+Fixes an issue where some text formatting was not preserved when importing PowerPoints as presentations.
+Fixes an issue where some fonts included in a PowerPoint were not showing up in the Missing Font dialog as expected.
+Fixes an issue where the Clean Up Media function would remove media only used in stage layouts.
+Fixes an issue where slide web fills would not render to the output.
+Fixes an issue where Chinese text with punctuation would not scale as expected on the Stage Screen.
+Fixes an issue with some fonts being reset when transferring presentations and playlist from Windows to macOS.
+Fixes an issue where .TIFF images do not display on the output properly.
+Fixes an issue where the stage screen could flicker when editing the active stage layout.
+Fixes an issue where global transition presets were not persisted with different workspaces.
+Fixes an issue where stage actions on macros could be reset when switching between workspaces.
+Fixes an issue where selecting an empty of partially filled folder when importing a legacy ProPresenter folder as a new workspace would present an error.
+Fixes issue where some users were experiencing data loss on a new launch of ProPresenter.
+Fixes an issue where the timer visibility setting could be lost after relaunching ProPresenter.
+Fixes issue where feathering applied to current/next slide image datalinks was not appearing on the output.
+Fixes an issue where “End Item on Time” Planning Center timers would not match what was shown in Planning Center when an excluded item was included in a service.
+Fixes an issue where some media had a color discrepancy from past versions.
+Fixes an issue where some users were seeing a significant frame drop when triggering slides to an SDI output.
+Fixes an issue where the API endpoint for v1/playlist/active was not sending chunked updates.
+Fixes some minor issues with the Import PowerPoint as Presentation functionality.
+Fixes various crashes and includes additional stability updates.
+Windows
+Fixes an issue where when importing PowerPoints as images, the presentation would not appear in the selected playlist.
+Fixes an issue where some slide notes were not importing properly when importing PowerPoints as presentations.
+Fixes an issue where some images included in PowerPoints were showing the incorrect orientation when importing PowerPoints as presentations.
+Fixes an issue where extra lines on a PowerPoint were causing the text to appear smaller when imported into ProPresenter.
+Fixes an issue where some text formatting was not preserved when importing PowerPoints as presentations.
+Fixes an issue where some fonts included in a PowerPoint were not showing up in the Missing Font dialog as expected.
+Fixes an issue where the Clean Up Media function would remove media only used in stage layouts.
+Fixes an issue where Chinese text with punctuation would not scale as expected on the Stage Screen.
+Fixes an issue with some fonts being reset when transferring presentations and playlist from Windows to macOS.
+Fixes an issue where .TIFF images do not display on the output properly.
+Fixes an issue where the stage screen could flicker when editing the active stage layout.
+Fixes an issue where global transition presets were not persisted with different workspaces.
+Fixes an issue where stage actions on macros could be reset when switching between workspaces.
+Fixes an issue where selecting an empty of partially filled folder when importing a legacy ProPresenter folder as a new workspace would present an error.
+Fixes issue where some users were experiencing data loss on a new launch of ProPresenter.
+Fixes an issue where the timer visibility setting could be lost after relaunching ProPresenter.
+Fixes issue where feathering applied to current/next slide image datalinks was not appearing on the output.
+Fixes an issue where “End Item on Time” Planning Center timers would not match what was shown in Planning Center when an excluded item was included in a service.
+Fixes an issue where some media had a color discrepancy from past versions.
+Fixes an issue where some users were seeing a significant frame drop when triggering slides to an SDI output.
+Fixes an issue where the API endpoint for v1/playlist/active was not sending chunked updates.
+Fixes some minor issues with the Import PowerPoint as Presentation functionality.
+Fixes various crashes and includes additional stability updates.
+21.1
+BETA
+352387082
+Stability improvements
+December 9, 2025
+macOS
+Windows
+Feature updates
+Release notes
+macOS
+Windows
+macOS
+Fixes an issue where some images appear correct in the thumbnail, but are rotated on the output.
+Fixes an issue where imported media into presentations was being set to the incorrect default playback behavior.
+Fixes an issue where some media in a PowerPoint file would not be imported when using the Import PowerPoint as Presentation function.
+Fixes an issue in which some users were seeing an error when attempting to import certain PowerPoint files using the Import PowerPoint as Presentation function.
+Fixes an issue where tab stops and indents dragged from the ruler of the Editor were not affecting text.
+Fixes an issue where a Go to Next timer does not show the next presentation in a playlist after triggering the first slide when Continuous Playlist is disabled.
+Fixes an issue where the timecode offset in a timeline was not able to be set to the millisecond.
+Fixes an issue where multiple media items could not be viewed in the Media Inspector at once when opening the Inspector after selecting multiple slides containing media actions.
+Fixes an issue where multiple or incorrect MIDI notes could be triggered at the same time when triggering multiple macros at once.
+Fixes an issue where the Set to Current Frame option for thumbnails of view inputs was greyed out.
+Fixes an issue in which options for specific Settings pages were missing from the Key Mappings window.
+Fixes various crashes and includes additional stability updates.
+Windows
+Fixes an issue where PowerPoints were not able to be imported as images.
+Fixes an issue where the same font family could appear multiple times in the Missing Font dialogue.
+Fixes an issue where media in a timeline would be seen as unlinked media when using the Clean Up Media function.
+Fixes an issue where the add new stage layout menu thumbnails were not aligned properly.
+Fixes an issue where some media appeared too bright with HDR enabled.
+Fixes various crashes and includes additional stability updates.
+21.0.1
+BETA
+352321797
+Stability improvements
+November 26, 2025
+macOS
+Windows
+Feature updates
+Release notes
+macOS
+Windows
+macOS
+Fixes a crash that would occur when SDI outputs were configured in conjunction with Blackmagic Desktop Video v15.3.
+Windows
+Fixes a crash that would occur when SDI outputs were configured in conjunction with Blackmagic Desktop Video v15.3.
+Load more
+1 / 17
+Hmm.. we didn't find anything — try another search!
+Looking for ProPresenter 6? Visit our support article.
+Thanks for downloading!
+Before you do, share some basic information with us.
+First name *
+Last name *
+Email *
+Industry * Select one... Worship Live Production Broadcast Education Business Government Live Sports
+Why are you downloading this app? * Select one... To try before purchasing Just for editing presentations To install on a new or updated device To install a previous version Other
+Average audience size * Select one... <500 501-1,000 1,001-5,000 5,001-20,000 20,000+
+Download only
+Thank you!
+Here's your download.
+BETA
+369098921
+MacOS
+Windows
+BETA
+21.4/21.4.2
+352583705
+MacOS
+Windows
+BETA
+21.3 / 21.3.1
+352518178
+MacOS
+Windows
+BETA
+21.2
+352452646
+MacOS
+Windows
+BETA
+21.1
+352387082
+MacOS
+Windows
+BETA
+21.0.1
+352321797
+MacOS
+Windows
+BETA
+3352321578
+MacOS
+Windows
+BETA
+20.0.1
+335544583
+MacOS
+Windows
+BETA
+335544354
+MacOS
+Windows
+BETA
+19.0.1
+318767361
+MacOS
+Windows
+BETA
+318767159
+MacOS
+Windows
+BETA
+18.4
+302252046
+MacOS
+Windows
+BETA
+18.3
+302186513
+MacOS
+Windows
+BETA
+18.2
+302120976
+MacOS
+Windows
+BETA
+18.1
+302055490
+MacOS
+Windows
+BETA
+301989919
+MacOS
+Windows
+BETA
+17.1
+285278217
+MacOS
+Windows
+BETA
+285212709
+MacOS
+Windows
+BETA
+7.16.3
+118489862
+MacOS
+Windows
+BETA
+7.15
+118423570
+MacOS
+Windows
+BETA
+7.14.1
+118358275
+MacOS
+Windows
+BETA
+7.13.2
+118292999
+MacOS
+Windows
+BETA
+7.13.1
+118292750
+MacOS
+Windows
+BETA
+7.13
+118292501
+MacOS
+Windows
+BETA
+7.12
+118226960
+MacOS
+Windows
+BETA
+7.11
+118161434
+MacOS
+Windows
+BETA
+7.10.4
+118096914
+MacOS
+Windows
+BETA
+7.10.3
+118096648
+MacOS
+Windows
+BETA
+7.10.2
+118096412
+MacOS
+Windows
+BETA
+7.10.1
+118096129
+MacOS
+Windows
+BETA
+7.10
+117506056
+MacOS
+Windows
+BETA
+7.9.2
+118030852
+MacOS
+Windows
+BETA
+7.9.1
+118030598
+MacOS
+Windows
+BETA
+7.9
+118030345
+MacOS
+Windows
+BETA
+7.8.4
+117965828
+MacOS
+Windows
+BETA
+7.8.3
+117965581
+MacOS
+Windows
+BETA
+7.8.2
+117965313
+MacOS
+Windows
+BETA
+7.8.1
+117965057
+MacOS
+Windows
+BETA
+7.8
+117964824
+MacOS
+Windows
+BETA
+7.7.1
+117899527
+MacOS
+Windows
+BETA
+7.7
+117899279
+MacOS
+Windows
+BETA
+7.6.1
+117833997
+MacOS
+Windows
+BETA
+7.6
+117833745
+MacOS
+Windows
+BETA
+7.5.3
+117768962
+MacOS
+Windows
+BETA
+7.5.2
+117768716
+MacOS
+Windows
+BETA
+7.5.1
+117768465
+MacOS
+Windows
+BETA
+7.5
+117768207
+MacOS
+Windows
+BETA
+7.4.2
+117703185
+MacOS
+Windows
+BETA
+7.4.1
+117702927
+MacOS
+Windows
+BETA
+7.4
+117702672
+MacOS
+Windows
+BETA
+7.3.1
+117637380
+MacOS
+Windows
+BETA
+7.3
+117637163
+MacOS
+Windows
+BETA
+7.2.2
+117572106
+MacOS
+Windows
+BETA
+7.2.1
+117571849
+MacOS
+Windows
+BETA
+7.2
+117571592
+MacOS
+Windows
+BETA
+7.1.3
+117506823
+MacOS
+Windows
+BETA
+7.1.2
+117506572
+MacOS
+Windows
+BETA
+7.1.1
+117506309
+MacOS
+Windows
+BETA
+7.1
+118095884
+MacOS
+Windows
+BETA
+7.0.8
+117442566
+MacOS
+Windows
+BETA
+7.0.7
+117442311
+MacOS
+Windows
+BETA
+7.0.6
+117442051
+MacOS
+Windows
+BETA
+7.0.5
+117441797
+MacOS
+Windows
+BETA
+7.0.4
+117441539
+MacOS
+Windows
+BETA
+7.0.3
+117441283
+MacOS
+Windows
+BETA
+7.0.2
+117441028
+MacOS
+Windows
+BETA
+7.0.1
+117440771
+MacOS
+Windows
+BETA
+7.0
+117440539
+MacOS
+Windows
+Oops! Something went wrong while submitting the form.

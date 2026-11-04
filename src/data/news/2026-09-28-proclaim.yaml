@@ -1,0 +1,8 @@
+title: 'Proclaim: September 2026 releases (4.20.0.0135 to 4.21.0.0174)'
+date: 2026-09-28
+product: proclaim
+kind: release
+url: https://faithlife.github.io/ProclaimReleaseNotes/4.21/ReleaseNotes.html
+summary: Version 4.21 brings Planning Center import fixes, element order on full-slide confidence monitors and a remembered CCLI checkbox per arrangement. An earlier update fixed exporting presentations with canvas items.
+source: Proclaim release notes
+draft: false

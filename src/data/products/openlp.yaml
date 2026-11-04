@@ -87,6 +87,8 @@ feature_notes:
   connectivity.remote_control: Built-in web remote plus Android and iOS remote apps.
 docs_url: https://manual.openlp.org
 community_url: https://discuss.openlp.org
+news_feeds:
+  - https://openlp.org/rss.xml
 sources:
   - https://openlp.org/
   - https://openlp.org/blog/

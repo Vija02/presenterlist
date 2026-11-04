@@ -1,0 +1,8 @@
+title: "ChurchPresenter: September 2026 releases (26.11.161 to 26.12.171)"
+date: 2026-09-28
+product: churchpresenter
+kind: release
+url: https://www.churchpresenter.org/changelog/
+summary: Adds media looping, NDI video input as a canvas source, configurable Bible verse splitting, title slide customization and an end-of-song marker option.
+source: GitHub
+draft: false
