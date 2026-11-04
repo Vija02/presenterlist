@@ -3,3 +3,4 @@
 #   "<product-slug> <YYYY-MM>" to skip a product's release item for that month.
 # Comments start with #.
 songbeamer 2026-10  # 6.17 announced as a beta
+propresenter 2026-10  # auto: The only release in the text is dated November 4, 2026, which falls outside the target month (October 2026). No stable r
