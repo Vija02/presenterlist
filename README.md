@@ -82,7 +82,9 @@ The site URL and GitHub repo used for "Suggest an edit" links are in `src/config
 
 ## Deploying
 
-The output is a static `dist/` folder. It deploys to Cloudflare Pages, Netlify, Vercel or GitHub Pages with build command `pnpm build` and output dir `dist`.
+The site is hosted on GitHub Pages at presenterlist.org. `.github/workflows/deploy.yml` builds and deploys on every push to `main`, and again after the monthly Releases workflow commits new release items. The custom domain is set by `public/CNAME`.
+
+One-time setup: in the repo's Settings → Pages, set the source to "GitHub Actions"; point the domain's DNS at GitHub Pages (apex `A` records 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153, and `www` as a `CNAME` to `vija02.github.io`); then enable "Enforce HTTPS".
 
 ## Contributing
 
