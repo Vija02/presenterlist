@@ -8,6 +8,7 @@ description: >-
   a timer display. It includes a song editor, setlists, mobile/web controllers,
   optional NDI output via a companion app, and MIDI/OSC control.
 website: https://lyricdisplay.app
+logo: /logos/lyricdisplay.png
 developer: Peter Alakembi
 founded: 2025
 status: active
@@ -21,25 +22,50 @@ platforms: [windows, macos, linux]
 deployment: [desktop]
 output_note: Outputs are browser pages, so they can be opened in streaming software (OBS, vMix, Wirecast) or other browsers on the network.
 features:
-  lyrics: true
-  slides_import: partial
-  timers: true
-  lower_thirds: true
-  ndi: addon
-  midi: true
-  api: true
-  multiple_outputs: true
-  stage_display: true
-  remote_control: true
+  songs:
+    library: true
+    import_other: true
+    import_text: true
+    auto_import: true
+    backgrounds: true
+  slides:
+    powerpoint: partial
+  sources:
+    timers: true
+  multilingual:
+    bilingual_display: true
+  hardware:
+    midi: true
+  automation:
+    api: true
+  outputs:
+    multiple: true
+    stage_display: true
+    lower_thirds: true
+    web_output: true
+  broadcast_video:
+    ndi: addon
+  connectivity:
+    offline: true
+    remote_control: true
 feature_notes:
-  slides_import: Imports lyrics from text, LRC, Markdown, RTF and DOCX files and offers EasyWorship/presentation import workflows; it is not a general slide player.
-  lower_thirds: Outputs can be added as transparent browser sources in OBS, vMix and Wirecast.
-  ndi: NDI output requires the separately installed LyricDisplay NDI companion.
-  midi: MIDI and OSC control.
-  api: Documented HTTP and Socket.IO realtime APIs.
-  multiple_outputs: Two default lyric outputs plus up to four custom outputs, a stage display and a timer display.
-  remote_control: Join-code-protected mobile/web controllers.
+  songs.import_other: EasyWorship song databases can be imported, keeping title, writers, copyright and CCLI number.
+  songs.import_text: Imports text, LRC, Markdown, RTF and DOCX files, and lyrics can be pasted from websites.
+  songs.auto_import: Built-in online lyric search via LRCLIB, Lyrics.ovh and OpenHymnal.
+  songs.backgrounds: Each output can have its own image or video background.
+  slides.powerpoint: PowerPoint files are imported as lyric slides (one text slide per PowerPoint slide); it is not a general slide player.
+  sources.timers: A separate timer display driven by a schedule/agenda.
+  multilingual.bilingual_display: Translation lines can be grouped with each lyric line and shown together.
+  hardware.midi: MIDI and OSC control.
+  automation.api: Documented HTTP (OpenAPI) and Socket.IO realtime APIs.
+  outputs.multiple: Two default lyric outputs plus up to four custom outputs, a stage display and a timer display.
+  outputs.lower_thirds: Outputs can be added as transparent browser sources in OBS, vMix and Wirecast.
+  outputs.web_output: Every output is a browser URL that can be opened on other devices on the LAN or in streaming software.
+  broadcast_video.ndi: NDI output requires the separately downloaded (free) LyricDisplay NDI companion.
+  connectivity.remote_control: Join-code-protected mobile/web controllers.
 sources:
   - https://github.com/PeterAlaks/lyric-display-app
+  - https://github.com/PeterAlaks/lyric-display-app/blob/master/INSTALLATION.md
+  - https://github.com/PeterAlaks/lyric-display-app/blob/master/docs/PROJECT_STRUCTURE.md
   - https://lyricdisplay.app
 last_verified: 2026-11-04

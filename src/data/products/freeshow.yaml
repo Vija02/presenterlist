@@ -9,6 +9,7 @@ description: >-
   the show or act as a stage display through companion web apps, and outputs
   can be sent over NDI.
 website: https://freeshow.app
+logo: /logos/freeshow.png
 developer: ChurchApps (Live Church Solutions)
 headquarters: Norway
 founded: 2021
@@ -24,30 +25,100 @@ platforms: [windows, macos, linux]
 deployment: [desktop]
 output_note: Web-based RemoteShow, StageShow, ControlShow and OutputShow can be opened in a browser on the local network.
 features:
-  lyrics: true
-  bible: true
-  slides_import: partial
-  video_playback: true
-  audio_playback: true
-  web_content: true
-  timers: true
-  ndi: true
-  live_video_input: true
-  midi: true
-  api: true
-  planning_center: true
-  multiple_outputs: true
-  stage_display: true
-  remote_control: true
-  cloud_sync: true
+  songs:
+    library: true
+    import_other: true
+    import_text: true
+    auto_import: partial
+    chords: true
+    backgrounds: true
+    ccli_reporting: partial
+  bible:
+    builtin: true
+    licensed: partial
+  slides:
+    powerpoint: true
+    keynote: partial
+    canva: true
+    pdf: true
+    animations: partial
+  media:
+    video: true
+    audio: true
+    images: true
+    youtube: true
+  sources:
+    camera: true
+    screen_share: true
+    web: true
+    timers: true
+    messages: true
+    interaction: true
+  multilingual:
+    ui: true
+    song_libraries: true
+    bible_translations: true
+    bilingual_display: true
+    side_by_side: true
+    non_latin: true
+  software_integrations:
+    planning_center: true
+  hardware:
+    midi: true
+    stream_deck: true
+  automation:
+    api: true
+    webhooks: true
+    ai: true
+  outputs:
+    multiple: true
+    stage_display: true
+    lower_thirds: true
+    web_output: true
+  broadcast_video:
+    ndi: true
+    sdi: true
+  streaming:
+    rtmp: true
+    youtube: true
+    facebook: true
+    recording: true
+  connectivity:
+    cloud_sync: true
+    offline: true
+    remote_control: true
 feature_notes:
-  bible: Scripture can be imported from local files or from over 200 versions via API.Bible (online).
-  slides_import: PowerPoint and PDF files can be imported; no Keynote or Google Slides import is documented.
-  web_content: YouTube and Vimeo videos can be played by pasting a link; screens or windows (e.g. a browser) can be captured.
-  live_video_input: Cameras and screens can be shown from the media drawer.
-  midi: Can receive MIDI to trigger actions and send MIDI on slide changes; Bitfocus Companion is also supported.
-  api: WebSocket and REST API, enabled in Connections settings.
-  planning_center: Downloads upcoming Planning Center service plans; ChurchApps (B1.church) is also supported.
+  songs.import_other: Imports from ProPresenter, EasyWorship, VideoPsalm, OpenLP/OpenLyrics, OpenSong, MediaShout, Quelea, SoftProjector, SongBeamer, EasySlides and VerseVIEW, plus ChordPro, CSV and Word.
+  songs.import_text: Lyrics can be pasted into the Quick lyrics box when creating a show.
+  songs.auto_import: No SongSelect integration because CCLI discontinued its API; song lyrics can be pulled from Planning Center plans.
+  songs.chords: Chords can be added to song text and shown on the stage display.
+  songs.ccli_reporting: Song usage can be logged to a file and exported; reports are not submitted to CCLI automatically.
+  bible.builtin: Over 200 versions can be downloaded through API.Bible (online), or Zefania, OSIS, Beblia and OpenSong files imported.
+  bible.licensed: Some copyrighted versions are available through API.Bible; the docs do not list NIV or ESV.
+  slides.powerpoint: PowerPoint and PDF files are imported as slides; a deprecated controller mode drives an installed PowerPoint or Keynote.
+  slides.keynote: Keynote is only supported through the deprecated controller mode, which needs Keynote installed on macOS.
+  slides.canva: A Canva connection (OAuth) lets designs be browsed and used from FreeShow's content library.
+  slides.animations: Original slide animations only play in the deprecated PowerPoint/Keynote controller mode; FreeShow has its own transitions and item animations.
+  media.youtube: YouTube and Vimeo videos can be played by pasting a link.
+  sources.camera: Cameras, screens and windows can be shown from the media drawer.
+  sources.messages: Any number of overlays can be layered over slides for announcements and messages.
+  sources.interaction: Interaction slides (join, question, chart, leaderboard) let the audience take part from their phones.
+  multilingual.ui: The interface is translated into about 30 languages.
+  multilingual.bilingual_display: Songs can carry translations that are shown together with the original lyrics.
+  multilingual.side_by_side: Scripture collections show several versions at the same time.
+  multilingual.non_latin: Text items have a right-to-left option, and the interface has an Arabic translation.
+  software_integrations.planning_center: Downloads upcoming Planning Center service plans; ChurchApps (B1.church) and OnStage are also supported.
+  hardware.midi: Can receive MIDI to trigger actions and slides and send MIDI on slide changes.
+  hardware.stream_deck: Bitfocus Companion is supported for Stream Deck control.
+  automation.api: WebSocket and REST API, enabled in Connections settings.
+  automation.webhooks: Emitter templates send HTTP, OSC or MIDI messages from slides and actions.
+  automation.ai: Optional AI features include speech-to-text transcription with automatic scripture detection and an LLM assistant (local or cloud models).
+  outputs.lower_thirds: Outputs can have their own styles and an alpha key output for keying lyrics over video.
+  outputs.web_output: OutputShow serves an output as a web page on the local network.
+  broadcast_video.sdi: Blackmagic DeckLink and UltraStudio outputs are supported.
+  streaming.rtmp: Outputs can be streamed over RTMP (YouTube, Twitch, Facebook Live) or WebRTC/WHIP.
+  streaming.recording: Outputs and captured screens can be recorded to a file.
+  connectivity.cloud_sync: The library can be synced across computers through cloud sync (e.g. Google Drive or ChurchApps).
 docs_url: https://freeshow.app/docs
 sources:
   - https://freeshow.app/
@@ -56,4 +127,10 @@ sources:
   - https://freeshow.app/docs/media
   - https://freeshow.app/api
   - https://github.com/ChurchApps/FreeShow
+  - https://github.com/ChurchApps/FreeShow/releases/tag/v1.6.7
+  - https://github.com/ChurchApps/FreeShow/tree/main/src/electron/contentProviders
+  - https://github.com/ChurchApps/FreeShow/tree/main/src/electron/streaming
+  - https://github.com/ChurchApps/FreeShow/tree/main/src/frontend/ai
+  - https://freeshow.app/docs/scripture
+  - https://freeshow.app/docs/faq
 last_verified: 2026-11-04

@@ -10,6 +10,7 @@ description: >-
   SongBeamer, OpenSong, OpenLyrics and ChordPro formats. The software is
   still labelled beta and is maintained by a small volunteer team.
 website: http://wordslive.org/en/
+logo: /logos/words-live.png
 developer: WordsLive project
 headquarters: Germany
 founded: 2013
@@ -23,18 +24,42 @@ pricing:
 platforms: [windows]
 deployment: [desktop]
 features:
-  lyrics: true
-  slides_import: true
-  video_playback: true
-  audio_playback: true
-  ccli_songselect: true
-  ccli_reporting: true
-  offline: true
+  songs:
+    library: true
+    import_other: true
+    auto_import: partial
+    chords: true
+    backgrounds: partial
+    ccli_reporting: partial
+  slides:
+    powerpoint: true
+    pdf: partial
+  media:
+    video: true
+    audio: true
+    images: true
+  sources:
+    messages: partial
+  multilingual:
+    ui: true
+    song_libraries: true
+    bilingual_display: true
+  connectivity:
+    offline: true
+    web_native: false
 feature_notes:
-  slides_import: PowerPoint (ppt, pptx) and OpenDocument (odp) presentations require Microsoft PowerPoint or LibreOffice/OpenOffice Impress to be installed; PDF and XPS documents are also supported (experimental).
-  video_playback: Additional formats are supported if VLC is installed and enabled.
-  ccli_songselect: Import of SongSelect song files.
-  ccli_reporting: The changelog references CCLI reporting (fixed in 0.9.17); details are not documented on the website.
+  songs.import_other: Native Powerpraise songs and portfolios; songs can also be imported from SongBeamer, OpenSong, OpenLyrics and ChordPro files.
+  songs.auto_import: Songs can be imported from SongSelect files or text copied to the clipboard; there is no direct online search.
+  songs.chords: Chords can be shown with the lyrics and transposed automatically.
+  songs.backgrounds: Background images for slides, songs or the whole service; background videos are experimental.
+  songs.ccli_reporting: Songs can be stored with CCLI numbers, and a command opens CCLI Online Reporting in the browser for the selected songs.
+  slides.powerpoint: PowerPoint (ppt, pptx) and OpenDocument (odp) presentations require Microsoft PowerPoint, the PowerPoint Viewer 2007 or LibreOffice/OpenOffice Impress to be installed.
+  slides.pdf: PDF and XPS documents are supported (experimental).
+  media.video: Additional formats are supported if VLC is installed and enabled.
+  media.images: Photos can be compiled into an optionally timer-controlled slide show.
+  sources.messages: An additional notification for the audience can be shown during a presentation (experimental).
+  multilingual.ui: Interface in English and German.
+  multilingual.bilingual_display: Songs can carry a translation, shown alongside the main language or on its own.
 languages: [German, English]
 docs_url: http://wordslive.org/en/manual/
 sources:
@@ -42,4 +67,6 @@ sources:
   - http://wordslive.org/en/features.html
   - https://github.com/Boddlnagg/WordsLive
   - https://github.com/Boddlnagg/WordsLive/releases
+  - https://github.com/Boddlnagg/WordsLive/tree/master/WordsLive.Core/Songs/IO
+  - https://github.com/Boddlnagg/WordsLive/blob/master/WordsLive/Resources/Resource.resx
 last_verified: 2026-11-04

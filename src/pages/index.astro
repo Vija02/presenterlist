@@ -1,8 +1,8 @@
 ---
 import Base from "../layouts/Base.astro";
 import ProductCard from "../components/ProductCard.astro";
-import { FEATURE_GROUPS, PLATFORMS } from "../lib/schema.ts";
-import { featureCount, filterTags, getProducts, latestVerified, supports } from "../lib/products.ts";
+import { FEATURE_GROUPS, LEAF_PATHS, PLATFORMS, subKeys } from "../lib/schema.ts";
+import { featureCount, featureLabel, filterTags, getProducts, latestVerified, supportedPaths, supports } from "../lib/products.ts";
 import { SITE_NAME } from "../config.ts";
 
 const products = await getProducts();
@@ -42,13 +42,13 @@ const jsonLd = {
     <div class="container-page py-12 sm:py-16">
       <h1 class="max-w-3xl text-3xl font-bold tracking-tight sm:text-5xl">The open directory of church presentation software</h1>
       <p class="mt-4 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
-        Compare {products.length} lyrics, scripture and media presentation tools by price, platform and features —
+        Compare {products.length} lyrics, scripture and media presentation tools by price, platform and features,
         from ProPresenter and EasyWorship to free and open-source options.
       </p>
       <dl class="mt-8 flex flex-wrap gap-x-10 gap-y-4 text-sm">
         <div><dt class="text-zinc-500">Products</dt><dd class="text-2xl font-semibold">{products.length}</dd></div>
         <div><dt class="text-zinc-500">Open source</dt><dd class="text-2xl font-semibold">{openSourceCount}</dd></div>
-        <div><dt class="text-zinc-500"><a href="/features/" class="hover:underline">Features tracked</a></dt><dd class="text-2xl font-semibold">{Object.values(FEATURE_GROUPS).reduce((n, g) => n + Object.keys(g.features).length, 0)}</dd></div>
+        <div><dt class="text-zinc-500"><a href="/features/" class="hover:underline">Features tracked</a></dt><dd class="text-2xl font-semibold">{LEAF_PATHS.length}</dd></div>
         <div><dt class="text-zinc-500">Last updated</dt><dd class="text-2xl font-semibold">{updated}</dd></div>
       </dl>
     </div>
@@ -88,12 +88,28 @@ const jsonLd = {
         {Object.values(FEATURE_GROUPS).map((g) => (
           <fieldset>
             <legend class="mb-2 font-semibold">{g.label}</legend>
-            {Object.entries(g.features).map(([k, label]) => (
-              <label class="flex items-start gap-2 py-0.5">
-                <input type="checkbox" name="feature" value={k} class="mt-0.5 accent-brand-600" />
-                <span class="flex-1">{label}</span><span class="text-xs text-zinc-400">{products.filter((p) => supports(p, k as any)).length}</span>
-              </label>
-            ))}
+            {Object.keys(g.features).map((k) => {
+              const count = (path: string) => products.filter((p) => supports(p, path)).length;
+              const row = (path: string, sub = false) => (
+                <label class:list={["flex items-start gap-2 py-0.5", sub && "text-xs text-zinc-600 dark:text-zinc-400"]}>
+                  <input type="checkbox" name="feature" value={path} class="mt-0.5 accent-brand-600" />
+                  <span class="flex-1">{featureLabel(path)}</span><span class="text-xs text-zinc-400">{count(path)}</span>
+                </label>
+              );
+              return subKeys(k).length ? (
+                <details class="group/sub">
+                  <summary class="flex cursor-pointer list-none items-start gap-1">
+                    <div class="flex-1" onclick="event.stopPropagation()">{row(k)}</div>
+                    <span class="mt-1 text-xs text-zinc-400 transition-transform group-open/sub:rotate-90" aria-label="Show sub-features">▸</span>
+                  </summary>
+                  <div class="mb-1 ml-1.5 border-l border-zinc-200 pl-3 dark:border-zinc-800">
+                    {subKeys(k).map((s) => row(`${k}.${s}`, true))}
+                  </div>
+                </details>
+              ) : (
+                row(k)
+              );
+            })}
           </fieldset>
         ))}
         <button type="reset" class="btn-secondary w-full">Reset filters</button>
@@ -112,7 +128,7 @@ const jsonLd = {
           <option value="features">Most features</option>
           <option value="newest">Newest</option>
         </select>
-        <button type="button" id="filters-open" class="btn-secondary lg:hidden">Filters <span id="filter-count" class="hidden rounded-full bg-brand-600 px-1.5 text-xs text-white"></span></button>
+        <button type="button" id="filters-open" class="btn-secondary lg:hidden">Filters <span id="filter-count" class="hidden rounded-full bg-brand-600 px-1.5 text-xs text-on-brand"></span></button>
       </div>
       <p class="mb-4 text-sm text-zinc-500" aria-live="polite"><span id="result-count">{products.length}</span> products</p>
 
@@ -126,7 +142,7 @@ const jsonLd = {
               "data-search": `${p.name} ${p.developer} ${p.tagline} ${p.description}`.toLowerCase(),
               "data-tags": filterTags(p),
               "data-platforms": p.platforms.join(" "),
-              "data-features": Object.entries(p.features ?? {}).filter(([, v]) => v === true || v === "partial" || v === "addon").map(([k]) => k).join(" "),
+              "data-features": supportedPaths(p).join(" "),
               "data-status": p.status,
               "data-score": String(featureCount(p)),
               "data-founded": String(p.founded ?? 0),
@@ -230,6 +246,10 @@ const jsonLd = {
   }
 
   readUrl();
+  // Expand sub-feature lists that contain an active filter.
+  form.querySelectorAll("details").forEach((d) => {
+    if (d.querySelector("div input:checked:not(summary input)")) d.open = true;
+  });
   doSort();
   apply();
   form.addEventListener("change", apply);
@@ -262,7 +282,7 @@ const jsonLd = {
   function updateTray() {
     const sel = toggles.filter((t) => t.checked);
     tray.classList.toggle("hidden", sel.length === 0);
-    names.textContent = sel.length < 2 ? `${sel.map((t) => t.dataset.name).join(", ")} — pick at least one more` : sel.map((t) => t.dataset.name).join(", ");
+    names.textContent = sel.length < 2 ? `${sel.map((t) => t.dataset.name).join(", ")}: pick at least one more` : sel.map((t) => t.dataset.name).join(", ");
     go.href = `/compare/?p=${sel.map((t) => t.value).join(",")}`;
     go.classList.toggle("pointer-events-none", sel.length < 2);
     go.classList.toggle("opacity-50", sel.length < 2);

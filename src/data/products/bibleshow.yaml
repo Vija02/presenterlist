@@ -9,6 +9,7 @@ description: >-
   presentations. The latest version, 5.4, dates from 2020; the same author
   offers a separate macOS app, BibleCast.
 website: https://www.bibleshow.net
+logo: /logos/bibleshow.png
 developer: BibleShow
 status: maintenance
 status_note: No updates since BibleShow 5.4 (installer dated 10 February 2020; site last updated December 2020). It remains available for download; no official discontinuation has been announced.
@@ -19,15 +20,39 @@ pricing:
 platforms: [windows]
 deployment: [desktop]
 features:
-  lyrics: false
-  bible: true
-  ndi: true
-  multiple_outputs: true
-  offline: true
+  songs: false
+  bible:
+    builtin: true
+  slides: false
+  media:
+    images: true
+  sources:
+    camera: partial
+  multilingual:
+    ui: true
+    bible_translations: true
+    side_by_side: true
+    non_latin: true
+  broadcast_video:
+    ndi: true
+  outputs:
+    multiple: true
+    stage_display: true
+    lower_thirds: true
+  connectivity:
+    offline: true
 feature_notes:
-  bible: Bible-only presenter; 180+ downloadable Bible modules, up to 4 versions shown in parallel, right-to-left language support.
-  ndi: NewTek NDI output (streaming) and NDI input as background.
-  multiple_outputs: Up to four screens with individually customised scripture display.
+  songs: Bible-only presenter; songs and general presentations are not handled.
+  bible.builtin: Ships with the King James Version; 180+ free Bible modules in over 60 languages can be downloaded from within the app.
+  media.images: Background images with adjustable effects behind the scripture text.
+  sources.camera: An NDI source can be used as the background; no direct capture-card input is described.
+  multilingual.ui: The menu language can be changed (the site itself is in English and Romanian).
+  multilingual.side_by_side: Up to 4 versions in parallel on the main screen and up to 7 across all displays.
+  multilingual.non_latin: Full support for right-to-left languages such as Hebrew and Arabic.
+  broadcast_video.ndi: NewTek NDI output (one per instance, with alpha channel) and NDI input as background.
+  outputs.multiple: Up to four independently configured displays, each to a window, NDI or data (XML/PNG) output.
+  outputs.stage_display: A stage monitor can mirror the main display or use its own theme.
+  outputs.lower_thirds: Display windows can cover part of the screen and NDI output carries an alpha channel.
 sources:
   - https://www.bibleshow.net/
   - https://www.bibleshow.net/presentation.php

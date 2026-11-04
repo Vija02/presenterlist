@@ -5,13 +5,15 @@ import Badges from "../../components/Badges.astro";
 import FeatureMark from "../../components/FeatureMark.astro";
 import FeatureLegend from "../../components/FeatureLegend.astro";
 import ProductCard from "../../components/ProductCard.astro";
-import { FEATURE_GROUPS, type FeatureKey } from "../../lib/schema.ts";
+import { FEATURE_GROUPS, LEAF_PATHS, subKeys } from "../../lib/schema.ts";
 import {
   alternativesFor,
   deploymentLabel,
+  feat,
+  featureFullLabel,
   featureLabel,
   featureSlug,
-  fullySupports,
+  featureCount,
   getProducts,
   isFree,
   listFormat,
@@ -31,7 +33,7 @@ const { product: p } = Astro.props as { product: P };
 const all = await getProducts();
 const alternatives = alternativesFor(p, all);
 const platforms = p.platforms.map(platformLabel);
-const supported = (Object.keys(p.features ?? {}) as FeatureKey[]).filter((k) => fullySupports(p, k));
+const confirmed = featureCount(p);
 
 const faq: { q: string; a: string }[] = [
   { q: `What is ${p.name}?`, a: `${p.name} is church presentation software by ${p.developer}. ${p.tagline}` },
@@ -47,10 +49,17 @@ const faq: { q: string; a: string }[] = [
     a: p.open_source ? `Yes. ${p.name} is open source under the ${p.license} license.` : `No. ${p.name} is proprietary software.`,
   },
 ];
-if (p.features?.bible !== undefined)
-  faq.push({ q: `Does ${p.name} include a Bible?`, a: p.features.bible === true ? `Yes, ${p.name} has built-in Bible support.` : p.features.bible === false ? `No, ${p.name} does not include built-in Bible support.` : `${p.name} has ${p.features.bible === "addon" ? "Bible support as a paid add-on" : "limited Bible support"}.${p.feature_notes?.bible ? ` ${p.feature_notes.bible}` : ""}` });
-if (p.features?.planning_center !== undefined)
-  faq.push({ q: `Does ${p.name} integrate with Planning Center?`, a: p.features.planning_center === true ? `Yes.${p.feature_notes?.planning_center ? ` ${p.feature_notes.planning_center}` : ""}` : p.features.planning_center === false ? `Not as far as we know.` : `Partially.${p.feature_notes?.planning_center ? ` ${p.feature_notes.planning_center}` : ""}` });
+const note = (k: string) => (p.feature_notes?.[k] ? ` ${p.feature_notes[k]}` : "");
+const bible = feat(p, "bible");
+if (bible !== undefined)
+  faq.push({ q: `Does ${p.name} include a Bible?`, a: bible === true ? `Yes, ${p.name} has built-in Bible support.${note("bible")}` : bible === false ? `No, ${p.name} does not include built-in Bible support.` : `${p.name} has ${bible === "addon" ? "Bible support as a paid add-on" : "limited Bible support"}.${note("bible")}` });
+const slideFormats = subKeys("slides").filter((s) => s !== "animations");
+const slidesYes = slideFormats.filter((s) => feat(p, `slides.${s}`) === true).map((s) => featureLabel(`slides.${s}`));
+if (slidesYes.length)
+  faq.push({ q: `Which slide formats can ${p.name} show?`, a: `${p.name} supports ${listFormat(slidesYes)}.${feat(p, "slides.animations") === true ? " Slide animations and transitions play back." : feat(p, "slides.animations") === false ? " Slide animations and transitions are not played back." : ""}` });
+const pco = feat(p, "software_integrations.planning_center");
+if (pco !== undefined)
+  faq.push({ q: `Does ${p.name} integrate with Planning Center?`, a: pco === true ? `Yes.${note("software_integrations.planning_center")}` : pco === false ? `Not as far as we know.` : `Partially.${note("software_integrations.planning_center")}` });
 faq.push({ q: `What are the best alternatives to ${p.name}?`, a: `Similar tools include ${listFormat(alternatives.slice(0, 5).map((x) => x.name))}.` });
 
 const jsonLd = [
@@ -78,7 +87,7 @@ const details: [string, string | undefined, string?][] = [
   ["Headquarters", p.headquarters],
   ["Founded", p.founded?.toString()],
   ["Status", p.status === "active" ? "Active" : p.status === "maintenance" ? "Unmaintained" : "Discontinued"],
-  ["License", p.open_source ? p.license : "Proprietary"],
+  ["License", p.license ? (p.open_source ? p.license : `${p.license} (source-available)`) : "Proprietary"],
   ["Pricing", p.pricing.models.map(pricingLabel).join(", ")],
   ["Starting price", p.pricing.starting_price, p.pricing.pricing_url],
   ["Deployment", p.deployment.map(deploymentLabel).join(", ")],
@@ -95,7 +104,7 @@ const host = (u: string) => new URL(u).hostname.replace(/^www\./, "");
 ---
 
 <Base
-  title={`${p.name} – features, pricing & alternatives`}
+  title={`${p.name}: features, pricing & alternatives`}
   description={`${p.name}: ${p.tagline} Compare platforms, pricing and features with other church presentation software.`}
   jsonLd={jsonLd}
   breadcrumbs={[{ label: "Directory", href: "/" }, { label: p.name }]}
@@ -141,15 +150,27 @@ const host = (u: string) => new URL(u).hostname.replace(/^www\./, "");
             <h2 class="h-section mb-0!">Features</h2>
             <FeatureLegend />
           </div>
-          <div class="grid gap-6 md:grid-cols-2">
+          <div class="gap-6 md:columns-2">
             {Object.values(FEATURE_GROUPS).map((g) => (
-              <div class="card p-4">
+              <div class="card mb-6 break-inside-avoid p-4">
                 <h3 class="mb-2 text-sm font-semibold text-zinc-500">{g.label}</h3>
                 <ul class="divide-y divide-zinc-100 dark:divide-zinc-800">
-                  {Object.entries(g.features).map(([k, label]) => (
-                    <li class="flex items-center justify-between gap-3 py-2 text-sm">
-                      <a href={`/features/${featureSlug(k)}/`} class="hover:underline">{label}</a>
-                      <FeatureMark value={p.features?.[k as FeatureKey]} note={p.feature_notes?.[k]} />
+                  {Object.keys(g.features).map((k) => (
+                    <li class="py-2 text-sm">
+                      <div class="flex items-center justify-between gap-3">
+                        <a href={`/features/${featureSlug(k)}/`} class="font-medium hover:underline">{featureLabel(k)}</a>
+                        <FeatureMark value={feat(p, k)} note={p.feature_notes?.[k]} />
+                      </div>
+                      {subKeys(k).length > 0 && (
+                        <ul class="mt-1.5 space-y-1 border-l border-zinc-200 pl-3 dark:border-zinc-800">
+                          {subKeys(k).map((s) => (
+                            <li class="flex items-center justify-between gap-3 text-xs text-zinc-600 dark:text-zinc-400">
+                              <a href={`/features/${featureSlug(`${k}.${s}`)}/`} class="hover:underline">{featureLabel(`${k}.${s}`)}</a>
+                              <FeatureMark value={feat(p, `${k}.${s}`)} note={p.feature_notes?.[`${k}.${s}`]} size="sm" />
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -161,7 +182,7 @@ const host = (u: string) => new URL(u).hostname.replace(/^www\./, "");
               <h3 class="mb-2 text-sm font-semibold text-zinc-500">Notes</h3>
               <dl class="space-y-2 text-sm">
                 {Object.entries(p.feature_notes).map(([k, v]) => (
-                  <div><dt class="inline font-medium">{featureLabel(k)}:</dt> <dd class="inline text-zinc-600 dark:text-zinc-400">{v}</dd></div>
+                  <div><dt class="inline font-medium">{featureFullLabel(k)}:</dt> <dd class="inline text-zinc-600 dark:text-zinc-400">{v}</dd></div>
                 ))}
               </dl>
             </div>
@@ -234,8 +255,8 @@ const host = (u: string) => new URL(u).hostname.replace(/^www\./, "");
             <a href={editFileUrl(p.slug)} class="btn-secondary px-3! py-1.5!" rel="noopener">Edit on GitHub</a>
           </div>
         </div>
-        {supported.length > 0 && (
-          <p class="text-xs text-zinc-500">{p.name} supports {supported.length} of the features we track.</p>
+        {confirmed > 0 && (
+          <p class="text-xs text-zinc-500">{p.name} has {confirmed} of the {LEAF_PATHS.length} features we track confirmed.</p>
         )}
       </aside>
     </div>

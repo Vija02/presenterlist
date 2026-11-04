@@ -4,7 +4,7 @@ import { existsSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { createInterface } from "node:readline/promises";
 import { stringify } from "yaml";
-import { DEPLOYMENTS, FEATURE_KEYS, PLATFORMS, PRICING_MODELS } from "../src/lib/schema.ts";
+import { DEPLOYMENTS, FEATURE_KEYS, PLATFORMS, PRICING_MODELS, subKeys } from "../src/lib/schema.ts";
 
 const rl = createInterface({ input: process.stdin, output: process.stdout });
 const ask = async (q: string, def = "") => (await rl.question(def ? `${q} [${def}]: ` : `${q}: `)).trim() || def;
@@ -52,6 +52,11 @@ const data: Record<string, unknown> = {
 };
 rl.close();
 
-const featureHelp = `# Features: set any of these to true | false | partial | addon (omit if unknown)\n# ${FEATURE_KEYS.join(", ")}\n`;
+const featureHelp =
+  "# Features: values are true | false | partial | addon (omit if unknown).\n" +
+  "# A feature with sub-features can be a single value or a map, e.g.\n" +
+  "#   slides:\n#     powerpoint: true\n#     animations: partial\n" +
+  FEATURE_KEYS.map((k) => `#   ${k}${subKeys(k).length ? `: ${subKeys(k).join(", ")}` : ""}`).join("\n") +
+  "\n";
 writeFileSync(file, stringify(data, { lineWidth: 100 }).replace("features: {}\n", `${featureHelp}features: {}\n`));
 console.log(`\nCreated ${file}\nFill in features and sources, then run: pnpm validate ${slug}`);

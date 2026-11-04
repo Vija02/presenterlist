@@ -1,8 +1,8 @@
 ---
 import Logo from "./Logo.astro";
 import FeatureMark from "./FeatureMark.astro";
-import { FEATURE_GROUPS, PLATFORMS, type FeatureKey } from "../lib/schema.ts";
-import { deploymentLabel, featureSlug, priceSummary, type P } from "../lib/products.ts";
+import { FEATURE_GROUPS, PLATFORMS, subKeys, type FeaturePath } from "../lib/schema.ts";
+import { deploymentLabel, feat, featureLabel, featureSlug, priceSummary, type P } from "../lib/products.ts";
 
 interface Props {
   products: P[];
@@ -13,7 +13,10 @@ interface Props {
 }
 const { products, selectable = false, highlightDiff = false } = Astro.props;
 const col = (p: P) => (selectable ? { "data-col": p.slug } : {});
-const differs = (k: FeatureKey) => highlightDiff && new Set(products.map((p) => String(p.features?.[k]))).size > 1;
+const differs = (k: FeaturePath) => highlightDiff && new Set(products.map((p) => String(feat(p, k)))).size > 1;
+/** Each feature followed by its sub-features. */
+const rowsFor = (features: Record<string, unknown>) =>
+  Object.keys(features).flatMap((k) => [k, ...subKeys(k).map((s) => `${k}.${s}`)]);
 ---
 
 <div class="card overflow-x-auto">
@@ -72,18 +75,21 @@ const differs = (k: FeatureKey) => highlightDiff && new Set(products.map((p) => 
             <tr class="bg-zinc-50 dark:bg-zinc-950/50">
               <th colspan={products.length + 1} scope="colgroup" class="sticky left-0 px-3 pt-4 pb-2 text-left text-xs font-semibold tracking-wide text-zinc-500 uppercase">{g.label}</th>
             </tr>
-            {Object.entries(g.features).map(([k, label]) => (
-              <tr class:list={["border-t border-zinc-100 dark:border-zinc-800/70", differs(k as FeatureKey) && "is-diff"]} data-feature={k}>
-                <th scope="row" class="sticky left-0 bg-white p-3 text-left font-normal text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400">
-                  <a href={`/features/${featureSlug(k)}/`} class="hover:text-zinc-900 hover:underline dark:hover:text-white">{label}</a>
-                </th>
-                {products.map((p) => (
-                  <td class="p-3" {...col(p)}>
-                    <FeatureMark value={p.features?.[k as FeatureKey]} note={p.feature_notes?.[k]} />
-                  </td>
-                ))}
-              </tr>
-            ))}
+            {rowsFor(g.features).map((k) => {
+              const isSub = k.includes(".");
+              return (
+                <tr class:list={["border-t border-zinc-100 dark:border-zinc-800/70", differs(k) && "is-diff"]} data-feature={k}>
+                  <th scope="row" class:list={["sticky left-0 bg-white p-3 text-left dark:bg-zinc-900", isSub ? "py-2 pl-7 text-xs font-normal text-zinc-500" : "font-medium text-zinc-700 dark:text-zinc-300"]}>
+                    <a href={`/features/${featureSlug(k)}/`} class="hover:text-zinc-900 hover:underline dark:hover:text-white">{featureLabel(k)}</a>
+                  </th>
+                  {products.map((p) => (
+                    <td class:list={["p-3", isSub && "py-2"]} {...col(p)}>
+                      <FeatureMark value={feat(p, k)} note={p.feature_notes?.[k]} size={isSub ? "sm" : "md"} />
+                    </td>
+                  ))}
+                </tr>
+              );
+            })}
           </>
         ))
       }

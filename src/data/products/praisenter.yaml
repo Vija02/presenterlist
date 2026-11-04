@@ -8,6 +8,7 @@ description: >-
   into workspaces and can be exported and imported between computers. It is
   distributed through the Microsoft Store, the Snap Store and the Mac App Store.
 website: https://praisenter.org
+logo: /logos/praisenter.png
 developer: William Bittle
 status: active
 open_source: true
@@ -19,16 +20,49 @@ pricing:
 platforms: [windows, macos, linux]
 deployment: [desktop]
 features:
-  lyrics: true
-  bible: true
-  video_playback: true
-  audio_playback: true
-  timers: true
-  multiple_outputs: true
-  offline: true
+  songs:
+    library: true
+    import_other: true
+    import_text: true
+    auto_import: partial
+    backgrounds: true
+  bible:
+    builtin: partial
+  media:
+    video: true
+    audio: true
+    images: true
+  sources:
+    timers: true
+    messages: true
+  multilingual:
+    ui: partial
+    song_libraries: true
+    bible_translations: true
+    bilingual_display: true
+    side_by_side: true
+  outputs:
+    multiple: true
+  broadcast_video:
+    ndi: true
+  connectivity:
+    offline: true
 feature_notes:
-  timers: Slides can include the current date/time and countdowns.
-  multiple_outputs: Each connected display can receive content independently.
+  songs.import_other: Imports OpenLyrics, ChordPro, SongSelect and ChurchView song files plus older Praisenter formats.
+  songs.import_text: Lyrics can be pasted into the bulk editor, and text can be extracted from a PDF into it.
+  songs.auto_import: Imports SongSelect files downloaded by the user (since 3.1.7); there is no online SongSelect connection.
+  songs.backgrounds: Slides and slide templates can use a video as their background.
+  bible.builtin: Only a sample Bible is included; free Bibles are downloaded separately (Unbound, Zefania or OpenSong formats) and imported.
+  sources.timers: Slides can include the current date/time and countdowns.
+  sources.messages: Notifications overlay a message on top of whatever is currently displayed.
+  multilingual.ui: The interface ships in English only; users can add their own translation of the messages file.
+  multilingual.bilingual_display: A primary and secondary set of song lyrics can be shown side by side with a suitable template.
+  multilingual.side_by_side: A primary and secondary Bible can be shown on the same slide.
+  outputs.multiple: Each connected display can receive content independently.
+  broadcast_video.ndi: Outputs can be sent as NDI displays.
 sources:
   - https://github.com/praisenter/praisenter
+  - https://github.com/praisenter/praisenter/blob/master/src/main/resources/org/praisenter/manual/manual.html
+  - https://github.com/praisenter/praisenter/tree/master/src/main/java/org/praisenter/data/song
+  - https://github.com/praisenter/praisenter/releases
 last_verified: 2026-11-04

@@ -10,6 +10,7 @@ description: >-
   country income level, and it is free in lower-income and persecuted-church
   countries.
 website: https://zionworx.com
+logo: /logos/zionworx.png
 developer: Jubilate Software Ltd
 headquarters: United Kingdom
 founded: 2002
@@ -29,26 +30,43 @@ platforms: [windows]
 deployment: [desktop]
 output_note: Runs on Mac hardware only via Parallels or Boot Camp; no native macOS version is planned.
 features:
-  lyrics: true
-  bible: true
-  slides_import: partial
-  video_playback: true
-  live_video_input: true
-  ndi: true
-  ccli_songselect: partial
-  ccli_reporting: partial
-  multiple_outputs: true
-  stage_display: partial
-  remote_control: true
+  songs:
+    library: true
+    auto_import: partial
+    backgrounds: true
+    ccli_reporting: partial
+  bible:
+    builtin: true
+    licensed: true
+  slides:
+    powerpoint: true
+  media:
+    video: true
+    images: true
+  sources:
+    camera: true
+  multilingual:
+    bible_translations: true
+  outputs:
+    multiple: true
+    stage_display: partial
+  broadcast_video:
+    ndi: true
+  connectivity:
+    remote_control: true
+    web_native: false
 feature_notes:
-  bible: 230+ Bible translations are accessed through BibleGateway.com.
-  slides_import: PowerPoint integration; no Keynote or Google Slides support mentioned.
-  live_video_input: Camera input is supported (a Windows camera app is offered); improved in v5.
-  ccli_songselect: One-click SongSelect lyrics import is new in v5, which is in beta.
-  ccli_reporting: CCLI song reporting is new in v5, which is in beta.
-  stage_display: A stage display is new in v5, which is in beta.
-  remote_control: ZionWorx Remote app for Android and iOS; v5 adds a web remote reached via QR code.
-  ndi: Multiple independent live NDI outputs.
+  bible.builtin: 230+ Bibles in over 70 languages are accessed through a BibleGateway.com connection.
+  bible.licensed: Translations available on BibleGateway.com can be used through the integration.
+  slides.powerpoint: Native PowerPoint integration; v5 reworks it for reliability. No Keynote or Google Slides support is mentioned.
+  songs.backgrounds: Motion backgrounds behind lyrics are supported.
+  sources.camera: Camera input is supported (a Windows camera app is offered); improved in v5.
+  songs.ccli_reporting: CCLI song reporting is new in v5, which is in beta until its release from December 2026.
+  outputs.multiple: Multiple outputs with dynamic text pagination; v5 adds synchronised outputs run by one operator.
+  outputs.stage_display: A stage display is new in v5, which is in beta until its release from December 2026.
+  connectivity.remote_control: ZionWorx Remote app for Android and iOS; v5 adds a web remote reached via QR code.
+  broadcast_video.ndi: Multiple independent live NDI outputs.
+  songs.auto_import: One-click SongSelect lyrics import is new in v5, which is in beta until its release from December 2026.
 sources:
   - https://zionworx.com/
   - https://zionworx.com/pricing/

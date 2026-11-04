@@ -7,6 +7,7 @@ description: >-
   runs on Windows, macOS and Linux. The most recent tagged release is 2.2 from
   November 2017; a Qt 6 migration was merged into the repository in 2025.
 website: http://softprojector.org/
+logo: /logos/softprojector.png
 developer: Vladislav Kobzar and contributors
 status: maintenance
 status_note: Last tagged release v2.2 on 8 November 2017; the most recent repository commit (Qt 6 migration) is from September 2025.
@@ -19,13 +20,44 @@ pricing:
 platforms: [windows, macos, linux]
 deployment: [desktop]
 features:
-  lyrics: true
-  bible: true
-  offline: true
+  songs:
+    library: true
+    import_text: true
+    auto_import: partial
+  bible:
+    builtin: true
+  media:
+    video: true
+    audio: true
+    images: true
+  sources:
+    messages: true
+  multilingual:
+    ui: true
+    song_libraries: true
+    bible_translations: true
+    side_by_side: true
+    non_latin: true
+  outputs:
+    multiple: true
+  connectivity:
+    offline: true
 feature_notes:
-  bible: Up to six Bible versions can be shown simultaneously.
+  songs.import_text: Songs are typed or pasted into the song editor; songbooks import only from SoftProjector's own .sps format.
+  songs.auto_import: Ready-made songbooks (and Bibles and themes) can be downloaded from a list hosted on softprojector.org; there is no SongSelect import.
+  bible.builtin: KJV, Russian Synodal and Ukrainian Bibles were bundled, and more can be downloaded from softprojector.org or imported from Unbound Bible files.
+  sources.messages: Custom announcements can be shown on screen.
+  media.images: Picture slideshows can be created and shown.
+  multilingual.ui: The interface is available in English, Russian, Ukrainian, German, Czech and Armenian.
+  multilingual.side_by_side: Up to three Bible versions can be shown on one screen (six across two screens).
+  multilingual.non_latin: Cyrillic and Armenian text are supported; right-to-left scripts are not documented.
+  outputs.multiple: A second display screen can be configured alongside the main projector screen.
 sources:
   - http://softprojector.org/
   - https://github.com/SoftProjector/softprojector
   - https://github.com/SoftProjector/softprojector/releases
+  - https://github.com/SoftProjector/softprojector/blob/master/help/features.html
+  - https://github.com/SoftProjector/softprojector/blob/master/src/sources/managedatadialog.cpp
+  - https://github.com/SoftProjector/softprojector/blob/master/src/sources/softprojector.cpp
+  - https://github.com/SoftProjector/softprojector/tree/master/src/translations
 last_verified: 2026-11-04

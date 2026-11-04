@@ -24,31 +24,68 @@ pricing:
 platforms: [windows, macos]
 deployment: [desktop]
 features:
-  lyrics: true
-  bible: true
-  slides_import: true
-  video_playback: true
-  web_content: true
-  timers: true
-  ccli_songselect: true
-  ccli_reporting: true
-  ndi: true
-  live_video_input: true
-  midi: true
-  multiple_outputs: true
-  stage_display: true
-  remote_control: true
+  songs:
+    library: true
+    auto_import: true
+    backgrounds: true
+    ccli_reporting: true
+  bible:
+    builtin: true
+    licensed: addon
+  slides:
+    powerpoint: true
+    keynote: false
+  media:
+    video: true
+    audio: true
+    images: true
+    youtube: true
+  sources:
+    camera: true
+    web: true
+    timers: true
+    messages: true
+  multilingual:
+    bible_translations: true
+  hardware:
+    midi: true
+    stream_deck: true
+  outputs:
+    multiple: true
+    stage_display: true
+    lower_thirds: true
+  broadcast_video:
+    ndi: true
+  connectivity:
+    remote_control: true
+    web_native: false
 feature_notes:
-  web_content: A built-in web browser (added in 7.4) can show live web pages and YouTube or Vimeo video.
-  ndi: NDI can be used as a live output and as a capture source.
-  midi: MIDI input and MIDI sync for controlling schedules across computers.
-  multiple_outputs: Alternate outputs for additional displays (added in 7.3).
-  remote_control: Free EasyWorship Remote app for iOS and Android.
-  slides_import: PowerPoint import.
+  songs.auto_import: SongSelect integration (added in 7.4) imports pre-formatted lyrics into the song library.
+  songs.ccli_reporting: SongSelect activity is auto-reported to CCLI (since 7.4.1).
+  songs.backgrounds: The Premium plan adds a library of motion backgrounds and countdowns.
+  bible.builtin: 100+ translations in 32 languages; a number of free Bibles are included.
+  bible.licensed: Copyrighted translations are sold as Bible plug-ins.
+  slides.powerpoint: PowerPoint files can be imported into the presentations library.
+  slides.keynote: No direct Keynote import; slides must be exported as images first.
+  media.youtube: A built-in web browser (added in 7.4) can show live web pages and YouTube or Vimeo video.
+  sources.web: A built-in web browser (added in 7.4) can show live web pages.
+  sources.camera: Capture cards such as Blackmagic, Magewell and AJA are supported, and NDI sources can be used as live inputs.
+  broadcast_video.ndi: NDI can be used as a live output and as a capture source, including NDI HX3.
+  hardware.midi: MIDI input and output for cues (e.g. Ableton Live) and MIDI Sync for controlling schedules across computers.
+  hardware.stream_deck: Stream Deck and Bitfocus Companion plug-ins trigger cues.
+  outputs.multiple: Alternate outputs for additional displays such as in-house or livestream screens (added in 7.3).
+  outputs.lower_thirds: Output supports an alpha channel, with key/fill via Blackmagic ATEM, and there is a lower-thirds media category.
+  connectivity.remote_control: Free EasyWorship Remote app for iOS and Android.
 docs_url: https://support.easyworship.com/
 sources:
   - https://www.easyworship.com/
+  - https://easyworship.com/software
+  - https://easyworship.com/software/bibles
   - https://www.easyworship.com/pricing
   - https://www.easyworship.com/software/whatsnew
+  - https://support.easyworship.com/support/solutions/articles/6000038368-what-bible-translations-come-with-easyworship-
+  - https://support.easyworship.com/support/solutions/articles/24000029975-how-to-add-a-powerpoint-presentation
+  - https://support.easyworship.com/support/discussions/topics/24000013451
+  - https://easyworship.com/blog/new-to-easyworship-stream-deck-and-companion-plug-ins
   - https://blog.easyworship.com/?p=1637
 last_verified: 2026-11-04

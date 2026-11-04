@@ -9,6 +9,7 @@ description: >-
   yearly membership for support, training and media, and a lower-cost
   single-computer subscription edition (LE).
 website: https://mediashout.com/
+logo: /logos/mediashout.png
 developer: MediaShout
 headquarters: United States
 status: active
@@ -30,30 +31,57 @@ output_note: >-
   MediaShout 6, so feature parity of the Mac version with MediaShout 7 for
   Windows is unclear.
 features:
-  lyrics: true
-  bible: true
-  slides_import: true
-  video_playback: true
-  audio_playback: true
-  lower_thirds: true
-  ccli_songselect: true
-  ccli_reporting: true
-  ndi: true
-  live_video_input: true
-  multiple_outputs: true
-  stage_display: true
-  remote_control: true
+  songs:
+    library: true
+    auto_import: true
+    backgrounds: true
+    ccli_reporting: true
+  bible:
+    builtin: true
+    licensed: true
+  slides:
+    powerpoint: true
+    animations: partial
+  media:
+    video: true
+    audio: true
+    images: true
+  sources:
+    camera: true
+  multilingual:
+    side_by_side: true
+  outputs:
+    multiple: true
+    stage_display: true
+    lower_thirds: true
+  broadcast_video:
+    ndi: true
+  connectivity:
+    remote_control: true
+    web_native: false
 feature_notes:
-  slides_import: PowerPoint slides can be imported as images or as editable MediaShout cues.
-  ndi: Since version 7.4, NDI feeds can be shown in presentations and outputs can be sent over NDI.
-  live_video_input: Live video feeds via NDI.
-  multiple_outputs: Control, main and optional stage/confidence screens.
-  stage_display: Not included in the LE edition.
-  ccli_reporting: Auto-reporting is listed for the Windows version.
+  songs.auto_import: Lyrics can be imported through the CCLI SongSelect integration.
+  songs.ccli_reporting: Songs used are reported to CCLI automatically; listed for the Windows version.
+  songs.backgrounds: Motion backgrounds are available, with Shift Worship Media included in the Complete bundle.
+  bible.builtin: About 70 translations, including public-domain and copyrighted versions, are included with the licence.
+  bible.licensed: Copyrighted translations are among the 70 included at no additional cost.
+  multilingual.side_by_side: Dual Bible display can show two translations or languages on screen.
+  slides.powerpoint: PowerPoint slides can be imported as images or as editable MediaShout cues.
+  slides.animations: MediaShout's own slides support text animations and transitions; it is not stated that imported PowerPoint animations are kept.
+  media.images: Unsplash and Pixabay images and videos can be searched and inserted from within the software.
+  broadcast_video.ndi: Since version 7.4, NDI feeds can be shown in presentations and outputs can be sent over NDI.
+  sources.camera: Live video feeds (cameras, phones, other apps) via NDI.
+  outputs.multiple: Control screen, main display and an optional third output for stage/confidence or livestream.
+  outputs.stage_display: Not included in the LE edition.
+  outputs.lower_thirds: Lower-third templates are included.
+  connectivity.remote_control: MediaShout Remote app for iOS (added in 7.3); standard USB presentation remotes also work.
 docs_url: https://mediashout.com/docs/mediashout-7-user-guide/
 sources:
   - https://mediashout.com/
   - https://mediashout.com/pricing
   - https://mediashout.com/docs/mediashout-7-user-guide/getting-started/what-mediashout-can-do
   - https://mediashout.com/ndi/
+  - https://support.mediashout.com/710620-Using-a-USB-Remote-with-MediaShout-7
+  - https://support.mediashout.com/169032-
+  - https://planningcenter.com/integrations/mediashout
 last_verified: 2026-11-04

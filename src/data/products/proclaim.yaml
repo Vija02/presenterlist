@@ -9,6 +9,7 @@ description: >-
   output, MIDI, confidence monitors and live streaming. One subscription covers
   unlimited installs and collaborators.
 website: https://proclaim.logos.com/
+logo: /logos/proclaim.png
 developer: Logos (formerly Faithlife)
 headquarters: United States
 status: active
@@ -16,12 +17,13 @@ open_source: false
 pricing:
   models: [subscription]
   free_trial: true
+  starting_price: $269.99/year
   pricing_url: https://proclaim.logos.com/pricing
   notes: >-
     One subscription per church covers unlimited installs and collaborators;
     media libraries are available as higher tiers. A 14-day free trial is
-    offered without a credit card. Exact current pricing could not be read
-    from the official pricing page.
+    offered without a credit card. Plans are Proclaim ($269.99/year), Pro
+    ($399.99/year) and Pro + Partner Media ($999.99/year).
 platforms: [windows, macos, web, ios, android]
 deployment: [desktop, cloud]
 output_note: >-
@@ -29,32 +31,91 @@ output_note: >-
   are for editing and remote control. A free signage app runs on Fire TV,
   Apple TV or a web browser.
 features:
-  lyrics: true
-  bible: true
-  slides_import: true
-  video_playback: true
-  ccli_songselect: true
-  ccli_reporting: true
-  planning_center: true
-  ndi: true
-  midi: true
-  multiple_outputs: true
-  stage_display: true
-  collaboration: true
-  cloud_sync: true
-  offline: true
+  songs:
+    library: true
+    import_other: true
+    auto_import: true
+    chords: true
+    backgrounds: true
+    ccli_reporting: true
+  bible:
+    builtin: true
+  slides:
+    powerpoint: true
+    keynote: partial
+  media:
+    video: true
+    audio: true
+    images: true
+  sources:
+    timers: true
+  multilingual:
+    ui: false
+    song_libraries: true
+  software_integrations:
+    planning_center: true
+  hardware:
+    midi: true
+    stream_deck: true
+  automation:
+    api: false
+    scripting: false
+  outputs:
+    multiple: true
+    stage_display: true
+    lower_thirds: true
+  broadcast_video:
+    ndi: true
+    sdi: true
+  streaming:
+    rtmp: false
+    youtube: false
+    facebook: false
+    recording: partial
+  tv_output:
+    apple_tv: true
+    fire_tv: true
+  connectivity:
+    cloud_sync: true
+    offline: true
+    remote_control: true
+    collaboration: true
+    web_native: partial
 feature_notes:
-  slides_import: PowerPoint files can be imported; on Windows control can also be handed over to PowerPoint.
-  ccli_songselect: Lyrics can be imported from SongSelect or Hymnbase.
-  planning_center: Service plans can be imported from Planning Center Services (requires edit permissions).
-  ndi: NDI and SDI output.
-  stage_display: Configurable confidence monitor outputs with stage messages.
-  collaboration: Team members can edit presentations from the web, iOS or Android, syncing to the service computer.
-  offline: Schedules are stored locally so going live does not require internet; some features (signals, importing third-party content, embedded content) need a connection.
+  songs.import_other: Song databases from EasyWorship 6/7 can be imported directly; other programs can export lyrics for import.
+  songs.auto_import: Lyrics can be imported from SongSelect, Hymnbase or MultiTracks.com.
+  songs.chords: Chord progressions come in from MultiTracks.com and can be shown on the confidence monitor.
+  songs.backgrounds: 1,000+ free motions and stills on every plan; Pro and Partner tiers add larger media libraries.
+  bible.builtin: 60+ Bible versions are included on every plan.
+  slides.powerpoint: PowerPoint files can be imported; on Windows control can also be handed over to PowerPoint.
+  slides.keynote: On a Mac with Keynote installed, Keynote files are imported as static image slideshows.
+  multilingual.ui: The interface is English only, though slide text can be in other languages.
+  hardware.midi: MIDI in/out, including MIDI over Wi-Fi with tools like Ableton Live.
+  hardware.stream_deck: Elgato Stream Deck is supported in Proclaim 3.2 and later.
+  automation.api: The vendor's ProPresenter comparison names scripting/API control as something ProPresenter has and Proclaim does not focus on.
+  automation.scripting: The vendor's ProPresenter comparison names scripting/API control as something ProPresenter has and Proclaim does not focus on.
+  outputs.multiple: Up to 8 virtual screens can send different content to lobby, overflow, nursery and livestream.
+  outputs.stage_display: Configurable confidence monitor outputs with stage messages; multiple confidence monitors are supported.
+  outputs.lower_thirds: Alpha keying is supported, and picture-in-picture shows slides over a transparent background.
+  streaming.rtmp: For YouTube or Facebook Live the vendor recommends sending NDI or SDI output to a tool such as OBS.
+  streaming.recording: Built-in recording is aimed at producing and publishing sermon podcasts.
+  tv_output.apple_tv: A free Digital Signage app runs on Apple TV, Fire TV Stick or any web browser for lobby screens.
+  tv_output.fire_tv: A free Digital Signage app runs on Apple TV, Fire TV Stick or any web browser for lobby screens.
+  software_integrations.planning_center: Service plans can be imported from Planning Center Services (requires edit permissions).
+  connectivity.collaboration: Team members edit presentations together with real-time cloud sync; web and mobile editing requires Proclaim Pro.
+  connectivity.offline: Schedules are stored locally so going live does not require internet; some features (signals, importing third-party content, embedded content) need a connection.
+  connectivity.web_native: Presentations can be created and edited in a browser with Proclaim Pro, but presenting requires the desktop app.
+  connectivity.remote_control: Remote control apps for iOS and Android are included in every plan.
 docs_url: https://support.proclaim.logos.com/
 sources:
   - https://proclaim.logos.com/
+  - https://proclaim.logos.com/pricing
+  - https://proclaim.logos.com/whats-new
+  - https://proclaim.logos.com/comparison/propresenter
   - https://www.logos.com/grow/does-proclaim-work-offline/
   - https://support.proclaim.logos.com/hc/en-us/articles/19864188689037-Confidence-Monitor
   - https://support.proclaim.logos.com/hc/en-us/articles/19864456647309-Import-a-Service-Plan-from-Planning-Center-Online
+  - https://support.proclaim.logos.com/hc/en-us/articles/19864411484557-How-do-I-export-song-lyrics-from-other-sofware
+  - https://support.proclaim.logos.com/hc/en-us/articles/19864460453133
+  - https://community.logos.com/discussion/comment/1331043
 last_verified: 2026-11-04

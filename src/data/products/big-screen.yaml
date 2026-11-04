@@ -9,6 +9,7 @@ description: >-
   clock, countdown timers and upcoming lyrics, and is designed to keep working
   without an internet connection.
 website: https://bigscreen.show
+logo: /logos/big-screen.png
 developer: Launch Interactive
 headquarters: Australia
 status: active
@@ -22,23 +23,57 @@ pricing:
 platforms: [web]
 deployment: [cloud]
 features:
-  lyrics: true
-  bible: true
-  video_playback: true
-  web_content: true
-  timers: true
-  live_video_input: true
-  multiple_outputs: true
-  stage_display: true
-  collaboration: partial
-  offline: true
+  songs:
+    library: true
+    import_other: true
+    backgrounds: true
+  bible:
+    builtin: true
+    licensed: addon
+  slides:
+    pdf: true
+  media:
+    video: true
+    images: true
+    youtube: true
+  sources:
+    camera: true
+    timers: true
+  multilingual:
+    ui: true
+    bible_translations: true
+    non_latin: true
+  outputs:
+    multiple: true
+    stage_display: true
+    lower_thirds: true
+    web_output: true
+  connectivity:
+    cloud_sync: true
+    offline: true
+    collaboration: partial
+    web_native: true
 feature_notes:
-  bible: 31 translations, some requiring a one-time purchase.
-  web_content: YouTube playback.
-  live_video_input: Phones, tablets or webcams can be used as live video sources.
-  multiple_outputs: Unlimited Frontend and Monitor outputs plus custom outputs.
-  collaboration: Lyrics, videos and images can be shared between locations within one organisation.
+  songs.import_other: Songs can be imported from OpenSong and OpenLyrics files; an Elvanto/Tithe.ly integration also imports songs.
+  songs.backgrounds: Looping background videos, including transparent overlay videos, with adjustable variations.
+  bible.builtin: Public-domain translations such as KJV, ASV, WEB and BSB are included.
+  bible.licensed: Translations such as ESV, NASB, NKJV and NLT require a one-time purchase of AUD $10 each.
+  slides.pdf: Uploaded PDFs are converted to images.
+  media.youtube: YouTube videos can be added to the playlist and controlled like other videos, with optional English captions.
+  sources.camera: Phones, tablets, webcams or other network devices can be used as live video sources.
+  sources.timers: Countdown and count-up timers and a clock on the monitor display.
+  multilingual.ui: The interface language can be chosen per organisation and location.
+  multilingual.bible_translations: Includes Spanish, Japanese, Thai, Khmer and Arabic translations.
+  multilingual.non_latin: Lyrics and scriptures support right-to-left languages.
+  outputs.multiple: Unlimited Frontend and Monitor outputs plus custom outputs.
+  outputs.lower_thirds: Theme backgrounds can be transparent for use as an overlay in streaming software such as OBS.
+  outputs.web_output: Remote Displays let other computers and devices show outputs in a browser, including as an OBS source.
+  connectivity.cloud_sync: Lyrics, videos and images are stored online and can be shared between locations within one organisation.
+  connectivity.offline: Continues working with no internet connection; a Cache Client can serve local media.
+  connectivity.collaboration: Several control surfaces can be open for a location, but only one controls the remote displays at a time.
 sources:
   - https://bigscreen.show
+  - https://bigscreen.show/change-log
+  - https://bigscreen.show/tutorials
   - https://alternativeto.net/software/big-screen-church-presentation-software/about/
 last_verified: 2026-11-04

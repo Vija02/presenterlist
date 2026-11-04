@@ -9,6 +9,7 @@ description: >-
   installs; stage display, the mobile remote and multiple output screens
   require a paid Pro plan.
 website: https://worshiptools.com/presenter
+logo: /logos/worshiptools-presenter.svg
 developer: WorshipTools (Blue Circle Lab LLC)
 status: active
 open_source: false
@@ -24,31 +25,96 @@ pricing:
 platforms: [windows, macos]
 deployment: [desktop, cloud]
 features:
-  lyrics: true
-  bible: true
-  slides_import: true
-  video_playback: true
-  ccli_songselect: true
-  ccli_reporting: true
-  ndi: true
-  multiple_outputs: addon
-  stage_display: addon
-  remote_control: addon
-  collaboration: addon
-  cloud_sync: true
-  offline: true
+  songs:
+    library: true
+    import_other: true
+    auto_import: true
+    chords: true
+    backgrounds: true
+    ccli_reporting: true
+  bible:
+    builtin: true
+    licensed: addon
+  slides:
+    powerpoint: true
+    keynote: true
+    google_slides: true
+    animations: partial
+  media:
+    video: true
+    audio: true
+    images: true
+    youtube: true
+  sources:
+    camera: true
+    web: true
+    timers: true
+    messages: true
+  multilingual:
+    ui: true
+    bible_translations: true
+    non_latin: true
+  software_integrations:
+    planning_center: true
+    worshiptools: true
+  hardware:
+    midi: true
+  outputs:
+    multiple: addon
+    stage_display: addon
+    lower_thirds: true
+  broadcast_video:
+    ndi: true
+  connectivity:
+    cloud_sync: true
+    offline: true
+    remote_control: addon
+    collaboration: true
+    web_native: false
 feature_notes:
-  bible: 45+ built-in Bible translations on all tiers.
-  slides_import: The vendor lists import of PowerPoint, Keynote and Google Slides presentations.
-  multiple_outputs: Requires a Pro plan; outputs can have different layouts (audience, stage, livestream lyrics).
-  stage_display: Requires a Pro plan; companion stage display app for iPhone, iPad and Android.
-  remote_control: Requires a Pro plan; remote app for iPhone, iPad and Android.
-  collaboration: Simultaneous Presenter sessions require the Pro Plus plan.
-  offline: Runs locally once content is synced.
+  songs.import_other: Lyrics can be imported from EasyWorship 7, OpenLP, ProPresenter 6/7, MediaShout (Windows) and others.
+  songs.auto_import: Lyrics, chords and lyric videos can be imported from CCLI SongSelect and Loop Community on all tiers.
+  songs.chords: ChordPro chords from SongSelect or Loop Community appear on the stage display and can be transposed; requires SongSelect Premium.
+  songs.backgrounds: Free and Pro include one motion graphic per month; Pro Plus has unlimited access to 500+ motion loops.
+  bible.builtin: 45+ free translations in many languages are included on all tiers; custom XML Bibles can also be imported.
+  bible.licensed: Translations such as NIV, ESV, NKJV and NLT can be purchased from the WorshipTools account page.
+  slides.keynote: Keynote import is macOS only and requires Keynote to be installed.
+  slides.google_slides: Google Slides presentations can be imported and re-synced after changes.
+  slides.animations: PowerPoint is converted to static images; the "Launch with PowerPoint" option (Windows only) keeps animations and transitions.
+  media.youtube: YouTube and Vimeo videos can be played as Web Video items (needs internet).
+  sources.camera: A camera or capture feed can be used as the background of any item to overlay lyrics or scripture (documented for the legacy version).
+  sources.web: Web Page service items show most external websites.
+  sources.messages: Alerts can be sent to the audience screen and the stage display.
+  multilingual.ui: Interface available in English, German, Spanish, Ukrainian, Italian, Korean, Portuguese and French.
+  software_integrations.planning_center: Planning Center Services plans can be imported and re-synced (documented for the legacy version).
+  software_integrations.worshiptools: Services from WorshipTools Planning and charts from WorshipTools Charts sync with Presenter.
+  hardware.midi: MIDI mapping to control service items, over USB/5-pin or a network session; MIDI Out is also listed.
+  outputs.multiple: Requires a Pro plan; unlimited outputs, each with its own layout (audience, stage, livestream lyrics).
+  outputs.stage_display: Requires a Pro plan; companion stage display app for iPhone, iPad and Android.
+  outputs.lower_thirds: Lower-third lyrics templates are offered for livestream outputs.
+  broadcast_video.ndi: Outputs can be sent over the network as NDI.
+  connectivity.remote_control: Requires a Pro plan; remote app for iPhone, iPad and Android.
+  connectivity.collaboration: Multiple users can work on presentations from one account; simultaneous Presenter sessions require Pro Plus.
+  connectivity.offline: Offline mode runs existing and new services; YouTube and SongSelect import need a connection.
 docs_url: https://www.worshiptools.com/
 sources:
   - https://worshiptools.com/presenter
   - https://www.worshiptools.com/pricing
   - https://www.worshiptools.com/compare/propresenter
+  - https://www.worshiptools.com/en-us/docs/222-import-from-other-programs
+  - https://www.worshiptools.com/en-us/docs/221-google-slides
+  - https://www.worshiptools.com/en-us/docs/207-import-ppt-keynote
+  - https://www.worshiptools.com/en-us/docs/196-web-videos
+  - https://www.worshiptools.com/en-us/docs/35-live-feed-bg
+  - https://www.worshiptools.com/en-us/docs/177-pr-language
+  - https://www.worshiptools.com/en-us/docs/19-import-pco
+  - https://www.worshiptools.com/en-us/docs/173-bibles
+  - https://www.worshiptools.com/en-us/docs/189-midi-mapping
+  - https://www.worshiptools.com/en-us/docs/204-import-lyrics
+  - https://www.worshiptools.com/en-us/docs/224-chords-stage-display
+  - https://www.worshiptools.com/en-us/docs/183-presenter-offline
+  - https://www.worshiptools.com/en-us/docs/215-alerts
+  - https://www.worshiptools.com/en-us/docs/217-countdown
+  - https://www.worshiptools.com/en-us/docs/188-additional-screens
   - https://faith.tools/app/worshiptools
 last_verified: 2026-11-04

@@ -9,6 +9,7 @@ description: >-
   plans add online sharing with the mobile app, Telegram audience
   interaction and internet access to the program's API.
 website: https://holyrics.com.br/
+logo: /logos/holyrics.png
 developer: Lima Giran Ltda.
 headquarters: Brazil
 founded: 2016
@@ -27,28 +28,103 @@ pricing:
 platforms: [windows, macos, linux]
 deployment: [desktop]
 features:
-  lyrics: true
-  bible: true
-  video_playback: true
-  audio_playback: true
-  timers: true
-  ndi: true
-  midi: true
-  api: true
-  stage_display: true
-  remote_control: true
-  cloud_sync: partial
+  songs:
+    library: true
+    import_other: true
+    import_text: true
+    auto_import: true
+    chords: true
+    backgrounds: true
+  bible:
+    builtin: true
+    licensed: true
+  slides:
+    powerpoint: partial
+  media:
+    video: true
+    audio: true
+    images: true
+    youtube: false
+  sources:
+    camera: partial
+    web: partial
+    timers: true
+    messages: true
+    interaction: addon
+  multilingual:
+    ui: true
+    song_libraries: true
+    bible_translations: true
+    bilingual_display: true
+    side_by_side: true
+    non_latin: true
+  hardware:
+    midi: true
+    dmx: partial
+  automation:
+    api: true
+    scripting: true
+    webhooks: true
+  outputs:
+    multiple: true
+    stage_display: true
+    lower_thirds: true
+    web_output: true
+  broadcast_video:
+    ndi: true
+  streaming:
+    rtmp: false
+    youtube: false
+    facebook: false
+  connectivity:
+    cloud_sync: true
+    offline: true
+    remote_control: true
+    web_native: false
 feature_notes:
-  video_playback: Uses VLC for media playback; videos can be used as animated theme backgrounds.
-  api: Local HTTP API server with token authentication; access from the internet requires the Advanced plan. Actions can also trigger OBS, vMix, OSC, MIDI, JavaScript and other receivers.
-  stage_display: Return monitors with their own settings and monitor-only messages and alerts.
-  remote_control: Holyrics mobile app for iOS and Android.
-  cloud_sync: The paid Basic plan stores songs, playlists, schedules and history online for access from the mobile app; this is not a full library sync between computers.
-  midi: MIDI settings and MIDI-triggered actions are exposed through the API.
+  songs.import_other: Lyrics can be imported from other sources, including PowerPoint files.
+  songs.auto_import: Built-in web search of the holyrics.com lyrics database, with many songs pre-formatted for projection.
+  songs.chords: Chords and comments can be shown on the return (stage) monitor.
+  songs.backgrounds: Themes can use videos as backgrounds, with optional BPM-synced playback speed.
+  bible.licensed: Translations are offered through partnerships with Bible publishers as well as public-domain versions.
+  slides.powerpoint: .ppt/.pptx files can be run from the program on Windows only, with Microsoft PowerPoint installed.
+  media.video: Audio and video play through the integrated VLC player.
+  media.youtube: The FAQ states YouTube videos cannot be played in the program because of YouTube policy.
+  sources.camera: Webcams and IP cameras can be played through the VLC player, though the FAQ warns of noticeable delay.
+  sources.web: A website can be opened full screen on the projection screen (Windows only, requires Chrome or Edge).
+  sources.messages: Alerts at the top or bottom of the screen, custom messages and a communication panel for the stage screen.
+  sources.interaction: Q&A, polls and raffles via a Telegram chatbot are part of the paid online plans; a built-in multiple-choice quiz is also available.
+  multilingual.bilingual_display: Song slides can carry translations, shown on separate screens or together on one screen.
+  multilingual.side_by_side: Up to 3 Bible versions can be shown simultaneously, with verse mapping across languages.
+  multilingual.non_latin: Settings for non-Latin scripts including Arabic, Hebrew, Cyrillic, Devanagari, Han and Hangul.
+  hardware.midi: MIDI input can trigger program actions, e.g. advancing slides from a multitrack playback.
+  hardware.dmx: No direct DMX output; API items and triggers can send commands to the Lumikit lighting software.
+  automation.api: Local HTTP API server with token authentication; access from the internet requires the Advanced plan.
+  automation.scripting: JavaScript (ECMAScript 5.1) scripts, startup code, system variables and custom API routes.
+  automation.webhooks: Triggers run actions on program events, sending HTTP, WebSocket, TCP/UDP, OSC or MIDI messages and controlling OBS, vMix and PTZ cameras.
+  outputs.stage_display: Return monitors with their own settings and monitor-only messages and alerts.
+  outputs.lower_thirds: NDI outputs can use a transparent background for keying over video.
+  outputs.web_output: The Holyrics plugin runs an HTTP server so the projection can be viewed in browsers or added as a source in streaming software.
+  broadcast_video.ndi: Multiple NDI outputs with configurable resolution, frame rate and theme.
+  streaming.rtmp: The FAQ states the program does not stream itself but works alongside streaming software such as OBS.
+  connectivity.cloud_sync: All data and media can be synchronised between computers through Google Drive (settings are not synced).
+  connectivity.remote_control: Holyrics mobile app for Android and iOS (iOS app is a one-time US$0.99 purchase).
 docs_url: https://github.com/holyrics/API-Server
 sources:
   - https://holyrics.com.br/
+  - https://holyrics.com.br/software.html
+  - https://holyrics.com.br/app.html
   - https://holyrics.com.br/download.html
   - https://holyrics.com.br/holyrics_plan.html
+  - https://holyrics.com.br/tips/features.html
+  - https://holyrics.com.br/tips/faq.html
+  - https://holyrics.com.br/tips/cloud_sync.html
+  - https://holyrics.com.br/tips/midi.html
+  - https://holyrics.com.br/tips/multiple_languages.html
+  - https://holyrics.com.br/tips/websearch.html
+  - https://holyrics.com.br/tips/fullscreen_website.html
+  - https://holyrics.com.br/tips/holyrics_script.html
+  - https://holyrics.com.br/tutorial.html
   - https://github.com/holyrics/API-Server
+  - https://apps.apple.com/app/id1451668865
 last_verified: 2026-11-04

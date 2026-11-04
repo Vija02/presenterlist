@@ -10,6 +10,7 @@ description: >-
   livestream software such as OBS. Companion songbook and Bible apps are
   available for Android and iOS.
 website: http://verseview.info/vv/
+logo: /logos/verseview.png
 developer: VerseVIEW
 founded: 2006
 status: active
@@ -17,24 +18,43 @@ open_source: false
 pricing:
   models: [free]
   free_trial: false
-platforms: [windows, macos]
+platforms: [windows, macos, linux]
 deployment: [desktop]
-output_note: A Linux build of VerseVIEW 10 is available on request from the developer.
 features:
-  lyrics: true
-  bible: true
-  video_playback: true
-  lower_thirds: true
-  multiple_outputs: true
-  stage_display: true
-  remote_control: true
-  offline: true
+  songs:
+    library: true
+    import_text: true
+    chords: true
+    backgrounds: true
+  bible:
+    builtin: true
+  media:
+    video: true
+    images: true
+  multilingual:
+    song_libraries: true
+    bible_translations: true
+    side_by_side: true
+    non_latin: true
+  outputs:
+    multiple: true
+    stage_display: true
+    lower_thirds: true
+  connectivity:
+    offline: true
+    remote_control: true
 feature_notes:
-  bible: Bible databases in 40+ languages; verses can be shown in two languages at once. Zefania XML Bibles can be imported.
-  video_playback: Video and still media playback was added in VerseVIEW 10.
-  lower_thirds: An additional lower-third output can be layered in OBS or fed to video mixers; lower-third themes can also be served over the network.
-  multiple_outputs: Main presentation plus stage view, AUX screen and lower-third outputs.
-  remote_control: Any device with a web browser can control Bible and scheduled song presentation.
+  songs.library: Bundled databases of 3,000+ Malayalam songs (with transliteration), 1,000+ Hindi songs and lyrics in Tamil, Telugu, Kannada, Bengali, Arabic, Spanish and Russian.
+  songs.import_text: Pasted lyrics are split into slides by blank lines.
+  songs.chords: Chords with transposition and a number system were added in VerseVIEW 10.1 to 10.3.
+  songs.backgrounds: A video background ships with the installation.
+  bible.builtin: Bible databases in 40+ languages; Zefania XML Bibles can be imported.
+  multilingual.side_by_side: Verses can be shown in primary and secondary languages at once.
+  multilingual.non_latin: Unicode Malayalam, Hindi, Tamil, Telugu, Arabic and Khmer texts are available.
+  media.video: Video and still media playback was added in VerseVIEW 10.
+  outputs.lower_thirds: An additional lower-third output can be layered in OBS or fed to video mixers; lower-third themes can also be served over the network.
+  outputs.multiple: Main presentation plus stage view, AUX screen and lower-third outputs.
+  connectivity.remote_control: Any device with a web browser can control Bible and scheduled song presentation.
 sources:
   - http://verseview.info/vv/
   - http://verseview.info/vv/downloads/
@@ -42,4 +62,6 @@ sources:
   - http://verseview.info/vv/features/
   - http://verseview.info/vv/history/
   - http://verseview.info/vv/about/
+  - http://verseview.info/vv/2022/11/19/faq-on-using-verseview-with-obs/
+  - http://verseview.info/vv/2023/04/06/arabic-song-database-for-verseview/
 last_verified: 2026-11-04

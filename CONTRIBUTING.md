@@ -16,9 +16,11 @@ Thanks for helping churches find the right tool.
 ### Data rules
 
 - **Neutral tone.** Use factual descriptions with no marketing superlatives.
+- **Features** are listed in `FEATURE_GROUPS` in `src/lib/schema.ts`. Fill in specific sub-features where you can (`slides: { powerpoint: true }`), or a single value when you only know the feature is supported. See the README for the format.
 - **Evidence first.** Only mark a feature `true` when a public source confirms it. Leave it out if unsure, so it shows as "unknown". Add the URLs you used to `sources`.
 - **Open source** means public source under an OSI-approved license. Use the exact SPDX id (e.g. `GPL-3.0-only` vs `GPL-3.0-or-later`). Freeware is not open source.
 - **Status:** use `maintenance` if there has been no release for about 2 years, and `discontinued` if officially ended. Explain in `status_note`.
 - **Headquarters** is where most of the team works, as a full English country name.
 - Update **`last_verified`** whenever you check an entry.
+- **Logos:** use the official logo or app icon from the vendor's site or repo, saved as `public/logos/<slug>.svg` (or a square PNG of at least 128px).
 - Vendors are welcome to update their own listings. Please say you're affiliated in the PR.

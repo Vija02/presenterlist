@@ -3,17 +3,19 @@ import { initial, type P } from "../lib/products.ts";
 interface Props { product: P; size?: "sm" | "md" | "lg" }
 const { product, size = "md" } = Astro.props;
 const dims = { sm: "size-8 text-sm", md: "size-11 text-lg", lg: "size-16 text-2xl" }[size];
-// Deterministic hue per product so placeholders are distinguishable.
-const hue = [...product.slug].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7);
 ---
 {
   product.logo ? (
-    <img src={product.logo} alt={`${product.name} logo`} class:list={[dims, "shrink-0 rounded-lg object-contain"]} loading="lazy" />
+    <span class:list={[dims, "inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white p-1 ring-1 ring-inset ring-zinc-200 dark:ring-zinc-700"]}>
+      <img src={product.logo} alt={`${product.name} logo`} class="size-full object-contain" loading="lazy" decoding="async" />
+    </span>
   ) : (
     <span
       aria-hidden="true"
-      class:list={[dims, "inline-flex shrink-0 items-center justify-center rounded-lg font-semibold text-white"]}
-      style={`background: linear-gradient(135deg, oklch(0.62 0.15 ${hue}), oklch(0.5 0.17 ${(hue + 40) % 360}))`}
+      class:list={[
+        dims,
+        "inline-flex shrink-0 items-center justify-center rounded-lg bg-zinc-100 font-semibold text-zinc-700 ring-1 ring-inset ring-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:ring-zinc-700",
+      ]}
     >
       {initial(product.name)}
     </span>

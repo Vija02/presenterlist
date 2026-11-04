@@ -1,0 +1,92 @@
+---
+import Base from "../../layouts/Base.astro";
+import ProductCard from "../../components/ProductCard.astro";
+import FeatureMark from "../../components/FeatureMark.astro";
+import FeatureLegend from "../../components/FeatureLegend.astro";
+import { FEATURE_DEFS, FEATURE_PATHS, subKeys, type FeaturePath } from "../../lib/schema.ts";
+import { feat, featureFullLabel, featureLabel, featureSlug, getProducts, supports } from "../../lib/products.ts";
+
+export function getStaticPaths() {
+  return FEATURE_PATHS.map((k) => ({ params: { feature: featureSlug(k) }, props: { path: k } }));
+}
+const { path } = Astro.props as { path: FeaturePath };
+const [parent, sub] = path.split(".");
+const subs = sub ? [] : subKeys(parent);
+const label = featureFullLabel(path);
+const products = (await getProducts()).filter((p) => p.status !== "discontinued");
+const groups = [
+  { title: "Supported", items: products.filter((p) => feat(p, path) === true) },
+  { title: "Partial support", items: products.filter((p) => feat(p, path) === "partial") },
+  { title: "Via paid add-on or higher tier", items: products.filter((p) => feat(p, path) === "addon") },
+];
+const unknown = products.filter((p) => feat(p, path) === undefined);
+// Matrix of sub-features for products that support the parent at all.
+const matrixProducts = products.filter((p) => supports(p, parent));
+const breadcrumbs = sub
+  ? [{ label: "Features", href: "/features/" }, { label: featureLabel(parent), href: `/features/${featureSlug(parent)}/` }, { label: featureLabel(path) }]
+  : [{ label: "Features", href: "/features/" }, { label }];
+---
+<Base title={`Church presentation software with ${label.toLowerCase()}`} description={`Church presentation software that supports ${label.toLowerCase()}, compared.`} breadcrumbs={breadcrumbs}>
+  <div class="container-page mt-6">
+    <h1 class="text-3xl font-bold tracking-tight">{label}</h1>
+    <p class="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">{FEATURE_DEFS[parent]?.description ?? `Active church presentation software with ${label.toLowerCase()}.`}</p>
+
+    {subs.length > 0 && (
+      <nav class="mt-5 flex flex-wrap gap-2" aria-label="Sub-features">
+        {subs.map((s) => <a href={`/features/${featureSlug(`${parent}.${s}`)}/`} class="chip hover:border-brand-400">{featureLabel(`${parent}.${s}`)}</a>)}
+      </nav>
+    )}
+    {sub && (
+      <p class="mt-4 text-sm"><a href={`/features/${featureSlug(parent)}/`} class="link">All {featureLabel(parent).toLowerCase()} features</a></p>
+    )}
+
+    {subs.length > 0 && matrixProducts.length > 0 && (
+      <section class="mt-10">
+        <div class="mb-3 flex flex-wrap items-end justify-between gap-2">
+          <h2 class="h-section mb-0!">At a glance</h2>
+          <FeatureLegend />
+        </div>
+        <div class="card overflow-x-auto">
+          <table class="w-full min-w-max text-sm">
+            <thead>
+              <tr class="border-b border-zinc-200 dark:border-zinc-800">
+                <th scope="col" class="sticky left-0 bg-white p-3 text-left font-medium text-zinc-500 dark:bg-zinc-900">Product</th>
+                {subs.map((s) => (
+                  <th scope="col" class="p-3 text-left text-xs font-medium text-zinc-500">
+                    <a href={`/features/${featureSlug(`${parent}.${s}`)}/`} class="hover:underline">{featureLabel(`${parent}.${s}`)}</a>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {matrixProducts.map((p) => (
+                <tr class="border-t border-zinc-100 dark:border-zinc-800/70">
+                  <th scope="row" class="sticky left-0 bg-white p-3 text-left font-medium dark:bg-zinc-900">
+                    <a href={`/software/${p.slug}/`} class="hover:underline">{p.name}</a>
+                  </th>
+                  {subs.map((s) => (
+                    <td class="p-3"><FeatureMark value={feat(p, `${parent}.${s}`)} note={p.feature_notes?.[`${parent}.${s}`]} size="sm" /></td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    )}
+
+    {groups.filter((g) => g.items.length).map((g) => (
+      <section class="mt-10">
+        <h2 class="h-section">{g.title} <span class="font-normal text-zinc-400">({g.items.length})</span></h2>
+        <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{g.items.map((p) => <ProductCard product={p} />)}</ul>
+      </section>
+    ))}
+    {groups.every((g) => !g.items.length) && <p class="mt-10 text-zinc-500">No products are confirmed to support this yet.</p>}
+    {unknown.length > 0 && (
+      <p class="mt-10 text-sm text-zinc-500">
+        Unknown for: {unknown.map((p, i) => <>{i > 0 && ", "}<a href={`/software/${p.slug}/`} class="link">{p.name}</a></>)}. Know the answer?{" "}
+        <a href="/about/#contribute" class="link">Help us fill it in.</a>
+      </p>
+    )}
+  </div>
+</Base>

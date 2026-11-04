@@ -44,19 +44,37 @@ scripts/
 
 Every product × product pair gets a generated `/compare/a-vs-b/` page, so the site grows quadratically: 30 products give 435 comparison pages.
 
-### Adding a comparison feature
+### Features
 
-Add a key to `FEATURE_GROUPS` in `src/lib/schema.ts`. It shows up automatically in filters, product pages, comparison tables and `/features/<key>/`. Existing products show it as "unknown" until filled in.
+Features are defined once in `FEATURE_GROUPS` in `src/lib/schema.ts`: groups, then features, with optional sub-features. For example, "Slides & presentations" has PowerPoint, Keynote, Google Slides, Canva, PDF and animations. A new key automatically appears in filters, product pages, comparison tables and `/features/<feature>/<sub>/`. Existing products show it as "unknown" until it's filled in.
 
-### Feature values
+In a product file, a feature with sub-features can be a single value when the details aren't known, or a map:
 
-| value     | meaning                           |
-| --------- | --------------------------------- |
-| `true`    | supported out of the box          |
-| `false`   | not supported                     |
+```yaml
+features:
+  bible: true            # supported, specifics unknown
+  slides:
+    powerpoint: true
+    canva: false
+    animations: partial
+  timers: true           # (features without sub-features are always a single value)
+feature_notes:
+  slides.animations: Only simple transitions are played back.
+```
+
+The top-level tick is rolled up from the sub-features: supported if any sub-feature is supported, and "not supported" only if every listed sub-feature is.
+
+| value     | meaning                              |
+| --------- | ------------------------------------ |
+| `true`    | supported out of the box             |
+| `false`   | not supported                        |
 | `partial` | limited (explain in `feature_notes`) |
-| `addon`   | needs a paid add-on or higher tier |
-| _omitted_ | unknown                           |
+| `addon`   | needs a paid add-on or higher tier   |
+| _omitted_ | unknown                              |
+
+### Logos
+
+Put the official logo or app icon in `public/logos/<slug>.svg` (or `.png`/`.webp`, square, at least 128px) and set `logo: /logos/<slug>.svg`. Products without a logo get a letter placeholder.
 
 ## Config
 

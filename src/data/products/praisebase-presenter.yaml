@@ -7,6 +7,7 @@ description: >-
   translations and image slideshows can be built. The project's website and
   community are German-language; the last release (1.4.0) dates from 2016.
 website: http://praisebase.org
+logo: /logos/praisebase-presenter.png
 developer: PraiseBase Presenter project
 status: maintenance
 status_note: No release since version 1.4.0 (December 2016) and no code changes since 2021; the project has asked for volunteer developers.
@@ -19,11 +20,43 @@ pricing:
 platforms: [windows]
 deployment: [desktop]
 features:
-  lyrics: true
-  bible: true
-  offline: true
+  songs:
+    library: true
+    import_other: true
+    import_text: true
+    auto_import: partial
+    ccli_reporting: partial
+  bible:
+    builtin: true
+  media:
+    images: true
+    youtube: partial
+  sources:
+    messages: true
+  multilingual:
+    ui: true
+    bible_translations: true
+    bilingual_display: true
+  outputs:
+    lower_thirds: true
+  connectivity:
+    offline: true
+feature_notes:
+  songs.import_other: Importers for PowerPraise, PraiseBox, SongBeamer and WorshipSystem songs plus OpenLyrics files.
+  songs.import_text: Lyrics can be pasted directly into a song file (added in 1.3.0).
+  songs.auto_import: Reads CCLI SongSelect (.usr) files and pasted SongSelect text; there is no online connection.
+  songs.ccli_reporting: Song statistics based on setlists show how often each song was used, to help with manual CCLI reporting (1.4.0).
+  bible.builtin: Uses Zefania XML Bibles; KJV, Luther 1912, Luther 1545 and Elberfelder 1905 are bundled.
+  media.images: Each slide can have its own background image and image slideshows can be built.
+  media.youtube: Experimental YouTube playback by video ID was added in 1.3.0.
+  sources.messages: Live text messages can be shown alongside lyrics and Bible texts.
+  multilingual.ui: Interface in German and English.
+  multilingual.bilingual_display: A translation can be added to each song and is shown on the slide in a separate font.
+  outputs.lower_thirds: A chroma-key mode replaces backgrounds with green or blue for keying in a video mixer.
 languages: [German, English]
 sources:
   - https://github.com/PraiseBase-Presenter/PraiseBase-Presenter
   - http://praisebase.org
+  - https://praisebase.org/de/merkmale/
+  - https://praisebase.org/de/2016/08/version-1-3-0-verfuegbar/
 last_verified: 2026-11-04

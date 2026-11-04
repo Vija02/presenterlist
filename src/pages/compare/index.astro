@@ -29,7 +29,7 @@ const defaultSel = popular.slice(0, 3);
         <legend class="mb-3 text-sm font-semibold">Products <span id="sel-count" class="font-normal text-zinc-500"></span></legend>
         <div class="flex flex-wrap gap-2">
           {products.map((p) => (
-            <label class:list={["chip cursor-pointer gap-1.5 py-1! has-checked:border-brand-500 has-checked:bg-brand-50 has-checked:text-brand-700 dark:has-checked:bg-brand-900/30 dark:has-checked:text-brand-200 has-disabled:opacity-40", p.status === "discontinued" && "italic"]}>
+            <label class:list={["chip cursor-pointer gap-1.5 py-1! has-checked:border-brand-600 has-checked:bg-brand-50 has-checked:text-brand-600 dark:has-checked:bg-brand-900/30 dark:has-checked:text-brand-200 has-disabled:opacity-40", p.status === "discontinued" && "italic"]}>
               <input type="checkbox" name="p" value={p.slug} class="sr-only" checked={defaultSel.includes(p.slug)} />
               {p.name}
             </label>

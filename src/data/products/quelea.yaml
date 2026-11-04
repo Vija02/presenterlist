@@ -9,6 +9,7 @@ description: >-
   another device control the projection. The latest stable release is 2024.0
   (February 2024); development activity in the repository has continued since.
 website: https://quelea.org
+logo: /logos/quelea.png
 developer: Quelea project (volunteer community)
 status: maintenance
 status_note: Last stable release 2024.0 on 2 February 2024; occasional commits were still made in 2026.
@@ -22,24 +23,59 @@ platforms: [windows, macos, linux]
 deployment: [desktop]
 output_note: Mobile Lyrics can be viewed in any web browser on the local network.
 features:
-  lyrics: true
-  bible: true
-  slides_import: partial
-  video_playback: true
-  web_content: true
-  timers: true
-  ccli_songselect: partial
-  planning_center: true
-  stage_display: true
-  remote_control: true
-  offline: true
+  songs:
+    library: true
+    import_other: true
+    import_text: true
+    auto_import: partial
+    chords: true
+    backgrounds: true
+  bible:
+    builtin: true
+  slides:
+    powerpoint: true
+    pdf: true
+    animations: partial
+  media:
+    video: true
+    audio: true
+    images: true
+    youtube: true
+  sources:
+    web: true
+    timers: true
+    messages: true
+  multilingual:
+    ui: true
+    song_libraries: true
+    bilingual_display: true
+  software_integrations:
+    planning_center: true
+  automation:
+    api: partial
+  outputs:
+    stage_display: true
+    web_output: partial
+  connectivity:
+    offline: true
+    remote_control: true
 feature_notes:
-  slides_import: Displays PowerPoint and PDF files (optionally driving PowerPoint itself on Windows); no Keynote or Google Slides import.
-  bible: Uses Bibles in the Zefania XML format.
-  web_content: Websites can be displayed, with documented limitations.
-  ccli_songselect: Imports downloaded SongSelect USR files; no direct online SongSelect connection.
-  planning_center: Imports schedules from Planning Center Online.
-  remote_control: Web-based Mobile Remote and a Quelea Mobile Remote app.
+  songs.import_other: Imports from EasyWorship, ProPresenter, MediaShout, OpenLP, OpenSong, SongBeamer, VideoPsalm, ZionWorx, SongPro, Sunday Plus, EasySlides and more, plus Elvanto plans.
+  songs.import_text: Plain-text song files (with optional ChordPro chords) can be imported, and lyrics can be typed or pasted into the song editor.
+  songs.auto_import: Imports downloaded SongSelect USR files; no direct online SongSelect connection.
+  songs.chords: Songs can hold chord lines, which can be transposed, printed and shown on the stage view.
+  songs.backgrounds: Themes can use a video as the background.
+  bible.builtin: KJV, ASV, RSV and NET Bibles ship with Quelea; further Bibles use the Zefania XML format.
+  slides.powerpoint: Displays PowerPoint and PDF files, optionally driving an installed PowerPoint on Windows.
+  slides.animations: Animations only play when Quelea is set to use an installed PowerPoint (Windows).
+  sources.web: Websites can be displayed, with documented limitations.
+  sources.messages: Notices scroll across the projected display a set number of times.
+  multilingual.ui: The interface is translated into over 20 languages.
+  multilingual.bilingual_display: A song translation can be shown together with the default lyrics.
+  software_integrations.planning_center: Imports schedules from Planning Center Online.
+  automation.api: The Mobile Remote HTTP server exposes endpoints (next, previous, lyrics, schedule, search) but is not documented as a public API.
+  outputs.web_output: Mobile Lyrics shows the current lyrics as a web page on the local network.
+  connectivity.remote_control: Web-based Mobile Remote and a Quelea Mobile Remote app.
 languages: [English, German, Spanish, Swedish, Czech, Hungarian, Norwegian, Dutch, Lithuanian, Portuguese]
 docs_url: https://quelea-projection.github.io/docs/
 community_url: https://quelea.discourse.group/
@@ -48,4 +84,8 @@ sources:
   - https://github.com/quelea-projection/Quelea
   - https://github.com/quelea-projection/Quelea/releases
   - https://quelea-projection.github.io/docs/
+  - https://github.com/quelea-projection/Quelea/tree/master/Quelea/src/main/java/org/quelea/services/importexport
+  - https://github.com/quelea-projection/Quelea/blob/master/Quelea/languages/gb.lang
+  - https://github.com/quelea-projection/Quelea/tree/master/Quelea/bibles
+  - https://github.com/quelea-projection/Quelea/blob/master/Quelea/src/main/java/org/quelea/server/RemoteControlServer.java
 last_verified: 2026-11-04

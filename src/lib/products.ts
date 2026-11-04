@@ -1,13 +1,15 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import {
   DEPLOYMENTS,
-  FEATURE_KEYS,
-  FEATURES,
+  FEATURE_PATHS,
+  LEAF_PATHS,
   PLATFORMS,
   PRICING_MODELS,
-  type FeatureKey,
+  featureValueOf,
+  type FeaturePath,
   type FeatureValue,
 } from "./schema.ts";
+export { featureLabel, featureFullLabel } from "./schema.ts";
 
 export type ProductEntry = CollectionEntry<"products">;
 export type P = ProductEntry["data"] & { slug: string };
@@ -26,28 +28,30 @@ export async function getProducts(): Promise<P[]> {
 export const platformLabel = (k: string) => PLATFORMS[k as keyof typeof PLATFORMS] ?? k;
 export const deploymentLabel = (k: string) => DEPLOYMENTS[k as keyof typeof DEPLOYMENTS] ?? k;
 export const pricingLabel = (k: string) => PRICING_MODELS[k as keyof typeof PRICING_MODELS] ?? k;
-export const featureLabel = (k: string) => FEATURES[k as FeatureKey] ?? k;
 
 export const isFree = (p: P) => p.pricing.models.includes("free") || p.pricing.models.includes("donation");
 export const hasFreeOption = (p: P) => isFree(p) || p.pricing.models.includes("freemium");
 
-/** Feature value with undefined meaning unknown. */
-export const feat = (p: P, k: FeatureKey): FeatureValue | undefined => p.features?.[k];
-export const supports = (p: P, k: FeatureKey) => {
-  const v = feat(p, k);
+/** Feature value for a path like "slides" or "slides.canva"; undefined means unknown. */
+export const feat = (p: P, path: FeaturePath): FeatureValue | undefined => featureValueOf(p.features as any, path);
+export const supports = (p: P, path: FeaturePath) => {
+  const v = feat(p, path);
   return v === true || v === "partial" || v === "addon";
 };
-export const fullySupports = (p: P, k: FeatureKey) => feat(p, k) === true;
-export const featureCount = (p: P) => FEATURE_KEYS.filter((k) => supports(p, k)).length;
+export const fullySupports = (p: P, path: FeaturePath) => feat(p, path) === true;
+/** Count of confirmed leaf features (sub-features, plus features without subs). */
+export const featureCount = (p: P) => LEAF_PATHS.filter((k) => supports(p, k)).length;
+/** All supported paths, parents and subs, for client-side filters. */
+export const supportedPaths = (p: P) => FEATURE_PATHS.filter((k) => supports(p, k));
 
-export type Badge = { label: string; tone: "green" | "blue" | "amber" | "gray" | "red" | "violet" };
+export type Badge = { label: string; tone: "green" | "blue" | "amber" | "gray" | "red" | "neutral" };
 export function badges(p: P): Badge[] {
   const out: Badge[] = [];
   if (p.open_source) out.push({ label: "Open Source", tone: "green" });
   if (isFree(p)) out.push({ label: "Free", tone: "blue" });
   else if (p.pricing.models.includes("freemium")) out.push({ label: "Freemium", tone: "blue" });
-  if (p.pricing.models.includes("subscription")) out.push({ label: "Subscription", tone: "violet" });
-  if (p.pricing.models.includes("one_time")) out.push({ label: "One-time", tone: "violet" });
+  if (p.pricing.models.includes("subscription")) out.push({ label: "Subscription", tone: "neutral" });
+  if (p.pricing.models.includes("one_time")) out.push({ label: "One-time", tone: "neutral" });
   if (p.pricing.free_trial) out.push({ label: "Free Trial", tone: "amber" });
   if (p.status === "discontinued") out.push({ label: "Discontinued", tone: "red" });
   else if (p.status === "maintenance") out.push({ label: "Unmaintained", tone: "gray" });
@@ -62,7 +66,7 @@ export function pairSlug(a: string, b: string) {
 /** Simple similarity score used to rank alternatives. */
 export function similarity(a: P, b: P) {
   let score = 0;
-  for (const k of FEATURE_KEYS) if (supports(a, k) && supports(b, k)) score += 1;
+  for (const k of FEATURE_PATHS) if (supports(a, k) && supports(b, k)) score += k.includes(".") ? 0.5 : 1;
   score += 1.5 * a.platforms.filter((x) => b.platforms.includes(x)).length;
   if (a.open_source === b.open_source) score += 1;
   if (isFree(a) === isFree(b)) score += 1;
@@ -98,7 +102,8 @@ export function latestVerified(all: P[]) {
   return all.map((p) => p.last_verified).sort().at(-1);
 }
 
-export const featureSlug = (k: string) => k.replaceAll("_", "-");
+/** URL slug: "slides.google_slides" -> "slides/google-slides". */
+export const featureSlug = (path: string) => path.replaceAll("_", "-").replace(".", "/");
 export const platformSlug = (k: string) => k;
 
 /** Space-separated tags used by client-side filters. */

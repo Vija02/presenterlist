@@ -8,48 +8,115 @@ description: >-
   subscriptions, which include the remote control apps and cloud sync of
   presentations between machines.
 website: https://renewedvision.com/propresenter/
+logo: /logos/propresenter.svg
 developer: Renewed Vision
 headquarters: United States
 status: active
 open_source: false
 pricing:
   models: [subscription]
-  free_trial: false
-  starting_price: $29/month or $289/year (one seat)
+  free_trial: true
+  starting_price: $289/year (one seat)
   pricing_url: https://support.renewedvision.com/hc/en-us/articles/35579747176083-Renewed-Vision-Pricing-and-Renewal-Process
   notes: Subscription only for new users. Additional seats are discounted on annual plans; legacy licence holders get discounted renewal pricing. Some Bible translations are sold separately.
 platforms: [windows, macos]
 deployment: [desktop]
 features:
-  lyrics: true
-  bible: true
-  video_playback: true
-  audio_playback: true
-  lower_thirds: true
-  ccli_songselect: true
-  ccli_reporting: true
-  planning_center: true
-  ndi: true
-  live_video_input: true
-  midi: true
-  api: true
-  multiple_outputs: true
-  stage_display: true
-  remote_control: true
-  cloud_sync: true
+  songs:
+    library: true
+    import_text: true
+    auto_import: true
+    chords: true
+    backgrounds: true
+    ccli_reporting: true
+  bible:
+    builtin: true
+    licensed: addon
+  slides:
+    powerpoint: true
+    keynote: partial
+    animations: partial
+  media:
+    video: true
+    audio: true
+    images: true
+  sources:
+    camera: true
+    screen_share: true
+    web: true
+    timers: true
+    messages: true
+  multilingual:
+    bible_translations: true
+    side_by_side: true
+    non_latin: true
+  software_integrations:
+    planning_center: true
+  hardware:
+    midi: true
+    dmx: true
+    stream_deck: true
+  automation:
+    api: true
+    scripting: true
+  outputs:
+    multiple: true
+    stage_display: true
+    lower_thirds: true
+  broadcast_video:
+    ndi: true
+    sdi: true
+  streaming:
+    rtmp: true
+    youtube: true
+    facebook: true
+    recording: true
+  tv_output:
+    apple_tv: addon
+    android_tv: addon
+  connectivity:
+    cloud_sync: true
+    offline: true
+    remote_control: true
+    collaboration: partial
+    web_native: false
 feature_notes:
-  bible: 130+ translations in 25+ languages; some translations are sold separately.
-  lower_thirds: Separate key/fill outputs are available for broadcast graphics.
-  ccli_songselect: Requires a SongSelect subscription and CCLI licence.
-  ccli_reporting: Songs triggered from presentations with a CCLI number can be auto-reported once SongSelect is signed in.
-  planning_center: Planning Center Services plans can be added as playlists; requires a separate Planning Center subscription.
-  multiple_outputs: Up to 8 unique outputs; multiple computers can be linked with Network Link.
-  api: Public network API (OpenAPI spec) introduced in ProPresenter 7.9.
+  bible.builtin: 130+ translations in 25+ languages are available in the Bible module.
+  bible.licensed: Some translations are sold separately.
+  slides.powerpoint: Since 21.2, .pptx files can be imported natively as editable presentations without PowerPoint installed.
+  slides.keynote: Keynote files are not converted; on Mac they are triggered from a playlist and Keynote takes over the output.
+  slides.animations: The native PowerPoint importer keeps simple builds and transitions; emphasis and some other animations are not supported.
+  outputs.lower_thirds: Separate key/fill outputs are available for broadcast graphics.
+  songs.ccli_reporting: Songs triggered from presentations with a CCLI number can be auto-reported once SongSelect is signed in.
+  songs.auto_import: Requires a SongSelect subscription and CCLI licence.
+  songs.chords: Chord charts can be shown on stage screens (e.g. from Planning Center or MultiTracks).
+  software_integrations.planning_center: Planning Center Services plans can be added as playlists; requires a separate Planning Center subscription.
+  outputs.multiple: Up to 8 unique outputs; multiple computers can be linked with Network Link.
+  automation.api: Public network API (OpenAPI spec) introduced in ProPresenter 7.9; older TCP/IP control also exists.
+  automation.scripting: Macros run multi-step action sequences from a slide, a device or on demand.
+  hardware.stream_deck: Official Elgato Stream Deck plugin since 7.9; Bitfocus Companion also has a ProPresenter module.
+  sources.screen_share: AirCast (added in 18) receives AirPlay screens and audio as inputs.
+  sources.web: Web pages can be shown as a web fill on slides.
+  multilingual.side_by_side: Multiple translations can be shown on one slide using a theme with one text box per translation.
+  streaming.rtmp: The Capture feature streams any output over RTMP, records it to disk, or both; Resi streaming is also supported.
+  tv_output.apple_tv: Via ProDisplay (separate per-screen subscription), which runs on Apple TV and select Google TV devices.
+  tv_output.android_tv: Via ProDisplay on select Google TV devices (separate per-screen subscription).
+  connectivity.cloud_sync: ProPresenter Cloud syncs playlists, media and settings between machines.
+  connectivity.collaboration: ProPresenter Cloud (beta in 22) lets others prepare playlists and make mid-service changes while an operator presents.
+  connectivity.remote_control: ProPresenter Remote app is included with an active subscription.
 docs_url: https://support.renewedvision.com/
 sources:
   - https://renewedvision.com/propresenter/
+  - https://renewedvision.com/propresenter/download
+  - https://renewedvision.com/prodisplay
   - https://support.renewedvision.com/hc/en-us/articles/35579747176083-Renewed-Vision-Pricing-and-Renewal-Process
   - https://support.renewedvision.com/hc/en-us/articles/360041815033-Importing-from-SongSelect
   - https://support.renewedvision.com/hc/en-us/articles/4408670102419-Using-Planning-Center-with-ProPresenter
+  - https://support.renewedvision.com/hc/en-us/articles/45377042213011-Importing-PowerPoint-files-Natively-within-ProPresenter
+  - https://support.renewedvision.com/hc/en-us/articles/5284750340371-Setting-Up-The-ProPresenter-Stream-Deck-Plugin
+  - https://support.renewedvision.com/hc/en-us/articles/360041814253
+  - https://renewedvision.com/blog/?p=214223
+  - https://renewedvision.com/tutorials/using-bibles-and-multi-translation-scripture-in-propresenter-7
+  - https://learn.renewedvision.com/propresenter6/the-features-of-propresenter/powerpoint-and-keynote/importing-keynote-files
   - https://www.24-7pressrelease.com/press-release/491798/renewed-vision-releases-public-api-for-propresenter
 last_verified: 2026-11-04

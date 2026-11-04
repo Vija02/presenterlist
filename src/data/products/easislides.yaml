@@ -18,30 +18,58 @@ pricing:
 platforms: [windows]
 deployment: [desktop]
 features:
-  lyrics: true
-  bible: true
-  slides_import: partial
-  video_playback: true
-  audio_playback: true
-  timers: true
-  live_video_input: true
-  ccli_songselect: partial
-  ccli_reporting: partial
-  multiple_outputs: true
-  stage_display: true
-  offline: true
+  songs:
+    library: true
+    import_other: true
+    auto_import: partial
+    chords: true
+    backgrounds: true
+    ccli_reporting: partial
+  bible:
+    builtin: true
+  slides:
+    powerpoint: true
+  media:
+    video: true
+    audio: true
+    images: true
+  sources:
+    camera: true
+    timers: true
+    messages: true
+  multilingual:
+    song_libraries: true
+    bible_translations: true
+    bilingual_display: true
+    side_by_side: true
+    non_latin: true
+  outputs:
+    multiple: true
+    stage_display: true
+  connectivity:
+    offline: true
 feature_notes:
-  bible: Supports Bibles in MyBible (SQLite) and Zefania formats; two versions can be shown at once.
-  slides_import: Integrates PowerPoint slides; Microsoft PowerPoint must be installed.
-  live_video_input: A video camera or webcam feed can be used as a background behind text.
-  ccli_songselect: Imports SongSelect lyrics in text format; no direct online connection.
-  ccli_reporting: Collates song usage for CCLI reporting; submission is manual.
-  multiple_outputs: Up to four outputs (main, subtitle and detailed outputs); live output can also be multicast to Windows PCs on the LAN.
-  stage_display: The "detailed" output shows chords, schedule, next item and operator messages for musicians and speakers.
+  songs.import_other: Lyrics can be imported directly from OpenSong and OpenLP.
+  songs.auto_import: Imports SongSelect lyrics in text format; no direct online connection.
+  songs.chords: Guitar chords and other notations can be added to lyrics and shown on the detailed output.
+  songs.backgrounds: Audio, video or a live camera can play as a background with text overlay.
+  songs.ccli_reporting: Collates song usage for CCLI reporting; submission is manual.
+  bible.builtin: Uses MyBible (SQLite) and Zefania format Bibles; KJV and Chinese Union versions have shipped by default.
+  slides.powerpoint: Integrates PowerPoint slides; Microsoft PowerPoint must be installed.
+  sources.camera: A video camera or webcam feed can be used as a background behind text.
+  sources.timers: Clock showing the time or a countdown to the start of the service.
+  sources.messages: Subtitle alerts and full-screen ad-hoc messages.
+  multilingual.bilingual_display: Lyrics and texts can be projected in two languages at the same time; widely used by bilingual Chinese churches.
+  multilingual.side_by_side: Two Bible versions can be shown at once.
+  multilingual.non_latin: Chinese text is supported, including Traditional/Simplified conversion.
+  outputs.multiple: Up to four outputs (main, subtitle and detailed outputs); live output can also be multicast to Windows PCs on the LAN.
+  outputs.stage_display: The "detailed" output shows chords, schedule, next item and operator messages for musicians and speakers.
 community_url: https://www.easyslides.com/forums/
 docs_url: https://www.easyslides.com/help/
 sources:
   - https://easyslides.com/
   - https://www.easyslides.com/main/v5/features/
   - https://www.easyslides.com/main/v5/downloads/
+  - https://ebibleteacher.com/worship/reviews/easyslides
+  - https://www.scribd.com/document/559559695/ES40-GettingStarted
 last_verified: 2026-11-04

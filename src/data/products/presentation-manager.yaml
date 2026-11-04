@@ -8,6 +8,7 @@ description: >-
   a dual preview mode. It also supports picture-in-picture and on-the-fly
   display of two Bible translations.
 website: https://www.presentationmanager.com
+logo: /logos/presentation-manager.png
 developer: CreativelifeStyles
 founded: 1998
 status: active
@@ -15,19 +16,58 @@ open_source: false
 pricing:
   models: [one_time]
   free_trial: true
-  notes: Sold as a perpetual licence through the vendor's shop; a downloadable demo is available.
+  starting_price: US$200 one-time (Standard)
+  notes: Perpetual site licence (Standard US$200, Pro US$375, upgrade from v6 US$120); a downloadable demo is available, and low-budget churches can ask for a free licence.
 platforms: [windows]
 deployment: [desktop]
 features:
-  lyrics: true
-  bible: true
-  video_playback: true
-  live_video_input: true
-  multiple_outputs: true
+  songs:
+    library: true
+    backgrounds: true
+  bible:
+    builtin: true
+    licensed: true
+  slides:
+    powerpoint: partial
+  media:
+    video: true
+    images: true
+    youtube: false
+  sources:
+    camera: true
+    timers: true
+    messages: true
+  multilingual:
+    ui: partial
+    bible_translations: true
+    side_by_side: true
+  outputs:
+    multiple: true
+  connectivity:
+    offline: true
+    web_native: false
 feature_notes:
-  live_video_input: Text can be overlaid on live video.
-  multiple_outputs: Different presentations can be shown on two projectors at once.
+  songs.library: The Professional package includes over 500 songs, and songs can be added without limit; a built-in editor handles formatting.
+  songs.backgrounds: The Professional package includes over 100 video backgrounds, and text can be shown over movies.
+  bible.builtin: Public-domain Bibles are included and more are available from pmBible.com.
+  bible.licensed: The Professional package includes KJV, NIV, NKJV, NRSV, NASB, ESV and Amplified; the Standard package has less data.
+  slides.powerpoint: PowerPoint files can be played on the Windows version only with PowerPoint installed; the pricing page says PM7 itself does not play PowerPoint and runs alongside it.
+  media.video: Movies and DVDs play on one or both screens, with movie-in-movie and picture-in-picture; some formats need codecs.
+  media.youtube: The FAQ advises downloading and converting online videos, so they are not played directly.
+  sources.camera: Text can be overlaid on live video from webcams or capture cards.
+  sources.timers: Countdown timer added in release 7.319.
+  sources.messages: A Nursery Alert box displays numbers or messages during worship.
+  multilingual.ui: The changelog mentions multi-language selection with not all translations complete.
+  multilingual.side_by_side: Two Bible translations, including different languages, can be shown at once and switched on the fly.
+  outputs.multiple: Different presentations can be shown on two projectors at once (triple monitor support).
+  connectivity.offline: An internet connection is only needed for optional RSS feeds and remote data or playlist access.
 sources:
   - https://www.presentationmanager.com
+  - https://www.presentationmanager.com/features.html
+  - https://www.presentationmanager.com/frequent-questions.html
+  - https://www.presentationmanager.com/pricing.html
+  - https://www.presentationmanager.com/compare-to-powerpoint.html
+  - https://www.presentationmanager.com/download.html
+  - http://www.creativelifehosting.com/downloads/Synapx/PMChangelog.txt
   - https://www.sourceforge.net/software/product/Presentation-Manager
 last_verified: 2026-11-04

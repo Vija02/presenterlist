@@ -10,6 +10,7 @@ description: >-
   export and integrations with OBS, Blackmagic ATEM and Bitfocus Companion.
   Companion iOS and Android apps can control the desktop schedule.
 website: https://www.churchpresenter.org
+logo: /logos/churchpresenter.png
 developer: ChurchPresenter
 status: active
 open_source: true
@@ -23,37 +24,88 @@ platforms: [windows, macos, linux]
 deployment: [desktop]
 output_note: A browser-source output can be used in OBS; companion iOS and Android apps act as remotes.
 features:
-  lyrics: true
-  bible: true
-  slides_import: true
-  video_playback: true
-  audio_playback: true
-  web_content: true
-  timers: true
-  lower_thirds: true
-  ccli_reporting: partial
-  planning_center: true
-  ndi: true
-  live_video_input: true
-  midi: partial
-  api: true
-  multiple_outputs: true
-  stage_display: true
-  remote_control: true
-  offline: true
+  songs:
+    library: true
+    import_other: true
+    import_text: true
+    chords: true
+    backgrounds: true
+    ccli_reporting: partial
+  bible:
+    builtin: true
+  slides:
+    powerpoint: true
+    keynote: true
+    pdf: true
+    animations: true
+  media:
+    video: true
+    audio: true
+    images: true
+  sources:
+    camera: true
+    screen_share: true
+    web: true
+    timers: true
+    messages: true
+    interaction: true
+  multilingual:
+    ui: true
+    song_libraries: true
+    bible_translations: true
+    bilingual_display: true
+    side_by_side: true
+    non_latin: true
+  software_integrations:
+    planning_center: true
+  hardware:
+    stream_deck: true
+  automation:
+    api: true
+    ai: true
+  outputs:
+    multiple: true
+    stage_display: true
+    lower_thirds: true
+    web_output: true
+  broadcast_video:
+    ndi: true
+    sdi: true
+  connectivity:
+    offline: true
+    remote_control: true
 feature_notes:
-  slides_import: Presents .pptx, .ppt, .key and PDF files without Microsoft or Apple software installed.
-  ccli_reporting: Exports date-filtered CSV/Excel song usage reports for CCLI reporting; it does not submit reports to CCLI automatically.
-  planning_center: Imports Planning Center Services plans (read-only); each church supplies its own free PCO developer credentials.
-  ndi: NDI input and output require the free NDI Runtime, installed separately.
-  live_video_input: Webcams, capture cards, NDI and OMT sources can be placed on the canvas compositor.
-  midi: Hardware control via Bitfocus Companion (e.g. Stream Deck) and Blackmagic ATEM integration; no MIDI/DMX support was found.
-  api: Built-in local server used by mobile remotes, with optional API-key protection, plus Companion HTTP buttons.
-  multiple_outputs: One window per connected display plus Blackmagic DeckLink/SDI, NDI, OMT and browser-source outputs.
+  songs.import_other: The bundled converter reads SongBeamer, OpenLP, OpenSong, FreeShow, Free Worship, EasySlides, Quelea, VideoPsalm and SoftProjector libraries.
+  songs.import_text: Songs are entered in the built-in editor, and lyrics can be extracted from PDF, Word, PowerPoint and Keynote files.
+  songs.chords: Songs hold chords that can be transposed, and stage tablets can transpose their own view.
+  songs.backgrounds: A song or section can have its own colour, gradient, picture, looping video or camera background.
+  songs.ccli_reporting: Exports date-filtered CSV/Excel song usage reports for CCLI reporting; it does not submit reports to CCLI automatically.
+  bible.builtin: Over 1,500 free translations in more than 1,000 languages can be downloaded in-app from eBible.org and the Zefania archive.
+  slides.powerpoint: Presents .pptx, .ppt, .key and PDF files without Microsoft or Apple software installed.
+  slides.animations: PowerPoint and Keynote entrance, emphasis and exit effects, builds, motion paths and transitions play back in the app.
+  media.video: Audio and video playback uses VLC, including network streams.
+  sources.camera: Webcams, capture cards, NDI and OMT sources can be placed on the canvas compositor.
+  sources.screen_share: Screen capture can be added as a layer on the canvas compositor.
+  sources.messages: Announcements can be shown anywhere on screen with scroll and slide animations.
+  sources.interaction: Audience Q&A lets people submit questions from their phones via a QR code, with moderation and voting.
+  multilingual.ui: The interface is translated into 34 languages, laid out right-to-left for Arabic and Persian.
+  multilingual.bilingual_display: Two song languages can be shown at once, side by side or stacked.
+  multilingual.side_by_side: Bible mode can show a primary and secondary translation or an ordered stack of any number of translations.
+  software_integrations.planning_center: Imports Planning Center Services plans (read-only); each church supplies its own free PCO developer credentials.
+  hardware.stream_deck: Bitfocus Companion is supported through HTTP buttons or a native Companion Satellite connection; MIDI and OSC control are on the roadmap.
+  automation.api: Built-in Ktor REST and WebSocket server used by mobile remotes, with optional API-key protection.
+  automation.ai: Can listen to a speech-to-text feed and automatically stage spoken Bible references; live captions and translation need a separate speech-to-text server.
+  outputs.multiple: One window per connected display plus Blackmagic DeckLink/SDI, NDI, OMT and browser-source outputs.
+  outputs.lower_thirds: Animated Lottie lower thirds and a lower-third mode per content type, with fill + key and alpha output.
+  outputs.web_output: A transparent browser-source output can be used in OBS or opened on tablets.
+  broadcast_video.ndi: NDI input and output require the free NDI Runtime, installed separately.
+  broadcast_video.sdi: SDI fill and key output through Blackmagic DeckLink cards.
 docs_url: https://www.churchpresenter.org/wiki/
 community_url: https://www.churchpresenter.org/forum/
 sources:
   - https://github.com/ChurchPresenter/ChurchPresenter
   - https://github.com/ChurchPresenter/ChurchPresenter/blob/main/FEATURES.md
   - https://www.churchpresenter.org
+  - https://github.com/ChurchPresenter/ChurchPresenter/blob/main/ROADMAP.md
+  - https://github.com/ChurchPresenter/ChurchPresenter/releases
 last_verified: 2026-11-04

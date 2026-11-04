@@ -8,6 +8,7 @@ description: >-
   from a USB drive and store data in a cloud-synced folder. It is freeware;
   no source code license is published.
 website: https://videopsalm.org
+logo: /logos/videopsalm.png
 developer: VideoPsalm
 founded: 2011
 status: active
@@ -18,27 +19,56 @@ pricing:
 platforms: [windows]
 deployment: [desktop]
 features:
-  lyrics: true
-  bible: true
-  slides_import: partial
-  video_playback: true
-  audio_playback: true
-  web_content: true
-  timers: true
-  live_video_input: true
-  ccli_songselect: partial
-  ccli_reporting: true
-  stage_display: true
-  remote_control: false
-  cloud_sync: partial
-  offline: true
+  songs:
+    library: true
+    import_other: true
+    auto_import: partial
+    chords: true
+    backgrounds: true
+    ccli_reporting: true
+  bible:
+    builtin: true
+  slides:
+    powerpoint: true
+    keynote: false
+    pdf: true
+    animations: true
+  media:
+    video: true
+    audio: true
+    images: true
+    youtube: true
+  sources:
+    camera: true
+    web: true
+    timers: true
+    messages: true
+  multilingual:
+    ui: true
+    song_libraries: true
+    bible_translations: true
+    bilingual_display: true
+    side_by_side: true
+  outputs:
+    stage_display: true
+  connectivity:
+    cloud_sync: partial
+    offline: true
+    remote_control: false
 feature_notes:
-  slides_import: Presents PowerPoint (including animations), PDF and LibreOffice documents; no Keynote or Google Slides import.
-  bible: Over 3,000 Bible translations can be downloaded and added.
-  live_video_input: A live video feed can be used as a lyrics background.
-  ccli_songselect: Downloaded SongSelect .usr song files can be added to the agenda.
-  remote_control: A Wi-Fi remote and mobile app are listed as "coming soon" on the features page.
-  cloud_sync: Data can be kept in a third-party cloud folder (pCloud, Dropbox, OneDrive); there is no built-in sync service.
+  songs.import_other: Described as compatible with OpenSong and ProPresenter song files.
+  songs.auto_import: Downloaded SongSelect .usr song files can be added to the agenda; songs can also be fetched from an expandable online song library.
+  songs.chords: Chords over lyrics with transposition and capo; ChordPro notation is supported.
+  songs.backgrounds: Video loops can be played under lyrics.
+  bible.builtin: Over 3,000 Bible translations in 1,900+ languages can be downloaded and added.
+  slides.keynote: Windows-only; PowerPoint, PDF, Word and LibreOffice documents are listed but not Keynote.
+  slides.animations: Animations inside PowerPoint slides can be stepped through.
+  sources.camera: A live video feed can be used as a lyrics background.
+  sources.timers: Clock, countdown and stopwatch.
+  multilingual.ui: The interface is translatable and available in 28+ languages.
+  multilingual.side_by_side: Bilingual display of songs and Bible verses on one slide.
+  connectivity.remote_control: A Wi-Fi remote and mobile app are listed as "coming soon" on the features page.
+  connectivity.cloud_sync: Data can be kept in a third-party cloud folder (pCloud, Dropbox, OneDrive); there is no built-in sync service.
 sources:
   - https://videopsalm.org/
   - https://videopsalm.org/features/

@@ -9,6 +9,7 @@ description: >-
   controlled. The last packaged release is 3.4.8 (June 2021), while development
   continues in the project's SourceForge repository.
 website: https://opensong.org
+logo: /logos/opensong.png
 developer: OpenSong project (volunteer community)
 status: maintenance
 status_note: Last packaged release 3.4.8 on 1 June 2021; source repository commits continue in 2026. Version 3.4.8 is not compatible with macOS 26 (Tahoe).
@@ -21,18 +22,50 @@ pricing:
 platforms: [windows, macos, linux]
 deployment: [desktop]
 features:
-  lyrics: true
-  bible: true
-  slides_import: partial
-  video_playback: partial
-  ndi: true
-  api: true
-  offline: true
+  songs:
+    library: true
+    import_text: true
+    auto_import: false
+    chords: true
+    backgrounds: partial
+    ccli_reporting: partial
+  bible:
+    builtin: true
+  slides:
+    powerpoint: true
+    animations: partial
+  media:
+    video: partial
+    audio: partial
+    images: true
+  sources:
+    messages: true
+  multilingual:
+    ui: true
+    song_libraries: true
+    bilingual_display: true
+  automation:
+    api: true
+  broadcast_video:
+    ndi: true
+  connectivity:
+    offline: true
 feature_notes:
-  slides_import: Controls external PowerPoint or LibreOffice Impress presentations; no direct import.
-  video_playback: Video is played via an external VideoLAN (VLC) player launched from a slide.
-  ndi: NDI output is supported (disabled by default in recent builds).
-  api: REST and WebSocket API for remote control and integrations.
+  songs.import_text: Lyrics found online can be pasted into a song using OpenSong's chord/lyric text format.
+  songs.auto_import: The built-in CCLI SongSelect import has been disabled because it broke; CCLI exports can be converted with the separate OpenSong Import Utility.
+  songs.chords: Chords transpose automatically, and lead sheets can print regular and capo chords together.
+  songs.backgrounds: Backgrounds are colours or images; a video background is only possible through a VideoLAN overlay preset (Windows).
+  songs.ccli_reporting: Presented songs are logged with their CCLI numbers in an activity log; there is no direct CCLI submission.
+  bible.builtin: The KJV is included; other Bibles must be converted to OpenSong's own format (several are offered on the downloads page).
+  slides.powerpoint: Drives an installed PowerPoint or LibreOffice Impress with live preview, or imports slides as image snapshots.
+  slides.animations: Animations only play when OpenSong drives PowerPoint or Impress directly; imported snapshots are static.
+  media.video: Video is played via an external VideoLAN (VLC) player launched from a slide.
+  media.audio: Audio clips are played through the external VideoLAN (VLC) player.
+  sources.messages: Alerts can be shown over the presentation, including via the API.
+  multilingual.ui: The interface is available in about 20 languages.
+  multilingual.bilingual_display: Bilingual songs can render the second language in a different style.
+  broadcast_video.ndi: NDI output is supported (disabled by default in recent builds).
+  automation.api: REST and WebSocket API for remote control and integrations.
 docs_url: https://opensong.org
 community_url: https://sourceforge.net/p/opensong/
 sources:
@@ -41,4 +74,8 @@ sources:
   - https://sourceforge.net/projects/opensong/files/
   - https://sourceforge.net/p/opensong/code/HEAD/tree/
   - https://sourceforge.net/p/opensong/code/HEAD/tree/source/trunk/changelog.txt
+  - https://opensong.org/documentation/importing/
+  - https://opensong.org/development/api/
+  - https://sourceforge.net/p/opensong/code/HEAD/tree/source/trunk/OpenSong%20Scripture/
+  - https://sourceforge.net/p/opensong/code/HEAD/tree/source/trunk/OpenSong%20Languages/
 last_verified: 2026-11-04

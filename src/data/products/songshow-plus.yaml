@@ -8,6 +8,7 @@ description: >-
   Planning Center Online and Shift Worship, plus cloud sync and a browser-based
   mobile control app. Version 9.3 added support for CCLI auto-reporting.
 website: https://www.songshowplus.com/
+logo: /logos/songshow-plus.png
 developer: R-Technics, Inc.
 status: active
 open_source: false
@@ -26,34 +27,66 @@ pricing:
 platforms: [windows]
 deployment: [desktop]
 features:
-  lyrics: true
-  bible: true
-  slides_import: true
-  video_playback: true
-  audio_playback: true
-  web_content: true
-  timers: true
-  lower_thirds: true
-  ccli_songselect: addon
-  ccli_reporting: true
-  planning_center: addon
-  ndi: true
-  live_video_input: true
-  multiple_outputs: true
-  stage_display: true
-  remote_control: addon
-  cloud_sync: addon
+  songs:
+    library: true
+    auto_import: addon
+    backgrounds: true
+    ccli_reporting: true
+  bible:
+    builtin: true
+    licensed: addon
+  slides:
+    powerpoint: true
+    animations: partial
+  media:
+    video: true
+    audio: true
+    images: true
+    youtube: true
+  sources:
+    camera: true
+    web: true
+    timers: true
+    messages: true
+  software_integrations:
+    planning_center: addon
+  automation:
+    ai: addon
+  outputs:
+    multiple: true
+    stage_display: true
+    lower_thirds: true
+  broadcast_video:
+    ndi: true
+    sdi: true
+  connectivity:
+    cloud_sync: addon
+    offline: true
+    remote_control: addon
+    collaboration: addon
+    web_native: false
 feature_notes:
-  bible: ASV, KJV and WEB included; other translations are paid plug-ins.
-  ccli_songselect: Requires the Bronze (or higher) subscription plus a separate SongSelect subscription.
-  ccli_reporting: CCLI auto-reporting added in version 9.3.
-  planning_center: Requires the Bronze (or higher) subscription plus a Planning Center subscription.
-  ndi: NDI streaming (added in 9.1) is part of the Ultra edition.
-  live_video_input: Live video (IMAG) with text and graphic overlays.
-  lower_thirds: Stage/output windows can be configured for lower-third layouts.
-  multiple_outputs: Multi-display support and DeckLink output are part of the Ultra edition.
-  remote_control: Mobile Control (a progressive web app) requires the Silver subscription.
-  cloud_sync: SongShow Sync and Drive storage require the Silver subscription.
+  bible.builtin: ASV, KJV and WEB are included.
+  bible.licensed: Translations such as NIV, ESV, NKJV and NLT are $25 plug-ins per machine.
+  songs.auto_import: Requires the Bronze (or higher) subscription plus a separate SongSelect subscription.
+  songs.ccli_reporting: CCLI auto-reporting added in version 9.3.
+  songs.backgrounds: Motion backgrounds with real-time effects and rendered visualizations; Shift Worship media can be imported with a separate subscription.
+  slides.powerpoint: PowerPoint presentations can be imported step by step, as images or as video files.
+  slides.animations: Importing PowerPoint as video can keep animations; SongShow's own slides have transitions and animations.
+  media.youtube: Web pages, including YouTube videos, can be presented.
+  sources.camera: Live video (IMAG) with text and graphic overlays.
+  sources.timers: Customizable countdown timers (Pro edition and above).
+  sources.messages: Instant Message shows nursery alerts and other messages (Pro edition and above).
+  software_integrations.planning_center: Requires the Bronze (or higher) subscription plus a Planning Center subscription.
+  automation.ai: Optional image indexing with Microsoft/Azure Computer Vision requires the Silver subscription.
+  outputs.multiple: Multi-display support (up to six display windows since 9.1) is part of the Ultra edition.
+  outputs.stage_display: One or more customizable stage outputs are part of the Ultra edition.
+  outputs.lower_thirds: Output windows can be configured as synchronized lower-third layouts.
+  broadcast_video.ndi: NDI streaming (added in 9.1) is part of the Ultra edition.
+  broadcast_video.sdi: Blackmagic DeckLink output can be assigned to any display window.
+  connectivity.cloud_sync: SongShow Sync requires the Silver subscription.
+  connectivity.remote_control: Mobile Control (a progressive web app) requires the Silver subscription.
+  connectivity.collaboration: SongShow Drive media sharing and the web-based SongShow Builder require the Silver subscription.
 sources:
   - https://www.songshowplus.com/
   - https://www.songshowplus.com/store

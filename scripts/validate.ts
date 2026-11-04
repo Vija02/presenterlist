@@ -23,7 +23,7 @@ for (const file of files) {
   try {
     raw = parse(readFileSync(join(dir, file), "utf8"));
   } catch (e) {
-    console.error(`✗ ${file}: invalid YAML – ${(e as Error).message}`);
+    console.error(`✗ ${file}: invalid YAML: ${(e as Error).message}`);
     errors++;
     continue;
   }

@@ -8,6 +8,7 @@ description: >-
   Windows (winget), macOS and Linux (Flatpak, Snap, AUR). A rewrite in Rust
   (Cantara 3) is in progress while version 2 continues to be maintained.
 website: https://www.cantara.app
+logo: /logos/cantara.svg
 developer: Jan Martin Reckel
 headquarters: Germany
 founded: 2019
@@ -21,15 +22,33 @@ pricing:
 platforms: [windows, macos, linux]
 deployment: [desktop]
 features:
-  lyrics: true
-  ccli_songselect: partial
-  multiple_outputs: true
-  offline: true
+  songs:
+    library: true
+    import_text: true
+    auto_import: partial
+  media:
+    images: partial
+  multilingual:
+    ui: true
+    bilingual_display: true
+  outputs:
+    multiple: true
+  connectivity:
+    offline: true
 feature_notes:
-  ccli_songselect: Can read song files in the CCLI SongSelect lyrics file format; there is no direct SongSelect account integration.
+  songs.library: Songs are kept as files in a song repository folder, in Cantara's own .song format or CCLI SongSelect text format.
+  songs.import_text: Plain .txt lyric files are recognised as songs.
+  songs.auto_import: Can read song files in the CCLI SongSelect lyrics file format; there is no direct SongSelect account integration.
+  media.images: Images are used only as presentation backgrounds (with per-song overrides since 2.7); there is no separate media playback.
+  multilingual.ui: The interface has been translated into a few languages by the community.
+  multilingual.bilingual_display: Songs can be presented and exported in two languages at the same time.
+  outputs.multiple: Multi-screen presentation is supported out of the box.
 docs_url: https://www.cantara.app
 sources:
   - https://www.cantara.app
   - https://github.com/reckel-jm/cantara
   - https://flathub.org/apps/app.cantara.Cantara
+  - https://github.com/reckel-jm/cantara/blob/master/CHANGELOG.md
+  - https://www.cantara.app/tutorial/where-to-get-the-songs/
+  - https://github.com/CantaraProject/Cantara
 last_verified: 2026-11-04

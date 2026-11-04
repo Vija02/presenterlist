@@ -4,9 +4,10 @@ import ComparisonTable from "../../components/ComparisonTable.astro";
 import FeatureLegend from "../../components/FeatureLegend.astro";
 import Logo from "../../components/Logo.astro";
 import Badges from "../../components/Badges.astro";
-import { FEATURE_KEYS } from "../../lib/schema.ts";
+import { FEATURE_PATHS, LEAF_PATHS } from "../../lib/schema.ts";
 import {
-  featureLabel,
+  feat,
+  featureFullLabel,
   fullySupports,
   getProducts,
   isFree,
@@ -31,18 +32,24 @@ export async function getStaticPaths() {
 const { a, b } = Astro.props as { a: P; b: P };
 const all = await getProducts();
 
-const onlyIn = (x: P, y: P) =>
-  FEATURE_KEYS.filter((k) => fullySupports(x, k) && (y.features?.[k] === false || y.features?.[k] === "partial" || y.features?.[k] === "addon")).map(
-    (k) => featureLabel(k) + (y.features?.[k] === "partial" ? ` (partial in ${y.name})` : y.features?.[k] === "addon" ? ` (paid add-on in ${y.name})` : ""),
-  );
+// Prefer the most specific paths: skip a parent when one of its subs already explains the difference.
+const onlyIn = (x: P, y: P) => {
+  const hits = FEATURE_PATHS.filter((k) => fullySupports(x, k) && ["partial", "addon", false].includes(feat(y, k) as any));
+  return hits
+    .filter((k) => k.includes(".") || !hits.some((h) => h.startsWith(`${k}.`)))
+    .map((k) => {
+      const v = feat(y, k);
+      return featureFullLabel(k) + (v === "partial" ? ` (partial in ${y.name})` : v === "addon" ? ` (paid add-on in ${y.name})` : "");
+    });
+};
 const platformsOnly = (x: P, y: P) => x.platforms.filter((k) => !y.platforms.includes(k)).map((k) => `Runs on ${platformLabel(k)}`);
 const aOnly = [...platformsOnly(a, b), ...onlyIn(a, b)];
 const bOnly = [...platformsOnly(b, a), ...onlyIn(b, a)];
-const both = FEATURE_KEYS.filter((k) => fullySupports(a, k) && fullySupports(b, k)).map(featureLabel);
+const both = LEAF_PATHS.filter((k) => fullySupports(a, k) && fullySupports(b, k)).map(featureFullLabel);
 const commonPlatforms = a.platforms.filter((x) => b.platforms.includes(x)).map(platformLabel);
 
 const summary: string[] = [];
-const price = (p: P) => (isFree(p) ? "free" : `paid – ${priceSummary(p)}`);
+const price = (p: P) => (isFree(p) ? "free" : `paid (${priceSummary(p)})`);
 summary.push(`${a.name} is ${price(a)}, while ${b.name} is ${price(b)}.`);
 if (a.open_source !== b.open_source) {
   const [os, prop] = a.open_source ? [a, b] : [b, a];
@@ -61,7 +68,7 @@ const title = `${a.name} vs ${b.name}`;
 
 <Base
   title={`${title}: features, pricing & platforms compared`}
-  description={`${title} compared side by side: pricing, platforms, open-source status and ${FEATURE_KEYS.length} features for church presentation software.`}
+  description={`${title} compared side by side: pricing, platforms, open-source status and ${LEAF_PATHS.length} features for church presentation software.`}
   breadcrumbs={[{ label: "Compare", href: "/compare/" }, { label: title }]}
 >
   <div class="container-page mt-6">
@@ -98,7 +105,7 @@ const title = `${a.name} vs ${b.name}`;
           </div>
         ))}
       </div>
-      <p class="mt-3 text-xs text-zinc-500">Based on confirmed data only — unknown values are not counted.</p>
+      <p class="mt-3 text-xs text-zinc-500">Based on confirmed data only. Unknown values are not counted.</p>
     </section>
 
     <section class="mt-10">

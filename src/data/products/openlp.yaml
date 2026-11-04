@@ -9,6 +9,7 @@ description: >-
   control from other devices on the local network. The current stable series
   is 3.1.x, with alpha releases of OpenLP 4.0 published in 2026.
 website: https://openlp.org
+logo: /logos/openlp.svg
 developer: OpenLP Developers (volunteer community)
 status: active
 open_source: true
@@ -21,26 +22,69 @@ platforms: [windows, macos, linux]
 deployment: [desktop]
 output_note: The stage view and web remote can be opened in any web browser on the local network; FreeBSD is also supported.
 features:
-  lyrics: true
-  bible: true
-  slides_import: partial
-  video_playback: true
-  audio_playback: true
-  ccli_songselect: true
-  ccli_reporting: partial
-  planning_center: true
-  multiple_outputs: true
-  stage_display: true
-  remote_control: true
-  offline: true
+  songs:
+    library: true
+    import_other: true
+    import_text: true
+    auto_import: true
+    chords: true
+    backgrounds: true
+    ccli_reporting: partial
+  bible:
+    builtin: partial
+    licensed: partial
+  slides:
+    powerpoint: true
+    keynote: true
+    pdf: true
+    animations: partial
+  media:
+    video: true
+    audio: true
+    images: true
+  sources:
+    camera: true
+    messages: true
+  multilingual:
+    ui: true
+    side_by_side: true
+  software_integrations:
+    planning_center: true
+  hardware:
+    stream_deck: true
+  automation:
+    api: true
+    plugins: partial
+  outputs:
+    multiple: false
+    stage_display: true
+    web_output: partial
+  connectivity:
+    offline: true
+    remote_control: true
 feature_notes:
-  slides_import: Controls PowerPoint, PowerPoint Viewer or LibreOffice Impress presentations and shows PDFs; no Keynote or Google Slides support.
-  bible: Bibles are imported from several file formats or downloaded from Bible websites.
-  ccli_songselect: Songs can be imported from CCLI SongSelect from within OpenLP; this importer has occasionally broken when CCLI changed its website.
-  ccli_reporting: The Song Usage Tracking plugin records song usage and produces reports; submission to CCLI is manual.
-  planning_center: The PlanningCenter plugin imports service plans from the Planning Center Online v2 API.
-  video_playback: Audio and video playback uses VLC.
-  remote_control: Built-in web remote plus Android and iOS remote apps.
+  songs.import_other: Imports songs from over 25 formats including EasyWorship, ProPresenter, MediaShout, SongShow Plus, SongBeamer, OpenSong, ZionWorx and VideoPsalm.
+  songs.chords: Songs can store chords (ChordPro-style), shown in the browser Chord View with transposition and printable via export.
+  songs.backgrounds: Themes can use a looping video or a live stream as the background.
+  songs.ccli_reporting: The Song Usage Tracking plugin records song usage and produces reports; submission to CCLI is manual.
+  songs.auto_import: Songs can be imported from CCLI SongSelect from within OpenLP; this importer has occasionally broken when CCLI changed its website.
+  bible.builtin: No Bibles are bundled; free translations are imported from OSIS, Zefania, OpenSong, CSV, SWORD or WordProject files.
+  bible.licensed: Copyrighted versions can be downloaded on demand from BibleGateway, Bibleserver or Crosswalk; there is no licensed in-app catalogue.
+  slides.powerpoint: Drives an installed PowerPoint or LibreOffice Impress to show the presentation.
+  slides.keynote: Keynote presentations are controlled through AppleScript on macOS with Keynote installed.
+  slides.animations: Animations play because OpenLP drives PowerPoint, Impress or Keynote itself; PDFs are shown as static images.
+  media.video: In the 3.x series audio and video playback uses VLC; OpenLP 4.0 alphas switch to Qt Multimedia.
+  sources.camera: Capture devices can be shown as a Device Stream media item, and network streams are also supported.
+  sources.messages: The Alerts plugin overlays a scrolling message on the live display.
+  multilingual.ui: The interface is translated into about 30 languages.
+  multilingual.side_by_side: A second Bible version can be selected to show the same passage alongside the first.
+  software_integrations.planning_center: The PlanningCenter plugin imports service plans from the Planning Center Online v2 API.
+  hardware.stream_deck: Bitfocus Companion has an OpenLP module that uses the OpenLP HTTP API.
+  automation.api: HTTP REST (v2) and WebSocket API, used by the web remote and mobile apps.
+  automation.plugins: Features are organised as built-in plugins that can be switched on or off; there is no third-party plugin store.
+  outputs.multiple: OpenLP projects to a single display screen; the source notes multi-monitor output is not yet supported (a custom geometry can span screens).
+  outputs.web_output: The browser Main View mirrors the projector using screenshots, without audio or video.
+  connectivity.remote_control: Built-in web remote plus Android and iOS remote apps.
 docs_url: https://manual.openlp.org
 community_url: https://discuss.openlp.org
 sources:
@@ -50,4 +94,8 @@ sources:
   - https://manual.openlp.org/
   - https://manual.openlp.org/plugin_list.html
   - https://discuss.openlp.org/d/6138-updated-songselect-now-incompatible-with-openlp-302
+  - https://manual.openlp.org/stage_view.html
+  - https://gitlab.com/openlp/openlp/-/tree/3.1.7/openlp/plugins
+  - https://gitlab.com/openlp/openlp/-/blob/master/openlp/core/display/screens.py
+  - https://github.com/bitfocus/companion-module-openlp-http
 last_verified: 2026-11-04

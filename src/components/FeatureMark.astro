@@ -1,20 +1,20 @@
 ---
 import type { FeatureValue } from "../lib/schema.ts";
-interface Props { value: FeatureValue | undefined; note?: string }
-const { value, note } = Astro.props;
+interface Props { value: FeatureValue | undefined; note?: string; size?: "sm" | "md" }
+const { value, note, size = "md" } = Astro.props;
 const map = {
   yes: { sym: "✓", label: "Yes", cls: "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300" },
   no: { sym: "✕", label: "No", cls: "bg-zinc-100 text-zinc-400 dark:bg-zinc-800 dark:text-zinc-500" },
   partial: { sym: "◐", label: "Partial", cls: "bg-amber-100 text-amber-700 dark:bg-amber-500/15 dark:text-amber-300" },
-  addon: { sym: "+", label: "Paid add-on", cls: "bg-violet-100 text-violet-700 dark:bg-violet-500/15 dark:text-violet-300" },
+  addon: { sym: "+", label: "Paid add-on", cls: "bg-sky-100 text-sky-700 dark:bg-sky-500/15 dark:text-sky-300" },
   unknown: { sym: "?", label: "Unknown", cls: "bg-transparent text-zinc-400 ring-1 ring-inset ring-zinc-200 dark:ring-zinc-700" },
 };
 const key = value === true ? "yes" : value === false ? "no" : value === "partial" ? "partial" : value === "addon" ? "addon" : "unknown";
 const m = map[key];
-const title = note ? `${m.label} – ${note}` : m.label;
+const title = note ? `${m.label}: ${note}` : m.label;
 ---
 <span class="inline-flex items-center gap-1.5" title={title}>
-  <span class:list={["inline-flex size-6 items-center justify-center rounded-full text-xs font-bold", m.cls]} aria-hidden="true">{m.sym}</span>
+  <span class:list={["inline-flex items-center justify-center rounded-full font-bold", size === "sm" ? "size-5 text-[10px]" : "size-6 text-xs", m.cls]} aria-hidden="true">{m.sym}</span>
   <span class="sr-only">{title}</span>
   {note && <span class="text-zinc-400" aria-hidden="true">*</span>}
 </span>

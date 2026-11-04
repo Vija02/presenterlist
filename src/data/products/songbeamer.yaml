@@ -27,27 +27,76 @@ pricing:
 platforms: [windows, macos]
 deployment: [desktop]
 features:
-  lyrics: true
-  bible: true
-  slides_import: true
-  video_playback: true
-  timers: true
-  ccli_songselect: true
-  ccli_reporting: true
-  ndi: true
-  live_video_input: true
-  midi: true
-  multiple_outputs: true
-  stage_display: true
-  offline: true
+  songs:
+    library: true
+    import_other: true
+    auto_import: true
+    chords: true
+    backgrounds: true
+    ccli_reporting: true
+  bible:
+    builtin: true
+    licensed: addon
+  slides:
+    powerpoint: true
+    pdf: true
+  media:
+    video: true
+    audio: true
+    images: true
+    youtube: true
+  sources:
+    camera: true
+    web: true
+    timers: true
+    messages: true
+  multilingual:
+    ui: true
+    song_libraries: true
+    bible_translations: true
+    bilingual_display: true
+    side_by_side: true
+    non_latin: partial
+  hardware:
+    midi: true
+  automation:
+    api: partial
+    scripting: true
+  outputs:
+    multiple: true
+    stage_display: true
+    lower_thirds: true
+  broadcast_video:
+    ndi: true
+  connectivity:
+    offline: true
+    remote_control: true
+    web_native: false
 feature_notes:
-  bible: Many current Bible translations are available for purchase.
-  slides_import: PowerPoint and LibreOffice files can be added to the schedule, and lyrics can be imported from PowerPoint.
-  timers: Countdown shown on the stage view.
-  ndi: Text output to OBS Studio and other software via NDI or a text file.
-  live_video_input: Live video can be shown behind text.
-  midi: Control via MIDI and OSC.
-  ccli_reporting: Optional automatic reporting to CCLI, added in version 6.0.
+  songs.import_other: Separate importers for PowerPraise, PraiseMaster and PraiseBox songs, plus lyrics import from PowerPoint and CSV.
+  songs.auto_import: Songs (with chords) can be imported directly from CCLI SongSelect while the licence is entitled to updates.
+  songs.chords: Songs can be projected and printed with chords, with transposition.
+  songs.backgrounds: Images and videos can be used as song backgrounds.
+  songs.ccli_reporting: Optional automatic reporting to CCLI, added in version 6.0, available while entitled to updates; VG Musikedition reports can be exported too.
+  bible.builtin: Elberfelder 1905 is included, and free translations can be imported from Zefania XML.
+  bible.licensed: Modern German translations such as Luther 2017, Schlachter 2000 and BasisBibel are sold separately (€19-39 each).
+  slides.powerpoint: PowerPoint and LibreOffice files can be added to the schedule; requires PowerPoint, the PowerPoint Viewer or LibreOffice.
+  media.youtube: YouTube videos can be shown, including URLs with a start time.
+  sources.camera: Live video from a camera or capture device can be shown behind text.
+  sources.web: Web pages can be added to the schedule and displayed.
+  sources.timers: Countdowns and stopwatches, also shown on the stage view.
+  sources.messages: Spontaneous messages to the congregation can be shown over the presentation.
+  multilingual.ui: Interface in German and English.
+  multilingual.bilingual_display: Songs can hold up to 4 languages, shown together on screen.
+  multilingual.side_by_side: Up to two Bible translations can be shown at once.
+  multilingual.non_latin: Unicode text such as Cyrillic is supported; the changelog notes right-to-left output (e.g. Arabic) is not yet fully correct.
+  hardware.midi: Control via MIDI and OSC.
+  automation.api: Remote control over the network via OSC; no HTTP or WebSocket API is documented.
+  automation.scripting: SongBeamer Script macros can be run from menus or added to the schedule.
+  outputs.multiple: A presentation can also be shown on a third monitor (beta).
+  outputs.lower_thirds: NDI output has its own formatting and an optional background colour for keying.
+  broadcast_video.ndi: Text output to OBS Studio and other software via NDI or a text file.
+  connectivity.remote_control: SongBeamer Remote app for iPhone and iPad.
 languages: [German, English]
 community_url: https://forum.songbeamer.de/
 sources:
@@ -55,5 +104,6 @@ sources:
   - https://www.songbeamer.de/software.htm
   - https://www.songbeamer.de/bestellen.php
   - https://www.songbeamer.de/download.htm
+  - https://www.songbeamer.de/order_bible.htm
   - https://www.songbeamer.com/
 last_verified: 2026-11-04

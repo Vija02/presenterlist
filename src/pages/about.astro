@@ -1,6 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
-import { FEATURE_GROUPS } from "../lib/schema.ts";
+import { FEATURE_GROUPS, LEAF_PATHS } from "../lib/schema.ts";
 import { REPO_URL, newProductIssueUrl } from "../config.ts";
 ---
 <Base title="About" description="How PresenterList works, where the data comes from and how to contribute." breadcrumbs={[{ label: "About" }]}>
@@ -8,7 +8,7 @@ import { REPO_URL, newProductIssueUrl } from "../config.ts";
     <header>
       <h1 class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">About PresenterList</h1>
       <p class="mt-3 text-lg">
-        PresenterList is an open, community-maintained directory of presentation software used by churches — tools for
+        PresenterList is an open, community-maintained directory of presentation software used by churches: tools for
         projecting song lyrics, scripture, slides and media. The goal is simple: help churches find the right tool without
         digging through a dozen marketing sites.
       </p>
@@ -21,7 +21,7 @@ import { REPO_URL, newProductIssueUrl } from "../config.ts";
         <li>Each entry lists the <strong>sources</strong> used and the date it was <strong>last verified</strong>.</li>
         <li>
           Features are only marked as supported when there's evidence. If we don't know, the feature shows as
-          <strong>unknown (?)</strong> rather than guessing. Prices change often — always check the vendor's pricing page.
+          <strong>unknown (?)</strong> rather than guessing. Prices change often, so always check the vendor's pricing page.
         </li>
         <li>Alternatives are ranked automatically by overlap in platforms and features, not by payment. There are no sponsored listings.</li>
         <li>The full dataset is available as <a href="/products.json" class="link">JSON</a>.</li>
@@ -30,14 +30,11 @@ import { REPO_URL, newProductIssueUrl } from "../config.ts";
 
     <section>
       <h2 class="h-section text-zinc-900 dark:text-white">What we compare</h2>
-      <div class="grid gap-4 sm:grid-cols-3">
-        {Object.values(FEATURE_GROUPS).map((g) => (
-          <div>
-            <h3 class="font-semibold text-zinc-900 dark:text-white">{g.label}</h3>
-            <ul class="mt-1 space-y-0.5 text-sm">{Object.values(g.features).map((f) => <li>{f}</li>)}</ul>
-          </div>
-        ))}
-      </div>
+      <p>
+        {LEAF_PATHS.length} features in {Object.keys(FEATURE_GROUPS).length} groups. Bigger features are split into specifics, so
+        "Slides" covers PowerPoint, Keynote, Google Slides, Canva, PDF and whether animations play.
+        <a href="/features/" class="link">Browse all features</a>.
+      </p>
     </section>
 
     <section id="contribute">
@@ -46,7 +43,7 @@ import { REPO_URL, newProductIssueUrl } from "../config.ts";
       <ol class="mt-3 list-decimal space-y-2 pl-5">
         <li><a href={newProductIssueUrl} class="link">Submit a new product</a> using the GitHub issue form.</li>
         <li>Use <strong>Suggest an edit</strong> on any product page to report a correction.</li>
-        <li>Open a pull request editing the product's YAML file directly — see <a href={`${REPO_URL}/blob/main/CONTRIBUTING.md`} class="link">CONTRIBUTING.md</a>.</li>
+        <li>Open a pull request editing the product's YAML file directly. See <a href={`${REPO_URL}/blob/main/CONTRIBUTING.md`} class="link">CONTRIBUTING.md</a>.</li>
       </ol>
       <p class="mt-3">Vendors are welcome to correct their own listings; please include a link to a public source.</p>
     </section>
@@ -55,8 +52,8 @@ import { REPO_URL, newProductIssueUrl } from "../config.ts";
       <h2 class="h-section text-zinc-900 dark:text-white">Disclosure</h2>
       <p>
         PresenterList is maintained by the developer of <a href="/software/theopenpresenter/" class="link">TheOpenPresenter</a>.
-        That product is listed using the same schema, rules and ranking as every other entry, and corrections to any listing —
-        including that one — are welcome.
+        That product is listed using the same schema, rules and ranking as every other entry, and corrections to any listing,
+        including that one, are welcome.
       </p>
     </section>
   </article>

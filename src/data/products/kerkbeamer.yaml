@@ -8,6 +8,7 @@ description: >-
   Paid add-ons cover kerkTV broadcasting, LiveBeamer (following the
   presentation on any device via a URL) and CameraRegie camera control.
 website: https://kerkbeamer.nl
+logo: /logos/kerkbeamer.png
 developer: KerkBeamer
 headquarters: Netherlands
 founded: 2017
@@ -19,19 +20,77 @@ pricing:
   starting_price: "From €17.50/month (excl. VAT)"
   pricing_url: https://kerkbeamer.nl/tarieven
   notes: Priced by number of active church members; songbooks and Bible translations cost €1.00 each per month when used. 4-week free trial.
-platforms: [web]
-deployment: [cloud]
+platforms: [web, windows, macos]
+deployment: [cloud, desktop]
 features:
-  lyrics: true
-  bible: true
-  collaboration: true
-  cloud_sync: true
-  remote_control: addon
+  songs:
+    library: true
+    ccli_reporting: false
+  bible:
+    builtin: true
+    licensed: true
+  slides:
+    powerpoint: true
+  media:
+    video: true
+    audio: true
+    images: true
+    youtube: false
+  sources:
+    camera: addon
+    interaction: addon
+  multilingual:
+    ui: false
+    bible_translations: true
+  automation:
+    ai: partial
+  outputs:
+    multiple: true
+    lower_thirds: addon
+    web_output: addon
+  connectivity:
+    cloud_sync: true
+    offline: partial
+    collaboration: true
+    web_native: partial
 feature_notes:
-  lyrics: Song database of 10,000+ songs, shown as text or sheet music; billed per songbook used.
-  remote_control: The paid LiveBeamer add-on lets the presentation be followed on any device via a URL; this is a viewer rather than a full remote.
+  songs.library: Song database of 10,000+ songs from Dutch songbooks, shown as text or sheet music; billed €1 per songbook used each month.
+  songs.ccli_reporting: CCLI Auto Reporting is not available, so songs must be reported to CCLI manually.
+  bible.builtin: 11 Dutch and regional-language translations, including the public-domain Statenvertaling; each translation used costs €1 per month.
+  bible.licensed: Copyrighted translations such as NBV21, Herziene Statenvertaling and Bijbel in Gewone Taal are included, with no separate licence needed.
+  slides.powerpoint: .ppt/.pptx files are uploaded and converted; they cannot be edited in KerkBeamer and can loop with a set time per slide.
+  media.video: Uploaded videos are converted to MP4 and can be trimmed.
+  media.youtube: The documentation states YouTube videos or URLs cannot be added.
+  sources.camera: The paid TV broadcasts add-on (or the separate CameraRegie product) controls PTZ cameras and a Blackmagic ATEM switcher, so camera images can be put on the projector.
+  sources.interaction: The paid LiveBeamer add-on lets people follow the presentation on their own phone, tablet or laptop via a URL.
+  multilingual.ui: The interface and documentation are Dutch only.
+  multilingual.bible_translations: Translations include Frisian, Twents and Gronings as well as standard Dutch.
+  automation.ai: Live sermon captions from speech recognition can be shown through an integration with Preekondertiteling.nl, which needs its own subscription.
+  outputs.multiple: Extra outputs for a church TV broadcast can be driven alongside the projector output.
+  outputs.lower_thirds: The paid TV broadcasts add-on provides subtitles and text-over-video using a separate alpha (key) output or chroma key.
+  outputs.web_output: The paid LiveBeamer add-on shows the live presentation as a web page on any device.
+  connectivity.offline: Presentations are stored online and must be loaded over the internet; once loaded they play without a connection.
+  connectivity.collaboration: Team members can work on presentations and templates at the same time.
+  connectivity.web_native: Presentations are prepared in the browser, but playback in church uses the KerkBeamer software for Windows or macOS.
 languages: [Dutch]
 sources:
   - https://kerkbeamer.nl
-  - https://kerkbeamer.nl/tarieven
+  - https://kerkbeamer.nl/tarieven/
+  - https://kerkbeamer.nl/kerkpresentaties/
+  - https://kerkbeamer.nl/database/
+  - https://kerkbeamer.nl/tv-uitzendingen/
+  - https://kerkbeamer.nl/cameraregie/
+  - https://kerkbeamer.nl/nieuw-livebeamer/
+  - https://kerkbeamer.nl/kerkbeamer-update-april/
+  - https://kerkbeamer.nl/kerkbeamer-beschikbaar-voor-macos/
+  - https://documentatie2.kerkbeamer.nl/artikelen/software-kerkbeamer-2
+  - https://documentatie2.kerkbeamer.nl/artikelen/wat-als-er-geen-internet-is-in-de-kerk
+  - https://documentatie2.kerkbeamer.nl/artikelen/powerpoint
+  - https://documentatie2.kerkbeamer.nl/artikelen/video
+  - https://documentatie2.kerkbeamer.nl/artikelen/rapporteren-aan-ccli
+  - https://documentatie2.kerkbeamer.nl/artikelen/overzicht-bijbelvertalingen
+  - https://documentatie2.kerkbeamer.nl/artikelen/extra-uitgang-voor-tv-uitzendingen
+  - https://documentatie2.kerkbeamer.nl/artikelen/transparantie-in-kerktv-uitzendingen
+  - https://documentatie2.kerkbeamer.nl/artikelen/integratie-preekondertiteling
+  - https://documentatie2.kerkbeamer.nl/artikelen/videomixer-koppelen
 last_verified: 2026-11-04

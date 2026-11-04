@@ -15,7 +15,7 @@ body:
     id: description
     attributes:
       label: Short description
-      description: One or two neutral sentences — what it is and who it's for.
+      description: One or two neutral sentences: what it is and who it's for.
     validations: { required: true }
   - type: checkboxes
     id: platforms
@@ -38,6 +38,9 @@ body:
   - type: input
     id: source
     attributes: { label: Source code URL (if open source) }
+  - type: input
+    id: logo
+    attributes: { label: Logo URL, description: Link to an official logo or app icon (SVG or square PNG) }
   - type: textarea
     id: features
     attributes:

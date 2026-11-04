@@ -10,6 +10,7 @@ description: >-
   for small churches and select non-profits, and an offline desktop app
   (TheOpenPresenter Studio) is available.
 website: https://theopenpresenter.com
+logo: /logos/theopenpresenter.png
 developer: TheOpenPresenter
 headquarters: United Kingdom
 founded: 2024
@@ -25,21 +26,60 @@ platforms: [web, windows, macos]
 deployment: [cloud, desktop, self_hosted]
 output_note: Any device with a modern web browser can be used as an output screen or remote.
 features:
-  lyrics: true
-  bible: true
-  slides_import: true
-  video_playback: true
-  audio_playback: true
-  web_content: true
-  timers: true
-  remote_control: true
-  collaboration: true
-  cloud_sync: true
-  multiple_outputs: true
-  offline: partial
+  songs:
+    library: true
+    chords: true
+    auto_import: true
+  bible:
+    builtin: true
+  slides:
+    powerpoint: true
+    google_slides: true
+    canva: true
+    pdf: true
+    animations: true
+  media:
+    video: true
+    audio: true
+    images: true
+    youtube: true
+  sources:
+    web: true
+    timers: true
+    screen_share: true
+    interaction: true
+  multilingual:
+    bible_translations: true
+  software_integrations:
+    planning_center: true
+    churchsuite: true
+  automation:
+    plugins: true
+    ai: true
+  outputs:
+    multiple: true
+    web_output: true
+  tv_output:
+    apple_tv: true
+    android_tv: true
+    fire_tv: true
+  connectivity:
+    cloud_sync: true
+    offline: partial
+    remote_control: true
+    collaboration: true
+    web_native: true
 feature_notes:
-  offline: Offline use is provided by the TheOpenPresenter Studio desktop app (stable on Windows, alpha on macOS).
-  video_playback: Plays local files and online sources such as YouTube.
+  sources.interaction: Slido polls and Q&A can be shown through the Slido plugin.
+  automation.ai: AI formats pasted lyrics into sections and slides.
+  automation.plugins: Features are built as plugins on a modular architecture.
+  connectivity.offline: Offline use is provided by the TheOpenPresenter Studio desktop app (stable on Windows, alpha on macOS).
+  bible.builtin: Over a thousand freely licensed translations are available through the Beblia and Free Use Bible API catalogues.
+  slides.animations: PowerPoint imports keep their slideshow data so animations play click by click.
+  software_integrations.planning_center: Setlists can be imported from Planning Center.
+  software_integrations.churchsuite: Setlists can be imported from ChurchSuite.
+  tv_output.android_tv: TheOpenPresenter TV app for Android TV and Apple TV; a Fire TV (Vega OS) version is also built.
+  songs.auto_import: Songs can be pulled from MyWorshipList.
 docs_url: https://docs.theopenpresenter.com
 sources:
   - https://github.com/Vija02/TheOpenPresenter

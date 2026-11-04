@@ -9,31 +9,88 @@ description: >-
   WebSocket. A Windows desktop app built with Tauri is also available; the
   source code is published on GitHub.
 website: https://www.cloudofworship.com
+logo: /logos/cloud-of-worship.svg
 developer: CoW Labs
 headquarters: Nigeria
 founded: 2024
 status: active
 open_source: false
+license: PolyForm-Shield-1.0.0
 source_code_url: https://github.com/CoW-Labs/cloudofworship
 pricing:
-  models: [free, donation]
+  models: [freemium]
   free_trial: false
   pricing_url: https://www.cloudofworship.com/pricing
-  notes: Free without watermarks; the project asks for donations.
+  notes: The free Starter plan has no watermarks; a paid Teams plan adds stage display, phone control, countdowns, team invites and other features.
 platforms: [web, windows]
 deployment: [cloud, desktop]
 features:
-  lyrics: true
-  bible: true
-  video_playback: true
-  collaboration: true
-  cloud_sync: true
-  offline: true
+  songs:
+    library: true
+    import_text: true
+    auto_import: addon
+    backgrounds: true
+  bible:
+    builtin: true
+    licensed: true
+  slides:
+    powerpoint: true
+    pdf: true
+    animations: false
+  media:
+    video: true
+    audio: true
+    images: true
+    youtube: addon
+  sources:
+    camera: partial
+    timers: addon
+    messages: addon
+  multilingual:
+    bilingual_display: true
+  automation:
+    ai: addon
+  outputs:
+    stage_display: addon
+    web_output: addon
+  broadcast_video:
+    ndi: true
+  connectivity:
+    cloud_sync: true
+    offline: true
+    remote_control: addon
+    collaboration: addon
+    web_native: true
 feature_notes:
-  lyrics: Includes access to a shared library of 7,000+ songs contributed by churches (cloud feature).
-  collaboration: Real-time "Multiplayer Mode" (cloud feature).
+  songs.library: Over 3,000 hymns are stored offline and churches can save their own songs on the free Starter plan.
+  songs.import_text: Lyrics can be pasted in; bracketed English lines are turned into a translation.
+  songs.auto_import: Searching the shared library of 15,000+ church-contributed songs is a Teams (paid) feature, with a metered free allowance.
+  songs.backgrounds: Slides can use colour, gradient, image or video backgrounds.
+  bible.builtin: KJV, ASV, YLT and WEB are offered and stored offline on the device.
+  bible.licensed: NKJV and NIV are listed among the available versions.
+  slides.powerpoint: PowerPoint files are converted to PDF on the server and imported as page images.
+  slides.animations: Imported PowerPoint and PDF files become static page images.
+  media.youtube: YouTube and Vimeo video slides are a Teams (paid) feature.
+  sources.camera: Camera slides with effects exist but are hidden behind a feature flag as of v1.4.1.
+  sources.timers: Countdown timers, time slides and stage clocks are Teams (paid) features.
+  sources.messages: Banners and alerts are a Teams (paid) feature.
+  multilingual.bilingual_display: Songs can carry a translation alongside the main lyrics.
+  automation.ai: Live sermon transcription with Bible-reference detection, voice commands and sermon summaries is a Teams (paid) feature and needs an internet connection.
+  outputs.stage_display: Stage display (current and next slide plus clock) is a Teams (paid) feature.
+  outputs.web_output: A livestream link that shows the live output in a browser is a Teams feature; free churches get a limited number of sessions.
+  broadcast_video.ndi: NDI output is available only in the Windows desktop app, not the browser version.
+  connectivity.remote_control: Running the service from a phone is a Teams (paid) feature.
+  connectivity.collaboration: Real-time multiplayer and inviting teammates to the workspace are Teams (paid) features.
 sources:
   - https://github.com/CoW-Labs/cloudofworship
+  - https://github.com/CoW-Labs/cloudofworship/blob/main/app/composables/useSubscription.ts
+  - https://github.com/CoW-Labs/cloudofworship/blob/main/app/utils/constants.ts
   - https://cow-labs.github.io/cloudofworship/
   - https://www.cloudofworship.com/pricing
+  - https://www.cloudofworship.com/features/bible-verses
+  - https://www.cloudofworship.com/features/song-lyrics
+  - https://www.cloudofworship.com/features/live-projection
+  - https://www.cloudofworship.com/features/live-transcription
+  - https://www.cloudofworship.com/download
+  - https://www.cloudofworship.com/changelog
 last_verified: 2026-11-04
