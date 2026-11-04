@@ -42,4 +42,4 @@ The workflow runs Claude Code on the maintainer's Claude subscription: it needs 
 
 ## Screenshots
 
-Product pages show a screenshot of the product's homepage (`website`). `pnpm screenshots` captures them into `public/screenshots/` with the same settings for every product (1280×800, cookie banners hidden). They aren't committed: the Deploy workflow captures them once a month (and for new or edited products) and caches them between deploys. If a site fails to load, the previous screenshot is kept.
+Product pages show a small screenshot of the product's homepage (`website`) in the sidebar. `pnpm screenshots` captures them into `public/screenshots/` with the same settings for every product (1280×800; cookie banners, ad slots and floating third-party widgets hidden). They aren't committed: the Deploy workflow recaptures them when the month, a product file or the capture script changes, and caches them between deploys. If a site fails to load, the previous screenshot is kept.
