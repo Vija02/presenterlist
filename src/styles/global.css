@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --color-brand-50: oklch(0.97 0.02 285);
+  --color-brand-100: oklch(0.94 0.04 285);
+  --color-brand-200: oklch(0.88 0.08 285);
+  --color-brand-400: oklch(0.7 0.16 285);
+  --color-brand-500: oklch(0.6 0.2 285);
+  --color-brand-600: oklch(0.52 0.21 285);
+  --color-brand-700: oklch(0.45 0.19 285);
+  --color-brand-900: oklch(0.3 0.12 285);
+}
+
+@layer base {
+  html {
+    @apply bg-white text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100;
+    scroll-behavior: smooth;
+  }
+  a {
+    @apply underline-offset-2;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-500;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors bg-brand-600 text-white hover:bg-brand-700;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors border border-zinc-300 bg-white text-zinc-800 hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800;
+  }
+  .card {
+    @apply rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900;
+  }
+  .link {
+    @apply text-brand-600 hover:underline dark:text-brand-400;
+  }
+  .prose-p p + p {
+    @apply mt-3;
+  }
+  .h-section {
+    @apply mb-3 text-lg font-semibold tracking-tight;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-full border border-zinc-200 px-2.5 py-0.5 text-xs text-zinc-700 dark:border-zinc-700 dark:text-zinc-300;
+  }
+}
+
+/* Comparison rows where products differ (applied to cells so sticky columns match). */
+tr.is-diff > th,
+tr.is-diff > td {
+  background-color: var(--color-brand-50);
+}
+@media (prefers-color-scheme: dark) {
+  tr.is-diff > th,
+  tr.is-diff > td {
+    background-color: color-mix(in oklch, var(--color-brand-900) 35%, var(--color-zinc-900));
+  }
+}

@@ -1,0 +1,274 @@
+---
+import Base from "../layouts/Base.astro";
+import ProductCard from "../components/ProductCard.astro";
+import { FEATURE_GROUPS, PLATFORMS } from "../lib/schema.ts";
+import { featureCount, filterTags, getProducts, latestVerified, supports } from "../lib/products.ts";
+import { SITE_NAME } from "../config.ts";
+
+const products = await getProducts();
+const platformCounts = Object.fromEntries(
+  Object.keys(PLATFORMS).map((k) => [k, products.filter((p) => p.platforms.includes(k as any)).length]),
+);
+const typeFilters = [
+  { tag: "open-source", label: "Open source" },
+  { tag: "free", label: "Free" },
+  { tag: "free-option", label: "Free or freemium" },
+  { tag: "trial", label: "Free trial" },
+  { tag: "price-subscription", label: "Subscription" },
+  { tag: "price-one_time", label: "One-time purchase" },
+  { tag: "deploy-cloud", label: "Cloud / hosted" },
+  { tag: "deploy-self_hosted", label: "Self-hostable" },
+];
+const typeCount = (tag: string) => products.filter((p) => filterTags(p).split(" ").includes(tag)).length;
+const updated = latestVerified(products);
+const openSourceCount = products.filter((p) => p.open_source).length;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: `${SITE_NAME} directory`,
+  numberOfItems: products.length,
+  itemListElement: products.map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: new URL(`/software/${p.slug}/`, Astro.site).toString(),
+    name: p.name,
+  })),
+};
+---
+
+<Base jsonLd={jsonLd}>
+  <section class="border-b border-zinc-200 bg-gradient-to-b from-brand-50 to-white dark:border-zinc-800 dark:from-brand-900/20 dark:to-zinc-950">
+    <div class="container-page py-12 sm:py-16">
+      <h1 class="max-w-3xl text-3xl font-bold tracking-tight sm:text-5xl">The open directory of church presentation software</h1>
+      <p class="mt-4 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
+        Compare {products.length} lyrics, scripture and media presentation tools by price, platform and features —
+        from ProPresenter and EasyWorship to free and open-source options.
+      </p>
+      <dl class="mt-8 flex flex-wrap gap-x-10 gap-y-4 text-sm">
+        <div><dt class="text-zinc-500">Products</dt><dd class="text-2xl font-semibold">{products.length}</dd></div>
+        <div><dt class="text-zinc-500">Open source</dt><dd class="text-2xl font-semibold">{openSourceCount}</dd></div>
+        <div><dt class="text-zinc-500"><a href="/features/" class="hover:underline">Features tracked</a></dt><dd class="text-2xl font-semibold">{Object.values(FEATURE_GROUPS).reduce((n, g) => n + Object.keys(g.features).length, 0)}</dd></div>
+        <div><dt class="text-zinc-500">Last updated</dt><dd class="text-2xl font-semibold">{updated}</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <div class="container-page mt-8 grid gap-8 lg:grid-cols-[16rem_1fr]">
+    <!-- Filters -->
+    <aside id="filters" class="hidden lg:block" aria-label="Filters">
+      <form id="filter-form" class="space-y-6 text-sm lg:sticky lg:top-20 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto lg:pr-2">
+        <div class="flex items-center justify-between lg:hidden">
+          <p class="font-semibold">Filters</p>
+          <button type="button" id="filters-close" class="btn-secondary px-3! py-1!">Done</button>
+        </div>
+        <fieldset>
+          <legend class="mb-2 font-semibold">Type &amp; pricing</legend>
+          {typeFilters.map((f) => (
+            <label class="flex items-center gap-2 py-0.5">
+              <input type="checkbox" name="type" value={f.tag} class="accent-brand-600" />
+              <span class="flex-1">{f.label}</span><span class="text-xs text-zinc-400">{typeCount(f.tag)}</span>
+            </label>
+          ))}
+          <label class="mt-2 flex items-center gap-2 py-0.5">
+            <input type="checkbox" name="hide-inactive" value="1" class="accent-brand-600" checked />
+            <span>Hide discontinued</span>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend class="mb-2 font-semibold">Platform</legend>
+          <p class="mb-1 text-xs text-zinc-500">Runs on any selected</p>
+          {Object.entries(PLATFORMS).map(([k, label]) => (
+            <label class="flex items-center gap-2 py-0.5">
+              <input type="checkbox" name="platform" value={k} class="accent-brand-600" />
+              <span class="flex-1">{label}</span><span class="text-xs text-zinc-400">{platformCounts[k]}</span>
+            </label>
+          ))}
+        </fieldset>
+        {Object.values(FEATURE_GROUPS).map((g) => (
+          <fieldset>
+            <legend class="mb-2 font-semibold">{g.label}</legend>
+            {Object.entries(g.features).map(([k, label]) => (
+              <label class="flex items-start gap-2 py-0.5">
+                <input type="checkbox" name="feature" value={k} class="mt-0.5 accent-brand-600" />
+                <span class="flex-1">{label}</span><span class="text-xs text-zinc-400">{products.filter((p) => supports(p, k as any)).length}</span>
+              </label>
+            ))}
+          </fieldset>
+        ))}
+        <button type="reset" class="btn-secondary w-full">Reset filters</button>
+      </form>
+    </aside>
+
+    <section aria-labelledby="results-heading">
+      <div class="mb-4 flex flex-wrap items-center gap-3">
+        <h2 id="results-heading" class="sr-only">Products</h2>
+        <div class="relative min-w-0 flex-1 basis-full sm:basis-auto">
+          <input id="search" type="search" placeholder="Search by name, developer or description…" aria-label="Search products"
+            class="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900" />
+        </div>
+        <select id="sort" aria-label="Sort" class="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900">
+          <option value="name">Name A–Z</option>
+          <option value="features">Most features</option>
+          <option value="newest">Newest</option>
+        </select>
+        <button type="button" id="filters-open" class="btn-secondary lg:hidden">Filters <span id="filter-count" class="hidden rounded-full bg-brand-600 px-1.5 text-xs text-white"></span></button>
+      </div>
+      <p class="mb-4 text-sm text-zinc-500" aria-live="polite"><span id="result-count">{products.length}</span> products</p>
+
+      <ul id="grid" class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        {products.map((p) => (
+          <ProductCard
+            product={p}
+            compareToggle
+            attrs={{
+              "data-product": p.slug,
+              "data-search": `${p.name} ${p.developer} ${p.tagline} ${p.description}`.toLowerCase(),
+              "data-tags": filterTags(p),
+              "data-platforms": p.platforms.join(" "),
+              "data-features": Object.entries(p.features ?? {}).filter(([, v]) => v === true || v === "partial" || v === "addon").map(([k]) => k).join(" "),
+              "data-status": p.status,
+              "data-score": String(featureCount(p)),
+              "data-founded": String(p.founded ?? 0),
+            }}
+          />
+        ))}
+      </ul>
+      <p id="empty" class="hidden rounded-xl border border-dashed border-zinc-300 p-10 text-center text-zinc-500 dark:border-zinc-700">
+        No products match these filters. <button type="button" id="empty-reset" class="link">Reset filters</button>
+      </p>
+    </section>
+  </div>
+
+  <!-- Compare tray -->
+  <div id="compare-tray" class="fixed inset-x-0 bottom-4 z-40 hidden px-4">
+    <div class="card mx-auto flex max-w-3xl items-center gap-3 p-3 shadow-xl">
+      <p class="min-w-0 flex-1 truncate text-sm"><span class="font-medium">Compare:</span> <span id="compare-names"></span></p>
+      <button type="button" id="compare-clear" class="btn-secondary px-3! py-1.5!">Clear</button>
+      <a id="compare-go" href="/compare/" class="btn-primary px-3! py-1.5!">Compare</a>
+    </div>
+  </div>
+</Base>
+
+<script>
+  const form = document.getElementById("filter-form") as HTMLFormElement;
+  const search = document.getElementById("search") as HTMLInputElement;
+  const sort = document.getElementById("sort") as HTMLSelectElement;
+  const grid = document.getElementById("grid")!;
+  const cards = [...grid.querySelectorAll<HTMLElement>("[data-product]")];
+  const countEl = document.getElementById("result-count")!;
+  const empty = document.getElementById("empty")!;
+  const filterCount = document.getElementById("filter-count")!;
+  const aside = document.getElementById("filters")!;
+
+  const checked = (name: string) =>
+    [...form.querySelectorAll<HTMLInputElement>(`input[name="${name}"]:checked`)].map((i) => i.value);
+
+  function apply() {
+    const q = search.value.trim().toLowerCase();
+    const types = checked("type");
+    const platforms = checked("platform");
+    const features = checked("feature");
+    const hideInactive = checked("hide-inactive").length > 0;
+    let n = 0;
+    for (const c of cards) {
+      const tags = c.dataset.tags!.split(" ");
+      const plats = c.dataset.platforms!.split(" ");
+      const feats = c.dataset.features!.split(" ");
+      const ok =
+        (!q || c.dataset.search!.includes(q)) &&
+        types.every((t) => tags.includes(t)) &&
+        (platforms.length === 0 || platforms.some((p) => plats.includes(p))) &&
+        features.every((f) => feats.includes(f)) &&
+        (!hideInactive || c.dataset.status !== "discontinued");
+      c.hidden = !ok;
+      if (ok) n++;
+    }
+    countEl.textContent = String(n);
+    empty.classList.toggle("hidden", n > 0);
+    const active = types.length + platforms.length + features.length;
+    filterCount.textContent = String(active);
+    filterCount.classList.toggle("hidden", active === 0);
+    syncUrl({ q, types, platforms, features, hideInactive });
+  }
+
+  function doSort() {
+    const by = sort.value;
+    const sorted = [...cards].sort((a, b) => {
+      if (by === "features") return Number(b.dataset.score) - Number(a.dataset.score);
+      if (by === "newest") return Number(b.dataset.founded) - Number(a.dataset.founded);
+      return 0; // DOM order is already A–Z
+    });
+    if (by === "name") sorted.sort((a, b) => cards.indexOf(a) - cards.indexOf(b));
+    grid.append(...sorted);
+  }
+
+  function syncUrl(s: { q: string; types: string[]; platforms: string[]; features: string[]; hideInactive: boolean }) {
+    const u = new URL(location.href);
+    u.search = "";
+    if (s.q) u.searchParams.set("q", s.q);
+    if (s.types.length) u.searchParams.set("type", s.types.join(","));
+    if (s.platforms.length) u.searchParams.set("platform", s.platforms.join(","));
+    if (s.features.length) u.searchParams.set("feature", s.features.join(","));
+    if (!s.hideInactive) u.searchParams.set("all", "1");
+    if (sort.value !== "name") u.searchParams.set("sort", sort.value);
+    history.replaceState(null, "", u);
+  }
+
+  function readUrl() {
+    const p = new URLSearchParams(location.search);
+    search.value = p.get("q") ?? "";
+    const set = (name: string, key: string) => {
+      const vals = (p.get(key) ?? "").split(",").filter(Boolean);
+      form.querySelectorAll<HTMLInputElement>(`input[name="${name}"]`).forEach((i) => (i.checked = vals.includes(i.value)));
+    };
+    set("type", "type");
+    set("platform", "platform");
+    set("feature", "feature");
+    (form.querySelector('input[name="hide-inactive"]') as HTMLInputElement).checked = p.get("all") !== "1";
+    if (p.get("sort")) sort.value = p.get("sort")!;
+  }
+
+  readUrl();
+  doSort();
+  apply();
+  form.addEventListener("change", apply);
+  form.addEventListener("reset", () => setTimeout(apply));
+  search.addEventListener("input", apply);
+  sort.addEventListener("change", () => { doSort(); apply(); });
+  document.getElementById("empty-reset")!.addEventListener("click", () => { form.reset(); search.value = ""; setTimeout(apply); });
+
+  // Mobile filter drawer
+  const openDrawer = (open: boolean) => {
+    aside.classList.toggle("hidden", !open);
+    aside.classList.toggle("max-lg:fixed", open);
+    aside.classList.toggle("max-lg:inset-0", open);
+    aside.classList.toggle("max-lg:z-50", open);
+    aside.classList.toggle("max-lg:overflow-y-auto", open);
+    aside.classList.toggle("max-lg:bg-white", open);
+    aside.classList.toggle("max-lg:dark:bg-zinc-950", open);
+    aside.classList.toggle("max-lg:p-6", open);
+    document.body.classList.toggle("overflow-hidden", open);
+  };
+  document.getElementById("filters-open")!.addEventListener("click", () => openDrawer(true));
+  document.getElementById("filters-close")!.addEventListener("click", () => openDrawer(false));
+
+  // Compare tray
+  const tray = document.getElementById("compare-tray")!;
+  const names = document.getElementById("compare-names")!;
+  const go = document.getElementById("compare-go") as HTMLAnchorElement;
+  const toggles = [...document.querySelectorAll<HTMLInputElement>(".compare-toggle")];
+  const MAX = 4;
+  function updateTray() {
+    const sel = toggles.filter((t) => t.checked);
+    tray.classList.toggle("hidden", sel.length === 0);
+    names.textContent = sel.length < 2 ? `${sel.map((t) => t.dataset.name).join(", ")} — pick at least one more` : sel.map((t) => t.dataset.name).join(", ");
+    go.href = `/compare/?p=${sel.map((t) => t.value).join(",")}`;
+    go.classList.toggle("pointer-events-none", sel.length < 2);
+    go.classList.toggle("opacity-50", sel.length < 2);
+    toggles.forEach((t) => (t.disabled = !t.checked && sel.length >= MAX));
+  }
+  toggles.forEach((t) => t.addEventListener("change", updateTray));
+  document.getElementById("compare-clear")!.addEventListener("click", () => { toggles.forEach((t) => (t.checked = false)); updateTray(); });
+  updateTray();
+</script>

@@ -1,0 +1,51 @@
+name: Quelea
+tagline: Free, open-source Java-based projection software for churches.
+description: >-
+  Quelea is a free, open-source church projection program written in Java
+  (JavaFX). It displays songs, Bible passages, images, videos, PDFs, websites
+  and PowerPoint presentations from an order of service, and includes a stage
+  view with chords, notices, countdown timers and audio recording. Lyrics can
+  be pushed to phones over the local network, and a mobile remote lets
+  another device control the projection. The latest stable release is 2024.0
+  (February 2024); development activity in the repository has continued since.
+website: https://quelea.org
+developer: Quelea project (volunteer community)
+status: maintenance
+status_note: Last stable release 2024.0 on 2 February 2024; occasional commits were still made in 2026.
+open_source: true
+license: GPL-3.0-or-later
+source_code_url: https://github.com/quelea-projection/Quelea
+pricing:
+  models: [free]
+  free_trial: false
+platforms: [windows, macos, linux]
+deployment: [desktop]
+output_note: Mobile Lyrics can be viewed in any web browser on the local network.
+features:
+  lyrics: true
+  bible: true
+  slides_import: partial
+  video_playback: true
+  web_content: true
+  timers: true
+  ccli_songselect: partial
+  planning_center: true
+  stage_display: true
+  remote_control: true
+  offline: true
+feature_notes:
+  slides_import: Displays PowerPoint and PDF files (optionally driving PowerPoint itself on Windows); no Keynote or Google Slides import.
+  bible: Uses Bibles in the Zefania XML format.
+  web_content: Websites can be displayed, with documented limitations.
+  ccli_songselect: Imports downloaded SongSelect USR files; no direct online SongSelect connection.
+  planning_center: Imports schedules from Planning Center Online.
+  remote_control: Web-based Mobile Remote and a Quelea Mobile Remote app.
+languages: [English, German, Spanish, Swedish, Czech, Hungarian, Norwegian, Dutch, Lithuanian, Portuguese]
+docs_url: https://quelea-projection.github.io/docs/
+community_url: https://quelea.discourse.group/
+sources:
+  - https://quelea.org/
+  - https://github.com/quelea-projection/Quelea
+  - https://github.com/quelea-projection/Quelea/releases
+  - https://quelea-projection.github.io/docs/
+last_verified: 2026-11-04

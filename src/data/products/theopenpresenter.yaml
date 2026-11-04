@@ -1,0 +1,47 @@
+name: TheOpenPresenter
+tagline: Open-source, browser-based presenter you can run and control from any device.
+description: >-
+  TheOpenPresenter is a modular, open-source presentation platform built for
+  smaller venues such as churches, community halls and conferences. Content is
+  managed in the browser and any device that can open a web page can act as an
+  output screen or a remote. Features are delivered as plugins (lyrics, Bible,
+  slides, video, timers, audio recording and more), and multiple people can
+  collaborate on the same presentation in real time. A hosted version is free
+  for small churches and select non-profits, and an offline desktop app
+  (TheOpenPresenter Studio) is available.
+website: https://theopenpresenter.com
+developer: TheOpenPresenter
+headquarters: United Kingdom
+founded: 2024
+status: active
+open_source: true
+license: AGPL-3.0-only
+source_code_url: https://github.com/Vija02/TheOpenPresenter
+pricing:
+  models: [free]
+  free_trial: false
+  notes: The hosted version is free for small churches and select non-profits; the code can be self-hosted.
+platforms: [web, windows, macos]
+deployment: [cloud, desktop, self_hosted]
+output_note: Any device with a modern web browser can be used as an output screen or remote.
+features:
+  lyrics: true
+  bible: true
+  slides_import: true
+  video_playback: true
+  audio_playback: true
+  web_content: true
+  timers: true
+  remote_control: true
+  collaboration: true
+  cloud_sync: true
+  multiple_outputs: true
+  offline: partial
+feature_notes:
+  offline: Offline use is provided by the TheOpenPresenter Studio desktop app (stable on Windows, alpha on macOS).
+  video_playback: Plays local files and online sources such as YouTube.
+docs_url: https://docs.theopenpresenter.com
+sources:
+  - https://github.com/Vija02/TheOpenPresenter
+  - https://theopenpresenter.com
+last_verified: 2026-11-04

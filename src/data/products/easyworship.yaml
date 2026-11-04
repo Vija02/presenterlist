@@ -1,0 +1,54 @@
+name: EasyWorship
+tagline: Subscription worship presentation software for Windows and Mac.
+description: >-
+  EasyWorship is a church presentation application for lyrics, scripture,
+  sermon slides and media. It includes a built-in Bible with over 100
+  translations, CCLI SongSelect import with automatic usage reporting, and NDI
+  output for livestreaming. Version 8, released in April 2026, added native
+  support for Apple Silicon Macs alongside Windows. It is sold as a
+  subscription, with a higher tier that adds a stock media library.
+website: https://www.easyworship.com/
+developer: EasyWorship
+headquarters: United States
+status: active
+open_source: false
+pricing:
+  models: [subscription]
+  free_trial: true
+  starting_price: $17.50/month or $210/year (Basic)
+  pricing_url: https://www.easyworship.com/pricing
+  notes: >-
+    Basic and Premium plans; Premium adds a library of backgrounds, countdowns
+    and an online media designer. Advertised prices are "starting at" and vary
+    by average weekly attendance. Each plan covers one campus. 30-day free trial.
+platforms: [windows, macos]
+deployment: [desktop]
+features:
+  lyrics: true
+  bible: true
+  slides_import: true
+  video_playback: true
+  web_content: true
+  timers: true
+  ccli_songselect: true
+  ccli_reporting: true
+  ndi: true
+  live_video_input: true
+  midi: true
+  multiple_outputs: true
+  stage_display: true
+  remote_control: true
+feature_notes:
+  web_content: A built-in web browser (added in 7.4) can show live web pages and YouTube or Vimeo video.
+  ndi: NDI can be used as a live output and as a capture source.
+  midi: MIDI input and MIDI sync for controlling schedules across computers.
+  multiple_outputs: Alternate outputs for additional displays (added in 7.3).
+  remote_control: Free EasyWorship Remote app for iOS and Android.
+  slides_import: PowerPoint import.
+docs_url: https://support.easyworship.com/
+sources:
+  - https://www.easyworship.com/
+  - https://www.easyworship.com/pricing
+  - https://www.easyworship.com/software/whatsnew
+  - https://blog.easyworship.com/?p=1637
+last_verified: 2026-11-04

@@ -1,0 +1,151 @@
+---
+import "../styles/global.css";
+import { SITE_NAME, SITE_DESCRIPTION, REPO_URL, newProductIssueUrl } from "../config.ts";
+
+interface Props {
+  title?: string;
+  description?: string;
+  jsonLd?: unknown | unknown[];
+  breadcrumbs?: { label: string; href?: string }[];
+}
+const { title, description = SITE_DESCRIPTION, jsonLd, breadcrumbs } = Astro.props;
+const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} – Compare church presentation software`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const path = Astro.url.pathname;
+
+const nav = [
+  { href: "/", label: "Directory" },
+  { href: "/compare/", label: "Compare" },
+  { href: "/features/", label: "Features" },
+  { href: "/platforms/", label: "Platforms" },
+  { href: "/about/", label: "About" },
+];
+const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
+
+const ld = [
+  ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []),
+  ...(breadcrumbs?.length
+    ? [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [{ label: "Home", href: "/" }, ...breadcrumbs].map((b, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: b.label,
+            ...(b.href ? { item: new URL(b.href, Astro.site).toString() } : {}),
+          })),
+        },
+      ]
+    : []),
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#5b3fd6" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    {ld.map((x) => <script type="application/ld+json" set:html={JSON.stringify(x)} />)}
+  </head>
+  <body class="flex min-h-screen flex-col">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 btn-primary">Skip to content</a>
+    <header class="sticky top-0 z-30 border-b border-zinc-200 bg-white/85 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/85">
+      <div class="container-page flex h-14 items-center gap-6">
+        <a href="/" class="flex items-center gap-2 font-semibold tracking-tight no-underline">
+          <img src="/favicon.svg" alt="" width="24" height="24" />
+          <span>Presenter<span class="text-brand-600 dark:text-brand-400">List</span></span>
+        </a>
+        <nav class="hidden items-center gap-1 md:flex" aria-label="Main">
+          {
+            nav.map((n) => (
+              <a
+                href={n.href}
+                class:list={[
+                  "rounded-md px-3 py-1.5 text-sm no-underline transition-colors",
+                  isActive(n.href)
+                    ? "bg-zinc-100 font-medium text-zinc-900 dark:bg-zinc-800 dark:text-white"
+                    : "text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white",
+                ]}
+                aria-current={isActive(n.href) ? "page" : undefined}
+              >
+                {n.label}
+              </a>
+            ))
+          }
+        </nav>
+        <div class="ml-auto flex items-center gap-2">
+          <a href={REPO_URL} class="hidden text-sm text-zinc-600 hover:text-zinc-900 sm:inline dark:text-zinc-400 dark:hover:text-white" rel="noopener">GitHub</a>
+          <a href={newProductIssueUrl} class="btn-primary !px-3 !py-1.5" rel="noopener">Submit product</a>
+        </div>
+      </div>
+      <nav class="container-page flex gap-1 overflow-x-auto pb-2 md:hidden" aria-label="Main (mobile)">
+        {
+          nav.map((n) => (
+            <a
+              href={n.href}
+              class:list={[
+                "shrink-0 rounded-md px-3 py-1 text-sm no-underline",
+                isActive(n.href) ? "bg-zinc-100 font-medium dark:bg-zinc-800" : "text-zinc-600 dark:text-zinc-400",
+              ]}
+            >
+              {n.label}
+            </a>
+          ))
+        }
+      </nav>
+    </header>
+
+    {
+      breadcrumbs && breadcrumbs.length > 0 && (
+        <nav aria-label="Breadcrumb" class="container-page pt-5 text-sm text-zinc-500">
+          <ol class="flex flex-wrap items-center gap-1.5">
+            <li><a href="/" class="hover:text-zinc-900 dark:hover:text-white">Home</a></li>
+            {breadcrumbs.map((b) => (
+              <li class="flex items-center gap-1.5">
+                <span aria-hidden="true">/</span>
+                {b.href ? <a href={b.href} class="hover:text-zinc-900 dark:hover:text-white">{b.label}</a> : <span class="text-zinc-700 dark:text-zinc-300" aria-current="page">{b.label}</span>}
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )
+    }
+
+    <main id="main" class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="mt-20 border-t border-zinc-200 py-10 text-sm text-zinc-500 dark:border-zinc-800">
+      <div class="container-page flex flex-col gap-6 md:flex-row md:justify-between">
+        <div class="max-w-md">
+          <p class="font-semibold text-zinc-800 dark:text-zinc-200">PresenterList</p>
+          <p class="mt-1">
+            An open, community-maintained directory of church presentation software. Data is
+            <a href={REPO_URL} class="link">open on GitHub</a> — corrections welcome.
+          </p>
+        </div>
+        <ul class="flex flex-wrap gap-x-5 gap-y-2">
+          {nav.map((n) => <li><a href={n.href} class="hover:text-zinc-900 dark:hover:text-white">{n.label}</a></li>)}
+          <li><a href="/products.json" class="hover:text-zinc-900 dark:hover:text-white">JSON data</a></li>
+          <li><a href={newProductIssueUrl} class="hover:text-zinc-900 dark:hover:text-white">Submit a product</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

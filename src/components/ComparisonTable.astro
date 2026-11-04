@@ -1,0 +1,92 @@
+---
+import Logo from "./Logo.astro";
+import FeatureMark from "./FeatureMark.astro";
+import { FEATURE_GROUPS, PLATFORMS, type FeatureKey } from "../lib/schema.ts";
+import { deploymentLabel, featureSlug, priceSummary, type P } from "../lib/products.ts";
+
+interface Props {
+  products: P[];
+  /** Adds data-col attributes so client JS can show/hide columns. */
+  selectable?: boolean;
+  /** Highlight rows where products differ. */
+  highlightDiff?: boolean;
+}
+const { products, selectable = false, highlightDiff = false } = Astro.props;
+const col = (p: P) => (selectable ? { "data-col": p.slug } : {});
+const differs = (k: FeatureKey) => highlightDiff && new Set(products.map((p) => String(p.features?.[k]))).size > 1;
+---
+
+<div class="card overflow-x-auto">
+  <table class="w-full min-w-max border-collapse text-sm">
+    <thead>
+      <tr class="border-b border-zinc-200 dark:border-zinc-800">
+        <th scope="col" class="sticky left-0 z-10 w-56 bg-white p-3 text-left font-medium text-zinc-500 dark:bg-zinc-900">Product</th>
+        {
+          products.map((p) => (
+            <th scope="col" class="min-w-36 p-3 text-left align-bottom" {...col(p)}>
+              <a href={`/software/${p.slug}/`} class="flex flex-col items-start gap-2 no-underline hover:text-brand-600 dark:hover:text-brand-400">
+                <Logo product={p} size="sm" />
+                <span class="font-semibold">{p.name}</span>
+              </a>
+            </th>
+          ))
+        }
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-zinc-50 dark:bg-zinc-950/50">
+        <th colspan={products.length + 1} scope="colgroup" class="sticky left-0 px-3 pt-4 pb-2 text-left text-xs font-semibold tracking-wide text-zinc-500 uppercase">Overview</th>
+      </tr>
+      <tr class="border-t border-zinc-100 dark:border-zinc-800/70">
+        <th scope="row" class="sticky left-0 bg-white p-3 text-left font-normal text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400">Price</th>
+        {products.map((p) => <td class="p-3" {...col(p)}>{priceSummary(p)}{p.pricing.free_trial && <span class="block text-xs text-zinc-500">Free trial</span>}</td>)}
+      </tr>
+      <tr class="border-t border-zinc-100 dark:border-zinc-800/70">
+        <th scope="row" class="sticky left-0 bg-white p-3 text-left font-normal text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400">Open source</th>
+        {products.map((p) => <td class="p-3" {...col(p)}>{p.open_source ? <span>Yes <span class="text-xs text-zinc-500">({p.license})</span></span> : "No"}</td>)}
+      </tr>
+      <tr class="border-t border-zinc-100 dark:border-zinc-800/70">
+        <th scope="row" class="sticky left-0 bg-white p-3 text-left font-normal text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400">Deployment</th>
+        {products.map((p) => <td class="p-3" {...col(p)}>{p.deployment.map(deploymentLabel).join(", ")}</td>)}
+      </tr>
+      <tr class="border-t border-zinc-100 dark:border-zinc-800/70">
+        <th scope="row" class="sticky left-0 bg-white p-3 text-left font-normal text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400">Status</th>
+        {products.map((p) => <td class="p-3 capitalize" {...col(p)}>{p.status}</td>)}
+      </tr>
+
+      <tr class="bg-zinc-50 dark:bg-zinc-950/50">
+        <th colspan={products.length + 1} scope="colgroup" class="sticky left-0 px-3 pt-4 pb-2 text-left text-xs font-semibold tracking-wide text-zinc-500 uppercase">Platforms</th>
+      </tr>
+      {
+        Object.entries(PLATFORMS).map(([k, label]) => (
+          <tr class="border-t border-zinc-100 dark:border-zinc-800/70">
+            <th scope="row" class="sticky left-0 bg-white p-3 text-left font-normal text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400">{label}</th>
+            {products.map((p) => <td class="p-3" {...col(p)}><FeatureMark value={p.platforms.includes(k as any)} /></td>)}
+          </tr>
+        ))
+      }
+
+      {
+        Object.values(FEATURE_GROUPS).map((g) => (
+          <>
+            <tr class="bg-zinc-50 dark:bg-zinc-950/50">
+              <th colspan={products.length + 1} scope="colgroup" class="sticky left-0 px-3 pt-4 pb-2 text-left text-xs font-semibold tracking-wide text-zinc-500 uppercase">{g.label}</th>
+            </tr>
+            {Object.entries(g.features).map(([k, label]) => (
+              <tr class:list={["border-t border-zinc-100 dark:border-zinc-800/70", differs(k as FeatureKey) && "is-diff"]} data-feature={k}>
+                <th scope="row" class="sticky left-0 bg-white p-3 text-left font-normal text-zinc-600 dark:bg-zinc-900 dark:text-zinc-400">
+                  <a href={`/features/${featureSlug(k)}/`} class="hover:text-zinc-900 hover:underline dark:hover:text-white">{label}</a>
+                </th>
+                {products.map((p) => (
+                  <td class="p-3" {...col(p)}>
+                    <FeatureMark value={p.features?.[k as FeatureKey]} note={p.feature_notes?.[k]} />
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </>
+        ))
+      }
+    </tbody>
+  </table>
+</div>

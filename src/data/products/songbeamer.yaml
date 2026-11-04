@@ -1,0 +1,59 @@
+name: SongBeamer
+tagline: German worship presentation software for songs, Bible texts and media, sold as a one-time licence.
+description: >-
+  SongBeamer is a worship presentation program from Germany for projecting
+  song lyrics, Bible passages, images, videos and short messages. It offers
+  full-text search across songs and Bible texts, chord display, PowerPoint
+  integration, an optional stage view with countdown, NDI output and MIDI/OSC
+  control. It runs on Windows, with a newer macOS version that does not yet
+  have the full feature set. Licences are one-time purchases that include a
+  year of updates.
+website: https://www.songbeamer.de/
+developer: Sebastian Zierer and RDD
+headquarters: Germany
+status: active
+open_source: false
+pricing:
+  models: [one_time]
+  free_trial: true
+  starting_price: €124 one-time (single computer)
+  pricing_url: https://www.songbeamer.de/bestellen.php
+  notes: >-
+    Single-seat licence €124; church licence for up to 5 PCs €195; unlimited
+    church licence €289 (prices include VAT). A licence covers both the Windows
+    and macOS versions. Updates are free for one year after purchase; later
+    updates are ordered separately. Songbooks and many Bible translations are
+    sold separately. A demo version can be downloaded.
+platforms: [windows, macos]
+deployment: [desktop]
+features:
+  lyrics: true
+  bible: true
+  slides_import: true
+  video_playback: true
+  timers: true
+  ccli_songselect: true
+  ccli_reporting: true
+  ndi: true
+  live_video_input: true
+  midi: true
+  multiple_outputs: true
+  stage_display: true
+  offline: true
+feature_notes:
+  bible: Many current Bible translations are available for purchase.
+  slides_import: PowerPoint and LibreOffice files can be added to the schedule, and lyrics can be imported from PowerPoint.
+  timers: Countdown shown on the stage view.
+  ndi: Text output to OBS Studio and other software via NDI or a text file.
+  live_video_input: Live video can be shown behind text.
+  midi: Control via MIDI and OSC.
+  ccli_reporting: Optional automatic reporting to CCLI, added in version 6.0.
+languages: [German, English]
+community_url: https://forum.songbeamer.de/
+sources:
+  - https://www.songbeamer.de/
+  - https://www.songbeamer.de/software.htm
+  - https://www.songbeamer.de/bestellen.php
+  - https://www.songbeamer.de/download.htm
+  - https://www.songbeamer.com/
+last_verified: 2026-11-04

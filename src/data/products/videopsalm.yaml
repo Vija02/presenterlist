@@ -1,0 +1,47 @@
+name: VideoPsalm
+tagline: Free Windows presentation software for lyrics, Bible verses and media.
+description: >-
+  VideoPsalm is a free church presentation program for Windows. It presents
+  song lyrics (with chords and transposition), Bible verses from a large
+  catalogue of downloadable translations, images, videos, PowerPoint and PDF
+  files, web pages and timers, organised into an agenda. It can run portably
+  from a USB drive and store data in a cloud-synced folder. It is freeware;
+  no source code license is published.
+website: https://videopsalm.org
+developer: VideoPsalm
+founded: 2011
+status: active
+open_source: false
+pricing:
+  models: [free]
+  free_trial: false
+platforms: [windows]
+deployment: [desktop]
+features:
+  lyrics: true
+  bible: true
+  slides_import: partial
+  video_playback: true
+  audio_playback: true
+  web_content: true
+  timers: true
+  live_video_input: true
+  ccli_songselect: partial
+  ccli_reporting: true
+  stage_display: true
+  remote_control: false
+  cloud_sync: partial
+  offline: true
+feature_notes:
+  slides_import: Presents PowerPoint (including animations), PDF and LibreOffice documents; no Keynote or Google Slides import.
+  bible: Over 3,000 Bible translations can be downloaded and added.
+  live_video_input: A live video feed can be used as a lyrics background.
+  ccli_songselect: Downloaded SongSelect .usr song files can be added to the agenda.
+  remote_control: A Wi-Fi remote and mobile app are listed as "coming soon" on the features page.
+  cloud_sync: Data can be kept in a third-party cloud folder (pCloud, Dropbox, OneDrive); there is no built-in sync service.
+sources:
+  - https://videopsalm.org/
+  - https://videopsalm.org/features/
+  - https://myvideopsalm.weebly.com/blog/add-a-songselect-ccli-usr-song-directly-into-the-agenda
+  - https://www.capterra.fr/software/170174/videopsalm
+last_verified: 2026-11-04

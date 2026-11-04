@@ -1,0 +1,28 @@
+---
+import Base from "../../layouts/Base.astro";
+import ProductCard from "../../components/ProductCard.astro";
+import { PLATFORMS } from "../../lib/schema.ts";
+import { getProducts } from "../../lib/products.ts";
+
+export function getStaticPaths() {
+  return Object.keys(PLATFORMS).map((k) => ({ params: { platform: k } }));
+}
+const { platform } = Astro.params as { platform: keyof typeof PLATFORMS };
+const label = PLATFORMS[platform];
+const all = (await getProducts()).filter((p) => p.platforms.includes(platform));
+const active = all.filter((p) => p.status !== "discontinued");
+const discontinued = all.filter((p) => p.status === "discontinued");
+---
+<Base title={`Church presentation software for ${label}`} description={`${active.length} church presentation tools that run on ${label}, compared by price and features.`} breadcrumbs={[{ label: "Platforms", href: "/platforms/" }, { label }]}>
+  <div class="container-page mt-6">
+    <h1 class="text-3xl font-bold tracking-tight">Church presentation software for {label}</h1>
+    <p class="mt-2 text-zinc-600 dark:text-zinc-400">{active.length} active products run on {label}.</p>
+    <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{active.map((p) => <ProductCard product={p} />)}</ul>
+    {discontinued.length > 0 && (
+      <section class="mt-12">
+        <h2 class="h-section">Discontinued</h2>
+        <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{discontinued.map((p) => <ProductCard product={p} />)}</ul>
+      </section>
+    )}
+  </div>
+</Base>

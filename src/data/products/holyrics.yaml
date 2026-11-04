@@ -1,0 +1,54 @@
+name: Holyrics
+tagline: Free Brazilian worship presentation software for lyrics and Bible verses, with optional online plans.
+description: >-
+  Holyrics is a free church presentation program for song lyrics, Bible
+  verses, audio and video, developed in Brazil and widely used by
+  Portuguese-speaking churches. It includes playlists for each service, song
+  history and reports, team scheduling, return (stage) monitors with their own
+  messages, and a mobile app for remote control. Low-cost optional monthly
+  plans add online sharing with the mobile app, Telegram audience
+  interaction and internet access to the program's API.
+website: https://holyrics.com.br/
+developer: Lima Giran Ltda.
+headquarters: Brazil
+founded: 2016
+status: active
+open_source: false
+pricing:
+  models: [freemium, subscription]
+  free_trial: false
+  starting_price: Free; optional plans from US$2/month
+  pricing_url: https://holyrics.com.br/holyrics_plan.html
+  notes: >-
+    The desktop program is free. Optional Holyrics Plan subscriptions: Basic
+    (US$2/month, online sharing and Telegram features), Advanced (US$3/month,
+    adds the online API) and Advanced + Worshipwide (US$7/month, adds a media
+    gallery).
+platforms: [windows, macos, linux]
+deployment: [desktop]
+features:
+  lyrics: true
+  bible: true
+  video_playback: true
+  audio_playback: true
+  timers: true
+  ndi: true
+  midi: true
+  api: true
+  stage_display: true
+  remote_control: true
+  cloud_sync: partial
+feature_notes:
+  video_playback: Uses VLC for media playback; videos can be used as animated theme backgrounds.
+  api: Local HTTP API server with token authentication; access from the internet requires the Advanced plan. Actions can also trigger OBS, vMix, OSC, MIDI, JavaScript and other receivers.
+  stage_display: Return monitors with their own settings and monitor-only messages and alerts.
+  remote_control: Holyrics mobile app for iOS and Android.
+  cloud_sync: The paid Basic plan stores songs, playlists, schedules and history online for access from the mobile app; this is not a full library sync between computers.
+  midi: MIDI settings and MIDI-triggered actions are exposed through the API.
+docs_url: https://github.com/holyrics/API-Server
+sources:
+  - https://holyrics.com.br/
+  - https://holyrics.com.br/download.html
+  - https://holyrics.com.br/holyrics_plan.html
+  - https://github.com/holyrics/API-Server
+last_verified: 2026-11-04

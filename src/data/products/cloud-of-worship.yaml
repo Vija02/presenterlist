@@ -1,0 +1,39 @@
+name: Cloud of Worship
+tagline: Free, minimalist browser-based presenter for lyrics, scripture and video.
+description: >-
+  Cloud of Worship is a free, minimalist, browser-based presentation tool for
+  churches, developed by CoW Labs. It displays song lyrics, scriptures, videos
+  and customizable slides, and is designed to work offline. Cloud features
+  include a shared library of user-contributed worship songs, a real-time
+  multiplayer mode for team collaboration and live content streaming over
+  WebSocket. A Windows desktop app built with Tauri is also available; the
+  source code is published on GitHub.
+website: https://www.cloudofworship.com
+developer: CoW Labs
+headquarters: Nigeria
+founded: 2024
+status: active
+open_source: false
+source_code_url: https://github.com/CoW-Labs/cloudofworship
+pricing:
+  models: [free, donation]
+  free_trial: false
+  pricing_url: https://www.cloudofworship.com/pricing
+  notes: Free without watermarks; the project asks for donations.
+platforms: [web, windows]
+deployment: [cloud, desktop]
+features:
+  lyrics: true
+  bible: true
+  video_playback: true
+  collaboration: true
+  cloud_sync: true
+  offline: true
+feature_notes:
+  lyrics: Includes access to a shared library of 7,000+ songs contributed by churches (cloud feature).
+  collaboration: Real-time "Multiplayer Mode" (cloud feature).
+sources:
+  - https://github.com/CoW-Labs/cloudofworship
+  - https://cow-labs.github.io/cloudofworship/
+  - https://www.cloudofworship.com/pricing
+last_verified: 2026-11-04

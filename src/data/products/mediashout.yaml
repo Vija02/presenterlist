@@ -1,0 +1,59 @@
+name: MediaShout
+tagline: Church presentation software sold mainly as a one-time site licence.
+description: >-
+  MediaShout is a church presentation application for lyrics, scripture,
+  sermon slides, announcements and media. MediaShout 7 includes 70 Bible
+  translations, a song library with CCLI SongSelect import and automatic
+  reporting, PowerPoint import and NDI input and output. It is primarily sold
+  as a one-time site licence covering unlimited computers, with an optional
+  yearly membership for support, training and media, and a lower-cost
+  single-computer subscription edition (LE).
+website: https://mediashout.com/
+developer: MediaShout
+headquarters: United States
+status: active
+open_source: false
+pricing:
+  models: [one_time, subscription]
+  free_trial: true
+  starting_price: $599 one-time (Windows site licence)
+  pricing_url: https://mediashout.com/pricing
+  notes: >-
+    Windows site licence $599; Mac site licence $499. Essentials and Complete
+    bundles add a first year of Plus membership ($199/year) and Shift Worship
+    Media. MediaShout LE is a $198/year single-computer subscription without a
+    stage display. 14-day fully functional trial.
+platforms: [windows, macos]
+deployment: [desktop]
+output_note: >-
+  The pricing page lists a Mac edition, but its product link refers to
+  MediaShout 6, so feature parity of the Mac version with MediaShout 7 for
+  Windows is unclear.
+features:
+  lyrics: true
+  bible: true
+  slides_import: true
+  video_playback: true
+  audio_playback: true
+  lower_thirds: true
+  ccli_songselect: true
+  ccli_reporting: true
+  ndi: true
+  live_video_input: true
+  multiple_outputs: true
+  stage_display: true
+  remote_control: true
+feature_notes:
+  slides_import: PowerPoint slides can be imported as images or as editable MediaShout cues.
+  ndi: Since version 7.4, NDI feeds can be shown in presentations and outputs can be sent over NDI.
+  live_video_input: Live video feeds via NDI.
+  multiple_outputs: Control, main and optional stage/confidence screens.
+  stage_display: Not included in the LE edition.
+  ccli_reporting: Auto-reporting is listed for the Windows version.
+docs_url: https://mediashout.com/docs/mediashout-7-user-guide/
+sources:
+  - https://mediashout.com/
+  - https://mediashout.com/pricing
+  - https://mediashout.com/docs/mediashout-7-user-guide/getting-started/what-mediashout-can-do
+  - https://mediashout.com/ndi/
+last_verified: 2026-11-04

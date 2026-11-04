@@ -1,0 +1,60 @@
+name: Proclaim
+tagline: Cloud-synced church presentation software from Logos (formerly Faithlife).
+description: >-
+  Proclaim is a church presentation application from Logos (formerly
+  Faithlife). Presentations are stored in the cloud and can be edited by
+  multiple team members from a browser or mobile app, then presented from a
+  Windows or Mac computer, where schedules are kept locally for offline use.
+  It includes scripture lookup, SongSelect import, CCLI reporting, NDI and SDI
+  output, MIDI, confidence monitors and live streaming. One subscription covers
+  unlimited installs and collaborators.
+website: https://proclaim.logos.com/
+developer: Logos (formerly Faithlife)
+headquarters: United States
+status: active
+open_source: false
+pricing:
+  models: [subscription]
+  free_trial: true
+  pricing_url: https://proclaim.logos.com/pricing
+  notes: >-
+    One subscription per church covers unlimited installs and collaborators;
+    media libraries are available as higher tiers. A 14-day free trial is
+    offered without a credit card. Exact current pricing could not be read
+    from the official pricing page.
+platforms: [windows, macos, web, ios, android]
+deployment: [desktop, cloud]
+output_note: >-
+  Presenting runs in the Windows or Mac desktop app; the web and mobile apps
+  are for editing and remote control. A free signage app runs on Fire TV,
+  Apple TV or a web browser.
+features:
+  lyrics: true
+  bible: true
+  slides_import: true
+  video_playback: true
+  ccli_songselect: true
+  ccli_reporting: true
+  planning_center: true
+  ndi: true
+  midi: true
+  multiple_outputs: true
+  stage_display: true
+  collaboration: true
+  cloud_sync: true
+  offline: true
+feature_notes:
+  slides_import: PowerPoint files can be imported; on Windows control can also be handed over to PowerPoint.
+  ccli_songselect: Lyrics can be imported from SongSelect or Hymnbase.
+  planning_center: Service plans can be imported from Planning Center Services (requires edit permissions).
+  ndi: NDI and SDI output.
+  stage_display: Configurable confidence monitor outputs with stage messages.
+  collaboration: Team members can edit presentations from the web, iOS or Android, syncing to the service computer.
+  offline: Schedules are stored locally so going live does not require internet; some features (signals, importing third-party content, embedded content) need a connection.
+docs_url: https://support.proclaim.logos.com/
+sources:
+  - https://proclaim.logos.com/
+  - https://www.logos.com/grow/does-proclaim-work-offline/
+  - https://support.proclaim.logos.com/hc/en-us/articles/19864188689037-Confidence-Monitor
+  - https://support.proclaim.logos.com/hc/en-us/articles/19864456647309-Import-a-Service-Plan-from-Planning-Center-Online
+last_verified: 2026-11-04

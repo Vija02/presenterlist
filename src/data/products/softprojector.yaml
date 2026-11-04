@@ -1,0 +1,31 @@
+name: SoftProjector
+tagline: Free, open-source projection software for songs, Bible verses, announcements and media.
+description: >-
+  SoftProjector is a free, open-source church projection program written in
+  C++ with Qt. It shows songs, Bible verses (up to six versions at once),
+  announcements, picture slideshows and media files on a second screen. It
+  runs on Windows, macOS and Linux. The most recent tagged release is 2.2 from
+  November 2017; a Qt 6 migration was merged into the repository in 2025.
+website: http://softprojector.org/
+developer: Vladislav Kobzar and contributors
+status: maintenance
+status_note: Last tagged release v2.2 on 8 November 2017; the most recent repository commit (Qt 6 migration) is from September 2025.
+open_source: true
+license: GPL-3.0-only
+source_code_url: https://github.com/SoftProjector/softprojector
+pricing:
+  models: [free]
+  free_trial: false
+platforms: [windows, macos, linux]
+deployment: [desktop]
+features:
+  lyrics: true
+  bible: true
+  offline: true
+feature_notes:
+  bible: Up to six Bible versions can be shown simultaneously.
+sources:
+  - http://softprojector.org/
+  - https://github.com/SoftProjector/softprojector
+  - https://github.com/SoftProjector/softprojector/releases
+last_verified: 2026-11-04

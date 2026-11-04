@@ -1,0 +1,61 @@
+name: SongShow Plus
+tagline: Windows worship presentation software with edition-based licences and optional subscriptions.
+description: >-
+  SongShow Plus is a Windows presentation application from R-Technics for
+  song lyrics, scripture, sermon slides and media. It is sold as a one-time
+  licence (currently only the Ultra edition) with optional yearly
+  subscriptions that add upgrades and integrations such as SongSelect,
+  Planning Center Online and Shift Worship, plus cloud sync and a browser-based
+  mobile control app. Version 9.3 added support for CCLI auto-reporting.
+website: https://www.songshowplus.com/
+developer: R-Technics, Inc.
+status: active
+open_source: false
+pricing:
+  models: [one_time, subscription]
+  free_trial: true
+  starting_price: $249 one-time (Ultra edition, special price)
+  pricing_url: https://www.songshowplus.com/store
+  notes: >-
+    Ultra edition is listed at $249 (special price, normally $549), including
+    the first year of the Bronze subscription. Basic and Pro editions are
+    listed as unavailable. Yearly subscriptions: Bronze $180, Silver $240,
+    Platinum $450. Each projection computer needs a projection licence (first
+    included); Bible translations beyond ASV, KJV and WEB are $25 per
+    plug-in per machine. A free evaluation copy is available.
+platforms: [windows]
+deployment: [desktop]
+features:
+  lyrics: true
+  bible: true
+  slides_import: true
+  video_playback: true
+  audio_playback: true
+  web_content: true
+  timers: true
+  lower_thirds: true
+  ccli_songselect: addon
+  ccli_reporting: true
+  planning_center: addon
+  ndi: true
+  live_video_input: true
+  multiple_outputs: true
+  stage_display: true
+  remote_control: addon
+  cloud_sync: addon
+feature_notes:
+  bible: ASV, KJV and WEB included; other translations are paid plug-ins.
+  ccli_songselect: Requires the Bronze (or higher) subscription plus a separate SongSelect subscription.
+  ccli_reporting: CCLI auto-reporting added in version 9.3.
+  planning_center: Requires the Bronze (or higher) subscription plus a Planning Center subscription.
+  ndi: NDI streaming (added in 9.1) is part of the Ultra edition.
+  live_video_input: Live video (IMAG) with text and graphic overlays.
+  lower_thirds: Stage/output windows can be configured for lower-third layouts.
+  multiple_outputs: Multi-display support and DeckLink output are part of the Ultra edition.
+  remote_control: Mobile Control (a progressive web app) requires the Silver subscription.
+  cloud_sync: SongShow Sync and Drive storage require the Silver subscription.
+sources:
+  - https://www.songshowplus.com/
+  - https://www.songshowplus.com/store
+  - https://www.songshowplus.com/whatsnew
+last_verified: 2026-11-04

@@ -1,0 +1,47 @@
+name: EasiSlides
+tagline: Free Windows song and Bible projection software with up to four outputs.
+description: >-
+  EasiSlides is a free, donation-supported worship projection program for
+  Windows by Wai Kuen Mo; version 5 is published under the spelling
+  "EasySlides" at easyslides.com. It projects song lyrics (optionally with
+  chords or two languages), Bible passages, PowerPoint slides, images, video
+  and audio from a schedule. Up to four outputs are supported, including a
+  "detailed" output intended as a confidence monitor for musicians and
+  speakers. Version 5.2 was released on 1 October 2026.
+website: https://www.easyslides.com
+developer: Wai Kuen Mo
+status: active
+open_source: false
+pricing:
+  models: [free, donation]
+  free_trial: false
+platforms: [windows]
+deployment: [desktop]
+features:
+  lyrics: true
+  bible: true
+  slides_import: partial
+  video_playback: true
+  audio_playback: true
+  timers: true
+  live_video_input: true
+  ccli_songselect: partial
+  ccli_reporting: partial
+  multiple_outputs: true
+  stage_display: true
+  offline: true
+feature_notes:
+  bible: Supports Bibles in MyBible (SQLite) and Zefania formats; two versions can be shown at once.
+  slides_import: Integrates PowerPoint slides; Microsoft PowerPoint must be installed.
+  live_video_input: A video camera or webcam feed can be used as a background behind text.
+  ccli_songselect: Imports SongSelect lyrics in text format; no direct online connection.
+  ccli_reporting: Collates song usage for CCLI reporting; submission is manual.
+  multiple_outputs: Up to four outputs (main, subtitle and detailed outputs); live output can also be multicast to Windows PCs on the LAN.
+  stage_display: The "detailed" output shows chords, schedule, next item and operator messages for musicians and speakers.
+community_url: https://www.easyslides.com/forums/
+docs_url: https://www.easyslides.com/help/
+sources:
+  - https://easyslides.com/
+  - https://www.easyslides.com/main/v5/features/
+  - https://www.easyslides.com/main/v5/downloads/
+last_verified: 2026-11-04

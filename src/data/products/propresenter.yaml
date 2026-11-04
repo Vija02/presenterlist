@@ -1,0 +1,55 @@
+name: ProPresenter
+tagline: Live presentation and production software for worship services, events and broadcast.
+description: >-
+  ProPresenter is a desktop presentation application from Renewed Vision used
+  for lyrics, scripture, media and slides in churches, live events and
+  broadcast. It supports up to eight independent outputs, customizable stage
+  screens, NDI/SDI output and MIDI/DMX control. New licences are sold only as
+  subscriptions, which include the remote control apps and cloud sync of
+  presentations between machines.
+website: https://renewedvision.com/propresenter/
+developer: Renewed Vision
+headquarters: United States
+status: active
+open_source: false
+pricing:
+  models: [subscription]
+  free_trial: false
+  starting_price: $29/month or $289/year (one seat)
+  pricing_url: https://support.renewedvision.com/hc/en-us/articles/35579747176083-Renewed-Vision-Pricing-and-Renewal-Process
+  notes: Subscription only for new users. Additional seats are discounted on annual plans; legacy licence holders get discounted renewal pricing. Some Bible translations are sold separately.
+platforms: [windows, macos]
+deployment: [desktop]
+features:
+  lyrics: true
+  bible: true
+  video_playback: true
+  audio_playback: true
+  lower_thirds: true
+  ccli_songselect: true
+  ccli_reporting: true
+  planning_center: true
+  ndi: true
+  live_video_input: true
+  midi: true
+  api: true
+  multiple_outputs: true
+  stage_display: true
+  remote_control: true
+  cloud_sync: true
+feature_notes:
+  bible: 130+ translations in 25+ languages; some translations are sold separately.
+  lower_thirds: Separate key/fill outputs are available for broadcast graphics.
+  ccli_songselect: Requires a SongSelect subscription and CCLI licence.
+  ccli_reporting: Songs triggered from presentations with a CCLI number can be auto-reported once SongSelect is signed in.
+  planning_center: Planning Center Services plans can be added as playlists; requires a separate Planning Center subscription.
+  multiple_outputs: Up to 8 unique outputs; multiple computers can be linked with Network Link.
+  api: Public network API (OpenAPI spec) introduced in ProPresenter 7.9.
+docs_url: https://support.renewedvision.com/
+sources:
+  - https://renewedvision.com/propresenter/
+  - https://support.renewedvision.com/hc/en-us/articles/35579747176083-Renewed-Vision-Pricing-and-Renewal-Process
+  - https://support.renewedvision.com/hc/en-us/articles/360041815033-Importing-from-SongSelect
+  - https://support.renewedvision.com/hc/en-us/articles/4408670102419-Using-Planning-Center-with-ProPresenter
+  - https://www.24-7pressrelease.com/press-release/491798/renewed-vision-releases-public-api-for-propresenter
+last_verified: 2026-11-04

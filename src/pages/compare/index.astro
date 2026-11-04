@@ -1,0 +1,99 @@
+---
+import Base from "../../layouts/Base.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+import FeatureLegend from "../../components/FeatureLegend.astro";
+import { getProducts, pairSlug } from "../../lib/products.ts";
+
+const products = await getProducts();
+const active = products.filter((p) => p.status !== "discontinued");
+// Suggested starting comparisons: the most commonly compared tools if present.
+const popularSlugs = ["propresenter", "easyworship", "proclaim", "mediashout", "openlp", "freeshow", "theopenpresenter"];
+const popular = popularSlugs.filter((s) => products.some((p) => p.slug === s));
+const pairs: [string, string][] = [];
+for (let i = 0; i < popular.length; i++) for (let j = i + 1; j < popular.length; j++) pairs.push([popular[i], popular[j]]);
+const nameOf = (s: string) => products.find((p) => p.slug === s)!.name;
+const defaultSel = popular.slice(0, 3);
+---
+
+<Base
+  title="Compare church presentation software side by side"
+  description="Pick up to 4 church presentation tools and compare pricing, platforms and features side by side."
+  breadcrumbs={[{ label: "Compare" }]}
+>
+  <div class="container-page mt-6">
+    <h1 class="text-3xl font-bold tracking-tight">Compare presentation software</h1>
+    <p class="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">Choose up to four products to see them side by side. Rows where the selected products differ are highlighted.</p>
+
+    <form id="picker" class="mt-6 card p-4">
+      <fieldset>
+        <legend class="mb-3 text-sm font-semibold">Products <span id="sel-count" class="font-normal text-zinc-500"></span></legend>
+        <div class="flex flex-wrap gap-2">
+          {products.map((p) => (
+            <label class:list={["chip cursor-pointer gap-1.5 py-1! has-checked:border-brand-500 has-checked:bg-brand-50 has-checked:text-brand-700 dark:has-checked:bg-brand-900/30 dark:has-checked:text-brand-200 has-disabled:opacity-40", p.status === "discontinued" && "italic"]}>
+              <input type="checkbox" name="p" value={p.slug} class="sr-only" checked={defaultSel.includes(p.slug)} />
+              {p.name}
+            </label>
+          ))}
+        </div>
+      </fieldset>
+      <label class="mt-4 flex items-center gap-2 text-sm">
+        <input type="checkbox" id="only-diff" class="accent-brand-600" /> Show only differences
+      </label>
+    </form>
+
+    <div class="mt-6 mb-3"><FeatureLegend /></div>
+    <div id="table-wrap">
+      <ComparisonTable products={products} selectable />
+    </div>
+    <noscript><p class="mt-3 text-sm text-zinc-500">Enable JavaScript to pick products; without it, all products are shown.</p></noscript>
+
+    {pairs.length > 0 && (
+      <section class="mt-14">
+        <h2 class="h-section">Popular comparisons</h2>
+        <ul class="flex flex-wrap gap-2">
+          {pairs.map(([a, b]) => <li><a href={`/compare/${pairSlug(a, b)}/`} class="chip hover:border-brand-400">{nameOf(a)} vs {nameOf(b)}</a></li>)}
+        </ul>
+      </section>
+    )}
+    <p class="mt-6 text-sm text-zinc-500">{active.length} active products · every pair also has its own page, e.g. <code>/compare/a-vs-b/</code>.</p>
+  </div>
+</Base>
+
+<script>
+  const form = document.getElementById("picker") as HTMLFormElement;
+  const wrap = document.getElementById("table-wrap")!;
+  const onlyDiff = document.getElementById("only-diff") as HTMLInputElement;
+  const selCount = document.getElementById("sel-count")!;
+  const boxes = [...form.querySelectorAll<HTMLInputElement>('input[name="p"]')];
+  const MAX = 4;
+
+  const fromUrl = new URLSearchParams(location.search).get("p");
+  if (fromUrl) {
+    const want = fromUrl.split(",").slice(0, MAX);
+    boxes.forEach((b) => (b.checked = want.includes(b.value)));
+  }
+
+  function render() {
+    const sel = boxes.filter((b) => b.checked).map((b) => b.value);
+    boxes.forEach((b) => (b.disabled = !b.checked && sel.length >= MAX));
+    selCount.textContent = `(${sel.length}/${MAX} selected)`;
+    wrap.querySelectorAll<HTMLElement>("[data-col]").forEach((el) => (el.hidden = !sel.includes(el.dataset.col!)));
+    wrap.querySelectorAll<HTMLTableRowElement>("tbody tr").forEach((tr) => {
+      const cells = [...tr.querySelectorAll<HTMLElement>("td[data-col]")].filter((c) => !c.hidden);
+      const groupHeader = tr.querySelector("th[colspan]") as HTMLTableCellElement | null;
+      if (groupHeader) {
+        groupHeader.colSpan = sel.length + 1;
+        return;
+      }
+      const vals = new Set(cells.map((c) => c.innerHTML.trim()));
+      const differ = vals.size > 1;
+      tr.classList.toggle("is-diff", differ);
+      tr.hidden = onlyDiff.checked && !differ;
+    });
+    const u = new URL(location.href);
+    u.searchParams.set("p", sel.join(","));
+    history.replaceState(null, "", u);
+  }
+  form.addEventListener("change", render);
+  render();
+</script>

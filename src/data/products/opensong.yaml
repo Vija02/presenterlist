@@ -1,0 +1,44 @@
+name: OpenSong
+tagline: Free, open-source tool for managing lyrics, chords and lead sheets and projecting them.
+description: >-
+  OpenSong is a free, open-source application for managing song lyrics, chords
+  and lead sheets and for presenting songs, scripture and custom slides. It
+  supports chord transposition and printable chord sheets, and combines songs,
+  scripture and timed slide loops into sets. Videos are played through an
+  external VLC player, and external PowerPoint or Impress presentations can be
+  controlled. The last packaged release is 3.4.8 (June 2021), while development
+  continues in the project's SourceForge repository.
+website: https://opensong.org
+developer: OpenSong project (volunteer community)
+status: maintenance
+status_note: Last packaged release 3.4.8 on 1 June 2021; source repository commits continue in 2026. Version 3.4.8 is not compatible with macOS 26 (Tahoe).
+open_source: true
+license: GPL-2.0-only
+source_code_url: https://sourceforge.net/p/opensong/code/HEAD/tree/
+pricing:
+  models: [free]
+  free_trial: false
+platforms: [windows, macos, linux]
+deployment: [desktop]
+features:
+  lyrics: true
+  bible: true
+  slides_import: partial
+  video_playback: partial
+  ndi: true
+  api: true
+  offline: true
+feature_notes:
+  slides_import: Controls external PowerPoint or LibreOffice Impress presentations; no direct import.
+  video_playback: Video is played via an external VideoLAN (VLC) player launched from a slide.
+  ndi: NDI output is supported (disabled by default in recent builds).
+  api: REST and WebSocket API for remote control and integrations.
+docs_url: https://opensong.org
+community_url: https://sourceforge.net/p/opensong/
+sources:
+  - https://opensong.org/
+  - https://sourceforge.net/projects/opensong/
+  - https://sourceforge.net/projects/opensong/files/
+  - https://sourceforge.net/p/opensong/code/HEAD/tree/
+  - https://sourceforge.net/p/opensong/code/HEAD/tree/source/trunk/changelog.txt
+last_verified: 2026-11-04

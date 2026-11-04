@@ -1,0 +1,45 @@
+name: VerseVIEW
+tagline: Free Bible and song presentation software focused on Indian and multilingual congregations.
+description: >-
+  VerseVIEW is a free (proprietary) Bible and song lyrics presentation program
+  for Windows and macOS, started in 2006 to show Bible verses in English and
+  Malayalam side by side. It displays Bible text in a choice of two languages
+  and comes with large song databases in Malayalam, Hindi, Tamil and other
+  languages, many with English transliteration and chords. It includes a
+  stage view, a browser-based remote and a lower-third output for use with
+  livestream software such as OBS. Companion songbook and Bible apps are
+  available for Android and iOS.
+website: http://verseview.info/vv/
+developer: VerseVIEW
+founded: 2006
+status: active
+open_source: false
+pricing:
+  models: [free]
+  free_trial: false
+platforms: [windows, macos]
+deployment: [desktop]
+output_note: A Linux build of VerseVIEW 10 is available on request from the developer.
+features:
+  lyrics: true
+  bible: true
+  video_playback: true
+  lower_thirds: true
+  multiple_outputs: true
+  stage_display: true
+  remote_control: true
+  offline: true
+feature_notes:
+  bible: Bible databases in 40+ languages; verses can be shown in two languages at once. Zefania XML Bibles can be imported.
+  video_playback: Video and still media playback was added in VerseVIEW 10.
+  lower_thirds: An additional lower-third output can be layered in OBS or fed to video mixers; lower-third themes can also be served over the network.
+  multiple_outputs: Main presentation plus stage view, AUX screen and lower-third outputs.
+  remote_control: Any device with a web browser can control Bible and scheduled song presentation.
+sources:
+  - http://verseview.info/vv/
+  - http://verseview.info/vv/downloads/
+  - http://verseview.info/vv/2024/01/15/verseview-10-release-notes/
+  - http://verseview.info/vv/features/
+  - http://verseview.info/vv/history/
+  - http://verseview.info/vv/about/
+last_verified: 2026-11-04

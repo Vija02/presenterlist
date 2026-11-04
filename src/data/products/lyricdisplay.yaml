@@ -1,0 +1,45 @@
+name: LyricDisplay
+tagline: Open-source lyric control app with outputs for projectors, stage displays, OBS and vMix.
+description: >-
+  LyricDisplay is a free, open-source lyric projection application aimed at
+  worship services, live events and streaming. An Electron control app drives
+  browser-based outputs that can be used on projectors or as browser sources in
+  OBS, vMix and Wirecast, with separate styling per output, a stage display and
+  a timer display. It includes a song editor, setlists, mobile/web controllers,
+  optional NDI output via a companion app, and MIDI/OSC control.
+website: https://lyricdisplay.app
+developer: Peter Alakembi
+founded: 2025
+status: active
+open_source: true
+license: GPL-3.0-or-later
+source_code_url: https://github.com/PeterAlaks/lyric-display-app
+pricing:
+  models: [free, donation]
+  free_trial: false
+platforms: [windows, macos, linux]
+deployment: [desktop]
+output_note: Outputs are browser pages, so they can be opened in streaming software (OBS, vMix, Wirecast) or other browsers on the network.
+features:
+  lyrics: true
+  slides_import: partial
+  timers: true
+  lower_thirds: true
+  ndi: addon
+  midi: true
+  api: true
+  multiple_outputs: true
+  stage_display: true
+  remote_control: true
+feature_notes:
+  slides_import: Imports lyrics from text, LRC, Markdown, RTF and DOCX files and offers EasyWorship/presentation import workflows; it is not a general slide player.
+  lower_thirds: Outputs can be added as transparent browser sources in OBS, vMix and Wirecast.
+  ndi: NDI output requires the separately installed LyricDisplay NDI companion.
+  midi: MIDI and OSC control.
+  api: Documented HTTP and Socket.IO realtime APIs.
+  multiple_outputs: Two default lyric outputs plus up to four custom outputs, a stage display and a timer display.
+  remote_control: Join-code-protected mobile/web controllers.
+sources:
+  - https://github.com/PeterAlaks/lyric-display-app
+  - https://lyricdisplay.app
+last_verified: 2026-11-04

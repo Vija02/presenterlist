@@ -1,0 +1,59 @@
+name: FreeShow
+tagline: Free, open-source presentation software for lyrics, scripture and media.
+description: >-
+  FreeShow is a free, open-source presentation program built with Electron and
+  maintained under the ChurchApps / Live Church Solutions non-profit umbrella.
+  It manages songs, scripture, media, overlays and countdown timers in projects,
+  and can drive several outputs with different styles (for example in-room,
+  livestream and stage). Phones and tablets on the local network can control
+  the show or act as a stage display through companion web apps, and outputs
+  can be sent over NDI.
+website: https://freeshow.app
+developer: ChurchApps (Live Church Solutions)
+headquarters: Norway
+founded: 2021
+status: active
+open_source: true
+license: GPL-3.0-only
+source_code_url: https://github.com/ChurchApps/FreeShow
+pricing:
+  models: [free, donation]
+  free_trial: false
+  notes: Funded by donations to Live Church Solutions, a US 501(c)(3) non-profit.
+platforms: [windows, macos, linux]
+deployment: [desktop]
+output_note: Web-based RemoteShow, StageShow, ControlShow and OutputShow can be opened in a browser on the local network.
+features:
+  lyrics: true
+  bible: true
+  slides_import: partial
+  video_playback: true
+  audio_playback: true
+  web_content: true
+  timers: true
+  ndi: true
+  live_video_input: true
+  midi: true
+  api: true
+  planning_center: true
+  multiple_outputs: true
+  stage_display: true
+  remote_control: true
+  cloud_sync: true
+feature_notes:
+  bible: Scripture can be imported from local files or from over 200 versions via API.Bible (online).
+  slides_import: PowerPoint and PDF files can be imported; no Keynote or Google Slides import is documented.
+  web_content: YouTube and Vimeo videos can be played by pasting a link; screens or windows (e.g. a browser) can be captured.
+  live_video_input: Cameras and screens can be shown from the media drawer.
+  midi: Can receive MIDI to trigger actions and send MIDI on slide changes; Bitfocus Companion is also supported.
+  api: WebSocket and REST API, enabled in Connections settings.
+  planning_center: Downloads upcoming Planning Center service plans; ChurchApps (B1.church) is also supported.
+docs_url: https://freeshow.app/docs
+sources:
+  - https://freeshow.app/
+  - https://freeshow.app/docs/features
+  - https://freeshow.app/docs/integrations
+  - https://freeshow.app/docs/media
+  - https://freeshow.app/api
+  - https://github.com/ChurchApps/FreeShow
+last_verified: 2026-11-04

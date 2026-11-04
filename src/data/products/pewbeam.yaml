@@ -1,0 +1,43 @@
+name: Pewbeam
+tagline: AI presentation app that listens to the sermon and puts detected Bible verses on screen.
+description: >-
+  Pewbeam is a desktop presentation app for churches that transcribes the
+  sermon in real time and automatically detects and displays Bible verses,
+  including paraphrased or unreferenced quotations. Verses are shown through a
+  theme designer with auto and manual modes, a queue and a preview/live
+  workflow, and can be sent to HDMI screens or over NDI. Paid plans add
+  unlimited transcription, AI slide generation, more outputs and AI sermon
+  notes. It was founded in Nigeria in 2025.
+website: https://pewbeam.com
+developer: Pewbeam
+headquarters: Nigeria
+founded: 2025
+status: active
+open_source: false
+pricing:
+  models: [freemium, subscription]
+  free_trial: false
+  starting_price: "From $12/month"
+  pricing_url: https://pewbeam.com/pricing
+  notes: Free Explorer tier with 60 one-time transcription minutes, a watermark and up to 2 outputs; Plus and Core tiers add unlimited transcription, more outputs and devices.
+platforms: [windows, macos]
+deployment: [desktop]
+features:
+  bible: true
+  lower_thirds: true
+  ndi: true
+  api: true
+  multiple_outputs: true
+  offline: partial
+feature_notes:
+  bible: Verses are detected automatically from live speech; 4 Bible translations on the free tier, 20 on paid plans.
+  lower_thirds: Can drive livestream graphics and lower thirds.
+  api: OSC and HTTP API endpoints for broadcast integration.
+  multiple_outputs: Up to 2, 4 or 6 display outputs depending on plan.
+  offline: Bible search and display work offline; offline transcription is available on Apple Silicon Macs on paid plans, otherwise transcription needs a connection.
+sources:
+  - https://pewbeam.com
+  - https://pewbeam.com/pricing
+  - https://pewbeam.pages.dev/docs
+  - https://religionunplugged.com/news/god-in-the-algorithm-how-nigerian-developers-are-building-ai-for-the-church
+last_verified: 2026-11-04

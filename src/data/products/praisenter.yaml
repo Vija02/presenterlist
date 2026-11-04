@@ -1,0 +1,34 @@
+name: Praisenter
+tagline: Free, open-source desktop app for showing Bible verses, song lyrics and slides.
+description: >-
+  Praisenter is a free, open-source church presentation application developed by
+  William Bittle. It displays Bible verses, song lyrics, notifications and custom
+  slides on secondary displays, with customizable templates, transitions and
+  side-by-side display of two languages or Bible versions. Content is organised
+  into workspaces and can be exported and imported between computers. It is
+  distributed through the Microsoft Store, the Snap Store and the Mac App Store.
+website: https://praisenter.org
+developer: William Bittle
+status: active
+open_source: true
+license: BSD-3-Clause
+source_code_url: https://github.com/praisenter/praisenter
+pricing:
+  models: [free]
+  free_trial: false
+platforms: [windows, macos, linux]
+deployment: [desktop]
+features:
+  lyrics: true
+  bible: true
+  video_playback: true
+  audio_playback: true
+  timers: true
+  multiple_outputs: true
+  offline: true
+feature_notes:
+  timers: Slides can include the current date/time and countdowns.
+  multiple_outputs: Each connected display can receive content independently.
+sources:
+  - https://github.com/praisenter/praisenter
+last_verified: 2026-11-04

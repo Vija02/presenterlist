@@ -1,0 +1,36 @@
+name: BibleShow
+tagline: Free Windows software for displaying Bible verses, with NDI output and up to four screens.
+description: >-
+  BibleShow is a free Windows application dedicated to presenting Bible
+  verses on projectors, TVs and other displays. It shows up to four Bible
+  versions in parallel, manages downloadable Bible modules (180+) and themes,
+  supports program lists and automatic verse playback, and can output to up
+  to four screens and over NDI. It does not handle songs or general media
+  presentations. The latest version, 5.4, dates from 2020; the same author
+  offers a separate macOS app, BibleCast.
+website: https://www.bibleshow.net
+developer: BibleShow
+status: maintenance
+status_note: No updates since BibleShow 5.4 (installer dated 10 February 2020; site last updated December 2020). It remains available for download; no official discontinuation has been announced.
+open_source: false
+pricing:
+  models: [free, donation]
+  free_trial: false
+platforms: [windows]
+deployment: [desktop]
+features:
+  lyrics: false
+  bible: true
+  ndi: true
+  multiple_outputs: true
+  offline: true
+feature_notes:
+  bible: Bible-only presenter; 180+ downloadable Bible modules, up to 4 versions shown in parallel, right-to-left language support.
+  ndi: NewTek NDI output (streaming) and NDI input as background.
+  multiple_outputs: Up to four screens with individually customised scripture display.
+sources:
+  - https://www.bibleshow.net/
+  - https://www.bibleshow.net/presentation.php
+  - https://www.bibleshow.net/operation.php
+  - https://www.renewedvision.com/blog/comparing-the-best-bible-presentation-software-in-2024
+last_verified: 2026-11-04

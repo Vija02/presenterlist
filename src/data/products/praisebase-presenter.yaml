@@ -1,0 +1,29 @@
+name: PraiseBase Presenter
+tagline: Open-source Windows worship presenter for song lyrics, images and Bible verses.
+description: >-
+  PraiseBase Presenter is an open-source worship presentation program for
+  projecting song lyrics, images and Bible verses in church services. Songs can
+  be paired with background images, Bible text is available in several
+  translations and image slideshows can be built. The project's website and
+  community are German-language; the last release (1.4.0) dates from 2016.
+website: http://praisebase.org
+developer: PraiseBase Presenter project
+status: maintenance
+status_note: No release since version 1.4.0 (December 2016) and no code changes since 2021; the project has asked for volunteer developers.
+open_source: true
+license: GPL-3.0
+source_code_url: https://github.com/PraiseBase-Presenter/PraiseBase-Presenter
+pricing:
+  models: [free]
+  free_trial: false
+platforms: [windows]
+deployment: [desktop]
+features:
+  lyrics: true
+  bible: true
+  offline: true
+languages: [German, English]
+sources:
+  - https://github.com/PraiseBase-Presenter/PraiseBase-Presenter
+  - http://praisebase.org
+last_verified: 2026-11-04

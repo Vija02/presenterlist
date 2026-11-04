@@ -1,0 +1,27 @@
+---
+import Base from "../../layouts/Base.astro";
+import { FEATURE_GROUPS } from "../../lib/schema.ts";
+import { featureSlug, getProducts, supports } from "../../lib/products.ts";
+const products = (await getProducts()).filter((p) => p.status !== "discontinued");
+---
+<Base title="Church presentation software by feature" description="Find church presentation software that supports Planning Center, CCLI SongSelect, NDI, stage displays, remote control and more." breadcrumbs={[{ label: "Features" }]}>
+  <div class="container-page mt-6">
+    <h1 class="text-3xl font-bold tracking-tight">Browse by feature</h1>
+    <p class="mt-2 text-zinc-600 dark:text-zinc-400">Counts include active products with confirmed (full, partial or add-on) support.</p>
+    <div class="mt-8 grid gap-6 md:grid-cols-3">
+      {Object.values(FEATURE_GROUPS).map((g) => (
+        <section class="card p-5">
+          <h2 class="mb-3 font-semibold">{g.label}</h2>
+          <ul class="space-y-1.5 text-sm">
+            {Object.entries(g.features).map(([k, label]) => (
+              <li class="flex justify-between gap-3">
+                <a href={`/features/${featureSlug(k)}/`} class="link">{label}</a>
+                <span class="text-zinc-400">{products.filter((p) => supports(p, k as any)).length}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </div>
+</Base>

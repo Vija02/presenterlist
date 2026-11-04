@@ -1,0 +1,11 @@
+---
+import FeatureMark from "./FeatureMark.astro";
+---
+<ul class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-zinc-500">
+  <li class="flex items-center gap-1.5"><FeatureMark value={true} /> Supported</li>
+  <li class="flex items-center gap-1.5"><FeatureMark value="partial" /> Partial</li>
+  <li class="flex items-center gap-1.5"><FeatureMark value="addon" /> Paid add-on / tier</li>
+  <li class="flex items-center gap-1.5"><FeatureMark value={false} /> Not supported</li>
+  <li class="flex items-center gap-1.5"><FeatureMark value={undefined} /> Unknown</li>
+  <li class="flex items-center gap-1.5"><span class="text-zinc-400">*</span> Hover for note</li>
+</ul>

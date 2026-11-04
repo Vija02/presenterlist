@@ -1,0 +1,57 @@
+name: ZionWorx
+tagline: Subscription-based Windows worship presentation software with NDI outputs and a remote app.
+description: >-
+  ZionWorx is a Windows worship presentation program developed by Jubilate
+  Software Ltd in Coventry, England. It presents songs, Bible passages from
+  BibleGateway.com, PowerPoint files, images and video, and supports multiple
+  independent NDI outputs and a mobile remote app. Version 4 is the current
+  release; version 5 is in public beta with additions such as a stage display,
+  SongSelect import, CCLI reporting and a web remote. Pricing is tiered by
+  country income level, and it is free in lower-income and persecuted-church
+  countries.
+website: https://zionworx.com
+developer: Jubilate Software Ltd
+headquarters: United Kingdom
+founded: 2002
+status: active
+open_source: false
+pricing:
+  models: [subscription]
+  free_trial: true
+  starting_price: From £9.50/month
+  pricing_url: https://zionworx.com/pricing/
+  notes: >-
+    Purchasing-power-parity pricing - full price in high-income countries, 50% off
+    in mid-income countries, free in low-income countries and countries on the
+    Open Doors World Watch List. A licence covers installation on multiple PCs
+    used by the team.
+platforms: [windows]
+deployment: [desktop]
+output_note: Runs on Mac hardware only via Parallels or Boot Camp; no native macOS version is planned.
+features:
+  lyrics: true
+  bible: true
+  slides_import: partial
+  video_playback: true
+  live_video_input: true
+  ndi: true
+  ccli_songselect: partial
+  ccli_reporting: partial
+  multiple_outputs: true
+  stage_display: partial
+  remote_control: true
+feature_notes:
+  bible: 230+ Bible translations are accessed through BibleGateway.com.
+  slides_import: PowerPoint integration; no Keynote or Google Slides support mentioned.
+  live_video_input: Camera input is supported (a Windows camera app is offered); improved in v5.
+  ccli_songselect: One-click SongSelect lyrics import is new in v5, which is in beta.
+  ccli_reporting: CCLI song reporting is new in v5, which is in beta.
+  stage_display: A stage display is new in v5, which is in beta.
+  remote_control: ZionWorx Remote app for Android and iOS; v5 adds a web remote reached via QR code.
+  ndi: Multiple independent live NDI outputs.
+sources:
+  - https://zionworx.com/
+  - https://zionworx.com/pricing/
+  - https://zionworx.com/requirements/
+  - https://www.capterra.com/p/119450/ZionWorx/
+last_verified: 2026-11-04

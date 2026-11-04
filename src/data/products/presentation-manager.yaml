@@ -1,0 +1,33 @@
+name: Presentation Manager
+tagline: Long-running Windows worship projection software with a built-in song database and Bibles.
+description: >-
+  Presentation Manager is worship projection software from CreativelifeStyles,
+  first released in 1998 and now in its seventh major version. It includes a
+  song database and popular Bible translations, can overlay text on live video
+  and movies, and can run different presentations on two projectors at once with
+  a dual preview mode. It also supports picture-in-picture and on-the-fly
+  display of two Bible translations.
+website: https://www.presentationmanager.com
+developer: CreativelifeStyles
+founded: 1998
+status: active
+open_source: false
+pricing:
+  models: [one_time]
+  free_trial: true
+  notes: Sold as a perpetual licence through the vendor's shop; a downloadable demo is available.
+platforms: [windows]
+deployment: [desktop]
+features:
+  lyrics: true
+  bible: true
+  video_playback: true
+  live_video_input: true
+  multiple_outputs: true
+feature_notes:
+  live_video_input: Text can be overlaid on live video.
+  multiple_outputs: Different presentations can be shown on two projectors at once.
+sources:
+  - https://www.presentationmanager.com
+  - https://www.sourceforge.net/software/product/Presentation-Manager
+last_verified: 2026-11-04

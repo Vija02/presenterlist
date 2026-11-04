@@ -1,0 +1,35 @@
+name: Cantara
+tagline: Lightweight open-source song presentation tool for churches and small groups.
+description: >-
+  Cantara is a free, open-source song presentation program written in Free
+  Pascal/Lazarus for quickly presenting song lyrics to a group. It supports
+  multiple screens, background images, two-language presentations, and export
+  of presentations to PPTX, images, text and other formats. It is packaged for
+  Windows (winget), macOS and Linux (Flatpak, Snap, AUR). A rewrite in Rust
+  (Cantara 3) is in progress while version 2 continues to be maintained.
+website: https://www.cantara.app
+developer: Jan Martin Reckel
+headquarters: Germany
+founded: 2019
+status: active
+open_source: true
+license: GPL-3.0
+source_code_url: https://github.com/reckel-jm/cantara
+pricing:
+  models: [free]
+  free_trial: false
+platforms: [windows, macos, linux]
+deployment: [desktop]
+features:
+  lyrics: true
+  ccli_songselect: partial
+  multiple_outputs: true
+  offline: true
+feature_notes:
+  ccli_songselect: Can read song files in the CCLI SongSelect lyrics file format; there is no direct SongSelect account integration.
+docs_url: https://www.cantara.app
+sources:
+  - https://www.cantara.app
+  - https://github.com/reckel-jm/cantara
+  - https://flathub.org/apps/app.cantara.Cantara
+last_verified: 2026-11-04

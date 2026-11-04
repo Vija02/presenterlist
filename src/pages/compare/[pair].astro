@@ -1,0 +1,123 @@
+---
+import Base from "../../layouts/Base.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+import FeatureLegend from "../../components/FeatureLegend.astro";
+import Logo from "../../components/Logo.astro";
+import Badges from "../../components/Badges.astro";
+import { FEATURE_KEYS } from "../../lib/schema.ts";
+import {
+  featureLabel,
+  fullySupports,
+  getProducts,
+  isFree,
+  listFormat,
+  pairSlug,
+  platformLabel,
+  priceSummary,
+  type P,
+} from "../../lib/products.ts";
+
+export async function getStaticPaths() {
+  const products = await getProducts();
+  const paths = [];
+  for (let i = 0; i < products.length; i++)
+    for (let j = i + 1; j < products.length; j++) {
+      const [a, b] = [products[i], products[j]].sort((x, y) => (x.slug < y.slug ? -1 : 1));
+      paths.push({ params: { pair: pairSlug(a.slug, b.slug) }, props: { a, b } });
+    }
+  return paths;
+}
+
+const { a, b } = Astro.props as { a: P; b: P };
+const all = await getProducts();
+
+const onlyIn = (x: P, y: P) =>
+  FEATURE_KEYS.filter((k) => fullySupports(x, k) && (y.features?.[k] === false || y.features?.[k] === "partial" || y.features?.[k] === "addon")).map(
+    (k) => featureLabel(k) + (y.features?.[k] === "partial" ? ` (partial in ${y.name})` : y.features?.[k] === "addon" ? ` (paid add-on in ${y.name})` : ""),
+  );
+const platformsOnly = (x: P, y: P) => x.platforms.filter((k) => !y.platforms.includes(k)).map((k) => `Runs on ${platformLabel(k)}`);
+const aOnly = [...platformsOnly(a, b), ...onlyIn(a, b)];
+const bOnly = [...platformsOnly(b, a), ...onlyIn(b, a)];
+const both = FEATURE_KEYS.filter((k) => fullySupports(a, k) && fullySupports(b, k)).map(featureLabel);
+const commonPlatforms = a.platforms.filter((x) => b.platforms.includes(x)).map(platformLabel);
+
+const summary: string[] = [];
+const price = (p: P) => (isFree(p) ? "free" : `paid – ${priceSummary(p)}`);
+summary.push(`${a.name} is ${price(a)}, while ${b.name} is ${price(b)}.`);
+if (a.open_source !== b.open_source) {
+  const [os, prop] = a.open_source ? [a, b] : [b, a];
+  summary.push(`${os.name} is open source (${os.license}); ${prop.name} is proprietary.`);
+} else if (a.open_source) summary.push(`Both are open source.`);
+summary.push(
+  commonPlatforms.length
+    ? `Both run on ${listFormat(commonPlatforms)}.`
+    : `They share no platforms: ${a.name} runs on ${listFormat(a.platforms.map(platformLabel))} and ${b.name} on ${listFormat(b.platforms.map(platformLabel))}.`,
+);
+for (const p of [a, b]) if (p.status !== "active") summary.push(`Note: ${p.name} is ${p.status === "discontinued" ? "discontinued" : "no longer actively maintained"}.`);
+
+const others = all.filter((x) => x.slug !== a.slug && x.slug !== b.slug).slice(0, 12);
+const title = `${a.name} vs ${b.name}`;
+---
+
+<Base
+  title={`${title}: features, pricing & platforms compared`}
+  description={`${title} compared side by side: pricing, platforms, open-source status and ${FEATURE_KEYS.length} features for church presentation software.`}
+  breadcrumbs={[{ label: "Compare", href: "/compare/" }, { label: title }]}
+>
+  <div class="container-page mt-6">
+    <h1 class="text-3xl font-bold tracking-tight">{a.name} <span class="text-zinc-400">vs</span> {b.name}</h1>
+
+    <div class="mt-6 grid gap-4 md:grid-cols-2">
+      {[a, b].map((p) => (
+        <div class="card flex gap-4 p-4">
+          <Logo product={p} />
+          <div class="min-w-0">
+            <a href={`/software/${p.slug}/`} class="font-semibold hover:underline">{p.name}</a>
+            <p class="text-sm text-zinc-600 dark:text-zinc-400">{p.tagline}</p>
+            <Badges product={p} class="mt-2" />
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <section class="mt-10">
+      <h2 class="h-section">Summary</h2>
+      <ul class="list-disc space-y-1 pl-5 text-zinc-700 dark:text-zinc-300">
+        {summary.map((s) => <li>{s}</li>)}
+        {both.length > 0 && <li>Both support: {both.join(" · ")}.</li>}
+      </ul>
+      <div class="mt-6 grid gap-4 md:grid-cols-2">
+        {[[a, aOnly, b], [b, bOnly, a]].map(([p, list, other]) => (
+          <div class="card p-4">
+            <h3 class="font-semibold">Only in {(p as P).name}</h3>
+            {(list as string[]).length ? (
+              <ul class="mt-2 list-disc space-y-0.5 pl-5 text-sm text-zinc-700 dark:text-zinc-300">{(list as string[]).map((f) => <li>{f}</li>)}</ul>
+            ) : (
+              <p class="mt-2 text-sm text-zinc-500">No confirmed features where {(other as P).name} falls short.</p>
+            )}
+          </div>
+        ))}
+      </div>
+      <p class="mt-3 text-xs text-zinc-500">Based on confirmed data only — unknown values are not counted.</p>
+    </section>
+
+    <section class="mt-10">
+      <div class="mb-3 flex flex-wrap items-end justify-between gap-2">
+        <h2 class="h-section mb-0!">Side by side</h2>
+        <FeatureLegend />
+      </div>
+      <ComparisonTable products={[a, b]} highlightDiff />
+    </section>
+
+    <section class="mt-12">
+      <h2 class="h-section">Other comparisons</h2>
+      <ul class="flex flex-wrap gap-2">
+        {others.flatMap((o) => [
+          <li><a href={`/compare/${pairSlug(a.slug, o.slug)}/`} class="chip hover:border-brand-400">{a.name} vs {o.name}</a></li>,
+          <li><a href={`/compare/${pairSlug(b.slug, o.slug)}/`} class="chip hover:border-brand-400">{b.name} vs {o.name}</a></li>,
+        ])}
+      </ul>
+      <p class="mt-4"><a href={`/compare/?p=${a.slug},${b.slug}`} class="link">Add more products to this comparison →</a></p>
+    </section>
+  </div>
+</Base>

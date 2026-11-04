@@ -1,0 +1,37 @@
+name: KerkBeamer
+tagline: Dutch online service for building church beamer presentations from a song and Bible database.
+description: >-
+  KerkBeamer is a Dutch-language online service for preparing church service
+  presentations for projectors and church TV screens. Presentations are built
+  online from a database of more than 10,000 songs (as text or sheet music) and
+  11 Bible translations, with reusable service parts and team collaboration.
+  Paid add-ons cover kerkTV broadcasting, LiveBeamer (following the
+  presentation on any device via a URL) and CameraRegie camera control.
+website: https://kerkbeamer.nl
+developer: KerkBeamer
+headquarters: Netherlands
+founded: 2017
+status: active
+open_source: false
+pricing:
+  models: [subscription]
+  free_trial: true
+  starting_price: "From €17.50/month (excl. VAT)"
+  pricing_url: https://kerkbeamer.nl/tarieven
+  notes: Priced by number of active church members; songbooks and Bible translations cost €1.00 each per month when used. 4-week free trial.
+platforms: [web]
+deployment: [cloud]
+features:
+  lyrics: true
+  bible: true
+  collaboration: true
+  cloud_sync: true
+  remote_control: addon
+feature_notes:
+  lyrics: Song database of 10,000+ songs, shown as text or sheet music; billed per songbook used.
+  remote_control: The paid LiveBeamer add-on lets the presentation be followed on any device via a URL; this is a viewer rather than a full remote.
+languages: [Dutch]
+sources:
+  - https://kerkbeamer.nl
+  - https://kerkbeamer.nl/tarieven
+last_verified: 2026-11-04

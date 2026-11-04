@@ -1,0 +1,243 @@
+---
+import Base from "../../layouts/Base.astro";
+import Logo from "../../components/Logo.astro";
+import Badges from "../../components/Badges.astro";
+import FeatureMark from "../../components/FeatureMark.astro";
+import FeatureLegend from "../../components/FeatureLegend.astro";
+import ProductCard from "../../components/ProductCard.astro";
+import { FEATURE_GROUPS, type FeatureKey } from "../../lib/schema.ts";
+import {
+  alternativesFor,
+  deploymentLabel,
+  featureLabel,
+  featureSlug,
+  fullySupports,
+  getProducts,
+  isFree,
+  listFormat,
+  pairSlug,
+  platformLabel,
+  pricingLabel,
+  type P,
+} from "../../lib/products.ts";
+import { editFileUrl, editProductIssueUrl } from "../../config.ts";
+
+export async function getStaticPaths() {
+  const products = await getProducts();
+  return products.map((p) => ({ params: { slug: p.slug }, props: { product: p } }));
+}
+
+const { product: p } = Astro.props as { product: P };
+const all = await getProducts();
+const alternatives = alternativesFor(p, all);
+const platforms = p.platforms.map(platformLabel);
+const supported = (Object.keys(p.features ?? {}) as FeatureKey[]).filter((k) => fullySupports(p, k));
+
+const faq: { q: string; a: string }[] = [
+  { q: `What is ${p.name}?`, a: `${p.name} is church presentation software by ${p.developer}. ${p.tagline}` },
+  {
+    q: `How much does ${p.name} cost?`,
+    a: isFree(p)
+      ? `${p.name} is free to use.${p.pricing.notes ? ` ${p.pricing.notes}` : ""}`
+      : `${p.name} uses a ${listFormat(p.pricing.models.map((m) => pricingLabel(m).toLowerCase()), "or")} pricing model${p.pricing.starting_price ? `, starting at ${p.pricing.starting_price}` : ""}.${p.pricing.free_trial ? " A free trial is available." : ""}${p.pricing.notes ? ` ${p.pricing.notes}` : ""}`,
+  },
+  { q: `What platforms does ${p.name} run on?`, a: `${p.name} runs on ${listFormat(platforms)}.${p.output_note ? ` ${p.output_note}` : ""}` },
+  {
+    q: `Is ${p.name} open source?`,
+    a: p.open_source ? `Yes. ${p.name} is open source under the ${p.license} license.` : `No. ${p.name} is proprietary software.`,
+  },
+];
+if (p.features?.bible !== undefined)
+  faq.push({ q: `Does ${p.name} include a Bible?`, a: p.features.bible === true ? `Yes, ${p.name} has built-in Bible support.` : p.features.bible === false ? `No, ${p.name} does not include built-in Bible support.` : `${p.name} has ${p.features.bible === "addon" ? "Bible support as a paid add-on" : "limited Bible support"}.${p.feature_notes?.bible ? ` ${p.feature_notes.bible}` : ""}` });
+if (p.features?.planning_center !== undefined)
+  faq.push({ q: `Does ${p.name} integrate with Planning Center?`, a: p.features.planning_center === true ? `Yes.${p.feature_notes?.planning_center ? ` ${p.feature_notes.planning_center}` : ""}` : p.features.planning_center === false ? `Not as far as we know.` : `Partially.${p.feature_notes?.planning_center ? ` ${p.feature_notes.planning_center}` : ""}` });
+faq.push({ q: `What are the best alternatives to ${p.name}?`, a: `Similar tools include ${listFormat(alternatives.slice(0, 5).map((x) => x.name))}.` });
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: p.name,
+    description: p.description,
+    url: p.website,
+    applicationCategory: "MultimediaApplication",
+    operatingSystem: platforms.join(", "),
+    author: { "@type": "Organization", name: p.developer },
+    ...(isFree(p) ? { offers: { "@type": "Offer", price: "0", priceCurrency: "USD" } } : {}),
+    ...(p.open_source ? { license: p.license } : {}),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  },
+];
+
+const details: [string, string | undefined, string?][] = [
+  ["Developer", p.developer],
+  ["Headquarters", p.headquarters],
+  ["Founded", p.founded?.toString()],
+  ["Status", p.status === "active" ? "Active" : p.status === "maintenance" ? "Unmaintained" : "Discontinued"],
+  ["License", p.open_source ? p.license : "Proprietary"],
+  ["Pricing", p.pricing.models.map(pricingLabel).join(", ")],
+  ["Starting price", p.pricing.starting_price, p.pricing.pricing_url],
+  ["Deployment", p.deployment.map(deploymentLabel).join(", ")],
+  ["Languages", p.languages?.join(", ")],
+];
+const links: [string, string | undefined][] = [
+  ["Website", p.website],
+  ["Source code", p.source_code_url],
+  ["Documentation", p.docs_url],
+  ["Community", p.community_url],
+  ["Pricing page", p.pricing.pricing_url],
+];
+const host = (u: string) => new URL(u).hostname.replace(/^www\./, "");
+---
+
+<Base
+  title={`${p.name} – features, pricing & alternatives`}
+  description={`${p.name}: ${p.tagline} Compare platforms, pricing and features with other church presentation software.`}
+  jsonLd={jsonLd}
+  breadcrumbs={[{ label: "Directory", href: "/" }, { label: p.name }]}
+>
+  <div class="container-page mt-6">
+    <header class="flex flex-col gap-5 sm:flex-row sm:items-start">
+      <Logo product={p} size="lg" />
+      <div class="min-w-0 flex-1">
+        <h1 class="text-3xl font-bold tracking-tight">{p.name}</h1>
+        <p class="mt-1 text-lg text-zinc-600 dark:text-zinc-400">{p.tagline}</p>
+        <Badges product={p} class="mt-3" />
+      </div>
+      <div class="flex shrink-0 flex-wrap gap-2">
+        <a href={p.website} class="btn-primary" rel="noopener">Visit {p.name} ↗</a>
+        <a href={`/alternatives/${p.slug}/`} class="btn-secondary">Alternatives</a>
+      </div>
+    </header>
+
+    {p.status !== "active" && (
+      <div class="mt-6 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200">
+        <strong>{p.status === "discontinued" ? "Discontinued." : "Not actively maintained."}</strong> {p.status_note}
+      </div>
+    )}
+
+    <div class="mt-10 grid gap-10 lg:grid-cols-[1fr_20rem]">
+      <div class="min-w-0 space-y-12">
+        <section>
+          <h2 class="h-section">Overview</h2>
+          <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">{p.description}</p>
+          {p.pricing.notes && <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-400"><strong>Pricing:</strong> {p.pricing.notes}</p>}
+        </section>
+
+        <section>
+          <h2 class="h-section">Supported platforms</h2>
+          <ul class="flex flex-wrap gap-2">
+            {p.platforms.map((k) => <li><a href={`/platforms/${k}/`} class="chip hover:border-brand-400">{platformLabel(k)}</a></li>)}
+          </ul>
+          {p.output_note && <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-400">{p.output_note}</p>}
+        </section>
+
+        <section>
+          <div class="mb-3 flex flex-wrap items-end justify-between gap-2">
+            <h2 class="h-section mb-0!">Features</h2>
+            <FeatureLegend />
+          </div>
+          <div class="grid gap-6 md:grid-cols-2">
+            {Object.values(FEATURE_GROUPS).map((g) => (
+              <div class="card p-4">
+                <h3 class="mb-2 text-sm font-semibold text-zinc-500">{g.label}</h3>
+                <ul class="divide-y divide-zinc-100 dark:divide-zinc-800">
+                  {Object.entries(g.features).map(([k, label]) => (
+                    <li class="flex items-center justify-between gap-3 py-2 text-sm">
+                      <a href={`/features/${featureSlug(k)}/`} class="hover:underline">{label}</a>
+                      <FeatureMark value={p.features?.[k as FeatureKey]} note={p.feature_notes?.[k]} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          {p.feature_notes && Object.keys(p.feature_notes).length > 0 && (
+            <div class="mt-4 card p-4">
+              <h3 class="mb-2 text-sm font-semibold text-zinc-500">Notes</h3>
+              <dl class="space-y-2 text-sm">
+                {Object.entries(p.feature_notes).map(([k, v]) => (
+                  <div><dt class="inline font-medium">{featureLabel(k)}:</dt> <dd class="inline text-zinc-600 dark:text-zinc-400">{v}</dd></div>
+                ))}
+              </dl>
+            </div>
+          )}
+        </section>
+
+        <section>
+          <h2 class="h-section">Frequently asked questions</h2>
+          <div class="divide-y divide-zinc-200 rounded-xl border border-zinc-200 dark:divide-zinc-800 dark:border-zinc-800">
+            {faq.map((f) => (
+              <details class="group p-4">
+                <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                  {f.q}<span class="text-zinc-400 transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                </summary>
+                <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 class="h-section">Similar software</h2>
+          <ul class="grid gap-4 sm:grid-cols-2">
+            {alternatives.slice(0, 4).map((x) => <ProductCard product={x} />)}
+          </ul>
+          <p class="mt-4"><a href={`/alternatives/${p.slug}/`} class="link">See all {p.name} alternatives →</a></p>
+        </section>
+
+        <section>
+          <h2 class="h-section">Compare {p.name} with</h2>
+          <ul class="flex flex-wrap gap-2">
+            {all.filter((x) => x.slug !== p.slug).map((x) => (
+              <li><a href={`/compare/${pairSlug(p.slug, x.slug)}/`} class="chip hover:border-brand-400">{p.name} vs {x.name}</a></li>
+            ))}
+          </ul>
+        </section>
+      </div>
+
+      <aside class="space-y-6 lg:sticky lg:top-20 lg:self-start">
+        <div class="card p-4">
+          <h2 class="mb-3 text-sm font-semibold text-zinc-500">Details</h2>
+          <dl class="space-y-2 text-sm">
+            {details.filter(([, v]) => v).map(([k, v, href]) => (
+              <div class="flex justify-between gap-4">
+                <dt class="text-zinc-500">{k}</dt>
+                <dd class="text-right">{href ? <a href={href} class="link" rel="noopener">{v}</a> : v}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+        <div class="card p-4">
+          <h2 class="mb-3 text-sm font-semibold text-zinc-500">Links</h2>
+          <ul class="space-y-1.5 text-sm">
+            {links.filter(([, v]) => v).map(([k, v]) => (
+              <li class="flex justify-between gap-4"><span class="text-zinc-500">{k}</span><a href={v} class="link truncate" rel="noopener">{host(v!)}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="card p-4 text-sm">
+          <h2 class="mb-2 text-sm font-semibold text-zinc-500">Data</h2>
+          <p class="text-zinc-600 dark:text-zinc-400">Last verified <time datetime={p.last_verified}>{p.last_verified}</time>.</p>
+          <details class="mt-2">
+            <summary class="cursor-pointer text-zinc-500">Sources ({p.sources.length})</summary>
+            <ul class="mt-2 space-y-1">
+              {p.sources.map((s) => <li class="truncate"><a href={s} class="link" rel="noopener nofollow">{s.replace(/^https?:\/\//, "")}</a></li>)}
+            </ul>
+          </details>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <a href={editProductIssueUrl(p.name, p.slug)} class="btn-secondary px-3! py-1.5!" rel="noopener">Suggest an edit</a>
+            <a href={editFileUrl(p.slug)} class="btn-secondary px-3! py-1.5!" rel="noopener">Edit on GitHub</a>
+          </div>
+        </div>
+        {supported.length > 0 && (
+          <p class="text-xs text-zinc-500">{p.name} supports {supported.length} of the features we track.</p>
+        )}
+      </aside>
+    </div>
+  </div>
+</Base>

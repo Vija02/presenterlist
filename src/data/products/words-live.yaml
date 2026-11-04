@@ -1,0 +1,45 @@
+name: WordsLive
+tagline: Free, open-source Windows projection software for lyrics, videos and presentations.
+description: >-
+  WordsLive is a free, open-source worship projection program for Windows,
+  created as a successor to the discontinued Powerpraise and natively
+  supporting its songs and portfolios. It presents songs from a central
+  full-text-searchable library alongside videos, music, PowerPoint and
+  LibreOffice presentations, PDF documents and images, and supports chord
+  display with transposition. Songs can be imported from SongSelect,
+  SongBeamer, OpenSong, OpenLyrics and ChordPro formats. The software is
+  still labelled beta and is maintained by a small volunteer team.
+website: http://wordslive.org/en/
+developer: WordsLive project
+headquarters: Germany
+founded: 2013
+status: active
+open_source: true
+license: GPL-3.0
+source_code_url: https://github.com/Boddlnagg/WordsLive
+pricing:
+  models: [free]
+  free_trial: false
+platforms: [windows]
+deployment: [desktop]
+features:
+  lyrics: true
+  slides_import: true
+  video_playback: true
+  audio_playback: true
+  ccli_songselect: true
+  ccli_reporting: true
+  offline: true
+feature_notes:
+  slides_import: PowerPoint (ppt, pptx) and OpenDocument (odp) presentations require Microsoft PowerPoint or LibreOffice/OpenOffice Impress to be installed; PDF and XPS documents are also supported (experimental).
+  video_playback: Additional formats are supported if VLC is installed and enabled.
+  ccli_songselect: Import of SongSelect song files.
+  ccli_reporting: The changelog references CCLI reporting (fixed in 0.9.17); details are not documented on the website.
+languages: [German, English]
+docs_url: http://wordslive.org/en/manual/
+sources:
+  - http://wordslive.org/en/
+  - http://wordslive.org/en/features.html
+  - https://github.com/Boddlnagg/WordsLive
+  - https://github.com/Boddlnagg/WordsLive/releases
+last_verified: 2026-11-04

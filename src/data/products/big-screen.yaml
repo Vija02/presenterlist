@@ -1,0 +1,44 @@
+name: Big Screen
+tagline: Browser-based church presentation software with themes, timers and unlimited outputs.
+description: >-
+  Big Screen is a web-based church presentation application from Launch
+  Interactive that runs in major browsers on Windows, macOS and Linux. Songs,
+  scriptures, images and videos are managed in one place and presented with
+  custom themes, looping video backgrounds and YouTube playback. It provides
+  unlimited front-of-house and monitor outputs, with a monitor display showing a
+  clock, countdown timers and upcoming lyrics, and is designed to keep working
+  without an internet connection.
+website: https://bigscreen.show
+developer: Launch Interactive
+headquarters: Australia
+status: active
+open_source: false
+pricing:
+  models: [subscription]
+  free_trial: true
+  starting_price: "AUD $15/month"
+  pricing_url: https://bigscreen.show
+  notes: AUD $15/month or $162/year including 5 GB storage; extra storage and some Bible translations cost extra. 30-day free trial.
+platforms: [web]
+deployment: [cloud]
+features:
+  lyrics: true
+  bible: true
+  video_playback: true
+  web_content: true
+  timers: true
+  live_video_input: true
+  multiple_outputs: true
+  stage_display: true
+  collaboration: partial
+  offline: true
+feature_notes:
+  bible: 31 translations, some requiring a one-time purchase.
+  web_content: YouTube playback.
+  live_video_input: Phones, tablets or webcams can be used as live video sources.
+  multiple_outputs: Unlimited Frontend and Monitor outputs plus custom outputs.
+  collaboration: Lyrics, videos and images can be shared between locations within one organisation.
+sources:
+  - https://bigscreen.show
+  - https://alternativeto.net/software/big-screen-church-presentation-software/about/
+last_verified: 2026-11-04

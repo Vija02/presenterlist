@@ -1,0 +1,54 @@
+name: WorshipTools Presenter
+tagline: Free church presentation app with cloud sync and paid tiers for multi-screen features.
+description: >-
+  Presenter is the church presentation app in the WorshipTools suite, which
+  was previously known as Worship Extreme. It runs on Windows and macOS,
+  syncs songs, media and cue lists across computers through the cloud, and
+  runs locally without an internet connection once synced. The free tier
+  includes lyrics, built-in Bibles and SongSelect import with unlimited
+  installs; stage display, the mobile remote and multiple output screens
+  require a paid Pro plan.
+website: https://worshiptools.com/presenter
+developer: WorshipTools (Blue Circle Lab LLC)
+status: active
+open_source: false
+pricing:
+  models: [freemium, subscription]
+  free_trial: false
+  pricing_url: https://www.worshiptools.com/pricing
+  notes: >-
+    Free forever tier with unlimited installs and no watermark. Pro adds stage
+    display, mobile remote and multiple outputs; Pro Plus adds unlimited
+    motion graphics and templates and simultaneous Presenter sessions. Prices
+    were not shown on the pricing page at the time of verification.
+platforms: [windows, macos]
+deployment: [desktop, cloud]
+features:
+  lyrics: true
+  bible: true
+  slides_import: true
+  video_playback: true
+  ccli_songselect: true
+  ccli_reporting: true
+  ndi: true
+  multiple_outputs: addon
+  stage_display: addon
+  remote_control: addon
+  collaboration: addon
+  cloud_sync: true
+  offline: true
+feature_notes:
+  bible: 45+ built-in Bible translations on all tiers.
+  slides_import: The vendor lists import of PowerPoint, Keynote and Google Slides presentations.
+  multiple_outputs: Requires a Pro plan; outputs can have different layouts (audience, stage, livestream lyrics).
+  stage_display: Requires a Pro plan; companion stage display app for iPhone, iPad and Android.
+  remote_control: Requires a Pro plan; remote app for iPhone, iPad and Android.
+  collaboration: Simultaneous Presenter sessions require the Pro Plus plan.
+  offline: Runs locally once content is synced.
+docs_url: https://www.worshiptools.com/
+sources:
+  - https://worshiptools.com/presenter
+  - https://www.worshiptools.com/pricing
+  - https://www.worshiptools.com/compare/propresenter
+  - https://faith.tools/app/worshiptools
+last_verified: 2026-11-04

@@ -1,0 +1,21 @@
+---
+import Base from "../../layouts/Base.astro";
+import { PLATFORMS } from "../../lib/schema.ts";
+import { getProducts } from "../../lib/products.ts";
+const products = (await getProducts()).filter((p) => p.status !== "discontinued");
+---
+<Base title="Church presentation software by platform" description="Church presentation software for Windows, macOS, Linux, the web, iPad and Android." breadcrumbs={[{ label: "Platforms" }]}>
+  <div class="container-page mt-6">
+    <h1 class="text-3xl font-bold tracking-tight">Browse by platform</h1>
+    <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {Object.entries(PLATFORMS).map(([k, label]) => (
+        <li>
+          <a href={`/platforms/${k}/`} class="card block p-5 no-underline transition-shadow hover:shadow-md">
+            <p class="font-semibold">{label}</p>
+            <p class="mt-1 text-sm text-zinc-500">{products.filter((p) => p.platforms.includes(k as any)).length} active products</p>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Base>

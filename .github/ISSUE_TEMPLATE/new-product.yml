@@ -1,0 +1,51 @@
+name: Submit a product
+description: Suggest presentation software to add to PresenterList
+title: "Add: "
+labels: ["new product"]
+body:
+  - type: input
+    id: name
+    attributes: { label: Product name }
+    validations: { required: true }
+  - type: input
+    id: website
+    attributes: { label: Website }
+    validations: { required: true }
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: One or two neutral sentences — what it is and who it's for.
+    validations: { required: true }
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: Platforms
+      options:
+        - label: Windows
+        - label: macOS
+        - label: Linux
+        - label: Web browser
+        - label: iOS / iPadOS
+        - label: Android
+        - label: ChromeOS
+  - type: dropdown
+    id: pricing
+    attributes:
+      label: Pricing
+      multiple: true
+      options: [Free, Freemium, Subscription, One-time purchase, Donation-supported]
+  - type: input
+    id: source
+    attributes: { label: Source code URL (if open source) }
+  - type: textarea
+    id: features
+    attributes:
+      label: Notable features
+      description: e.g. Bible, CCLI SongSelect, Planning Center, NDI, stage display, remote control. Links to docs help a lot.
+  - type: checkboxes
+    id: affiliation
+    attributes:
+      label: Affiliation
+      options:
+        - label: I work for or represent this product

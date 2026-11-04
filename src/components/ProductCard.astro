@@ -1,0 +1,28 @@
+---
+import Logo from "./Logo.astro";
+import Badges from "./Badges.astro";
+import type { P } from "../lib/products.ts";
+interface Props { product: P; compareToggle?: boolean; attrs?: Record<string, string> }
+const { product: p, compareToggle = false, attrs = {} } = Astro.props;
+---
+<li class="group card relative flex flex-col p-4 transition-shadow hover:shadow-md hover:shadow-zinc-200/60 dark:hover:shadow-black/40" {...attrs}>
+  <div class="flex items-start gap-3">
+    <Logo product={p} />
+    <div class="min-w-0 flex-1">
+      <h3 class="font-semibold leading-tight">
+        <a href={`/software/${p.slug}/`} class="no-underline after:absolute after:inset-0 group-hover:text-brand-600 dark:group-hover:text-brand-400">{p.name}</a>
+      </h3>
+      <p class="mt-0.5 truncate text-xs text-zinc-500">{p.developer}</p>
+    </div>
+  </div>
+  <p class="mt-3 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{p.tagline}</p>
+  <div class="mt-auto flex items-end justify-between gap-2 pt-3">
+    <Badges product={p} />
+    {compareToggle && (
+      <label class="relative z-10 -mr-1.5 -mb-1 flex shrink-0 cursor-pointer items-center gap-1.5 rounded-md px-1.5 py-1 text-xs text-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-800" title="Add to comparison">
+        <input type="checkbox" class="compare-toggle accent-brand-600" value={p.slug} data-name={p.name} />
+        <span>Compare</span>
+      </label>
+    )}
+  </div>
+</li>

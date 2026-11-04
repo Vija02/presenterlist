@@ -1,0 +1,53 @@
+name: OpenLP
+tagline: Free, open-source worship presentation software for songs, Bibles, media and slides.
+description: >-
+  OpenLP is a free, open-source church presentation program written in Python
+  and Qt, developed by a volunteer community since the 2000s. It projects song
+  lyrics, Bible verses, custom slides, images, audio/video (via VLC) and
+  PowerPoint, Impress or PDF presentations, organised into a service plan.
+  A built-in web remote, stage view and companion Android and iOS apps allow
+  control from other devices on the local network. The current stable series
+  is 3.1.x, with alpha releases of OpenLP 4.0 published in 2026.
+website: https://openlp.org
+developer: OpenLP Developers (volunteer community)
+status: active
+open_source: true
+license: GPL-3.0-or-later
+source_code_url: https://gitlab.com/openlp/openlp
+pricing:
+  models: [free, donation]
+  free_trial: false
+platforms: [windows, macos, linux]
+deployment: [desktop]
+output_note: The stage view and web remote can be opened in any web browser on the local network; FreeBSD is also supported.
+features:
+  lyrics: true
+  bible: true
+  slides_import: partial
+  video_playback: true
+  audio_playback: true
+  ccli_songselect: true
+  ccli_reporting: partial
+  planning_center: true
+  multiple_outputs: true
+  stage_display: true
+  remote_control: true
+  offline: true
+feature_notes:
+  slides_import: Controls PowerPoint, PowerPoint Viewer or LibreOffice Impress presentations and shows PDFs; no Keynote or Google Slides support.
+  bible: Bibles are imported from several file formats or downloaded from Bible websites.
+  ccli_songselect: Songs can be imported from CCLI SongSelect from within OpenLP; this importer has occasionally broken when CCLI changed its website.
+  ccli_reporting: The Song Usage Tracking plugin records song usage and produces reports; submission to CCLI is manual.
+  planning_center: The PlanningCenter plugin imports service plans from the Planning Center Online v2 API.
+  video_playback: Audio and video playback uses VLC.
+  remote_control: Built-in web remote plus Android and iOS remote apps.
+docs_url: https://manual.openlp.org
+community_url: https://discuss.openlp.org
+sources:
+  - https://openlp.org/
+  - https://openlp.org/blog/
+  - https://gitlab.com/openlp/openlp
+  - https://manual.openlp.org/
+  - https://manual.openlp.org/plugin_list.html
+  - https://discuss.openlp.org/d/6138-updated-songselect-now-incompatible-with-openlp-302
+last_verified: 2026-11-04

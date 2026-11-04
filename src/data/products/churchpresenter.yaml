@@ -1,0 +1,59 @@
+name: ChurchPresenter
+tagline: Free, open-source desktop presenter for songs, scripture, slides, media and broadcast graphics.
+description: >-
+  ChurchPresenter is a free, open-source worship presentation application for
+  Windows, macOS and Linux, built with Compose Multiplatform on the JVM. It
+  presents songs, Bible verses, PowerPoint/Keynote/PDF slides, video, web pages,
+  live captions and animated lower thirds to any number of outputs, including
+  NDI, OMT, browser-source and DeckLink outputs. It also offers a stage monitor,
+  phone and tablet remote control, Planning Center import, CCLI usage report
+  export and integrations with OBS, Blackmagic ATEM and Bitfocus Companion.
+  Companion iOS and Android apps can control the desktop schedule.
+website: https://www.churchpresenter.org
+developer: ChurchPresenter
+status: active
+open_source: true
+license: GPL-3.0
+source_code_url: https://github.com/ChurchPresenter/ChurchPresenter
+pricing:
+  models: [free]
+  free_trial: false
+  notes: Free with no subscription and no seat limits.
+platforms: [windows, macos, linux]
+deployment: [desktop]
+output_note: A browser-source output can be used in OBS; companion iOS and Android apps act as remotes.
+features:
+  lyrics: true
+  bible: true
+  slides_import: true
+  video_playback: true
+  audio_playback: true
+  web_content: true
+  timers: true
+  lower_thirds: true
+  ccli_reporting: partial
+  planning_center: true
+  ndi: true
+  live_video_input: true
+  midi: partial
+  api: true
+  multiple_outputs: true
+  stage_display: true
+  remote_control: true
+  offline: true
+feature_notes:
+  slides_import: Presents .pptx, .ppt, .key and PDF files without Microsoft or Apple software installed.
+  ccli_reporting: Exports date-filtered CSV/Excel song usage reports for CCLI reporting; it does not submit reports to CCLI automatically.
+  planning_center: Imports Planning Center Services plans (read-only); each church supplies its own free PCO developer credentials.
+  ndi: NDI input and output require the free NDI Runtime, installed separately.
+  live_video_input: Webcams, capture cards, NDI and OMT sources can be placed on the canvas compositor.
+  midi: Hardware control via Bitfocus Companion (e.g. Stream Deck) and Blackmagic ATEM integration; no MIDI/DMX support was found.
+  api: Built-in local server used by mobile remotes, with optional API-key protection, plus Companion HTTP buttons.
+  multiple_outputs: One window per connected display plus Blackmagic DeckLink/SDI, NDI, OMT and browser-source outputs.
+docs_url: https://www.churchpresenter.org/wiki/
+community_url: https://www.churchpresenter.org/forum/
+sources:
+  - https://github.com/ChurchPresenter/ChurchPresenter
+  - https://github.com/ChurchPresenter/ChurchPresenter/blob/main/FEATURES.md
+  - https://www.churchpresenter.org
+last_verified: 2026-11-04
