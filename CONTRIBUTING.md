@@ -39,3 +39,7 @@ They're collected automatically. On the 1st of each month `.github/workflows/rel
 To help: add a `release_feeds` or `release_notes_url` to a product so its releases are picked up, or use the "Submit a release" issue form. To remove or fix an item, edit or delete its file and, if needed, add a line to `scripts/news-ignored.txt` so it isn't recreated. Run `pnpm fetch-news` without `--auto` to create drafts for manual review instead.
 
 The workflow runs Claude Code on the maintainer's Claude subscription: it needs a `CLAUDE_CODE_OAUTH_TOKEN` secret (from `claude setup-token`) in a GitHub environment named `releases`, restricted to the `main` branch. Locally, `SUMMARY_BACKEND=claude-code pnpm fetch-news --auto` uses your own Claude Code login; with `ANTHROPIC_API_KEY` instead it uses the API. Each run is capped at 40 summary requests (`SUMMARY_MAX_CALLS`).
+
+## Screenshots
+
+Product pages show a screenshot of the product's homepage (`website`). `pnpm screenshots` captures them into `public/screenshots/` with the same settings for every product (1280×800, cookie banners hidden). They aren't committed: the Deploy workflow captures them once a month (and for new or edited products) and caches them between deploys. If a site fails to load, the previous screenshot is kept.

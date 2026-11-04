@@ -34,6 +34,25 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm validate
+
+      # Homepage screenshots: captured at most once a month per product, cached between deploys.
+      - id: month
+        run: echo "month=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
+      - id: shots
+        uses: actions/cache@v4
+        with:
+          path: public/screenshots
+          key: screenshots-${{ steps.month.outputs.month }}-${{ hashFiles('src/data/products/*.yaml') }}
+          restore-keys: |
+            screenshots-${{ steps.month.outputs.month }}-
+            screenshots-
+      - name: Capture screenshots
+        if: steps.shots.outputs.cache-hit != 'true'
+        continue-on-error: true # a broken site shouldn't block the deploy
+        run: |
+          pnpm exec playwright install --with-deps chromium-headless-shell
+          pnpm screenshots
+
       - run: pnpm build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

@@ -1,3 +1,5 @@
+import { existsSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 import { getCollection, type CollectionEntry } from "astro:content";
 import {
   DEPLOYMENTS,
@@ -116,4 +118,13 @@ export function filterTags(p: P) {
   for (const m of p.pricing.models) t.push(`price-${m}`);
   for (const d of p.deployment) t.push(`deploy-${d}`);
   return t.join(" ");
+}
+
+// Homepage screenshots, captured by scripts/screenshots.ts into public/screenshots (not committed).
+let shotMeta: Record<string, string> | undefined;
+export function screenshotOf(slug: string): { src: string; date: string } | undefined {
+  const dir = join(process.cwd(), "public", "screenshots");
+  shotMeta ??= existsSync(join(dir, "meta.json")) ? JSON.parse(readFileSync(join(dir, "meta.json"), "utf8")) : {};
+  if (!existsSync(join(dir, `${slug}.jpg`))) return;
+  return { src: `/screenshots/${slug}.jpg`, date: shotMeta![slug] ?? "" };
 }
