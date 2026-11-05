@@ -60,6 +60,8 @@ const ld = [
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="256x256" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="alternate" type="application/rss+xml" title={`${SITE_NAME} releases`} href="/releases/rss.xml" />
     <meta property="og:type" content="website" />
@@ -79,7 +81,7 @@ const ld = [
     <header class="sticky top-0 z-30 border-b border-zinc-200 bg-white/85 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/85">
       <div class="container-page flex h-14 items-center gap-6">
         <a href="/" class="flex items-center gap-2 font-semibold tracking-tight no-underline">
-          <img src="/favicon.svg" alt="" width="24" height="24" />
+          <img src="/logo.png" alt="" width="24" height="24" class="dark:invert" />
           <span>Presenter<span class="text-zinc-500 dark:text-zinc-400">List</span></span>
         </a>
         <nav class="hidden items-center gap-1 md:flex" aria-label="Main">
