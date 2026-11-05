@@ -22,16 +22,19 @@ pricing:
   models: [free]
   free_trial: false
   notes: The hosted version is free for small churches and select non-profits; the code can be self-hosted.
-platforms: [web, windows, macos]
+platforms: [web, windows, macos, linux]
 deployment: [cloud, desktop, self_hosted]
 output_note: Any device with a modern web browser can be used as an output screen or remote.
 features:
   songs:
     library: true
+    import_text: true
     chords: true
     auto_import: true
+    backgrounds: true
   bible:
     builtin: true
+    licensed: partial
   slides:
     powerpoint: true
     google_slides: true
@@ -49,6 +52,7 @@ features:
     screen_share: true
     interaction: true
   multilingual:
+    song_libraries: partial
     bible_translations: true
   software_integrations:
     planning_center: true
@@ -58,14 +62,16 @@ features:
     ai: true
   outputs:
     multiple: true
+    stage_display: true
+    lower_thirds: true
     web_output: true
   tv_output:
-    apple_tv: true
+    apple_tv: false
     android_tv: true
     fire_tv: true
   connectivity:
     cloud_sync: true
-    offline: partial
+    offline: true
     remote_control: true
     collaboration: true
     web_native: true
@@ -78,7 +84,10 @@ feature_notes:
   slides.animations: PowerPoint imports keep their slideshow data so animations play click by click.
   software_integrations.planning_center: Setlists can be imported from Planning Center.
   software_integrations.churchsuite: Setlists can be imported from ChurchSuite.
-  tv_output.android_tv: TheOpenPresenter TV app for Android TV and Apple TV; a Fire TV (Vega OS) version is also built.
+  tv_output.android_tv: TheOpenPresenter TV app for Android TV; a Fire TV (Vega OS) version is also built.
+  bible.licensed: Licensed translations can be used, but the church has to upload them.
+  sources.web: Web pages can be shown, but interacting with them isn't supported yet; use screen share instead.
+  multilingual.song_libraries: Songs in any language work, but the automatic import sources have few non-English songs so far.
   songs.auto_import: Songs can be pulled from MyWorshipList.
 docs_url: https://docs.theopenpresenter.com
 news_feeds:
@@ -86,4 +95,4 @@ news_feeds:
 sources:
   - https://github.com/Vija02/TheOpenPresenter
   - https://theopenpresenter.com
-last_verified: 2026-11-04
+last_verified: 2026-11-05
