@@ -36,21 +36,25 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm validate
 
-      # Homepage screenshots: recaptured when the month, a product file or the capture script
-      # changes; otherwise reused from the cache. Old screenshots are kept for sites that fail.
-      - id: month
-        run: echo "month=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
+      # Homepage screenshots: recaptured when the month, a product's website (or the product list)
+      # or the capture script changes; otherwise reused from the cache. Other product edits don't
+      # trigger a recapture. Old screenshots are kept for sites that fail.
+      - id: shotkey
+        run: |
+          echo "month=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
+          echo "sites=$(grep -H -E '^(website|status):' src/data/products/*.yaml | sha256sum | cut -c1-16)" >> "$GITHUB_OUTPUT"
       - id: shots
         uses: actions/cache@v4
         with:
           path: public/screenshots
-          key: screenshots-${{ steps.month.outputs.month }}-${{ hashFiles('src/data/products/*.yaml', 'scripts/screenshots.ts') }}
+          key: screenshots-${{ steps.shotkey.outputs.month }}-${{ steps.shotkey.outputs.sites }}-${{ hashFiles('scripts/screenshots.ts') }}
           restore-keys: |
-            screenshots-${{ steps.month.outputs.month }}-
+            screenshots-${{ steps.shotkey.outputs.month }}-
             screenshots-
       - name: Capture screenshots
         if: steps.shots.outputs.cache-hit != 'true'
         continue-on-error: true # a broken site shouldn't block the deploy
+        timeout-minutes: 15
         run: |
           pnpm exec playwright install --with-deps chromium-headless-shell
           pnpm screenshots --force
