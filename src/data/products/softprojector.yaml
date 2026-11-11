@@ -52,6 +52,10 @@ feature_notes:
   multilingual.side_by_side: Up to three Bible versions can be shown on one screen (six across two screens).
   multilingual.non_latin: Cyrillic and Armenian text are supported; right-to-left scripts are not documented.
   outputs.multiple: A second display screen can be configured alongside the main projector screen.
+screenshots:
+  - image: http://softprojector.org/images/main.jpg
+    source: http://softprojector.org/
+    caption: Main window with service schedule, Bible tab and live verse list
 sources:
   - http://softprojector.org/
   - https://github.com/SoftProjector/softprojector

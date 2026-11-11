@@ -120,6 +120,16 @@ feature_notes:
   streaming.recording: Outputs and captured screens can be recorded to a file.
   connectivity.cloud_sync: The library can be synced across computers through cloud sync (e.g. Google Drive or ChurchApps).
 docs_url: https://freeshow.app/docs
+screenshots:
+  - image: https://freeshow.app/images/preview/main_create.webp
+    source: https://freeshow.app/
+    caption: Show view with a song's slides, project list and output preview
+  - image: https://freeshow.app/images/preview/main_scripture.webp
+    source: https://freeshow.app/
+    caption: Scripture drawer open with a Bible passage and slide previews
+  - image: https://freeshow.app/images/preview/main_template.webp
+    source: https://freeshow.app/
+    caption: Templates drawer open below a song's slides
 sources:
   - https://freeshow.app/
   - https://freeshow.app/docs/features

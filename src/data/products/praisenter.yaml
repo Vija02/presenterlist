@@ -60,6 +60,16 @@ feature_notes:
   multilingual.side_by_side: A primary and secondary Bible can be shown on the same slide.
   outputs.multiple: Each connected display can receive content independently.
   broadcast_video.ndi: Outputs can be sent as NDI displays.
+screenshots:
+  - image: https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b9/7a/14/b97a149f-e48f-700c-caa4-f8cfd5fd32d1/PraisenterScreenshot2.png/1286x804bb-60.jpg
+    source: https://apps.apple.com/us/app/praisenter/id6756894623
+    caption: Presenting view controlling two displays, with slide queue and content tabs
+  - image: https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/38/db/62/38db622d-71fd-441b-5026-e02e94482c91/PraisenterScreenshot4.png/1286x804bb-60.jpg
+    source: https://apps.apple.com/us/app/praisenter/id6756894623
+    caption: Slide editor with a two-language Bible template and slide properties panel
+  - image: https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e4/aa/ba/e4aabaee-1aea-f3bd-ce20-f753b3d21e47/PraisenterScreenshot5.png/1286x804bb-60.jpg
+    source: https://apps.apple.com/us/app/praisenter/id6756894623
+    caption: Bible editor showing Genesis 1 verses and a verse text field
 sources:
   - https://github.com/praisenter/praisenter
   - https://github.com/praisenter/praisenter/blob/master/src/main/resources/org/praisenter/manual/manual.html

@@ -72,6 +72,13 @@ feature_notes:
   connectivity.offline: Continues working with no internet connection; a Cache Client can serve local media.
   connectivity.collaboration: Several control surfaces can be open for a location, but only one controls the remote displays at a time.
 release_notes_url: https://bigscreen.show/change-log
+screenshots:
+  - image: https://bigscreen.show/images/control-1200.png
+    source: https://bigscreen.show
+    caption: Control surface with playlist items and song verse slide previews
+  - image: https://bigscreen.show/images/monitor-1200.png
+    source: https://bigscreen.show
+    caption: Monitor display with countdown timer, current lyrics, next line and clock
 sources:
   - https://bigscreen.show
   - https://bigscreen.show/change-log

@@ -106,6 +106,16 @@ feature_notes:
   connectivity.remote_control: ProPresenter Remote app is included with an active subscription.
 docs_url: https://support.renewedvision.com/
 release_notes_url: https://renewedvision.com/propresenter/download
+screenshots:
+  - image: https://cdn.prod.website-files.com/662f9c93a3bc73a71bd8dc81/6a569ef093ea36e79dec87a0_Versatileproductionsolution.png
+    source: https://renewedvision.com/propresenter/
+    caption: Main window with library, playlist, slide grid, output preview and timers
+  - image: https://cdn.prod.website-files.com/662f9c93a3bc73a71bd8dc81/669577167259cf291ba66d41_StageDisplayCurrent-Next%20(1).webp
+    source: https://renewedvision.com/propresenter/stage-display
+    caption: Stage display layout with current slide, next slide, countdown and clock
+  - image: https://cdn.prod.website-files.com/662f9c93a3bc73a71bd8dc81/66830ec566b366670fe61994_Multiple%20Screens.avif
+    source: https://renewedvision.com/propresenter/multi-screen-management
+    caption: Screen configuration with audience and stage screens and output settings
 sources:
   - https://renewedvision.com/propresenter/
   - https://renewedvision.com/propresenter/download

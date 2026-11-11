@@ -77,6 +77,13 @@ feature_notes:
   connectivity.remote_control: MediaShout Remote app for iOS (added in 7.3); standard USB presentation remotes also work.
 docs_url: https://mediashout.com/docs/mediashout-7-user-guide/
 release_notes_url: https://support.mediashout.com/688627-MediaShout-7-Windows-Change-Log
+screenshots:
+  - image: https://mediashout.com/wp-content/uploads/2023/01/Light-Theme-1.png
+    source: https://mediashout.com/
+    caption: Main window in light theme with script, slide editor, templates and viewers
+  - image: https://mediashout.com/wp-content/uploads/2026/10/stage-scripture-preview.png
+    source: https://mediashout.com/set-up-a-stage-display-in-mediashout-7/
+    caption: Editing a stage display layout with clock, timer and next line
 sources:
   - https://mediashout.com/
   - https://mediashout.com/pricing

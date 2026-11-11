@@ -70,6 +70,16 @@ docs_url: https://opensong.org
 community_url: https://sourceforge.net/p/opensong/
 news_feeds:
   - https://sourceforge.net/p/opensong/news/feed.rss
+screenshots:
+  - image: https://opensong.org/images/PresentationHelper.png
+    source: https://opensong.org/documentation/getting-started/
+    caption: Presentation helper window with slide list, current slide preview, and display mode controls
+  - image: https://opensong.org/images/screenshot.jpg
+    source: https://opensong.org/
+    caption: Song mode with song list and song editor showing chords and lyrics
+  - image: https://opensong.org/images/SetMode.png
+    source: https://opensong.org/documentation/getting-started/
+    caption: Set mode with a set's items listed and the slide editor open
 sources:
   - https://opensong.org/
   - https://sourceforge.net/projects/opensong/

@@ -62,6 +62,13 @@ feature_notes:
   multilingual.bilingual_display: Songs can carry a translation, shown alongside the main language or on its own.
 languages: [German, English]
 docs_url: http://wordslive.org/en/manual/
+screenshots:
+  - image: https://wordslive.org/assets/img/slider-viewer.png
+    source: https://wordslive.org/en/
+    caption: Main window with running order, preview and the slides of the current song (German UI)
+  - image: https://wordslive.org/assets/img/slider-editor.png
+    source: https://wordslive.org/en/
+    caption: Song editor with song parts, slide preview, slide text and arrangement (German UI)
 sources:
   - http://wordslive.org/en/
   - http://wordslive.org/en/features.html

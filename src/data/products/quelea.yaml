@@ -79,6 +79,10 @@ feature_notes:
 languages: [English, German, Spanish, Swedish, Czech, Hungarian, Norwegian, Dutch, Lithuanian, Portuguese]
 docs_url: https://quelea-projection.github.io/docs/
 community_url: https://quelea.discourse.group/
+screenshots:
+  - image: https://raw.githubusercontent.com/quelea-projection/Quelea/master/screenshot.png
+    source: https://github.com/quelea-projection/Quelea
+    caption: Main window with order of service, song preview, live video and song library
 sources:
   - https://quelea.org/
   - https://github.com/quelea-projection/Quelea

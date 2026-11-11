@@ -103,6 +103,13 @@ feature_notes:
 docs_url: https://www.churchpresenter.org/wiki/
 community_url: https://www.churchpresenter.org/forum/
 release_notes_url: https://www.churchpresenter.org/changelog/
+screenshots:
+  - image: https://www.churchpresenter.org/homepage-hero-light.webp
+    source: https://www.churchpresenter.org
+    caption: Main window with schedule, Bible tab verse browser and live output preview
+  - image: https://www.churchpresenter.org/homepage-songs-light.webp
+    source: https://www.churchpresenter.org
+    caption: Songs tab with song book list, verse lyrics and live output preview
 sources:
   - https://github.com/ChurchPresenter/ChurchPresenter
   - https://github.com/ChurchPresenter/ChurchPresenter/blob/main/FEATURES.md

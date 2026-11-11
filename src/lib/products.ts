@@ -12,6 +12,7 @@ import {
   type FeatureValue,
 } from "./schema.ts";
 export { featureLabel, featureFullLabel } from "./schema.ts";
+import { appScreenshotFile, type AppScreenshotMeta } from "./app-screenshots.ts";
 
 export type ProductEntry = CollectionEntry<"products">;
 export type P = ProductEntry["data"] & { slug: string };
@@ -127,4 +128,19 @@ export function screenshotOf(slug: string): { src: string; date: string } | unde
   shotMeta ??= existsSync(join(dir, "meta.json")) ? JSON.parse(readFileSync(join(dir, "meta.json"), "utf8")) : {};
   if (!existsSync(join(dir, `${slug}.jpg`))) return;
   return { src: `/screenshots/${slug}.jpg`, date: shotMeta![slug] ?? "" };
+}
+
+// App screenshots from official sources, downloaded by scripts/app-screenshots.ts into public/app-screenshots
+// (committed). Entries whose file is missing (not downloaded yet, or the source failed) are left out.
+let appShotMeta: AppScreenshotMeta | undefined;
+export type AppScreenshot = { src: string; width: number; height: number; caption: string; source: string };
+export function appScreenshotsOf(p: P): AppScreenshot[] {
+  const dir = join(process.cwd(), "public", "app-screenshots");
+  appShotMeta ??= existsSync(join(dir, "meta.json")) ? JSON.parse(readFileSync(join(dir, "meta.json"), "utf8")) : {};
+  return (p.screenshots ?? []).flatMap((s) => {
+    const file = appScreenshotFile(p.slug, s.image);
+    const m = appShotMeta![file];
+    if (!m || !existsSync(join(dir, file))) return [];
+    return [{ src: `/app-screenshots/${file}`, width: m.width, height: m.height, caption: s.caption, source: s.source }];
+  });
 }

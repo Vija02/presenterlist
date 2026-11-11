@@ -20,6 +20,7 @@ import {
   pairSlug,
   platformLabel,
   pricingLabel,
+  appScreenshotsOf,
   screenshotOf,
   type P,
 } from "../../lib/products.ts";
@@ -38,6 +39,7 @@ const platforms = p.platforms.map(platformLabel);
 const confirmed = featureCount(p);
 const news = await releasesFor(p.slug);
 const shot = screenshotOf(p.slug);
+const appShots = appScreenshotsOf(p);
 
 const faq: { q: string; a: string }[] = [
   { q: `What is ${p.name}?`, a: `${p.name} is church presentation software by ${p.developer}. ${p.tagline}` },
@@ -141,6 +143,57 @@ const host = (u: string) => new URL(u).hostname.replace(/^www\./, "");
           <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">{p.description}</p>
           {p.pricing.notes && <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-400"><strong>Pricing:</strong> {p.pricing.notes}</p>}
         </section>
+
+        {appShots.length > 0 && (
+          <section>
+            <h2 class="h-section">Screenshots</h2>
+            <ul class:list={["grid gap-4", appShots.length > 1 && "sm:grid-cols-2"]}>
+              {appShots.map((s, i) => (
+                <li class:list={[appShots.length === 3 && i === 0 && "sm:col-span-2"]}>
+                  <figure class="card overflow-hidden">
+                    <button
+                      type="button"
+                      class="group block w-full cursor-zoom-in"
+                      data-lightbox={s.src}
+                      data-caption={s.caption}
+                      data-width={s.width}
+                      data-height={s.height}
+                      aria-label={`Enlarge: ${s.caption}`}
+                    >
+                      <img
+                        src={s.src}
+                        width={s.width}
+                        height={s.height}
+                        alt={`${p.name}: ${s.caption}`}
+                        class:list={[
+                          "block h-auto w-full border-b border-zinc-200 bg-zinc-100 object-contain transition-opacity group-hover:opacity-90 dark:border-zinc-800 dark:bg-zinc-900",
+                          // Full-width images keep their own shape; side-by-side ones share a box so rows line up, letterboxed, never cropped.
+                          appShots.length === 1 || (appShots.length === 3 && i === 0) ? "max-h-[32rem]" : "sm:aspect-[16/10]",
+                        ]}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+                    <figcaption class="flex items-baseline justify-between gap-3 px-4 py-2.5 text-xs text-zinc-500">
+                      <span class="text-zinc-700 dark:text-zinc-300">{s.caption}</span>
+                      <a href={s.source} rel="noopener nofollow" class="link shrink-0">{host(s.source)}</a>
+                    </figcaption>
+                  </figure>
+                </li>
+              ))}
+            </ul>
+            <p class="mt-2 text-xs text-zinc-500">Screenshots from {p.name}'s official channels. Images belong to their owners.</p>
+            <dialog id="lightbox" class="m-auto max-h-[95vh] max-w-[95vw] overflow-hidden rounded-lg bg-transparent p-0 backdrop:bg-black/80">
+              <form method="dialog" class="flex flex-col items-center gap-2">
+                <img id="lightbox-img" alt="" class="max-h-[85vh] w-auto max-w-[95vw] rounded-md object-contain" />
+                <div class="flex w-full items-center justify-between gap-4 text-sm text-zinc-200">
+                  <span id="lightbox-caption"></span>
+                  <button class="shrink-0 rounded px-2 py-1 hover:bg-white/10" aria-label="Close">Close ✕</button>
+                </div>
+              </form>
+            </dialog>
+          </section>
+        )}
 
         <section>
           <h2 class="h-section">Supported platforms</h2>
@@ -294,3 +347,25 @@ const host = (u: string) => new URL(u).hostname.replace(/^www\./, "");
     </div>
   </div>
 </Base>
+
+<script>
+  const dialog = document.getElementById("lightbox") as HTMLDialogElement | null;
+  const img = document.getElementById("lightbox-img") as HTMLImageElement | null;
+  const caption = document.getElementById("lightbox-caption");
+  if (dialog && img && caption) {
+    for (const btn of document.querySelectorAll<HTMLButtonElement>("[data-lightbox]")) {
+      btn.addEventListener("click", () => {
+        img.src = btn.dataset.lightbox!;
+        img.alt = btn.dataset.caption ?? "";
+        img.width = Number(btn.dataset.width);
+        img.height = Number(btn.dataset.height);
+        caption.textContent = btn.dataset.caption ?? "";
+        dialog.showModal();
+      });
+    }
+    // Click on the backdrop closes it.
+    dialog.addEventListener("click", (e) => {
+      if (e.target === dialog) dialog.close();
+    });
+  }
+</script>

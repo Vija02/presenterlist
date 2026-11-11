@@ -77,6 +77,16 @@ news_feeds:
   - https://kerkbeamer.nl/categorie/nieuws/feed/
 release_feeds:
   - https://kerkbeamer.nl/categorie/app/feed/
+screenshots:
+  - image: https://kerkbeamer.nl/wp-content/uploads/2022/09/KerkBeamer-Presentatiescherm.png
+    source: https://kerkbeamer.nl/
+    caption: Presentation screen with service order, live slide and next slides
+  - image: https://kerkbeamer.nl/wp-content/uploads/2022/09/KerkBeamer_bewerkpop-up.png
+    source: https://kerkbeamer.nl/
+    caption: Slide editor for a song item in the web app
+  - image: https://kerkbeamer.nl/wp-content/uploads/2023/05/KerkBeamer-sjabloon.png
+    source: https://kerkbeamer.nl/
+    caption: Template item library with the standard liturgy order
 sources:
   - https://kerkbeamer.nl
   - https://kerkbeamer.nl/tarieven/

@@ -53,6 +53,13 @@ feature_notes:
   outputs.multiple: Up to four independently configured displays, each to a window, NDI or data (XML/PNG) output.
   outputs.stage_display: A stage monitor can mirror the main display or use its own theme.
   outputs.lower_thirds: Display windows can cover part of the screen and NDI output carries an alpha channel.
+screenshots:
+  - image: https://www.bibleshow.net/Pictures/Screenshots/i_01.jpg
+    source: https://www.bibleshow.net/screenshots.php
+    caption: Main window with Bible browser, monitor preview, program list and theme options
+  - image: https://www.bibleshow.net/Pictures/Screenshots/i_16.jpg
+    source: https://www.bibleshow.net/screenshots.php
+    caption: Browser panel with Bible version and book buttons, monitor preview and history
 sources:
   - https://www.bibleshow.net/
   - https://www.bibleshow.net/presentation.php

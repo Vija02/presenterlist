@@ -89,6 +89,16 @@ docs_url: https://manual.openlp.org
 community_url: https://discuss.openlp.org
 news_feeds:
   - https://openlp.org/rss.xml
+screenshots:
+  - image: https://openlp.org/screenshots/mainwindow.png
+    source: https://openlp.org/
+    caption: Main window with song library, preview and live panes, and service manager
+  - image: https://openlp.org/screenshots/song_edit_verse_in_use.png
+    source: https://openlp.org/
+    caption: Song editor with lyrics split into verses and a verse order
+  - image: https://manual.openlp.org/_images/stage_view_song_w_note.png
+    source: https://manual.openlp.org/stage_view.html
+    caption: Stage view in a web browser showing current and upcoming lyrics, clock, and note
 sources:
   - https://openlp.org/
   - https://openlp.org/blog/

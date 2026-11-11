@@ -80,6 +80,16 @@ docs_url: https://support.easyworship.com/
 news_feeds:
   - https://easyworship.com/blog/feed.xml
 release_notes_url: https://www.easyworship.com/software/release-notes
+screenshots:
+  - image: https://cdn.easyworship.com/files/software/features/ew-interface.webp
+    source: https://www.easyworship.com/software/features
+    caption: Main window with schedule, preview, live output and scripture browser
+  - image: https://cdn.easyworship.com/files/software/features/presentation-schedule.webp
+    source: https://www.easyworship.com/software/features
+    caption: Contiguous schedule view showing all slides of the service in one list
+  - image: https://cdn.easyworship.com/files/software/features/remote-app.webp
+    source: https://www.easyworship.com/software/features
+    caption: EasyWorship Remote app on a phone next to a tablet showing a lyric slide
 sources:
   - https://www.easyworship.com/
   - https://easyworship.com/software

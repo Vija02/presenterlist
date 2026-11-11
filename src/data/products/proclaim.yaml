@@ -112,6 +112,16 @@ news_feeds:
 release_feeds:
   - https://github.com/Faithlife/ProclaimReleaseNotes/commits/gh-pages.atom
 release_notes_url: https://faithlife.github.io/ProclaimReleaseNotes/
+screenshots:
+  - image: https://support.proclaim.logos.com/hc/article_attachments/41423631691021
+    source: https://support.proclaim.logos.com/hc/en-us/articles/19863193393805-Volunteer-Reference-Guide
+    caption: Desktop app in edit mode with the service order, slide editor and slide preview
+  - image: https://support.proclaim.logos.com/hc/article_attachments/41423631699341
+    source: https://support.proclaim.logos.com/hc/en-us/articles/19863193393805-Volunteer-Reference-Guide
+    caption: Preview mode with the current slide, quick screens and slide timeline (help-article highlights)
+  - image: https://files.logoscdn.com/v1/assets/18397465/optimized?w=1398
+    source: https://proclaim.logos.com/features
+    caption: Browser-based editor editing a Bible passage slide
 sources:
   - https://proclaim.logos.com/
   - https://proclaim.logos.com/pricing

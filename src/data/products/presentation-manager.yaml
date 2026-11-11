@@ -61,6 +61,13 @@ feature_notes:
   multilingual.side_by_side: Two Bible translations, including different languages, can be shown at once and switched on the fly.
   outputs.multiple: Different presentations can be shown on two projectors at once (triple monitor support).
   connectivity.offline: An internet connection is only needed for optional RSS feeds and remote data or playlist access.
+screenshots:
+  - image: https://www.presentationmanager.com/images/layoutmixer.png
+    source: https://www.presentationmanager.com/tour.html
+    caption: Main window with media library, preview and live panes, transition controls, and playlist
+  - image: https://www.presentationmanager.com/images/templatedualBible.png
+    source: https://www.presentationmanager.com/tour.html
+    caption: Bible tab with a dual-translation template shown in the preview pane
 sources:
   - https://www.presentationmanager.com
   - https://www.presentationmanager.com/features.html

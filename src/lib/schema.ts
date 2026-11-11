@@ -330,6 +330,26 @@ export const productSchema = z
     /** Human-readable release notes / changelog page. Shown on the product page; checked by hand when there's no feed. */
     release_notes_url: z.url().optional(),
 
+    /**
+     * Screenshots of the app itself, from official channels only (vendor website, docs, official
+     * repo, app store listing). Downloaded and committed by scripts/app-screenshots.ts.
+     */
+    screenshots: z
+      .array(
+        z
+          .object({
+            /** Direct URL of the image file. */
+            image: z.url(),
+            /** Official page the image is published on, credited on the site. */
+            source: z.url(),
+            /** Short, factual description of what the screenshot shows. */
+            caption: z.string().min(1).max(100),
+          })
+          .strict(),
+      )
+      .max(4)
+      .optional(),
+
     /** URLs used to verify this entry. */
     sources: z.array(z.url()).min(1),
     last_verified: isoDate,

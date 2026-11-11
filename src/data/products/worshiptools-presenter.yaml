@@ -98,6 +98,13 @@ feature_notes:
   connectivity.offline: Offline mode runs existing and new services; YouTube and SongSelect import need a connection.
 docs_url: https://www.worshiptools.com/
 release_notes_url: https://www.worshiptools.com/en-us/presenter/download/change-log
+screenshots:
+  - image: https://www.worshiptools.com/img/presenter/whats-new/nc_rverx8mc.jpg
+    source: https://www.worshiptools.com/en-us/presenter/whats-new
+    caption: Live view with service order, song slides, audience output preview and alerts
+  - image: https://www.worshiptools.com/img/presenter/whats-new/vg5v1_t4zfs.jpg
+    source: https://www.worshiptools.com/en-us/presenter/whats-new
+    caption: Scripture tab with a passage split into slides
 sources:
   - https://worshiptools.com/presenter
   - https://www.worshiptools.com/pricing

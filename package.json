@@ -13,6 +13,7 @@
     "add-product": "node scripts/add-product.ts",
     "fetch-news": "node scripts/fetch-news.ts",
     "screenshots": "node scripts/screenshots.ts",
+    "app-screenshots": "node scripts/app-screenshots.ts",
     "astro": "astro"
   },
   "dependencies": {
@@ -28,6 +29,7 @@
     "@anthropic-ai/sdk": "^1.4.0",
     "@astrojs/check": "^0.9.12",
     "playwright": "1.64.1",
+    "sharp": "0.35.5",
     "typescript": "^5.9.3"
   }
 }

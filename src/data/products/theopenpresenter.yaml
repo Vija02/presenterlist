@@ -92,6 +92,13 @@ feature_notes:
 docs_url: https://docs.theopenpresenter.com
 news_feeds:
   - https://theopenpresenter.com/rss.xml
+screenshots:
+  - image: https://theopenpresenter.com/_astro/hero-remote.Bn9CtKkd_ZrOcu1.webp
+    source: https://theopenpresenter.com/
+    caption: Project view with the lyrics scene, showing two songs as slide thumbnails
+  - image: https://theopenpresenter.com/_astro/hero-remote-slides.Op9_Ut3r_ZH2mbu.webp
+    source: https://theopenpresenter.com/
+    caption: Slides scene with three slides and navigation controls
 sources:
   - https://github.com/Vija02/TheOpenPresenter
   - https://theopenpresenter.com

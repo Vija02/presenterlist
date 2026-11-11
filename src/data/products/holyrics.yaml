@@ -111,6 +111,16 @@ feature_notes:
   connectivity.remote_control: Holyrics mobile app for Android and iOS (iOS app is a one-time US$0.99 purchase).
 docs_url: https://github.com/holyrics/API-Server
 release_notes_url: https://holyrics.com.br/changelog/
+screenshots:
+  - image: https://holyrics.com.br/images/holyrics.png
+    source: https://holyrics.com.br/software.html
+    caption: Main window with song search, lyrics list, media player and output preview
+  - image: https://holyrics.com.br/images/bible_ra.png
+    source: https://holyrics.com.br/software.html
+    caption: Bible window with verse list and book, chapter and verse picker
+  - image: https://holyrics.com.br/images/musicView.png
+    source: https://holyrics.com.br/software.html
+    caption: Song editor with lyrics text and slide previews
 sources:
   - https://holyrics.com.br/
   - https://holyrics.com.br/software.html

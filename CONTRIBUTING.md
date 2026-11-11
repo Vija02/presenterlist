@@ -43,3 +43,13 @@ The workflow runs Claude Code on the maintainer's Claude subscription: it needs 
 ## Screenshots
 
 Product pages show a small screenshot of the product's homepage (`website`) in the sidebar. `pnpm screenshots` captures them into `public/screenshots/` with the same settings for every product (1280×800; cookie banners, ad slots and floating third-party widgets hidden). They aren't committed: the Deploy workflow recaptures them when the month, a product file or the capture script changes, and caches them between deploys. If a site fails to load, the previous screenshot is kept.
+
+### App screenshots
+
+The optional `screenshots` field lists up to 4 screenshots of the app itself, each with the direct `image` URL, the official `source` page it's published on, and a short factual `caption`. Same rules for every product:
+
+- Official channels only: the vendor's website, docs or blog, the official source repository, or the official app store listing. No third-party reviews, videos or forums.
+- The image must show the software's interface (not a logo, illustration or photo of a stage). Prefer the main operator window first.
+- Don't use URLs with expiring signatures.
+
+`pnpm app-screenshots` downloads them into `public/app-screenshots/` (resized to at most 1600px wide, WebP) and the site serves those copies. Unlike homepage screenshots they're committed, so run it after adding or changing an entry and commit the new files. A screenshot without a downloaded file is left off the page.

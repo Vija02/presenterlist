@@ -82,6 +82,13 @@ feature_notes:
   connectivity.remote_control: Running the service from a phone is a Teams (paid) feature.
   connectivity.collaboration: Real-time multiplayer and inviting teammates to the workspace are Teams (paid) features.
 release_notes_url: https://www.cloudofworship.com/changelog
+screenshots:
+  - image: https://cloudofworship.com/features/posters/transcription.webp
+    source: https://cloudofworship.com
+    caption: Service editor with quick actions, Bible slide editor, live preview and slide schedule
+  - image: https://cloudofworship.com/features/songs-hymns.webp
+    source: https://cloudofworship.com
+    caption: Dark theme with hymn search results, content editor and slide schedule
 sources:
   - https://github.com/CoW-Labs/cloudofworship
   - https://github.com/CoW-Labs/cloudofworship/blob/main/app/composables/useSubscription.ts

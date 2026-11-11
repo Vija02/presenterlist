@@ -70,6 +70,13 @@ feature_notes:
   connectivity.remote_control: A Wi-Fi remote and mobile app are listed as "coming soon" on the features page.
   connectivity.cloud_sync: Data can be kept in a third-party cloud folder (pCloud, Dropbox, OneDrive); there is no built-in sync service.
 release_notes_url: https://videopsalm.org/list-of-changes/
+screenshots:
+  - image: https://videopsalm.org/wp-content/uploads/2025/01/ViewerMode2.png
+    source: https://videopsalm.org/
+    caption: Main window with agenda, songbook list, song verses and output preview
+  - image: https://videopsalm.org/wp-content/uploads/2025/02/Edit-lyrics.png
+    source: https://videopsalm.org/
+    caption: Song lyrics editor with formatting ribbon (a typo is circled in red on the image)
 sources:
   - https://videopsalm.org/
   - https://videopsalm.org/features/

@@ -47,6 +47,13 @@ docs_url: https://www.cantara.app
 news_feeds:
   - https://www.cantara.app/blog/index.xml
 release_notes_url: https://www.cantara.app/releasenotes/
+screenshots:
+  - image: https://www.cantara.app/images/cantara-presentationcontroller-en.png
+    source: https://www.cantara.app
+    caption: Song selection window with slide list and running presentation preview
+  - image: https://www.cantara.app/images/cantara3.png
+    source: https://www.cantara.app
+    caption: Alternative layout with song library, selected songs and presentation preview
 sources:
   - https://www.cantara.app
   - https://github.com/reckel-jm/cantara
